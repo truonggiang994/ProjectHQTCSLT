@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\laptrinhWindows\\XinViec\\Job\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|d:\\laptrinhwindows\\xinviec\\job\\job\\nguoiungtuyen\\fcv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\nguoiungtuyen\\fcv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|d:\\laptrinhwindows\\xinviec\\job\\job\\nguoiungtuyen\\fthongtinvieclam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\nguoiungtuyen\\fthongtinvieclam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|d:\\laptrinhwindows\\xinviec\\job\\job\\login\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\login\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|d:\\laptrinhwindows\\xinviec\\job\\job\\login\\fquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\login\\fquenmk.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|d:\\laptrinhwindows\\xinviec\\job\\job\\login\\fdangki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\login\\fdangki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|d:\\laptrinhwindows\\xinviec\\job\\job\\thongtinvieclamdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\thongtinvieclamdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\nguoiungtuyen\\fcv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\nguoiungtuyen\\fcv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\xuly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\xuly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\fdangtin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\fdangtin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\fcvguide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\fcvguide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\fcvguide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\fcvguide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\ungtuyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\ungtuyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\dulieucongty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\dulieucongty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\ungtuyendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\ungtuyendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\dulieuungtuyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\dulieuungtuyen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\dulieuungtuyendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\dulieuungtuyendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\cv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\cvdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\cvdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\login\\fdangki.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\login\\fdangki.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|D:\\laptrinhWindows\\XinViec\\Job\\job\\login\\fdangki.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{A345AC8B-57C8-4801-9C14-106580DD308E}|Job\\Job.csproj|solutionrelative:job\\login\\fdangki.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 237,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FCV.cs [Design]",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\NguoiUngTuyen\\FCV.cs",
+              "RelativeDocumentMoniker": "Job\\NguoiUngTuyen\\FCV.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\NguoiUngTuyen\\FCV.cs [Design]",
+              "RelativeToolTip": "Job\\NguoiUngTuyen\\FCV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:08:12.655Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FThongTinViecLam.cs [Design]",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\NguoiUngTuyen\\FThongTinViecLam.cs",
+              "RelativeDocumentMoniker": "Job\\NguoiUngTuyen\\FThongTinViecLam.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\NguoiUngTuyen\\FThongTinViecLam.cs [Design]",
+              "RelativeToolTip": "Job\\NguoiUngTuyen\\FThongTinViecLam.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:08:11.738Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "Job\\Login\\TaiKhoan.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\TaiKhoan.cs",
+              "RelativeToolTip": "Job\\Login\\TaiKhoan.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:08:08.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FQuenMK.cs [Design]",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FQuenMK.cs",
+              "RelativeDocumentMoniker": "Job\\Login\\FQuenMK.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FQuenMK.cs [Design]",
+              "RelativeToolTip": "Job\\Login\\FQuenMK.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:08:06.776Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FDangKi.cs [Design]",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FDangKi.cs",
+              "RelativeDocumentMoniker": "Job\\Login\\FDangKi.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FDangKi.cs [Design]",
+              "RelativeToolTip": "Job\\Login\\FDangKi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:08:02.065Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ThongTinViecLamDAO.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\ThongTinViecLamDAO.cs",
+              "RelativeDocumentMoniker": "Job\\ThongTinViecLamDAO.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\ThongTinViecLamDAO.cs",
+              "RelativeToolTip": "Job\\ThongTinViecLamDAO.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T08:07:48.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FCV.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\NguoiUngTuyen\\FCV.cs",
+              "RelativeDocumentMoniker": "Job\\NguoiUngTuyen\\FCV.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\NguoiUngTuyen\\FCV.cs",
+              "RelativeToolTip": "Job\\NguoiUngTuyen\\FCV.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAEwBYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:39:13.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FDangTin.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\FDangTin.cs",
+              "RelativeDocumentMoniker": "Job\\FDangTin.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\FDangTin.cs",
+              "RelativeToolTip": "Job\\FDangTin.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwC8AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:38:50.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FCVGuide.cs [Design]",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\FCVGuide.cs",
+              "RelativeDocumentMoniker": "Job\\FCVGuide.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\FCVGuide.cs [Design]",
+              "RelativeToolTip": "Job\\FCVGuide.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:38:20.092Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "XuLy.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\XuLy.cs",
+              "RelativeDocumentMoniker": "Job\\XuLy.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\XuLy.cs",
+              "RelativeToolTip": "Job\\XuLy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:36:15.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DuLieuCongTy.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\DuLieuCongTy.cs",
+              "RelativeDocumentMoniker": "Job\\DuLieuCongTy.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\DuLieuCongTy.cs",
+              "RelativeToolTip": "Job\\DuLieuCongTy.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA6wBIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:35:12.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UngTuyenDAO.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\UngTuyenDAO.cs",
+              "RelativeDocumentMoniker": "Job\\UngTuyenDAO.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\UngTuyenDAO.cs",
+              "RelativeToolTip": "Job\\UngTuyenDAO.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwCcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:30:38.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UngTuyen.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\UngTuyen.cs",
+              "RelativeDocumentMoniker": "Job\\UngTuyen.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\UngTuyen.cs",
+              "RelativeToolTip": "Job\\UngTuyen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:30:31.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DuLieuUngTuyen.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\DuLieuUngTuyen.cs",
+              "RelativeDocumentMoniker": "Job\\DuLieuUngTuyen.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\DuLieuUngTuyen.cs",
+              "RelativeToolTip": "Job\\DuLieuUngTuyen.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:29:21.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DuLieuUngTuyenDAO.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\DuLieuUngTuyenDAO.cs",
+              "RelativeDocumentMoniker": "Job\\DuLieuUngTuyenDAO.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\DuLieuUngTuyenDAO.cs",
+              "RelativeToolTip": "Job\\DuLieuUngTuyenDAO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:29:20.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FCVGuide.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\FCVGuide.cs",
+              "RelativeDocumentMoniker": "Job\\FCVGuide.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\FCVGuide.cs",
+              "RelativeToolTip": "Job\\FCVGuide.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:26:17.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CV.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\CV.cs",
+              "RelativeDocumentMoniker": "Job\\CV.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\CV.cs",
+              "RelativeToolTip": "Job\\CV.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:29:05.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CVDAO.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\CVDAO.cs",
+              "RelativeDocumentMoniker": "Job\\CVDAO.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\CVDAO.cs",
+              "RelativeToolTip": "Job\\CVDAO.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:27:14.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FDangKi.Designer.cs",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FDangKi.Designer.cs",
+              "RelativeDocumentMoniker": "Job\\Login\\FDangKi.Designer.cs",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FDangKi.Designer.cs",
+              "RelativeToolTip": "Job\\Login\\FDangKi.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T07:26:18.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FDangKi.resx",
+              "DocumentMoniker": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FDangKi.resx",
+              "RelativeDocumentMoniker": "Job\\Login\\FDangKi.resx",
+              "ToolTip": "D:\\laptrinhWindows\\XinViec\\Job\\Job\\Login\\FDangKi.resx",
+              "RelativeToolTip": "Job\\Login\\FDangKi.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-10-10T07:26:18.087Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

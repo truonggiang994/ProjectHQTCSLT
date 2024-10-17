@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A345AC8B-57C8-4801-9C14-106580DD308E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Job</RootNamespace>
+    <AssemblyName>Job</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CamNang.cs" />
+    <Compile Include="CamNangDAO.cs" />
+    <Compile Include="CongTy.cs" />
+    <Compile Include="CongTyDao.cs" />
+    <Compile Include="CV.cs" />
+    <Compile Include="CVDAO.cs" />
+    <Compile Include="dangTin.cs" />
+    <Compile Include="dangTinDao.cs" />
+    <Compile Include="DanhGia.cs" />
+    <Compile Include="DanhGiaDAO.cs" />
+    <Compile Include="DuLieuCongTy.cs" />
+    <Compile Include="DuLieuCV.cs" />
+    <Compile Include="DuLieuUngTuyen.cs" />
+    <Compile Include="DuLieuUngTuyenDAO.cs" />
+    <Compile Include="FCamNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCamNang.Designer.cs">
+      <DependentUpon>FCamNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCVGuide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCVGuide.Designer.cs">
+      <DependentUpon>FCVGuide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHenPhongVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHenPhongVan.Designer.cs">
+      <DependentUpon>FHenPhongVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FHoSoUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FHoSoUngTuyen.Designer.cs">
+      <DependentUpon>FHoSoUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLichSuDangViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLichSuDangViec.Designer.cs">
+      <DependentUpon>FLichSuDangViec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLichSuUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLichSuUngTuyen.Designer.cs">
+      <DependentUpon>FLichSuUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhanPhongVan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhanPhongVan.Designer.cs">
+      <DependentUpon>FNhanPhongVan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhapCamNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhapCamNang.Designer.cs">
+      <DependentUpon>FNhapCamNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhapDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhapDanhGia.Designer.cs">
+      <DependentUpon>FNhapDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuaCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuaCV.Designer.cs">
+      <DependentUpon>FSuaCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuaDangTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuaDangTin.Designer.cs">
+      <DependentUpon>FSuaDangTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongBao.Designer.cs">
+      <DependentUpon>FThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongBaoNhaUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongBaoNhaUngTuyen.Designer.cs">
+      <DependentUpon>FThongBaoNhaUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinCongTy.Designer.cs">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTopViecLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTopViecLam.Designer.cs">
+      <DependentUpon>FTopViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FTrangChuNhaUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTrangChuNhaUngTuyen.Designer.cs">
+      <DependentUpon>FTrangChuNhaUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FViecLamYeuThich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FViecLamYeuThich.Designer.cs">
+      <DependentUpon>FViecLamYeuThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemCamNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemCamNang.Designer.cs">
+      <DependentUpon>FXemCamNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemCongTy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemCongTy.Designer.cs">
+      <DependentUpon>FXemCongTy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemCV.Designer.cs">
+      <DependentUpon>FXemCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FXemDanhGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FXemDanhGia.Designer.cs">
+      <DependentUpon>FXemDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuDangTinDAO.cs" />
+    <Compile Include="LichSuUngTuyen.cs" />
+    <Compile Include="LichSuUngTuyenDAO.cs" />
+    <Compile Include="LicSuDangTin.cs" />
+    <Compile Include="PhongVan.cs" />
+    <Compile Include="PhongVanDAO.cs" />
+    <Compile Include="UngTuyen.cs" />
+    <Compile Include="UngTuyenDAO.cs" />
+    <Compile Include="KiemTraDauVao.cs" />
+    <Compile Include="Login\FQuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FQuenMK.Designer.cs">
+      <DependentUpon>FQuenMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FCV.Designer.cs">
+      <DependentUpon>FCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FThongTinViecLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FThongTinViecLam.Designer.cs">
+      <DependentUpon>FThongTinViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FViecLam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FViecLam.Designer.cs">
+      <DependentUpon>FViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FDangKi.Designer.cs">
+      <DependentUpon>FDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDangTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDangTin.Designer.cs">
+      <DependentUpon>FDangTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNguoiUngTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNguoiUngTuyen.Designer.cs">
+      <DependentUpon>FNguoiUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FNhaTuyenDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FNhaTuyenDung.Designer.cs">
+      <DependentUpon>FNhaTuyenDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NguoiUngTuyen\FTrangChu.Designer.cs">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Login\TaiKhoan.cs" />
+    <Compile Include="Login\TaiKhoanDao.cs" />
+    <Compile Include="ThongTinViecLam.cs" />
+    <Compile Include="ThongTinViecLamDAO.cs" />
+    <Compile Include="UserControlCamNang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCamNang.Designer.cs">
+      <DependentUpon>UserControlCamNang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlComboBox.Designer.cs">
+      <DependentUpon>UserControlComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDanhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDanhGia.Designer.cs">
+      <DependentUpon>UserControlDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLSUngTuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLSUngTuyen.Designer.cs">
+      <DependentUpon>UserControlLSUngTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDangTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDangTin.Designer.cs">
+      <DependentUpon>UserControlDangTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlLabelTT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLabelTT.Designer.cs">
+      <DependentUpon>UserControlLabelTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlTextCT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlTextCT.Designer.cs">
+      <DependentUpon>UserControlTextCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlUngVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlUngVien.Designer.cs">
+      <DependentUpon>UserControlUngVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlViecLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlViecLam.Designer.cs">
+      <DependentUpon>UserControlViecLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViecLamYeuThich.cs" />
+    <Compile Include="ViecLamYeuThichDAO.cs" />
+    <Compile Include="XuLy.cs" />
+    <EmbeddedResource Include="FCamNang.resx">
+      <DependentUpon>FCamNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCVGuide.resx">
+      <DependentUpon>FCVGuide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHenPhongVan.resx">
+      <DependentUpon>FHenPhongVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FHoSoUngTuyen.resx">
+      <DependentUpon>FHoSoUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLichSuDangViec.resx">
+      <DependentUpon>FLichSuDangViec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLichSuUngTuyen.resx">
+      <DependentUpon>FLichSuUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhanPhongVan.resx">
+      <DependentUpon>FNhanPhongVan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhapCamNang.resx">
+      <DependentUpon>FNhapCamNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhapDanhGia.resx">
+      <DependentUpon>FNhapDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuaCV.resx">
+      <DependentUpon>FSuaCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuaDangTin.resx">
+      <DependentUpon>FSuaDangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongBao.resx">
+      <DependentUpon>FThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongBaoNhaUngTuyen.resx">
+      <DependentUpon>FThongBaoNhaUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinCongTy.resx">
+      <DependentUpon>FThongTinCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTopViecLam.resx">
+      <DependentUpon>FTopViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTrangChuNhaUngTuyen.resx">
+      <DependentUpon>FTrangChuNhaUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FViecLamYeuThich.resx">
+      <DependentUpon>FViecLamYeuThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemCamNang.resx">
+      <DependentUpon>FXemCamNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemCongTy.resx">
+      <DependentUpon>FXemCongTy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemCV.resx">
+      <DependentUpon>FXemCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FXemDanhGia.resx">
+      <DependentUpon>FXemDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FQuenMK.resx">
+      <DependentUpon>FQuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguoiUngTuyen\FCV.resx">
+      <DependentUpon>FCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguoiUngTuyen\FThongTinViecLam.resx">
+      <DependentUpon>FThongTinViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguoiUngTuyen\FViecLam.resx">
+      <DependentUpon>FViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FDangKi.resx">
+      <DependentUpon>FDangKi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDangTin.resx">
+      <DependentUpon>FDangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNguoiUngTuyen.resx">
+      <DependentUpon>FNguoiUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNhaTuyenDung.resx">
+      <DependentUpon>FNhaTuyenDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NguoiUngTuyen\FTrangChu.resx">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlCamNang.resx">
+      <DependentUpon>UserControlCamNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlComboBox.resx">
+      <DependentUpon>UserControlComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDanhGia.resx">
+      <DependentUpon>UserControlDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlLSUngTuyen.resx">
+      <DependentUpon>UserControlLSUngTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDangTin.resx">
+      <DependentUpon>UserControlDangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlLabelTT.resx">
+      <DependentUpon>UserControlLabelTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlTextCT.resx">
+      <DependentUpon>UserControlTextCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlUngVien.resx">
+      <DependentUpon>UserControlUngVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlViecLam.resx">
+      <DependentUpon>UserControlViecLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="config\RESXManager.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\heart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
