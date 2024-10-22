@@ -3,7 +3,8 @@
     "",
     "\\Job",
     "\\Job\\Job",
-    "\\Job\\Job\\NguoiUngTuyen"
+    "\\Job\\Job\\NguoiUngTuyen",
+    "\\Job\\packages"
   ],
   "SelectedNode": "\\Job\\Job\\NguoiUngTuyen\\FCV.cs",
   "PreviewInSolutionExplorer": false

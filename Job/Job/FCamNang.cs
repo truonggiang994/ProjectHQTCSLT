@@ -21,21 +21,14 @@ namespace Job
             TaiDuLieu();
 
         }
+                
 
         private void TaiDuLieu()
         {
-            labelTieuDe1.Text = camNang.Label1;
-            richTextBoxNoiDung1.Text = camNang.RichTextBox1;
-            labelTieuDe2.Text = camNang.Label2;
-            richTextBoxNoiDung2.Text = camNang.RichTextBox2;
-            labelTieuDe3.Text = camNang.Label3;
-            richTextBoxNoiDung3.Text = camNang.RichTextBox3;
-            labelTieuDe4.Text = camNang.Label4;
-            richTextBoxNoiDung4.Text = camNang.RichTextBox4;
-            labelTieuDe5.Text = camNang.Label5;
-            richTextBox1NoiDung5.Text = camNang.RichTextBox5;
-            labelTieuDe6.Text = camNang.Label5;
-            richTextBoxNoiDung6.Text = camNang.RichTextBox4;
+           
+                MY_DB db = new MY_DB();
+                db.OpenConnection(); // Kiểm tra kết nối
+           
         }
 
 

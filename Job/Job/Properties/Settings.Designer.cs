@@ -25,8 +25,8 @@ namespace Job.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\laptrinhWindows\\XinViec\\Jo" +
-            "b\\Job\\Database.mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\HK1_2024_2025\\HQTCSDL\\XinV" +
+            "iec\\ProjectHQTCSLT\\Job\\Job\\Database.mdf;Integrated Security=True")]
         public string Connection {
             get {
                 return ((string)(this["Connection"]));

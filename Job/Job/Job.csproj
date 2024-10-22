@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDAO.cs" />
     <Compile Include="CamNang.cs" />
     <Compile Include="CamNangDAO.cs" />
     <Compile Include="CongTy.cs" />
@@ -207,10 +208,12 @@
     <Compile Include="FXemDanhGia.Designer.cs">
       <DependentUpon>FXemDanhGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="LichSuDangTinDAO.cs" />
     <Compile Include="LichSuUngTuyen.cs" />
     <Compile Include="LichSuUngTuyenDAO.cs" />
     <Compile Include="LicSuDangTin.cs" />
+    <Compile Include="MY_DB.cs" />
     <Compile Include="PhongVan.cs" />
     <Compile Include="PhongVanDAO.cs" />
     <Compile Include="UngTuyen.cs" />
