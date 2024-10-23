@@ -4,23 +4,25 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Job
 {
-    
-    public partial class FViecLam : Form
+    public partial class FKhoaTaiKhoan : Form
     {
-        public FViecLam()
+        public FKhoaTaiKhoan()
         {
             InitializeComponent();
         }
 
-        private void flowLayoutPanelChinh_Paint(object sender, PaintEventArgs e)
+        private void FKhoaTaiKhoan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
         }

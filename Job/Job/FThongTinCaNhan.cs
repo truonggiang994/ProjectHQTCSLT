@@ -4,25 +4,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Job
 {
-    
-    public partial class FViecLam : Form
+    public partial class FThongTinCaNhan : Form
     {
-        public FViecLam()
+        public FThongTinCaNhan()
         {
             InitializeComponent();
-        }
-
-        private void flowLayoutPanelChinh_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
