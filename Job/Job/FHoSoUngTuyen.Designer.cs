@@ -60,7 +60,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FHoSoUngTuyen";
             this.Text = "FHoSoUngTuyen";
-            this.Load += new System.EventHandler(this.FHoSoUngTuyen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

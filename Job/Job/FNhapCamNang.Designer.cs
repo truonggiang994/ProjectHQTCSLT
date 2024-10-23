@@ -111,7 +111,6 @@
             this.btnLuu.TabIndex = 3;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
             // 
             // guna2TextBox10NhapNoiDung
             // 
@@ -559,7 +558,6 @@
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "guna2Button1";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // pictureBoxLoGo
             // 

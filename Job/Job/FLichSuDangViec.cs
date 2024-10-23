@@ -16,24 +16,5 @@ namespace Job
         {
             InitializeComponent();
         }
-        private void TaiDuLieu()
-        {
-            if (DuLieuCongTy.licSuDangTins.Count == 0)
-            {
-                FNhaTuyenDung.Instance.MoFCon(new FThongBaoNhaUngTuyen("Bạn chưa đăng tin nào, vui lòng tạo tin đăng trước!", "Tạo đăng tin", new FDangTin()));
-                return;
-            }
-            else
-            foreach (LicSuDangTin licSuDangTin in DuLieuCongTy.licSuDangTins)
-            {
-                UserControlDangTin userControl = new UserControlDangTin(licSuDangTin);
-                flowLayoutPanel1.Controls.Add(userControl);
-            }
-        }
-
-        private void FLichSuDangViec_Load(object sender, EventArgs e)
-        {
-            TaiDuLieu();
-        }
     }
 }

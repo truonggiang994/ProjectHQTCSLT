@@ -99,7 +99,6 @@
             this.guna2Button1.Size = new System.Drawing.Size(135, 30);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Nhà tuyển dụng";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // panel
             // 
@@ -107,7 +106,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(930, 460);
             this.panel.TabIndex = 2;
-            this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
             // 
             // buttonLogOut
             // 
@@ -125,7 +123,6 @@
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 0;
-            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -182,7 +179,6 @@
             this.buttonXemCV.Size = new System.Drawing.Size(160, 40);
             this.buttonXemCV.TabIndex = 9;
             this.buttonXemCV.Text = "Xem CV ";
-            this.buttonXemCV.Click += new System.EventHandler(this.buttonXemCV_Click);
             // 
             // guna2PictureBox1
             // 
@@ -222,7 +218,6 @@
             this.buttonVLYeuThich.Size = new System.Drawing.Size(160, 40);
             this.buttonVLYeuThich.TabIndex = 8;
             this.buttonVLYeuThich.Text = " Việc làm yêu thích";
-            this.buttonVLYeuThich.Click += new System.EventHandler(this.buttonVLYeuThich_Click);
             // 
             // buttonCoHoiVL
             // 
@@ -248,7 +243,6 @@
             this.buttonCoHoiVL.Size = new System.Drawing.Size(160, 40);
             this.buttonCoHoiVL.TabIndex = 7;
             this.buttonCoHoiVL.Text = "     Cơ hội việc làm";
-            this.buttonCoHoiVL.Click += new System.EventHandler(this.buttonCoHoiVL_Click);
             // 
             // buttonVLDaUngTuyen
             // 
@@ -274,7 +268,6 @@
             this.buttonVLDaUngTuyen.Size = new System.Drawing.Size(160, 40);
             this.buttonVLDaUngTuyen.TabIndex = 6;
             this.buttonVLDaUngTuyen.Text = "     Việc làm đã ứng tuyển ";
-            this.buttonVLDaUngTuyen.Click += new System.EventHandler(this.buttonVLDaUngTuyen_Click);
             // 
             // buttonCV
             // 
@@ -300,7 +293,6 @@
             this.buttonCV.Size = new System.Drawing.Size(160, 40);
             this.buttonCV.TabIndex = 5;
             this.buttonCV.Text = "CV ";
-            this.buttonCV.Click += new System.EventHandler(this.buttonCV_Click);
             // 
             // buttonTrangChu
             // 
@@ -327,7 +319,6 @@
             this.buttonTrangChu.Size = new System.Drawing.Size(160, 40);
             this.buttonTrangChu.TabIndex = 3;
             this.buttonTrangChu.Text = "Trang chủ";
-            this.buttonTrangChu.Click += new System.EventHandler(this.buttonTrangChu_Click);
             // 
             // FNguoiUngTuyen
             // 

@@ -12,23 +12,9 @@ namespace Job
 {
     public partial class FThongBao : Form
     {
-        private Form form;
         public FThongBao(string noiDung, string tenButton, Form form)
         {
             InitializeComponent();
-            this.form = form;
-            TaiDuLieu(noiDung, tenButton);
-        }
-        
-        private void TaiDuLieu(string noiDung, string tenButton)
-        {
-            labelNoiDung.Text = noiDung;
-            buttonMoForm.Text = tenButton;
-        }
-
-        private void buttonMoForm_Click(object sender, EventArgs e)
-        {
-            FNguoiUngTuyen.Instance.MoFCon(form);
         }
     }
 }

@@ -12,26 +12,9 @@ namespace Job
 {
     public partial class FCamNang : Form
     {
-        private CamNang camNang;
-
-        public FCamNang(CamNang camNang)
+        public FCamNang()
         {
-            this.camNang = camNang;
             InitializeComponent();
-            TaiDuLieu();
-
         }
-                
-
-        private void TaiDuLieu()
-        {
-           
-                MY_DB db = new MY_DB();
-                db.OpenConnection(); // Kiểm tra kết nối
-           
-        }
-
-
-
     }
 }

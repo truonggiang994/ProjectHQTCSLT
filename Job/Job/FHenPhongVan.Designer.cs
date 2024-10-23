@@ -63,7 +63,6 @@
             this.buttonBack.PressedState.ImageSize = new System.Drawing.Size(25, 25);
             this.buttonBack.Size = new System.Drawing.Size(34, 29);
             this.buttonBack.TabIndex = 0;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // dateTimePickerNgayPhongVan
             // 
@@ -206,7 +205,6 @@
             this.buttonGuiThongTin.Size = new System.Drawing.Size(128, 30);
             this.buttonGuiThongTin.TabIndex = 9;
             this.buttonGuiThongTin.Text = "Gửi thông tin";
-            this.buttonGuiThongTin.Click += new System.EventHandler(this.buttonGuiThongTin_Click);
             // 
             // labelChucVu
             // 

@@ -43,9 +43,9 @@
             // 
             this.lblLsdv.AutoSize = true;
             this.lblLsdv.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLsdv.Location = new System.Drawing.Point(30, 10);
+            this.lblLsdv.Location = new System.Drawing.Point(8, 8);
             this.lblLsdv.Name = "lblLsdv";
-            this.lblLsdv.Size = new System.Drawing.Size(142, 21);
+            this.lblLsdv.Size = new System.Drawing.Size(182, 27);
             this.lblLsdv.TabIndex = 0;
             this.lblLsdv.Text = "Lịch sử đăng việc";
             // 
@@ -67,7 +67,7 @@
             this.labelCotTenTinDang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotTenTinDang.Location = new System.Drawing.Point(35, 99);
             this.labelCotTenTinDang.Name = "labelCotTenTinDang";
-            this.labelCotTenTinDang.Size = new System.Drawing.Size(103, 22);
+            this.labelCotTenTinDang.Size = new System.Drawing.Size(124, 27);
             this.labelCotTenTinDang.TabIndex = 3;
             this.labelCotTenTinDang.Text = "Tên tin đăng";
             // 
@@ -77,7 +77,7 @@
             this.labelCotHapNopHoSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotHapNopHoSo.Location = new System.Drawing.Point(380, 99);
             this.labelCotHapNopHoSo.Name = "labelCotHapNopHoSo";
-            this.labelCotHapNopHoSo.Size = new System.Drawing.Size(72, 22);
+            this.labelCotHapNopHoSo.Size = new System.Drawing.Size(88, 27);
             this.labelCotHapNopHoSo.TabIndex = 4;
             this.labelCotHapNopHoSo.Text = "Thời hạn";
             // 
@@ -87,7 +87,7 @@
             this.labelCotLuotUngTuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotLuotUngTuyen.Location = new System.Drawing.Point(620, 99);
             this.labelCotLuotUngTuyen.Name = "labelCotLuotUngTuyen";
-            this.labelCotLuotUngTuyen.Size = new System.Drawing.Size(123, 22);
+            this.labelCotLuotUngTuyen.Size = new System.Drawing.Size(146, 27);
             this.labelCotLuotUngTuyen.TabIndex = 5;
             this.labelCotLuotUngTuyen.Text = "Lượt ứng tuyển";
             // 
@@ -97,7 +97,7 @@
             this.labelCotHanhDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotHanhDong.Location = new System.Drawing.Point(782, 99);
             this.labelCotHanhDong.Name = "labelCotHanhDong";
-            this.labelCotHanhDong.Size = new System.Drawing.Size(91, 22);
+            this.labelCotHanhDong.Size = new System.Drawing.Size(108, 27);
             this.labelCotHanhDong.TabIndex = 6;
             this.labelCotHanhDong.Text = "Hành động";
             // 
@@ -107,7 +107,7 @@
             this.labelCotMucLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotMucLuong.Location = new System.Drawing.Point(510, 99);
             this.labelCotMucLuong.Name = "labelCotMucLuong";
-            this.labelCotMucLuong.Size = new System.Drawing.Size(85, 22);
+            this.labelCotMucLuong.Size = new System.Drawing.Size(103, 27);
             this.labelCotMucLuong.TabIndex = 7;
             this.labelCotMucLuong.Text = "Mức lương";
             // 
@@ -131,7 +131,6 @@
             this.Controls.Add(this.guna2PanelLsdv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLichSuDangViec";
-            this.Load += new System.EventHandler(this.FLichSuDangViec_Load);
             this.guna2PanelLsdv.ResumeLayout(false);
             this.guna2PanelLsdv.PerformLayout();
             this.ResumeLayout(false);

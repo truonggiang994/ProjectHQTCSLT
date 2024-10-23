@@ -95,7 +95,6 @@
             this.buttonXemChiTiet.Size = new System.Drawing.Size(97, 25);
             this.buttonXemChiTiet.TabIndex = 5;
             this.buttonXemChiTiet.Text = "xem hồ sơ";
-            this.buttonXemChiTiet.Click += new System.EventHandler(this.buttonXemChiTiet_Click);
             // 
             // buttonTuyen
             // 
@@ -111,7 +110,6 @@
             this.buttonTuyen.Size = new System.Drawing.Size(95, 25);
             this.buttonTuyen.TabIndex = 6;
             this.buttonTuyen.Text = "Tuyển";
-            this.buttonTuyen.Click += new System.EventHandler(this.buttonTuyen_Click);
             // 
             // labelChucVu
             // 
@@ -148,7 +146,6 @@
             this.buttonPhuongVan.Size = new System.Drawing.Size(108, 25);
             this.buttonPhuongVan.TabIndex = 8;
             this.buttonPhuongVan.Text = "Phỏng vấn";
-            this.buttonPhuongVan.Click += new System.EventHandler(this.buttonPhuongVan_Click);
             // 
             // UserControlUngVien
             // 

@@ -72,7 +72,7 @@
             this.labelCotTrangThai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotTrangThai.Location = new System.Drawing.Point(800, 62);
             this.labelCotTrangThai.Name = "labelCotTrangThai";
-            this.labelCotTrangThai.Size = new System.Drawing.Size(125, 24);
+            this.labelCotTrangThai.Size = new System.Drawing.Size(157, 28);
             this.labelCotTrangThai.TabIndex = 15;
             this.labelCotTrangThai.Text = "Hẹn phỏng vấn";
             // 
@@ -82,7 +82,7 @@
             this.labelCotHanNop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotHanNop.Location = new System.Drawing.Point(695, 62);
             this.labelCotHanNop.Name = "labelCotHanNop";
-            this.labelCotHanNop.Size = new System.Drawing.Size(90, 24);
+            this.labelCotHanNop.Size = new System.Drawing.Size(112, 28);
             this.labelCotHanNop.TabIndex = 14;
             this.labelCotHanNop.Text = "Trạng thái";
             // 
@@ -92,7 +92,7 @@
             this.labelCotNgayNop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotNgayNop.Location = new System.Drawing.Point(595, 62);
             this.labelCotNgayNop.Name = "labelCotNgayNop";
-            this.labelCotNgayNop.Size = new System.Drawing.Size(81, 24);
+            this.labelCotNgayNop.Size = new System.Drawing.Size(100, 28);
             this.labelCotNgayNop.TabIndex = 13;
             this.labelCotNgayNop.Text = "Ngày nộp";
             // 
@@ -113,7 +113,7 @@
             this.labelCotTenViecLam.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCotTenViecLam.Location = new System.Drawing.Point(34, 62);
             this.labelCotTenViecLam.Name = "labelCotTenViecLam";
-            this.labelCotTenViecLam.Size = new System.Drawing.Size(107, 24);
+            this.labelCotTenViecLam.Size = new System.Drawing.Size(132, 28);
             this.labelCotTenViecLam.TabIndex = 11;
             this.labelCotTenViecLam.Text = "Tên việc làm";
             // 
@@ -141,9 +141,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(35, 11);
+            this.label1.Location = new System.Drawing.Point(2, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 21);
+            this.label1.Size = new System.Drawing.Size(247, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lịch sử người ứng tuyển";
             // 
@@ -153,7 +153,6 @@
             this.Controls.Add(this.panelLsnut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLichSuUngTuyen";
-            this.Load += new System.EventHandler(this.FLichSuUngTuyen_Load);
             this.panelLsnut.ResumeLayout(false);
             this.panelLsnut.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

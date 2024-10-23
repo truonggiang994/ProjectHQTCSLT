@@ -243,7 +243,6 @@
             this.buttonDanhGia.Size = new System.Drawing.Size(118, 26);
             this.buttonDanhGia.TabIndex = 16;
             this.buttonDanhGia.Text = "Đánh giá";
-            this.buttonDanhGia.Click += new System.EventHandler(this.buttonDanhGia_Click);
             // 
             // buttonXemDanhGia
             // 
@@ -259,7 +258,6 @@
             this.buttonXemDanhGia.Size = new System.Drawing.Size(118, 26);
             this.buttonXemDanhGia.TabIndex = 17;
             this.buttonXemDanhGia.Text = "Xem đánh giá";
-            this.buttonXemDanhGia.Click += new System.EventHandler(this.buttonXemDanhGia_Click);
             // 
             // FXemCongTy
             // 

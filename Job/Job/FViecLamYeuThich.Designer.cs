@@ -73,7 +73,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FViecLamYeuThich";
             this.Text = "FViecLamYeuThich";
-            this.Load += new System.EventHandler(this.FViecLamYeuThich_Load);
             this.panelYeuThich.ResumeLayout(false);
             this.panelYeuThich.PerformLayout();
             this.ResumeLayout(false);

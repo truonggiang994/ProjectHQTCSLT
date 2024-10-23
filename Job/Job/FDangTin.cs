@@ -8,84 +8,82 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Job
 {
     public partial class FDangTin : Form
     {
-        private DangTinDao dangTinDao;
+    
         private List<(Guna2HtmlLabel label, ComboBox comboBox)> capLabelComboBox = new List<(Guna2HtmlLabel label, ComboBox comboBox)>();
         private List<(Guna2HtmlLabel label, RichTextBox richTextBox)> capLabelRichTextBox = new List<(Guna2HtmlLabel label, RichTextBox richTextBox)>();
-
         public FDangTin()
         {
             InitializeComponent();
+          
 
-            dangTinDao = new DangTinDao();
-            BatTatControls();
-
-        }
-        private void KiemTra()
-        {
-            if(DuLieuCongTy.CongTy == null)
-            {
-                FNhaTuyenDung.Instance.MoFCon(new FThongBaoNhaUngTuyen("Bạn chưa nhập thông tin công ty, vui lòng nhập thông tin công ty trước!", "Nhập thông tin", new FThongTinCongTy()));
-            }
-        }
-        private void BatTatControls()
-        {
-            capLabelComboBox.Add((labelChonNganhNghe, comboBoxNganhNghe));
-            capLabelComboBox.Add((labelChonHinhThucLV, comboBoxHinhThucLV));
-            capLabelComboBox.Add((labelChonBangCap, comBoBoxBangNap));
-            capLabelComboBox.Add((labelChonGioiTinh, comboBoxGioiTinh));
-            capLabelComboBox.Add((labelChonKinhNghiem, comboBoxKinhNghiem));
-            capLabelComboBox.Add((labelChonTinhThanh, comboBoxTinhThanh));
-
-            capLabelRichTextBox.Add((labelChonMoTaCV, textBoxMoTaCongViec));
-            capLabelRichTextBox.Add((label1ChonYeuCauCV, textBoxYeuCauCongViec));
-            capLabelRichTextBox.Add((labelChonQuyenLoi, textBoxQuyenLoi));
-
-            XuLy.KiemSoatControls(capLabelComboBox, capLabelRichTextBox);
         }
         private void buttonDang_Click(object sender, EventArgs e)
         {
-            if(!KiemTraDauVao.KiemTraControlsRong(capLabelComboBox,capLabelRichTextBox)) 
-                return;
-            if (!KiemTraDauVao.KiemTraTextBoxRong(textBoxChucDanh, textBoxQuanHuyen, textBoxSoNha, textBoxKiNang, textBoxLuongToiThieu, textBoxLuongToiDa, textBoxTuoiToiDa, textBoxTuoiToiTieu))
-                return;
-            string taiKhoan = TaiKhoan.TaiKhoanDangNhap.TK;
-            string chucDanh = textBoxChucDanh.Text;
-            string nganhNghe = comboBoxNganhNghe.SelectedItem.ToString();
-            string hinhThucLV = comboBoxHinhThucLV.SelectedItem.ToString();
-            string bangCap = comBoBoxBangNap.SelectedItem.ToString();
-            string kinhNghiem = comboBoxKinhNghiem.SelectedItem.ToString();
-            string yeuCauGioiTinh = comboBoxGioiTinh.SelectedItem.ToString();
-            DateTime hanNopHoSo = dateTimePickerHanNopHoSo.Value;
-            string tinhThanh = comboBoxTinhThanh.SelectedItem.ToString();
-            string quanHuyen = textBoxQuanHuyen.Text;
-            string soNha = textBoxSoNha.Text;
-            string kiNang = textBoxKiNang.Text;
-            string moTaCV = textBoxMoTaCongViec.Text;
-            string yeuCauCV = textBoxYeuCauCongViec.Text;
-            string quyenLoi = textBoxQuyenLoi.Text;
-            float mucLuongToiThieu = float.Parse(textBoxLuongToiThieu.Text);
-            float mucLuongToiDa = float.Parse(textBoxLuongToiDa.Text);
-            int doTuoiToiThieu = int.Parse(textBoxTuoiToiTieu.Text); 
-            int doTuoiToiDa = int.Parse(textBoxTuoiToiDa.Text); 
 
-            // Tạo một đối tượng DangTin từ dữ liệu thu thập được
-            DangTin dangTin = new DangTin(taiKhoan, chucDanh, nganhNghe, hinhThucLV, bangCap, kinhNghiem, yeuCauGioiTinh, hanNopHoSo, tinhThanh, quanHuyen, soNha, kiNang, moTaCV, yeuCauCV, quyenLoi, mucLuongToiThieu, mucLuongToiDa, doTuoiToiThieu, doTuoiToiDa);
 
-            // Gọi phương thức ThemDangTin của lớp DangTinDao để lưu trữ dữ liệu vào cơ sở dữ liệu
-            dangTinDao.ThemDangTin(dangTin);
+            string employerUsername = "hoan4703";
+            int companyId = 1;
+            string jobvacancy = labelViTri.Text.Trim();
+            string description = textBoxMoTaCongViec.Text.Trim();
+            string skill = textBoxKiNang.Text.Trim();
+            string experience = comboBoxKinhNghiem.Text.Trim();
+            decimal salaryMax = decimal.Parse(textBoxLuongToiDa.Text.Trim());
+            decimal salaryMin = decimal.Parse(textBoxLuongToiThieu.Text.Trim());
+            string benefits = textBoxQuyenLoi.Text.Trim();
+            string workForm = comboBoxHinhThucLV.Text.Trim();
 
-            // Thông báo cho người dùng biết rằng dữ liệu đã được lưu thành công
-            MessageBox.Show("Đã đăng tin thành công!");
+            try
+            {
+                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand("AddPostJob", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số
+                        command.Parameters.AddWithValue("@EmployerUsername", employerUsername);
+                        command.Parameters.AddWithValue("@CompanyID", companyId);
+                        command.Parameters.AddWithValue("@Description", description);
+                        command.Parameters.AddWithValue("@Skill", skill);
+                        command.Parameters.AddWithValue("@Experience", experience);
+                        command.Parameters.AddWithValue("@SalaryMax", salaryMax);
+                        command.Parameters.AddWithValue("@SalaryMin", salaryMin);
+                        command.Parameters.AddWithValue("@Benefits", benefits);
+                        command.Parameters.AddWithValue("@WorkForm", workForm);
+                        command.Parameters.AddWithValue("@JobVacancy", jobvacancy);
+
+
+                        int result = command.ExecuteNonQuery();
+
+                        if (result > 0)
+                        {
+                            MessageBox.Show("Đăng bài viết thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đăng bài viết thất bại, vui lòng thử lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Lỗi kết nối: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
-        private void FDangTin_Load(object sender, EventArgs e)
+        private void buttonHuy_Click_1(object sender, EventArgs e)
         {
-            KiemTra();
+            Close();
         }
     }
 }
