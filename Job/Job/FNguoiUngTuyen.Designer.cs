@@ -81,11 +81,7 @@
             this.panelTren.Location = new System.Drawing.Point(171, 0);
             this.panelTren.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTren.Name = "panelTren";
-<<<<<<< Updated upstream
-            this.panelTren.Size = new System.Drawing.Size(1026, 40);
-=======
             this.panelTren.Size = new System.Drawing.Size(1029, 40);
->>>>>>> Stashed changes
             this.panelTren.TabIndex = 0;
             // 
             // guna2Button1
@@ -139,11 +135,7 @@
             // 
             this.panelMain.Location = new System.Drawing.Point(170, 40);
             this.panelMain.Name = "panelMain";
-<<<<<<< Updated upstream
-            this.panelMain.Size = new System.Drawing.Size(1027, 637);
-=======
             this.panelMain.Size = new System.Drawing.Size(1030, 639);
->>>>>>> Stashed changes
             this.panelMain.TabIndex = 2;
             // 
             // panelMenu
@@ -160,11 +152,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-<<<<<<< Updated upstream
-            this.panelMenu.Size = new System.Drawing.Size(170, 677);
-=======
             this.panelMenu.Size = new System.Drawing.Size(170, 679);
->>>>>>> Stashed changes
             this.panelMenu.TabIndex = 1;
             // 
             // buttonXemCV

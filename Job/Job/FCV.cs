@@ -18,8 +18,6 @@ namespace Job
 {
     public partial class FCV : Form
     {
-        string username = "hoan4701"; // Giả sử bạn đã có tên người dùng ứng viên
-
         public FCV()
         {
             InitializeComponent();
@@ -52,7 +50,7 @@ namespace Job
                         command.CommandType = CommandType.StoredProcedure;
 
                         // Thêm các tham số cho thủ tục
-                        command.Parameters.AddWithValue("@CandidateUsername", username);
+                        command.Parameters.AddWithValue("@CandidateUsername", Data.username);
                         command.Parameters.AddWithValue("@CareerGoals", careerGoals);
                         command.Parameters.AddWithValue("@Experience", experience);
                         command.Parameters.AddWithValue("@Education", education);
@@ -83,7 +81,7 @@ namespace Job
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Username", username); // Thêm tham số cho hàm
+                    command.Parameters.AddWithValue("@Username", Data.username); // Thêm tham số cho hàm
 
                     try
                     {
