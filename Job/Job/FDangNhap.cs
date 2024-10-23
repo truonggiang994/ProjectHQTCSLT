@@ -55,6 +55,8 @@ namespace Job
                                             int resultCandidate = (int)resultObjCandidate;
                                             if(resultCandidate == 1)
                                             {
+                                                Data.username = textBoTaiKhoan.Text;
+
                                                 FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
                                                 this.Hide();
                                                 fNguoiUngTuyen.Show();
@@ -82,6 +84,8 @@ namespace Job
                                             int resultEmployer = (int)resultObjEmployer;
                                             if (resultEmployer == 1)
                                             {
+                                                Data.username = textBoTaiKhoan.Text;
+
                                                 FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
                                                 this.Hide();
                                                 fNhaTuyenDung.Show();
