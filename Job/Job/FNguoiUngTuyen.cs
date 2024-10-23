@@ -37,6 +37,9 @@ namespace Job
             // Hiển thị fCV
             fCV.Show();
         }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     }
 }
