@@ -43,6 +43,8 @@ namespace Job
             this.textBoxMK = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBoTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBoxDangNhap = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.radioButtonCandidate = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.radioButtonEmployer = new Guna.UI2.WinForms.Guna2RadioButton();
             this.panelDangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDangNhap)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +72,7 @@ namespace Job
             this.linkLabelDangki.TabIndex = 8;
             this.linkLabelDangki.TabStop = true;
             this.linkLabelDangki.Text = "Đăng kí ";
+            this.linkLabelDangki.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDangki_LinkClicked);
             // 
             // buttonDangNhap
             // 
@@ -83,9 +86,12 @@ namespace Job
             this.buttonDangNhap.TabIndex = 9;
             this.buttonDangNhap.Text = "Đăng nhập";
             this.buttonDangNhap.UseVisualStyleBackColor = false;
+            this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
             // panelDangNhap
             // 
+            this.panelDangNhap.Controls.Add(this.radioButtonEmployer);
+            this.panelDangNhap.Controls.Add(this.radioButtonCandidate);
             this.panelDangNhap.Controls.Add(this.textBoxMK);
             this.panelDangNhap.Controls.Add(this.textBoTaiKhoan);
             this.panelDangNhap.Controls.Add(this.pictureBoxDangNhap);
@@ -172,6 +178,42 @@ namespace Job
             this.pictureBoxDangNhap.TabIndex = 10;
             this.pictureBoxDangNhap.TabStop = false;
             // 
+            // radioButtonCandidate
+            // 
+            this.radioButtonCandidate.AutoSize = true;
+            this.radioButtonCandidate.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButtonCandidate.CheckedState.BorderThickness = 0;
+            this.radioButtonCandidate.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButtonCandidate.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioButtonCandidate.CheckedState.InnerOffset = -4;
+            this.radioButtonCandidate.Location = new System.Drawing.Point(144, 86);
+            this.radioButtonCandidate.Name = "radioButtonCandidate";
+            this.radioButtonCandidate.Size = new System.Drawing.Size(68, 17);
+            this.radioButtonCandidate.TabIndex = 14;
+            this.radioButtonCandidate.Text = "Ứng viên";
+            this.radioButtonCandidate.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioButtonCandidate.UncheckedState.BorderThickness = 2;
+            this.radioButtonCandidate.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioButtonCandidate.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // radioButtonEmployer
+            // 
+            this.radioButtonEmployer.AutoSize = true;
+            this.radioButtonEmployer.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButtonEmployer.CheckedState.BorderThickness = 0;
+            this.radioButtonEmployer.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButtonEmployer.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioButtonEmployer.CheckedState.InnerOffset = -4;
+            this.radioButtonEmployer.Location = new System.Drawing.Point(144, 110);
+            this.radioButtonEmployer.Name = "radioButtonEmployer";
+            this.radioButtonEmployer.Size = new System.Drawing.Size(101, 17);
+            this.radioButtonEmployer.TabIndex = 15;
+            this.radioButtonEmployer.Text = "Nhà tuyển dụng";
+            this.radioButtonEmployer.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioButtonEmployer.UncheckedState.BorderThickness = 2;
+            this.radioButtonEmployer.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioButtonEmployer.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // FDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,5 +239,7 @@ namespace Job
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxDangNhap;
         private Guna.UI2.WinForms.Guna2TextBox textBoTaiKhoan;
         private Guna.UI2.WinForms.Guna2TextBox textBoxMK;
+        private Guna.UI2.WinForms.Guna2RadioButton radioButtonCandidate;
+        private Guna.UI2.WinForms.Guna2RadioButton radioButtonEmployer;
     }
 }
