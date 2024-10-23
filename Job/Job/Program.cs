@@ -16,7 +16,7 @@ namespace Job
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FDangTin());
+            Application.Run(new FNguoiUngTuyen());
         }
     }
 }

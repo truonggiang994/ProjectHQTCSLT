@@ -34,9 +34,9 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelTren = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel = new System.Windows.Forms.Panel();
             this.buttonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -81,7 +81,7 @@
             this.panelTren.Location = new System.Drawing.Point(171, 0);
             this.panelTren.Margin = new System.Windows.Forms.Padding(2);
             this.panelTren.Name = "panelTren";
-            this.panelTren.Size = new System.Drawing.Size(929, 40);
+            this.panelTren.Size = new System.Drawing.Size(1026, 40);
             this.panelTren.TabIndex = 0;
             // 
             // guna2Button1
@@ -99,13 +99,6 @@
             this.guna2Button1.Size = new System.Drawing.Size(135, 30);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Nhà tuyển dụng";
-            // 
-            // panel
-            // 
-            this.panel.Location = new System.Drawing.Point(170, 40);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(930, 460);
-            this.panel.TabIndex = 2;
             // 
             // buttonLogOut
             // 
@@ -138,6 +131,13 @@
             this.guna2CirclePictureBox1.TabIndex = 2;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+            // panelMain
+            // 
+            this.panelMain.Location = new System.Drawing.Point(170, 40);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1027, 637);
+            this.panelMain.TabIndex = 2;
+            // 
             // panelMenu
             // 
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
@@ -152,7 +152,7 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(170, 500);
+            this.panelMenu.Size = new System.Drawing.Size(170, 677);
             this.panelMenu.TabIndex = 1;
             // 
             // buttonXemCV
@@ -293,6 +293,7 @@
             this.buttonCV.Size = new System.Drawing.Size(160, 40);
             this.buttonCV.TabIndex = 5;
             this.buttonCV.Text = "CV ";
+            this.buttonCV.Click += new System.EventHandler(this.buttonCV_Click);
             // 
             // buttonTrangChu
             // 
@@ -324,8 +325,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 500);
-            this.Controls.Add(this.panel);
+            this.ClientSize = new System.Drawing.Size(1200, 680);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTren);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.Transparent;
@@ -355,7 +356,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panelMain;
         private Guna.UI2.WinForms.Guna2Button buttonXemCV;
     }
 }

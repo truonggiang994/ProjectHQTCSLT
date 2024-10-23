@@ -120,7 +120,6 @@ D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FLichSuUngTuyen.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FNhanPhongVan.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FNhapCamNang.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FNhapDanhGia.resources
-D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FSuaCV.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FSuaDangTin.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FThongBao.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FThongBaoNhaUngTuyen.resources

@@ -14,6 +14,7 @@ namespace Job
     public partial class FXemCamNang : Form
     {
         private UserControlCamNang myUserControl;
+
         public FXemCamNang()
         {
             InitializeComponent();
