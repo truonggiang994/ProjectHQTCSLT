@@ -33,14 +33,15 @@
             this.labelViTriMongMuon = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelHoTen = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.buttonSuaCV = new Guna.UI2.WinForms.Guna2Button();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBoxAnhDaiDien = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanelChinh = new System.Windows.Forms.FlowLayoutPanel();
+            this.buttonSuaCV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhDaiDien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.flowLayoutPanelChinh.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -83,11 +84,12 @@
             this.guna2Panel1.Controls.Add(this.pictureBoxAnhDaiDien);
             this.guna2Panel1.Controls.Add(this.labelHoTen);
             this.guna2Panel1.Controls.Add(this.labelViTriMongMuon);
-            this.guna2Panel1.Location = new System.Drawing.Point(12, 35);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(906, 145);
             this.guna2Panel1.TabIndex = 3;
             // 
+<<<<<<< HEAD
             // buttonSuaCV
             // 
             this.buttonSuaCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -103,6 +105,8 @@
             this.buttonSuaCV.TabIndex = 4;
             this.buttonSuaCV.Text = "Sửa CV";
             // 
+=======
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
             // buttonXemCV
             // 
             this.buttonXemCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -112,7 +116,7 @@
             this.buttonXemCV.FillColor = System.Drawing.Color.DarkGray;
             this.buttonXemCV.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXemCV.ForeColor = System.Drawing.Color.White;
-            this.buttonXemCV.Location = new System.Drawing.Point(506, 98);
+            this.buttonXemCV.Location = new System.Drawing.Point(799, 111);
             this.buttonXemCV.Name = "buttonXemCV";
             this.buttonXemCV.Size = new System.Drawing.Size(102, 29);
             this.buttonXemCV.TabIndex = 5;
@@ -132,7 +136,7 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 187);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(15, 30);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(906, 103);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -141,10 +145,26 @@
             // 
             // flowLayoutPanelChinh
             // 
-            this.flowLayoutPanelChinh.Location = new System.Drawing.Point(4, 296);
+            this.flowLayoutPanelChinh.Controls.Add(this.guna2Panel1);
+            this.flowLayoutPanelChinh.Location = new System.Drawing.Point(12, 139);
             this.flowLayoutPanelChinh.Name = "flowLayoutPanelChinh";
-            this.flowLayoutPanelChinh.Size = new System.Drawing.Size(917, 205);
+            this.flowLayoutPanelChinh.Size = new System.Drawing.Size(917, 351);
             this.flowLayoutPanelChinh.TabIndex = 5;
+            // 
+            // buttonSuaCV
+            // 
+            this.buttonSuaCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonSuaCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonSuaCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonSuaCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonSuaCV.FillColor = System.Drawing.Color.DarkGray;
+            this.buttonSuaCV.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSuaCV.ForeColor = System.Drawing.Color.White;
+            this.buttonSuaCV.Location = new System.Drawing.Point(670, 111);
+            this.buttonSuaCV.Name = "buttonSuaCV";
+            this.buttonSuaCV.Size = new System.Drawing.Size(102, 29);
+            this.buttonSuaCV.TabIndex = 4;
+            this.buttonSuaCV.Text = "Sửa CV";
             // 
             // FXemCV
             // 
@@ -154,7 +174,6 @@
             this.ClientSize = new System.Drawing.Size(930, 502);
             this.Controls.Add(this.flowLayoutPanelChinh);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FXemCV";
@@ -163,6 +182,7 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhDaiDien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.flowLayoutPanelChinh.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,9 +195,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labelHoTen;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button buttonXemCV;
-        private Guna.UI2.WinForms.Guna2Button buttonSuaCV;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBoxAnhDaiDien;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelChinh;
+        private Guna.UI2.WinForms.Guna2Button buttonSuaCV;
     }
 }

@@ -9,7 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Data.SqlClient;
+=======
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
 
 namespace Job
 {
@@ -19,6 +22,7 @@ namespace Job
         public FViecLam()
         {
             InitializeComponent();
+<<<<<<< HEAD
             LoadData();
         }
         public void LoadData()
@@ -48,6 +52,8 @@ namespace Job
                     }
                 }
             }
+=======
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
         }
     }
 }

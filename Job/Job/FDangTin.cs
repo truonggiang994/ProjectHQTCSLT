@@ -1,9 +1,11 @@
 ﻿using Guna.UI2.WinForms;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +16,7 @@ namespace Job
 {
     public partial class FDangTin : Form
     {
+<<<<<<< HEAD
     
         private List<(Guna2HtmlLabel label, ComboBox comboBox)> capLabelComboBox = new List<(Guna2HtmlLabel label, ComboBox comboBox)>();
         private List<(Guna2HtmlLabel label, RichTextBox richTextBox)> capLabelRichTextBox = new List<(Guna2HtmlLabel label, RichTextBox richTextBox)>();
@@ -84,6 +87,11 @@ namespace Job
         private void buttonHuy_Click_1(object sender, EventArgs e)
         {
             Close();
+=======
+        public FDangTin()
+        {
+            InitializeComponent();
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
         }
     }
 }

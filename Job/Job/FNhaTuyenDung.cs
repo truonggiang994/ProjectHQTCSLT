@@ -17,6 +17,7 @@ namespace Job
         public FNhaTuyenDung()
         {
             InitializeComponent();
+<<<<<<< HEAD
         }
 
         private void buttonDangTin_Click(object sender, EventArgs e)
@@ -28,5 +29,8 @@ namespace Job
         {
 
         }
+=======
+        }       
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
     }
 }

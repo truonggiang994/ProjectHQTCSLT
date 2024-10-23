@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using System.Data.SqlClient;
+=======
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
 
 namespace Job
 {
     public partial class FThongTinViecLam : Form
     {
+<<<<<<< HEAD
 
         private int ID; 
         public FThongTinViecLam(int ID)
@@ -72,6 +76,13 @@ namespace Job
         private void buttonNopHoSo_Click(object sender, EventArgs e)
         {
 
+=======
+        private int maCV;
+
+        public FThongTinViecLam()
+        {
+            InitializeComponent();
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
         }
     }
 }

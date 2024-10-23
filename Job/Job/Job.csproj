@@ -70,6 +70,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Compile Include="Data.cs" />
+>>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
     <Compile Include="FCamNang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,12 +127,6 @@
     </Compile>
     <Compile Include="FNhapDanhGia.Designer.cs">
       <DependentUpon>FNhapDanhGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FSuaCV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSuaCV.Designer.cs">
-      <DependentUpon>FSuaCV.cs</DependentUpon>
     </Compile>
     <Compile Include="FSuaDangTin.cs">
       <SubType>Form</SubType>
@@ -338,9 +336,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FNhapDanhGia.resx">
       <DependentUpon>FNhapDanhGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSuaCV.resx">
-      <DependentUpon>FSuaCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSuaDangTin.resx">
       <DependentUpon>FSuaDangTin.cs</DependentUpon>
