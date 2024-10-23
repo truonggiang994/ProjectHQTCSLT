@@ -71,3 +71,4 @@ crashlytics-build.properties
 
 # Bin folder
 /bin/
+/bin/Debug/
