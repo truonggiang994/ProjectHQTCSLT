@@ -16,5 +16,27 @@ namespace Job
         {
             InitializeComponent();
         }
+
+        private void buttonCapNhat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFileGiayPhep_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAnhBia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonThayDoiAnh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

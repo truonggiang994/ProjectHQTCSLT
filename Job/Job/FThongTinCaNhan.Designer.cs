@@ -1,6 +1,6 @@
 ﻿namespace Job
 {
-    partial class FThongTinCongTy
+    partial class FThongTinCaNhan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FThongTinCongTy));
             this.panelThongTin = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.groupBoxNgayThanhLap = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerNgayThanhLap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.groupBoxQuanHuyen = new System.Windows.Forms.GroupBox();
             this.comboBoxQuanHuyen = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -54,13 +56,12 @@
             this.labelThongTinCongTy = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.buttonCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.panelGiayPhep = new Guna.UI2.WinForms.Guna2Panel();
+            this.richTextBoxMoTa = new System.Windows.Forms.RichTextBox();
             this.labelGiayPhep = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.openFileDialogGiayPhep = new System.Windows.Forms.OpenFileDialog();
-            this.richTextBoxMoTa = new System.Windows.Forms.RichTextBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.groupBoxNgayThanhLap = new System.Windows.Forms.GroupBox();
-            this.dateTimePickerNgayThanhLap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelThongTin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            this.groupBoxNgayThanhLap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.groupBoxQuanHuyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhBia)).BeginInit();
@@ -70,8 +71,6 @@
             this.groupBoxTInhThanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoGo)).BeginInit();
             this.panelGiayPhep.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.groupBoxNgayThanhLap.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelThongTin
@@ -103,12 +102,50 @@
             this.panelThongTin.Location = new System.Drawing.Point(0, 0);
             this.panelThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.panelThongTin.Name = "panelThongTin";
-            this.panelThongTin.Size = new System.Drawing.Size(930, 388);
+            this.panelThongTin.Size = new System.Drawing.Size(1000, 388);
             this.panelThongTin.TabIndex = 0;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(28, 172);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(33, 36);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 21;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // groupBoxNgayThanhLap
+            // 
+            this.groupBoxNgayThanhLap.Controls.Add(this.dateTimePickerNgayThanhLap);
+            this.groupBoxNgayThanhLap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxNgayThanhLap.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBoxNgayThanhLap.Location = new System.Drawing.Point(68, 164);
+            this.groupBoxNgayThanhLap.Name = "groupBoxNgayThanhLap";
+            this.groupBoxNgayThanhLap.Size = new System.Drawing.Size(278, 50);
+            this.groupBoxNgayThanhLap.TabIndex = 20;
+            this.groupBoxNgayThanhLap.TabStop = false;
+            this.groupBoxNgayThanhLap.Text = "Ngày thành lập";
+            // 
+            // dateTimePickerNgayThanhLap
+            // 
+            this.dateTimePickerNgayThanhLap.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.dateTimePickerNgayThanhLap.Checked = true;
+            this.dateTimePickerNgayThanhLap.FillColor = System.Drawing.SystemColors.Control;
+            this.dateTimePickerNgayThanhLap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerNgayThanhLap.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePickerNgayThanhLap.Location = new System.Drawing.Point(9, 19);
+            this.dateTimePickerNgayThanhLap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerNgayThanhLap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerNgayThanhLap.Name = "dateTimePickerNgayThanhLap";
+            this.dateTimePickerNgayThanhLap.Size = new System.Drawing.Size(263, 28);
+            this.dateTimePickerNgayThanhLap.TabIndex = 0;
+            this.dateTimePickerNgayThanhLap.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.dateTimePickerNgayThanhLap.Value = new System.DateTime(2024, 10, 23, 14, 57, 34, 0);
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(28, 336);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -225,7 +262,6 @@
             this.buttonAnhBia.Size = new System.Drawing.Size(110, 30);
             this.buttonAnhBia.TabIndex = 17;
             this.buttonAnhBia.Text = "Thay đổi ảnh";
-            this.buttonAnhBia.Click += new System.EventHandler(this.buttonAnhBia_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -241,7 +277,6 @@
             // pictureBoxAnhBia
             // 
             this.pictureBoxAnhBia.FillColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxAnhBia.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAnhBia.Image")));
             this.pictureBoxAnhBia.ImageRotate = 0F;
             this.pictureBoxAnhBia.Location = new System.Drawing.Point(752, 208);
             this.pictureBoxAnhBia.Name = "pictureBoxAnhBia";
@@ -256,9 +291,9 @@
             this.userControlTextCTGmail.GroupBoxSize = new System.Drawing.Size(280, 50);
             this.userControlTextCTGmail.GroupBoxText = "Gmail";
             this.userControlTextCTGmail.Location = new System.Drawing.Point(377, 216);
-            this.userControlTextCTGmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userControlTextCTGmail.Margin = new System.Windows.Forms.Padding(2);
             this.userControlTextCTGmail.Name = "userControlTextCTGmail";
-            this.userControlTextCTGmail.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextCTGmail.PictureBoxImage")));
+            this.userControlTextCTGmail.PictureBoxImage = null;
             this.userControlTextCTGmail.Placeholder = "VD: user@gmail.com";
             this.userControlTextCTGmail.ReadOnly = false;
             this.userControlTextCTGmail.Size = new System.Drawing.Size(330, 50);
@@ -274,7 +309,7 @@
             this.userControlTextCTMaSoThue.Location = new System.Drawing.Point(27, 216);
             this.userControlTextCTMaSoThue.Margin = new System.Windows.Forms.Padding(2);
             this.userControlTextCTMaSoThue.Name = "userControlTextCTMaSoThue";
-            this.userControlTextCTMaSoThue.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextCTMaSoThue.PictureBoxImage")));
+            this.userControlTextCTMaSoThue.PictureBoxImage = null;
             this.userControlTextCTMaSoThue.Placeholder = "Nhập số";
             this.userControlTextCTMaSoThue.ReadOnly = false;
             this.userControlTextCTMaSoThue.Size = new System.Drawing.Size(330, 50);
@@ -284,7 +319,6 @@
             // 
             // pictureBoxQuyMoNhanSu
             // 
-            this.pictureBoxQuyMoNhanSu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuyMoNhanSu.Image")));
             this.pictureBoxQuyMoNhanSu.ImageRotate = 0F;
             this.pictureBoxQuyMoNhanSu.Location = new System.Drawing.Point(31, 276);
             this.pictureBoxQuyMoNhanSu.Margin = new System.Windows.Forms.Padding(2);
@@ -338,7 +372,7 @@
             this.userControlTextDiaChi.Location = new System.Drawing.Point(377, 328);
             this.userControlTextDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.userControlTextDiaChi.Name = "userControlTextDiaChi";
-            this.userControlTextDiaChi.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextDiaChi.PictureBoxImage")));
+            this.userControlTextDiaChi.PictureBoxImage = null;
             this.userControlTextDiaChi.Placeholder = "VD: số 1, Võ Văn Ngân";
             this.userControlTextDiaChi.ReadOnly = false;
             this.userControlTextDiaChi.Size = new System.Drawing.Size(330, 58);
@@ -348,7 +382,6 @@
             // 
             // pictureBoxDiaDiem
             // 
-            this.pictureBoxDiaDiem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiaDiem.Image")));
             this.pictureBoxDiaDiem.ImageRotate = 0F;
             this.pictureBoxDiaDiem.Location = new System.Drawing.Point(381, 280);
             this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(2);
@@ -458,7 +491,7 @@
             this.userControlTextSDT.Location = new System.Drawing.Point(377, 161);
             this.userControlTextSDT.Margin = new System.Windows.Forms.Padding(2);
             this.userControlTextSDT.Name = "userControlTextSDT";
-            this.userControlTextSDT.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextSDT.PictureBoxImage")));
+            this.userControlTextSDT.PictureBoxImage = null;
             this.userControlTextSDT.Placeholder = "Nhập số";
             this.userControlTextSDT.ReadOnly = false;
             this.userControlTextSDT.Size = new System.Drawing.Size(330, 50);
@@ -474,7 +507,7 @@
             this.userControlNguoiDungDau.Location = new System.Drawing.Point(28, 101);
             this.userControlNguoiDungDau.Margin = new System.Windows.Forms.Padding(2);
             this.userControlNguoiDungDau.Name = "userControlNguoiDungDau";
-            this.userControlNguoiDungDau.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlNguoiDungDau.PictureBoxImage")));
+            this.userControlNguoiDungDau.PictureBoxImage = null;
             this.userControlNguoiDungDau.Placeholder = "Nhập địa chỉ webside";
             this.userControlNguoiDungDau.ReadOnly = false;
             this.userControlNguoiDungDau.Size = new System.Drawing.Size(680, 58);
@@ -497,7 +530,6 @@
             this.buttonThayDoiAnh.Size = new System.Drawing.Size(110, 30);
             this.buttonThayDoiAnh.TabIndex = 4;
             this.buttonThayDoiAnh.Text = "Thay đổi ảnh";
-            this.buttonThayDoiAnh.Click += new System.EventHandler(this.buttonThayDoiAnh_Click);
             // 
             // labelLogo
             // 
@@ -513,7 +545,6 @@
             // pictureBoxLoGo
             // 
             this.pictureBoxLoGo.FillColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxLoGo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLoGo.Image")));
             this.pictureBoxLoGo.ImageRotate = 0F;
             this.pictureBoxLoGo.Location = new System.Drawing.Point(752, 36);
             this.pictureBoxLoGo.Name = "pictureBoxLoGo";
@@ -530,7 +561,7 @@
             this.userControlTextTenCongTy.Location = new System.Drawing.Point(27, 39);
             this.userControlTextTenCongTy.Margin = new System.Windows.Forms.Padding(2);
             this.userControlTextTenCongTy.Name = "userControlTextTenCongTy";
-            this.userControlTextTenCongTy.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextTenCongTy.PictureBoxImage")));
+            this.userControlTextTenCongTy.PictureBoxImage = null;
             this.userControlTextTenCongTy.Placeholder = "Nhập tên công ty";
             this.userControlTextTenCongTy.ReadOnly = false;
             this.userControlTextTenCongTy.Size = new System.Drawing.Size(680, 58);
@@ -564,7 +595,6 @@
             this.buttonCapNhat.Size = new System.Drawing.Size(157, 32);
             this.buttonCapNhat.TabIndex = 13;
             this.buttonCapNhat.Text = "Cập nhật thông tin";
-            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // panelGiayPhep
             // 
@@ -575,8 +605,18 @@
             this.panelGiayPhep.Controls.Add(this.labelGiayPhep);
             this.panelGiayPhep.Location = new System.Drawing.Point(-1, 391);
             this.panelGiayPhep.Name = "panelGiayPhep";
-            this.panelGiayPhep.Size = new System.Drawing.Size(930, 130);
+            this.panelGiayPhep.Size = new System.Drawing.Size(1001, 130);
             this.panelGiayPhep.TabIndex = 1;
+            // 
+            // richTextBoxMoTa
+            // 
+            this.richTextBoxMoTa.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxMoTa.Location = new System.Drawing.Point(26, 34);
+            this.richTextBoxMoTa.Name = "richTextBoxMoTa";
+            this.richTextBoxMoTa.Size = new System.Drawing.Size(876, 73);
+            this.richTextBoxMoTa.TabIndex = 17;
+            this.richTextBoxMoTa.Text = "";
             // 
             // labelGiayPhep
             // 
@@ -593,72 +633,24 @@
             // 
             this.openFileDialogGiayPhep.FileName = "openFileDialogGiayPhep";
             // 
-            // richTextBoxMoTa
-            // 
-            this.richTextBoxMoTa.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBoxMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBoxMoTa.Location = new System.Drawing.Point(26, 34);
-            this.richTextBoxMoTa.Name = "richTextBoxMoTa";
-            this.richTextBoxMoTa.Size = new System.Drawing.Size(876, 73);
-            this.richTextBoxMoTa.TabIndex = 17;
-            this.richTextBoxMoTa.Text = "";
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(28, 172);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(33, 36);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 21;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // groupBoxNgayThanhLap
-            // 
-            this.groupBoxNgayThanhLap.Controls.Add(this.dateTimePickerNgayThanhLap);
-            this.groupBoxNgayThanhLap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxNgayThanhLap.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBoxNgayThanhLap.Location = new System.Drawing.Point(68, 164);
-            this.groupBoxNgayThanhLap.Name = "groupBoxNgayThanhLap";
-            this.groupBoxNgayThanhLap.Size = new System.Drawing.Size(278, 50);
-            this.groupBoxNgayThanhLap.TabIndex = 20;
-            this.groupBoxNgayThanhLap.TabStop = false;
-            this.groupBoxNgayThanhLap.Text = "Ngày thành lập";
-            // 
-            // dateTimePickerNgayThanhLap
-            // 
-            this.dateTimePickerNgayThanhLap.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dateTimePickerNgayThanhLap.Checked = true;
-            this.dateTimePickerNgayThanhLap.FillColor = System.Drawing.SystemColors.Control;
-            this.dateTimePickerNgayThanhLap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerNgayThanhLap.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerNgayThanhLap.Location = new System.Drawing.Point(9, 19);
-            this.dateTimePickerNgayThanhLap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dateTimePickerNgayThanhLap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dateTimePickerNgayThanhLap.Name = "dateTimePickerNgayThanhLap";
-            this.dateTimePickerNgayThanhLap.Size = new System.Drawing.Size(263, 28);
-            this.dateTimePickerNgayThanhLap.TabIndex = 0;
-            this.dateTimePickerNgayThanhLap.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.dateTimePickerNgayThanhLap.Value = new System.DateTime(2024, 10, 23, 14, 57, 34, 0);
-            // 
-            // FThongTinCongTy
+            // FThongTinCaNhan
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(930, 560);
+            this.ClientSize = new System.Drawing.Size(1000, 638);
             this.Controls.Add(this.buttonCapNhat);
             this.Controls.Add(this.panelGiayPhep);
             this.Controls.Add(this.panelThongTin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FThongTinCongTy";
-            this.Text = "FThongTinCongTy";
+            this.Name = "FThongTinCaNhan";
+            this.Text = "FThongTinCaNhan";
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.groupBoxNgayThanhLap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.groupBoxQuanHuyen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhBia)).EndInit();
@@ -669,8 +661,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoGo)).EndInit();
             this.panelGiayPhep.ResumeLayout(false);
             this.panelGiayPhep.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            this.groupBoxNgayThanhLap.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

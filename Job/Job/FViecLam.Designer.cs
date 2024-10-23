@@ -299,6 +299,7 @@
             this.flowLayoutPanelChinh.Name = "flowLayoutPanelChinh";
             this.flowLayoutPanelChinh.Size = new System.Drawing.Size(930, 384);
             this.flowLayoutPanelChinh.TabIndex = 2;
+            this.flowLayoutPanelChinh.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelChinh_Paint);
             // 
             // panelChinh
             // 

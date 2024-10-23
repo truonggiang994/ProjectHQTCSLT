@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Job
 {
-    public partial class UserControlLSUngTuyen : UserControl
+    public partial class FLichSuKhoaTaiKhoan : Form
     {
-        public UserControlLSUngTuyen()
+        public FLichSuKhoaTaiKhoan()
         {
             InitializeComponent();
         }

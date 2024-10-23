@@ -1,6 +1,6 @@
 ﻿namespace Job
 {
-    partial class UserControlLSUngTuyen
+    partial class UserControlDuyetbaiDang
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlLSUngTuyen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDuyetbaiDang));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.labelTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.buttonXemPhongVan = new Guna.UI2.WinForms.Guna2Button();
             this.labelNgayNop = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
@@ -43,7 +43,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.labelTrangThai);
+            this.guna2Panel1.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel1.Controls.Add(this.buttonXemPhongVan);
             this.guna2Panel1.Controls.Add(this.labelNgayNop);
             this.guna2Panel1.Controls.Add(this.buttonXemCV);
@@ -52,21 +52,31 @@
             this.guna2Panel1.Controls.Add(this.pictureBoxAnhLogo);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(920, 80);
+            this.guna2Panel1.Size = new System.Drawing.Size(1000, 80);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // labelTrangThai
+            // guna2ComboBox1
             // 
-            this.labelTrangThai.AutoSize = false;
-            this.labelTrangThai.BackColor = System.Drawing.Color.Transparent;
-            this.labelTrangThai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTrangThai.ForeColor = System.Drawing.Color.Black;
-            this.labelTrangThai.Location = new System.Drawing.Point(681, 42);
-            this.labelTrangThai.Name = "labelTrangThai";
-            this.labelTrangThai.Size = new System.Drawing.Size(125, 23);
-            this.labelTrangThai.TabIndex = 7;
-            this.labelTrangThai.Text = "Chờ tuyển";
-            this.labelTrangThai.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2ComboBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2ComboBox1.BorderRadius = 5;
+            this.guna2ComboBox1.BorderThickness = 2;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.Items.AddRange(new object[] {
+            "Chờ duyệt",
+            "Đã duyệt",
+            "Bị từ chối",
+            " "});
+            this.guna2ComboBox1.Location = new System.Drawing.Point(706, 34);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(169, 36);
+            this.guna2ComboBox1.TabIndex = 7;
             // 
             // buttonXemPhongVan
             // 
@@ -77,11 +87,11 @@
             this.buttonXemPhongVan.FillColor = System.Drawing.Color.DarkGray;
             this.buttonXemPhongVan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXemPhongVan.ForeColor = System.Drawing.Color.White;
-            this.buttonXemPhongVan.Location = new System.Drawing.Point(814, 34);
+            this.buttonXemPhongVan.Location = new System.Drawing.Point(901, 34);
             this.buttonXemPhongVan.Name = "buttonXemPhongVan";
             this.buttonXemPhongVan.Size = new System.Drawing.Size(86, 31);
             this.buttonXemPhongVan.TabIndex = 6;
-            this.buttonXemPhongVan.Text = "Xem";
+            this.buttonXemPhongVan.Text = "Duyệt";
             // 
             // labelNgayNop
             // 
@@ -109,6 +119,7 @@
             this.buttonXemCV.Size = new System.Drawing.Size(86, 31);
             this.buttonXemCV.TabIndex = 3;
             this.buttonXemCV.Text = "Xem ";
+            this.buttonXemCV.Click += new System.EventHandler(this.buttonXemDangTin_Click);
             // 
             // labelTenCongTy
             // 
@@ -145,13 +156,13 @@
             this.pictureBoxAnhLogo.TabIndex = 0;
             this.pictureBoxAnhLogo.TabStop = false;
             // 
-            // UserControlLSUngTuyen
+            // UserControlDuyetbaiDang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
-            this.Name = "UserControlLSUngTuyen";
-            this.Size = new System.Drawing.Size(920, 80);
+            this.Name = "UserControlDuyetbaiDang";
+            this.Size = new System.Drawing.Size(1003, 80);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhLogo)).EndInit();
             this.ResumeLayout(false);
@@ -167,6 +178,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labelTenCongTy;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelNgayNop;
         private Guna.UI2.WinForms.Guna2Button buttonXemPhongVan;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelTrangThai;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }
