@@ -103,6 +103,7 @@
             this.buttonBack.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonBack.Size = new System.Drawing.Size(33, 31);
             this.buttonBack.TabIndex = 17;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // buttonNopHoSo
             // 
@@ -121,6 +122,7 @@
             this.buttonNopHoSo.Size = new System.Drawing.Size(151, 37);
             this.buttonNopHoSo.TabIndex = 16;
             this.buttonNopHoSo.Text = "Nộp hồ sơ ";
+            this.buttonNopHoSo.Click += new System.EventHandler(this.buttonNopHoSo_Click);
             // 
             // labelDiaChi
             // 
@@ -391,7 +393,6 @@
             // 
             // userControlLabelWorkForm
             // 
-<<<<<<< HEAD
             this.userControlLabelWorkForm.GroupBoxSize = new System.Drawing.Size(350, 55);
             this.userControlLabelWorkForm.GroupBoxText = "Hình thức làm việc";
             this.userControlLabelWorkForm.LabelText = "Toàn thời gian";
@@ -401,22 +402,6 @@
             this.userControlLabelWorkForm.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelWorkForm.PictureBoxImage")));
             this.userControlLabelWorkForm.Size = new System.Drawing.Size(547, 53);
             this.userControlLabelWorkForm.TabIndex = 4;
-=======
-            this.labelTenCongTy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelTenCongTy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.labelTenCongTy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.labelTenCongTy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.labelTenCongTy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.labelTenCongTy.FillColor = System.Drawing.Color.Transparent;
-            this.labelTenCongTy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenCongTy.ForeColor = System.Drawing.Color.Black;
-            this.labelTenCongTy.Location = new System.Drawing.Point(126, 4);
-            this.labelTenCongTy.Name = "labelTenCongTy";
-            this.labelTenCongTy.Size = new System.Drawing.Size(610, 23);
-            this.labelTenCongTy.TabIndex = 0;
-            this.labelTenCongTy.Text = "guna2Button1";
-            this.labelTenCongTy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
             // 
             // userControlLabelSkill
             // 

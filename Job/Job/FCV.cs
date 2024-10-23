@@ -183,7 +183,5 @@ namespace Job
                 comboBoxQuanHuyen.DataSource = selectedProvince.Value; // Gán danh sách quận huyện tương ứng
             }
         }
-
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
     }
 }

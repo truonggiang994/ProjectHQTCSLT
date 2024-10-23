@@ -2,21 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-<<<<<<< HEAD
-=======
 using System.Data.SqlClient;
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-<<<<<<< HEAD
-=======
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
 
 namespace Job
 {
@@ -26,8 +20,6 @@ namespace Job
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
-=======
 
         private void buttonDangKi_Click(object sender, EventArgs e)
         {
@@ -116,6 +108,5 @@ namespace Job
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
     }
 }

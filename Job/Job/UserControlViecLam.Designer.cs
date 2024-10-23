@@ -63,23 +63,6 @@
             this.panelChinh.Size = new System.Drawing.Size(1200, 130);
             this.panelChinh.TabIndex = 1;
             // 
-<<<<<<< HEAD
-=======
-            // buttonYeuThich
-            // 
-            this.buttonYeuThich.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.buttonYeuThich.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.buttonYeuThich.Image = global::Job.Properties.Resources.heart;
-            this.buttonYeuThich.ImageOffset = new System.Drawing.Point(0, 0);
-            this.buttonYeuThich.ImageRotate = 0F;
-            this.buttonYeuThich.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonYeuThich.Location = new System.Drawing.Point(847, 14);
-            this.buttonYeuThich.Name = "buttonYeuThich";
-            this.buttonYeuThich.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.buttonYeuThich.Size = new System.Drawing.Size(30, 30);
-            this.buttonYeuThich.TabIndex = 9;
-            // 
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
             // buttonXemChiTiet
             // 
             this.buttonXemChiTiet.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

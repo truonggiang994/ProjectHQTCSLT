@@ -89,24 +89,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(906, 145);
             this.guna2Panel1.TabIndex = 3;
             // 
-<<<<<<< HEAD
-            // buttonSuaCV
-            // 
-            this.buttonSuaCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonSuaCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonSuaCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonSuaCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonSuaCV.FillColor = System.Drawing.Color.DarkGray;
-            this.buttonSuaCV.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSuaCV.ForeColor = System.Drawing.Color.White;
-            this.buttonSuaCV.Location = new System.Drawing.Point(377, 98);
-            this.buttonSuaCV.Name = "buttonSuaCV";
-            this.buttonSuaCV.Size = new System.Drawing.Size(102, 29);
-            this.buttonSuaCV.TabIndex = 4;
-            this.buttonSuaCV.Text = "Sửa CV";
-            // 
-=======
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
             // buttonXemCV
             // 
             this.buttonXemCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

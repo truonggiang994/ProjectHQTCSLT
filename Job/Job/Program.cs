@@ -16,11 +16,9 @@ namespace Job
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new FViecLam());
-=======
+
             Application.Run(new FDangNhap());
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
+
         }
     }
 }

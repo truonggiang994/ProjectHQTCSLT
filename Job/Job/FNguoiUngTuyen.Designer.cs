@@ -99,16 +99,6 @@
             this.guna2Button1.Size = new System.Drawing.Size(135, 30);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Nhà tuyển dụng";
-<<<<<<< HEAD
-            // 
-            // panel
-            // 
-            this.panel.Location = new System.Drawing.Point(170, 40);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(930, 460);
-            this.panel.TabIndex = 2;
-=======
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
             // 
             // buttonLogOut
             // 
@@ -303,6 +293,7 @@
             this.buttonCV.Size = new System.Drawing.Size(160, 40);
             this.buttonCV.TabIndex = 5;
             this.buttonCV.Text = "CV ";
+            this.buttonCV.Click += new System.EventHandler(this.buttonCV_Click);
             // 
             // buttonTrangChu
             // 
@@ -369,4 +360,3 @@
         private Guna.UI2.WinForms.Guna2Button buttonXemCV;
     }
 }
-

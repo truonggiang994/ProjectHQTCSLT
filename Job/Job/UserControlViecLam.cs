@@ -13,7 +13,6 @@ namespace Job
 {
     public partial class UserControlViecLam : UserControl
     {
-<<<<<<< HEAD
         private int IDPostJob;
         public UserControlViecLam(int ID, string tenCongTy, string diaChi, string tienLuong, string chucVu)
         {
@@ -30,13 +29,5 @@ namespace Job
             FThongTinViecLam fThongTinViecLam = new FThongTinViecLam(IDPostJob);
             fThongTinViecLam.ShowDialog();
         }
-
-      
-=======
-        public UserControlViecLam()
-        {
-            InitializeComponent();
-        }
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
     }
 }

@@ -72,6 +72,7 @@ namespace Job
             this.linkLabelDangki.TabIndex = 8;
             this.linkLabelDangki.TabStop = true;
             this.linkLabelDangki.Text = "Đăng kí ";
+            this.linkLabelDangki.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDangki_LinkClicked);
             // 
             // buttonDangNhap
             // 
@@ -85,6 +86,7 @@ namespace Job
             this.buttonDangNhap.TabIndex = 9;
             this.buttonDangNhap.Text = "Đăng nhập";
             this.buttonDangNhap.UseVisualStyleBackColor = false;
+            this.buttonDangNhap.Click += new System.EventHandler(this.buttonDangNhap_Click);
             // 
             // panelDangNhap
             // 

@@ -3,10 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-<<<<<<< HEAD
-=======
 using System.Data.SqlClient;
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
 using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
@@ -22,9 +19,6 @@ namespace Job
         public FDangNhap()
         {
             InitializeComponent();
-<<<<<<< HEAD
-        }      
-=======
         }
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
@@ -51,7 +45,7 @@ namespace Job
                             {
                                 if (radioButtonCandidate.Checked)
                                 {
-                                    using(SqlCommand commandCandidate = new SqlCommand("sp_CheckAccountCandidate", connection))
+                                    using (SqlCommand commandCandidate = new SqlCommand("sp_CheckAccountCandidate", connection))
                                     {
                                         commandCandidate.CommandType = CommandType.StoredProcedure;
                                         commandCandidate.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
@@ -59,7 +53,7 @@ namespace Job
                                         if (resultObjCandidate != null)
                                         {
                                             int resultCandidate = (int)resultObjCandidate;
-                                            if(resultCandidate == 1)
+                                            if (resultCandidate == 1)
                                             {
                                                 Data.username = textBoTaiKhoan.Text;
 
@@ -140,6 +134,5 @@ namespace Job
             this.Hide();
             fDangKi.Show();
         }
->>>>>>> 8c09ce6e5d69f7524384847dbe0e3a3d2daa3bfe
     }
 }
