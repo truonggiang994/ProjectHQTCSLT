@@ -124,12 +124,6 @@
     <Compile Include="FNhapDanhGia.Designer.cs">
       <DependentUpon>FNhapDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSuaCV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSuaCV.Designer.cs">
-      <DependentUpon>FSuaCV.cs</DependentUpon>
-    </Compile>
     <Compile Include="FSuaDangTin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,9 +332,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FNhapDanhGia.resx">
       <DependentUpon>FNhapDanhGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSuaCV.resx">
-      <DependentUpon>FSuaCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSuaDangTin.resx">
       <DependentUpon>FSuaDangTin.cs</DependentUpon>
