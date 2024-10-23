@@ -34,9 +34,9 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelTren = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel = new System.Windows.Forms.Panel();
             this.buttonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -79,9 +79,9 @@
             this.panelTren.Controls.Add(this.guna2CirclePictureBox1);
             this.panelTren.ForeColor = System.Drawing.Color.Silver;
             this.panelTren.Location = new System.Drawing.Point(171, 0);
-            this.panelTren.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTren.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTren.Name = "panelTren";
-            this.panelTren.Size = new System.Drawing.Size(929, 40);
+            this.panelTren.Size = new System.Drawing.Size(1029, 40);
             this.panelTren.TabIndex = 0;
             // 
             // guna2Button1
@@ -94,18 +94,11 @@
             this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(591, 5);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(135, 30);
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "Nhà tuyển dụng";
-            // 
-            // panel
-            // 
-            this.panel.Location = new System.Drawing.Point(170, 40);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(930, 460);
-            this.panel.TabIndex = 2;
             // 
             // buttonLogOut
             // 
@@ -119,7 +112,7 @@
             this.buttonLogOut.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogOut.Image")));
             this.buttonLogOut.ImageSize = new System.Drawing.Size(28, 28);
             this.buttonLogOut.Location = new System.Drawing.Point(897, 3);
-            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 0;
@@ -130,13 +123,20 @@
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(730, 2);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(36, 36);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 2;
             this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // panelMain
+            // 
+            this.panelMain.Location = new System.Drawing.Point(170, 40);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1030, 639);
+            this.panelMain.TabIndex = 2;
             // 
             // panelMenu
             // 
@@ -150,9 +150,9 @@
             this.panelMenu.Controls.Add(this.buttonCV);
             this.panelMenu.Controls.Add(this.buttonTrangChu);
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(170, 500);
+            this.panelMenu.Size = new System.Drawing.Size(170, 679);
             this.panelMenu.TabIndex = 1;
             // 
             // buttonXemCV
@@ -174,7 +174,7 @@
             this.buttonXemCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonXemCV.ImageSize = new System.Drawing.Size(25, 25);
             this.buttonXemCV.Location = new System.Drawing.Point(0, 240);
-            this.buttonXemCV.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonXemCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonXemCV.Name = "buttonXemCV";
             this.buttonXemCV.Size = new System.Drawing.Size(160, 40);
             this.buttonXemCV.TabIndex = 9;
@@ -187,7 +187,7 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(2, 0);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(172, 80);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -213,7 +213,7 @@
             this.buttonVLYeuThich.ImageOffset = new System.Drawing.Point(4, 0);
             this.buttonVLYeuThich.ImageSize = new System.Drawing.Size(25, 25);
             this.buttonVLYeuThich.Location = new System.Drawing.Point(0, 340);
-            this.buttonVLYeuThich.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonVLYeuThich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonVLYeuThich.Name = "buttonVLYeuThich";
             this.buttonVLYeuThich.Size = new System.Drawing.Size(160, 40);
             this.buttonVLYeuThich.TabIndex = 8;
@@ -238,7 +238,7 @@
             this.buttonCoHoiVL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonCoHoiVL.ImageSize = new System.Drawing.Size(25, 25);
             this.buttonCoHoiVL.Location = new System.Drawing.Point(0, 140);
-            this.buttonCoHoiVL.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCoHoiVL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCoHoiVL.Name = "buttonCoHoiVL";
             this.buttonCoHoiVL.Size = new System.Drawing.Size(160, 40);
             this.buttonCoHoiVL.TabIndex = 7;
@@ -263,7 +263,7 @@
             this.buttonVLDaUngTuyen.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonVLDaUngTuyen.ImageSize = new System.Drawing.Size(25, 25);
             this.buttonVLDaUngTuyen.Location = new System.Drawing.Point(0, 290);
-            this.buttonVLDaUngTuyen.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonVLDaUngTuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonVLDaUngTuyen.Name = "buttonVLDaUngTuyen";
             this.buttonVLDaUngTuyen.Size = new System.Drawing.Size(160, 40);
             this.buttonVLDaUngTuyen.TabIndex = 6;
@@ -288,11 +288,12 @@
             this.buttonCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonCV.ImageSize = new System.Drawing.Size(25, 25);
             this.buttonCV.Location = new System.Drawing.Point(0, 190);
-            this.buttonCV.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCV.Name = "buttonCV";
             this.buttonCV.Size = new System.Drawing.Size(160, 40);
             this.buttonCV.TabIndex = 5;
             this.buttonCV.Text = "CV ";
+            this.buttonCV.Click += new System.EventHandler(this.buttonCV_Click);
             // 
             // buttonTrangChu
             // 
@@ -313,7 +314,7 @@
             this.buttonTrangChu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonTrangChu.ImageSize = new System.Drawing.Size(25, 25);
             this.buttonTrangChu.Location = new System.Drawing.Point(0, 90);
-            this.buttonTrangChu.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTrangChu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonTrangChu.Name = "buttonTrangChu";
             this.buttonTrangChu.PressedColor = System.Drawing.Color.Transparent;
             this.buttonTrangChu.Size = new System.Drawing.Size(160, 40);
@@ -324,13 +325,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 500);
-            this.Controls.Add(this.panel);
+            this.ClientSize = new System.Drawing.Size(1200, 680);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTren);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FNguoiUngTuyen";
             this.panelTren.ResumeLayout(false);
             this.panelTren.PerformLayout();
@@ -355,7 +356,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Panel panelMain;
         private Guna.UI2.WinForms.Guna2Button buttonXemCV;
     }
 }
