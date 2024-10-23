@@ -47,7 +47,6 @@
             this.btnXemchitiet.TabIndex = 3;
             this.btnXemchitiet.Text = "Xem chi tiết";
             this.btnXemchitiet.UseVisualStyleBackColor = false;
-            this.btnXemchitiet.Click += new System.EventHandler(this.btnXemchitiet_Click);
             // 
             // labelNoiDung
             // 

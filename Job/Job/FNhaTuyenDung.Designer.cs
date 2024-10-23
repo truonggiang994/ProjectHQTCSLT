@@ -88,7 +88,6 @@
             this.buttonNguoiUngTuyen.Size = new System.Drawing.Size(147, 32);
             this.buttonNguoiUngTuyen.TabIndex = 3;
             this.buttonNguoiUngTuyen.Text = "Người ứng  tuyển";
-            this.buttonNguoiUngTuyen.Click += new System.EventHandler(this.buttonNguoiUngTuyen_Click);
             // 
             // panelChinh
             // 
@@ -100,7 +99,6 @@
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(930, 476);
             this.panelChinh.TabIndex = 2;
-            this.panelChinh.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChinh_Paint);
             // 
             // guna2CirclePictureBox1
             // 
@@ -132,7 +130,6 @@
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 2;
-            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
             // panelMenu
             // 
@@ -174,7 +171,6 @@
             this.buttonHoSoUngTuyen.Size = new System.Drawing.Size(139, 42);
             this.buttonHoSoUngTuyen.TabIndex = 3;
             this.buttonHoSoUngTuyen.Text = "    Hồ sơ ứng tuyển";
-            this.buttonHoSoUngTuyen.Click += new System.EventHandler(this.buttonHoSoUngTuyen_Click);
             // 
             // guna2PictureBox1
             // 
@@ -215,7 +211,6 @@
             this.buttonTT.Size = new System.Drawing.Size(139, 42);
             this.buttonTT.TabIndex = 2;
             this.buttonTT.Text = "    Thông tin công ty";
-            this.buttonTT.Click += new System.EventHandler(this.buttonTT_Click);
             // 
             // buttonTinDaDang
             // 
@@ -241,7 +236,6 @@
             this.buttonTinDaDang.Size = new System.Drawing.Size(139, 42);
             this.buttonTinDaDang.TabIndex = 1;
             this.buttonTinDaDang.Text = "    Danh sách đã đăng";
-            this.buttonTinDaDang.Click += new System.EventHandler(this.buttonTinDaDang_Click);
             // 
             // buttonDangTin
             // 
@@ -267,7 +261,6 @@
             this.buttonDangTin.Size = new System.Drawing.Size(139, 42);
             this.buttonDangTin.TabIndex = 0;
             this.buttonDangTin.Text = "    Tạo tin tuyển dụng";
-            this.buttonDangTin.Click += new System.EventHandler(this.buttonDangTin_Click);
             // 
             // FNhaTuyenDung
             // 

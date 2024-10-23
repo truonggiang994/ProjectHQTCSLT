@@ -80,7 +80,6 @@
             this.buttonYeuThich.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonYeuThich.Size = new System.Drawing.Size(30, 30);
             this.buttonYeuThich.TabIndex = 9;
-            this.buttonYeuThich.Click += new System.EventHandler(this.buttonYeuThich_Click);
             // 
             // buttonXemChiTiet
             // 
@@ -97,7 +96,6 @@
             this.buttonXemChiTiet.Size = new System.Drawing.Size(135, 37);
             this.buttonXemChiTiet.TabIndex = 8;
             this.buttonXemChiTiet.Text = "Xem chi tiết";
-            this.buttonXemChiTiet.Click += new System.EventHandler(this.buttonXemChiTiet_Click);
             // 
             // labelChucVu
             // 

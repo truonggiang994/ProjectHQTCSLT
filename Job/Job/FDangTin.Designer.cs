@@ -45,8 +45,6 @@
             this.labelGioiTnh = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelHanNop = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelDiaDiemLamViec = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelChonTinhThanh = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.comboBoxTinhThanh = new Guna.UI2.WinForms.Guna2ComboBox();
             this.labelTinhThanh = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelQuanHuyen = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -80,7 +78,6 @@
             this.label1ChonYeuCauCV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelChonQuyenLoi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelChonGioiTinh = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.textBoxQuanHuyen = new Guna.UI2.WinForms.Guna2TextBox();
             this.labelChonBangCap = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -88,6 +85,8 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.dateTimePickerHanNopHoSo = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.comboBoxQuanHuyen = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBoxTinhThanh = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -357,100 +356,6 @@
             this.labelDiaDiemLamViec.Size = new System.Drawing.Size(142, 22);
             this.labelDiaDiemLamViec.TabIndex = 30;
             this.labelDiaDiemLamViec.Text = "Địa điểm làm việc";
-            // 
-            // labelChonTinhThanh
-            // 
-            this.labelChonTinhThanh.BackColor = System.Drawing.Color.Transparent;
-            this.labelChonTinhThanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChonTinhThanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.labelChonTinhThanh.Location = new System.Drawing.Point(44, 335);
-            this.labelChonTinhThanh.Margin = new System.Windows.Forms.Padding(2);
-            this.labelChonTinhThanh.Name = "labelChonTinhThanh";
-            this.labelChonTinhThanh.Size = new System.Drawing.Size(157, 21);
-            this.labelChonTinhThanh.TabIndex = 33;
-            this.labelChonTinhThanh.Text = "Chọn tỉnh hoặc thành phố";
-            // 
-            // comboBoxTinhThanh
-            // 
-            this.comboBoxTinhThanh.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxTinhThanh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.comboBoxTinhThanh.BorderRadius = 4;
-            this.comboBoxTinhThanh.BorderThickness = 2;
-            this.comboBoxTinhThanh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxTinhThanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTinhThanh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxTinhThanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxTinhThanh.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.comboBoxTinhThanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxTinhThanh.ItemHeight = 24;
-            this.comboBoxTinhThanh.Items.AddRange(new object[] {
-            "Hà Nội",
-            "Hồ Chí Minh",
-            "Hải Phòng",
-            "Cần Thơ",
-            "Đà Nẵng",
-            "An Giang",
-            "Bà Rịa - Vũng Tàu",
-            "Bạc Liêu",
-            "Bắc Giang",
-            "Bắc Kạn",
-            "Bắc Ninh",
-            "Bến Tre",
-            "Bình Dương",
-            "Bình Định",
-            "Bình Phước",
-            "Bình Thuận",
-            "Cà Mau",
-            "Cao Bằng",
-            "Đắk Lắk",
-            "Đắk Nông",
-            "Điện Biên",
-            "Đồng Nai",
-            "Đồng Tháp",
-            "Gia Lai",
-            "Hà Giang",
-            "Hà Nam",
-            "Hà Tĩnh",
-            "Hải Dương",
-            "Hậu Giang",
-            "Hòa Bình",
-            "Hưng Yên",
-            "Khánh Hòa",
-            "Kiên Giang",
-            "Kon Tum",
-            "Lai Châu",
-            "Lâm Đồng",
-            "Lạng Sơn",
-            "Lào Cai",
-            "Long An",
-            "Nam Định",
-            "Nghệ An",
-            "Ninh Bình",
-            "Ninh Thuận",
-            "Phú Thọ",
-            "Quảng Bình",
-            "Quảng Nam",
-            "Quảng Ngãi",
-            "Quảng Ninh",
-            "Quảng Trị",
-            "Sóc Trăng",
-            "Sơn La",
-            "Tây Ninh",
-            "Thái Bình",
-            "Thái Nguyên",
-            "Thanh Hóa",
-            "Thừa Thiên Huế",
-            "Tiền Giang",
-            "Trà Vinh",
-            "Tuyên Quang",
-            "Vĩnh Long",
-            "Vĩnh Phúc",
-            "Yên Bái"});
-            this.comboBoxTinhThanh.Location = new System.Drawing.Point(35, 332);
-            this.comboBoxTinhThanh.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxTinhThanh.Name = "comboBoxTinhThanh";
-            this.comboBoxTinhThanh.Size = new System.Drawing.Size(213, 30);
-            this.comboBoxTinhThanh.TabIndex = 32;
             // 
             // labelTinhThanh
             // 
@@ -725,7 +630,6 @@
             this.buttonDang.Size = new System.Drawing.Size(71, 32);
             this.buttonDang.TabIndex = 201;
             this.buttonDang.Text = "Đăng";
-            this.buttonDang.Click += new System.EventHandler(this.buttonDang_Click);
             // 
             // comboBoxGioiTinh
             // 
@@ -926,32 +830,6 @@
             this.labelChonGioiTinh.TabIndex = 218;
             this.labelChonGioiTinh.Text = "Chọn";
             // 
-            // textBoxQuanHuyen
-            // 
-            this.textBoxQuanHuyen.Animated = true;
-            this.textBoxQuanHuyen.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBoxQuanHuyen.BorderRadius = 4;
-            this.textBoxQuanHuyen.BorderThickness = 2;
-            this.textBoxQuanHuyen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxQuanHuyen.DefaultText = "";
-            this.textBoxQuanHuyen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxQuanHuyen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxQuanHuyen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxQuanHuyen.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxQuanHuyen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxQuanHuyen.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.textBoxQuanHuyen.ForeColor = System.Drawing.Color.Black;
-            this.textBoxQuanHuyen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxQuanHuyen.Location = new System.Drawing.Point(271, 332);
-            this.textBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxQuanHuyen.Name = "textBoxQuanHuyen";
-            this.textBoxQuanHuyen.PasswordChar = '\0';
-            this.textBoxQuanHuyen.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBoxQuanHuyen.PlaceholderText = "VD: Thủ Đức";
-            this.textBoxQuanHuyen.SelectedText = "";
-            this.textBoxQuanHuyen.Size = new System.Drawing.Size(213, 30);
-            this.textBoxQuanHuyen.TabIndex = 219;
-            // 
             // labelChonBangCap
             // 
             this.labelChonBangCap.BackColor = System.Drawing.Color.Transparent;
@@ -1041,6 +919,44 @@
             this.dateTimePickerHanNopHoSo.TabIndex = 223;
             this.dateTimePickerHanNopHoSo.Value = new System.DateTime(2024, 5, 5, 22, 15, 23, 571);
             // 
+            // comboBoxQuanHuyen
+            // 
+            this.comboBoxQuanHuyen.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxQuanHuyen.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.comboBoxQuanHuyen.BorderRadius = 4;
+            this.comboBoxQuanHuyen.BorderThickness = 2;
+            this.comboBoxQuanHuyen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxQuanHuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxQuanHuyen.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxQuanHuyen.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxQuanHuyen.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.comboBoxQuanHuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxQuanHuyen.ItemHeight = 24;
+            this.comboBoxQuanHuyen.Location = new System.Drawing.Point(271, 332);
+            this.comboBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxQuanHuyen.Name = "comboBoxQuanHuyen";
+            this.comboBoxQuanHuyen.Size = new System.Drawing.Size(213, 30);
+            this.comboBoxQuanHuyen.TabIndex = 285;
+            // 
+            // comboBoxTinhThanh
+            // 
+            this.comboBoxTinhThanh.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxTinhThanh.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.comboBoxTinhThanh.BorderRadius = 4;
+            this.comboBoxTinhThanh.BorderThickness = 2;
+            this.comboBoxTinhThanh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxTinhThanh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTinhThanh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxTinhThanh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxTinhThanh.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.comboBoxTinhThanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxTinhThanh.ItemHeight = 24;
+            this.comboBoxTinhThanh.Location = new System.Drawing.Point(35, 332);
+            this.comboBoxTinhThanh.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxTinhThanh.Name = "comboBoxTinhThanh";
+            this.comboBoxTinhThanh.Size = new System.Drawing.Size(213, 30);
+            this.comboBoxTinhThanh.TabIndex = 284;
+            // 
             // FDangTin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1048,11 +964,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(937, 400);
+            this.Controls.Add(this.comboBoxQuanHuyen);
+            this.Controls.Add(this.comboBoxTinhThanh);
             this.Controls.Add(this.dateTimePickerHanNopHoSo);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.labelChonBangCap);
-            this.Controls.Add(this.textBoxQuanHuyen);
             this.Controls.Add(this.labelChonGioiTinh);
             this.Controls.Add(this.labelChonQuyenLoi);
             this.Controls.Add(this.label1ChonYeuCauCV);
@@ -1082,10 +999,8 @@
             this.Controls.Add(this.textBoxLuongToiThieu);
             this.Controls.Add(this.labelMucLuongKiNang);
             this.Controls.Add(this.textBoxSoNha);
-            this.Controls.Add(this.labelChonTinhThanh);
             this.Controls.Add(this.guna2HtmlLabel10);
             this.Controls.Add(this.labelQuanHuyen);
-            this.Controls.Add(this.comboBoxTinhThanh);
             this.Controls.Add(this.labelTinhThanh);
             this.Controls.Add(this.labelDiaDiemLamViec);
             this.Controls.Add(this.labelHanNop);
@@ -1112,7 +1027,6 @@
             this.Name = "FDangTin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "FDangTin";
-            this.Load += new System.EventHandler(this.FDangTin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -1139,8 +1053,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labelGioiTnh;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelHanNop;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelDiaDiemLamViec;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelChonTinhThanh;
-        private Guna.UI2.WinForms.Guna2ComboBox comboBoxTinhThanh;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelTinhThanh;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelQuanHuyen;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
@@ -1177,10 +1089,11 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel label1ChonYeuCauCV;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelChonQuyenLoi;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelChonGioiTinh;
-        private Guna.UI2.WinForms.Guna2TextBox textBoxQuanHuyen;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelChonBangCap;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerHanNopHoSo;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxQuanHuyen;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxTinhThanh;
     }
 }

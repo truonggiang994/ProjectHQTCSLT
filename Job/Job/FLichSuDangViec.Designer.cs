@@ -131,7 +131,6 @@
             this.Controls.Add(this.guna2PanelLsdv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLichSuDangViec";
-            this.Load += new System.EventHandler(this.FLichSuDangViec_Load);
             this.guna2PanelLsdv.ResumeLayout(false);
             this.guna2PanelLsdv.PerformLayout();
             this.ResumeLayout(false);

@@ -133,7 +133,6 @@
             this.buttonBack.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonBack.Size = new System.Drawing.Size(27, 30);
             this.buttonBack.TabIndex = 7;
-            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // labelDiaChi
             // 

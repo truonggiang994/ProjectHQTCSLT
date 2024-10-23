@@ -86,7 +86,6 @@
             this.flowLayoutPanelChinh.Name = "flowLayoutPanelChinh";
             this.flowLayoutPanelChinh.Size = new System.Drawing.Size(930, 376);
             this.flowLayoutPanelChinh.TabIndex = 5;
-            this.flowLayoutPanelChinh.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelChinh_Paint);
             // 
             // guna2ImageButton1
             // 
@@ -101,7 +100,6 @@
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Size = new System.Drawing.Size(25, 32);
             this.guna2ImageButton1.TabIndex = 8;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // FXemDanhGia
             // 
@@ -118,7 +116,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FXemDanhGia";
             this.Text = "FXemDanhGia";
-            this.Load += new System.EventHandler(this.FXemDanhGia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -71,7 +71,6 @@
             this.buttonMoForm.Size = new System.Drawing.Size(180, 45);
             this.buttonMoForm.TabIndex = 2;
             this.buttonMoForm.Text = "Tạo CV";
-            this.buttonMoForm.Click += new System.EventHandler(this.buttonMoForm_Click);
             // 
             // FThongBao
             // 

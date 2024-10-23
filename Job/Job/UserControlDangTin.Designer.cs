@@ -203,7 +203,6 @@
             this.buttonSua.Size = new System.Drawing.Size(121, 26);
             this.buttonSua.TabIndex = 13;
             this.buttonSua.Text = "Sửa";
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // guna2Panel1
             // 

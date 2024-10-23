@@ -51,6 +51,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -67,21 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminDAO.cs" />
-    <Compile Include="CamNang.cs" />
-    <Compile Include="CamNangDAO.cs" />
-    <Compile Include="CongTy.cs" />
-    <Compile Include="CongTyDao.cs" />
-    <Compile Include="CV.cs" />
-    <Compile Include="CVDAO.cs" />
-    <Compile Include="dangTin.cs" />
-    <Compile Include="dangTinDao.cs" />
-    <Compile Include="DanhGia.cs" />
-    <Compile Include="DanhGiaDAO.cs" />
-    <Compile Include="DuLieuCongTy.cs" />
-    <Compile Include="DuLieuCV.cs" />
-    <Compile Include="DuLieuUngTuyen.cs" />
-    <Compile Include="DuLieuUngTuyenDAO.cs" />
     <Compile Include="FCamNang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,51 +196,40 @@
     <Compile Include="FXemDanhGia.Designer.cs">
       <DependentUpon>FXemDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Global.cs" />
-    <Compile Include="LichSuDangTinDAO.cs" />
-    <Compile Include="LichSuUngTuyen.cs" />
-    <Compile Include="LichSuUngTuyenDAO.cs" />
-    <Compile Include="LicSuDangTin.cs" />
-    <Compile Include="MY_DB.cs" />
-    <Compile Include="PhongVan.cs" />
-    <Compile Include="PhongVanDAO.cs" />
-    <Compile Include="UngTuyen.cs" />
-    <Compile Include="UngTuyenDAO.cs" />
-    <Compile Include="KiemTraDauVao.cs" />
-    <Compile Include="Login\FQuenMK.cs">
+    <Compile Include="FQuenMK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\FQuenMK.Designer.cs">
+    <Compile Include="FQuenMK.Designer.cs">
       <DependentUpon>FQuenMK.cs</DependentUpon>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FCV.cs">
+    <Compile Include="FCV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FCV.Designer.cs">
+    <Compile Include="FCV.Designer.cs">
       <DependentUpon>FCV.cs</DependentUpon>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FThongTinViecLam.cs">
+    <Compile Include="FThongTinViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FThongTinViecLam.Designer.cs">
+    <Compile Include="FThongTinViecLam.Designer.cs">
       <DependentUpon>FThongTinViecLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FViecLam.cs">
+    <Compile Include="FViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FViecLam.Designer.cs">
+    <Compile Include="FViecLam.Designer.cs">
       <DependentUpon>FViecLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\FDangKi.cs">
+    <Compile Include="FDangKi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\FDangKi.Designer.cs">
+    <Compile Include="FDangKi.Designer.cs">
       <DependentUpon>FDangKi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\FDangNhap.cs">
+    <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\FDangNhap.Designer.cs">
+    <Compile Include="FDangNhap.Designer.cs">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="FDangTin.cs">
@@ -273,18 +250,14 @@
     <Compile Include="FNhaTuyenDung.Designer.cs">
       <DependentUpon>FNhaTuyenDung.cs</DependentUpon>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FTrangChu.cs">
+    <Compile Include="FTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NguoiUngTuyen\FTrangChu.Designer.cs">
+    <Compile Include="FTrangChu.Designer.cs">
       <DependentUpon>FTrangChu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Login\TaiKhoan.cs" />
-    <Compile Include="Login\TaiKhoanDao.cs" />
-    <Compile Include="ThongTinViecLam.cs" />
-    <Compile Include="ThongTinViecLamDAO.cs" />
     <Compile Include="UserControlCamNang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -339,9 +312,6 @@
     <Compile Include="UserControlViecLam.Designer.cs">
       <DependentUpon>UserControlViecLam.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViecLamYeuThich.cs" />
-    <Compile Include="ViecLamYeuThichDAO.cs" />
-    <Compile Include="XuLy.cs" />
     <EmbeddedResource Include="FCamNang.resx">
       <DependentUpon>FCamNang.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,22 +375,22 @@
     <EmbeddedResource Include="FXemDanhGia.resx">
       <DependentUpon>FXemDanhGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\FQuenMK.resx">
+    <EmbeddedResource Include="FQuenMK.resx">
       <DependentUpon>FQuenMK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NguoiUngTuyen\FCV.resx">
+    <EmbeddedResource Include="FCV.resx">
       <DependentUpon>FCV.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NguoiUngTuyen\FThongTinViecLam.resx">
+    <EmbeddedResource Include="FThongTinViecLam.resx">
       <DependentUpon>FThongTinViecLam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NguoiUngTuyen\FViecLam.resx">
+    <EmbeddedResource Include="FViecLam.resx">
       <DependentUpon>FViecLam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\FDangKi.resx">
+    <EmbeddedResource Include="FDangKi.resx">
       <DependentUpon>FDangKi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\FDangNhap.resx">
+    <EmbeddedResource Include="FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FDangTin.resx">
@@ -432,7 +402,7 @@
     <EmbeddedResource Include="FNhaTuyenDung.resx">
       <DependentUpon>FNhaTuyenDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NguoiUngTuyen\FTrangChu.resx">
+    <EmbeddedResource Include="FTrangChu.resx">
       <DependentUpon>FTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -488,13 +458,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
+    <None Include="Resources\Address.json" />
     <None Include="Resources\heart.png" />
     <None Include="Resources\heart %281%29.png" />
   </ItemGroup>

@@ -149,7 +149,6 @@
             this.btnGuiDanhGia.TabIndex = 11;
             this.btnGuiDanhGia.Text = "Gửi đánh giá ";
             this.btnGuiDanhGia.UseVisualStyleBackColor = false;
-            this.btnGuiDanhGia.Click += new System.EventHandler(this.btnGuiDanhGia_Click);
             // 
             // label8
             // 
@@ -197,7 +196,6 @@
             this.buttonThemAnh.TabIndex = 13;
             this.buttonThemAnh.Text = "Thêm ảnh";
             this.buttonThemAnh.UseVisualStyleBackColor = false;
-            this.buttonThemAnh.Click += new System.EventHandler(this.buttonThemAnh_Click);
             // 
             // pictureBoxAnhDanhGia
             // 
@@ -222,7 +220,6 @@
             this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.guna2ImageButton1.Size = new System.Drawing.Size(25, 32);
             this.guna2ImageButton1.TabIndex = 7;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // guna2PictureBox1
             // 

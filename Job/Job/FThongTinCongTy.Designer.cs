@@ -113,7 +113,6 @@
             this.buttonAnhBia.Size = new System.Drawing.Size(110, 30);
             this.buttonAnhBia.TabIndex = 17;
             this.buttonAnhBia.Text = "Thay đổi ảnh";
-            this.buttonAnhBia.Click += new System.EventHandler(this.buttonAnhBia_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -269,7 +268,6 @@
             this.buttonThayDoiAnh.Size = new System.Drawing.Size(110, 30);
             this.buttonThayDoiAnh.TabIndex = 4;
             this.buttonThayDoiAnh.Text = "Thay đổi ảnh";
-            this.buttonThayDoiAnh.Click += new System.EventHandler(this.buttonThayDoiAnh_Click);
             // 
             // labelLogo
             // 
@@ -308,7 +306,6 @@
             this.buttonCapNhat.Size = new System.Drawing.Size(157, 32);
             this.buttonCapNhat.TabIndex = 13;
             this.buttonCapNhat.Text = "Cập nhật thông tin";
-            this.buttonCapNhat.Click += new System.EventHandler(this.buttonCapNhat_Click);
             // 
             // panelGiayPhep
             // 
@@ -349,7 +346,6 @@
             this.buttonFileGiayPhep.Size = new System.Drawing.Size(104, 27);
             this.buttonFileGiayPhep.TabIndex = 14;
             this.buttonFileGiayPhep.Text = "Tải file";
-            this.buttonFileGiayPhep.Click += new System.EventHandler(this.buttonFileGiayPhep_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -555,7 +551,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FThongTinCongTy";
             this.Text = "FThongTinCongTy";
-            this.Load += new System.EventHandler(this.FThongTinCongTy_Load);
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
             this.groupBoxQuyMoNhanSu.ResumeLayout(false);

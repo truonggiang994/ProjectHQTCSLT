@@ -153,7 +153,6 @@
             this.Controls.Add(this.panelLsnut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLichSuUngTuyen";
-            this.Load += new System.EventHandler(this.FLichSuUngTuyen_Load);
             this.panelLsnut.ResumeLayout(false);
             this.panelLsnut.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);

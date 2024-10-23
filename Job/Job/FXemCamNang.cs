@@ -17,16 +17,6 @@ namespace Job
         public FXemCamNang()
         {
             InitializeComponent();
-            TaiDuLieu();
-        }
-
-        private void TaiDuLieu()
-        {
-            foreach (CamNang camNang in DuLieuCV.camNangs)
-            {
-                UserControlCamNang userControl = new UserControlCamNang(camNang);
-                flowLayoutPanelChinh.Controls.Add(userControl);
-            }
         }
     }
 }

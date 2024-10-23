@@ -82,7 +82,6 @@
             this.buttonXemPhongVan.Size = new System.Drawing.Size(86, 31);
             this.buttonXemPhongVan.TabIndex = 6;
             this.buttonXemPhongVan.Text = "Xem";
-            this.buttonXemPhongVan.Click += new System.EventHandler(this.buttonXemPhongVan_Click);
             // 
             // labelNgayNop
             // 
@@ -110,7 +109,6 @@
             this.buttonXemCV.Size = new System.Drawing.Size(86, 31);
             this.buttonXemCV.TabIndex = 3;
             this.buttonXemCV.Text = "Xem ";
-            this.buttonXemCV.Click += new System.EventHandler(this.buttonXemCV_Click);
             // 
             // labelTenCongTy
             // 

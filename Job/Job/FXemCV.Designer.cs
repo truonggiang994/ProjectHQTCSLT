@@ -102,7 +102,6 @@
             this.buttonSuaCV.Size = new System.Drawing.Size(102, 29);
             this.buttonSuaCV.TabIndex = 4;
             this.buttonSuaCV.Text = "Sửa CV";
-            this.buttonSuaCV.Click += new System.EventHandler(this.buttonSuaCV_Click);
             // 
             // buttonXemCV
             // 
@@ -118,7 +117,6 @@
             this.buttonXemCV.Size = new System.Drawing.Size(102, 29);
             this.buttonXemCV.TabIndex = 5;
             this.buttonXemCV.Text = "Xem CV";
-            this.buttonXemCV.Click += new System.EventHandler(this.buttonXemCV_Click);
             // 
             // pictureBoxAnhDaiDien
             // 
@@ -161,7 +159,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FXemCV";
             this.Text = "FXemCV";
-            this.Load += new System.EventHandler(this.FXemCV_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhDaiDien)).EndInit();
