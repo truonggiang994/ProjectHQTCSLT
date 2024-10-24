@@ -41,7 +41,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // guna2PanelChinh
             // 
             this.guna2Panel1.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel1.Controls.Add(this.buttonXemPhongVan);
@@ -51,7 +51,7 @@
             this.guna2Panel1.Controls.Add(this.labelChucVu);
             this.guna2Panel1.Controls.Add(this.pictureBoxAnhLogo);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Name = "guna2PanelChinh";
             this.guna2Panel1.Size = new System.Drawing.Size(1000, 80);
             this.guna2Panel1.TabIndex = 0;
             // 

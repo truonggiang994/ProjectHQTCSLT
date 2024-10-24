@@ -338,6 +338,7 @@
             this.buttonTaiAnh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.buttonTaiAnh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.buttonTaiAnh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonTaiAnh.Enabled = false;
             this.buttonTaiAnh.FillColor = System.Drawing.Color.LightGray;
             this.buttonTaiAnh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTaiAnh.ForeColor = System.Drawing.Color.Black;
@@ -546,8 +547,7 @@
             this.richTextBoxMucTieuNgheNghiep.Name = "richTextBoxMucTieuNgheNghiep";
             this.richTextBoxMucTieuNgheNghiep.Size = new System.Drawing.Size(850, 65);
             this.richTextBoxMucTieuNgheNghiep.TabIndex = 319;
-            this.richTextBoxMucTieuNgheNghiep.Text = "Mục tiêu nghề nghiệp của tôi là phát triển và ứng dụng công nghệ mới để giải quyế" +
-    "t các vấn đề trong ngành.";
+            this.richTextBoxMucTieuNgheNghiep.Text = "Phát triển và ứng dụng công nghệ mới để giải quyết các vấn đề trong ngành.";
             // 
             // labelMucTieuNgheNghiep
             // 

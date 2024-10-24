@@ -18,13 +18,58 @@ namespace Job
 {
     public partial class FCV : Form
     {
+        int ID = -1;
+
         public FCV()
         {
             InitializeComponent();
             LoadLocations();
         }
 
-        private void buttonLuu_Click(object sender, EventArgs e)
+        public void LoadCV(int ID)//CV đã có sẵn
+        {
+            this.ID = ID;   
+            string connectionString = Settings.Default.Connection; // Chuỗi kết nối
+            DataTable cvTable = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Gọi hàm GetCVByUsername
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetCVByUsername(@Username, @ID)", connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", Data.username); // Thêm tham số Username
+                        command.Parameters.AddWithValue("@ID", ID); // Thêm tham số ID
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(cvTable); // Điền dữ liệu vào DataTable
+                        }
+                    }
+
+                    // Lặp qua các hàng trong DataTable để tạo UserControl cho từng CV
+                    foreach (DataRow row in cvTable.Rows)
+                    {
+                        // Lấy dữ liệu từ các trường thông tin
+                        richTextBoxMucTieuNgheNghiep.Text = row["CareerGoals"].ToString();
+                        richTextBoxKinhNghiem.Text = row["Experience"].ToString();
+                        richTextBoxHocVan.Text = row["Education"].ToString();
+                        richTextBoxKiNang.Text = row["Skills"].ToString();
+                        richTextBoxChungChi.Text = row["Certificates"].ToString();
+                        richTextBoxSoThich.Text = row["Hobbies"].ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi khi lấy dữ liệu CV: " + ex.Message);
+                }
+            }
+        }
+
+        private void buttonLuu_Click(object sender, EventArgs e)//Tạo CV
         {
             // Chuẩn bị kết nối tới cơ sở dữ liệu
             string connectionString = Settings.Default.Connection; // Sửa lại cho phù hợp với cấu hình của bạn
@@ -36,7 +81,7 @@ namespace Job
             string certificates = richTextBoxChungChi.Text;
             string hobbies = richTextBoxSoThich.Text;
 
-            // Tạo kết nối tới cơ sở dữ liệu và gọi thủ tục InsertCV
+            // Tạo kết nối tới cơ sở dữ liệu và gọi thủ tục UpdateCV
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -44,12 +89,12 @@ namespace Job
                     // Mở kết nối
                     connection.Open();
 
-                    // Tạo một SqlCommand để gọi thủ tục InsertCV
-                    using (SqlCommand command = new SqlCommand("InsertCV", connection))
+                    // Tạo một SqlCommand để gọi thủ tục UpdateCV
+                    using (SqlCommand command = new SqlCommand("InsertOrUpdateCV", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        // Thêm các tham số cho thủ tục
+                        command.Parameters.AddWithValue("@ID", ID);
                         command.Parameters.AddWithValue("@CandidateUsername", Data.username);
                         command.Parameters.AddWithValue("@CareerGoals", careerGoals);
                         command.Parameters.AddWithValue("@Experience", experience);
@@ -63,6 +108,24 @@ namespace Job
                     }
 
                     MessageBox.Show("CV đã được lưu thành công!");
+
+                    // Chuyển đến Form Danh Sách CV nhưng hiển thị nó trong cùng một Panel
+                    FXemCV fXemCV = new FXemCV(); // Tạo instance của form danh sách CV
+
+                    // Lấy Panel chứa form hiện tại (ví dụ: panelMain là panel cha của form hiện tại)
+                    Panel parentPanel = (Panel)Parent; // Giả sử form hiện tại đang được nhúng vào một panel
+
+                    // Xóa các form con khác bên trong panel
+                    parentPanel.Controls.Clear();
+
+                    // Thiết lập form fXemCV để nhúng vào panel
+                    fXemCV.TopLevel = false;
+                    fXemCV.FormBorderStyle = FormBorderStyle.None;
+                    fXemCV.Dock = DockStyle.Fill;
+
+                    // Thêm form danh sách CV vào panel
+                    parentPanel.Controls.Add(fXemCV);
+                    fXemCV.Show(); // Hiển thị form danh sách CV
                 }
                 catch (Exception ex)
                 {
@@ -73,6 +136,14 @@ namespace Job
 
         private void FCV_Load(object sender, EventArgs e)
         {
+            if (ID == -1)
+            {
+                buttonLuu.Text = "Tạo CV";
+            }
+            else
+            {
+                buttonLuu.Text = "Lưu CV";
+            }    
             string connectionString = Settings.Default.Connection; // Chuỗi kết nối đến SQL Server
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -139,8 +210,6 @@ namespace Job
             }
         }
 
-
-
         //Khu vực
 
         // Dictionary để chứa dữ liệu tỉnh thành và quận huyện
@@ -183,6 +252,5 @@ namespace Job
                 comboBoxQuanHuyen.DataSource = selectedProvince.Value; // Gán danh sách quận huyện tương ứng
             }
         }
-
     }
 }

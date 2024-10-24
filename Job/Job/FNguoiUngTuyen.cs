@@ -1,41 +1,54 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Job
 {
     public partial class FNguoiUngTuyen : Form
     {
+        public static FNguoiUngTuyen Ins;
+
         public FNguoiUngTuyen()
         {
+            Ins = this;
             InitializeComponent();
         }
 
-        private void buttonCV_Click(object sender, EventArgs e)
+        // Hàm LoadForm chung để hiển thị các Form vào panel
+        public void LoadForm(Form form)
         {
             // Xóa tất cả các control hiện tại trong panelMain
             panelMain.Controls.Clear();
 
-            // Tạo instance của FormCV
-            FCV fCV = new FCV();
-
             // Thiết lập không có viền cho Form khi nhúng vào panel
-            fCV.TopLevel = false;
-            fCV.FormBorderStyle = FormBorderStyle.None;
-            fCV.Dock = DockStyle.Fill; // Điều chỉnh form vừa với panel
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill; // Điều chỉnh form vừa với panel
 
-            // Thêm FormCV vào panelMain
-            panelMain.Controls.Add(fCV);
-            panelMain.Tag = fCV;
+            // Thêm Form vào panelMain
+            panelMain.Controls.Add(form);
+            panelMain.Tag = form;
 
-            // Hiển thị fCV
-            fCV.Show();
+            // Hiển thị form
+            form.Show();
+        }
+
+        private void buttonCV_Click(object sender, EventArgs e)
+        {
+            // Tạo instance của FormCV và gọi hàm LoadForm
+            FCV fCV = new FCV();
+            LoadForm(fCV);
+        }
+
+        private void buttonXemCV_Click(object sender, EventArgs e)
+        {
+            // Tạo instance của FXemCV và gọi hàm LoadForm
+            FXemCV fCV = new FXemCV();
+            LoadForm(fCV);
+        }
+
+        private void buttonCoHoiVL_Click(object sender, EventArgs e)
+        {
+            LoadForm(new FThonTinCaNhanUngVien());
         }
     }
 }

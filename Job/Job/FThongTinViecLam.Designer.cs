@@ -362,7 +362,7 @@
             this.labelTenQuyenLoi.TabIndex = 0;
             this.labelTenQuyenLoi.Text = "Quyền lợi";
             // 
-            // guna2Panel1
+            // guna2PanelChinh
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel1.BorderRadius = 4;
@@ -371,7 +371,7 @@
             this.guna2Panel1.Controls.Add(this.labelTenDiaDiemLV);
             this.guna2Panel1.ForeColor = System.Drawing.Color.Black;
             this.guna2Panel1.Location = new System.Drawing.Point(12, 700);
-            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Name = "guna2PanelChinh";
             this.guna2Panel1.Size = new System.Drawing.Size(883, 52);
             this.guna2Panel1.TabIndex = 9;
             // 
