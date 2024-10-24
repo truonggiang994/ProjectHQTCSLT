@@ -27,97 +27,66 @@ namespace Job
                 using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("sp_CheckAccount", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.sp_CheckAccount(@Username, @Password)", connection))
                     {
-                        command.CommandType = CommandType.StoredProcedure;
-
                         // Chỉ truyền đúng 2 tham số
                         command.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
                         command.Parameters.AddWithValue("@Password", textBoxMK.Text);
 
-                        // Không cần thêm tham số OUTPUT nếu stored procedure không yêu cầu
-                        object resultObj = command.ExecuteScalar(); // Thực thi và lấy kết quả
+                        int result = (int)command.ExecuteScalar();
 
-                        if (resultObj != null)
+                        if (result == 1)
                         {
-                            int result = (int)resultObj;
-                            if (result == 1)
+                            if (radioButtonCandidate.Checked)
                             {
-                                if (radioButtonCandidate.Checked)
+                                using (SqlCommand commandCandidate = new SqlCommand("SELECT dbo.sp_CheckAccountCandidate(@Username)", connection))
                                 {
-                                    using(SqlCommand commandCandidate = new SqlCommand("sp_CheckAccountCandidate", connection))
+                                    commandCandidate.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
+                                    int resultCandidate = (int)commandCandidate.ExecuteScalar();
+                                    if (resultCandidate == 1)
                                     {
-                                        commandCandidate.CommandType = CommandType.StoredProcedure;
-                                        commandCandidate.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
-                                        object resultObjCandidate = commandCandidate.ExecuteScalar();
-                                        if (resultObjCandidate != null)
-                                        {
-                                            int resultCandidate = (int)resultObjCandidate;
-                                            if(resultCandidate == 1)
-                                            {
-                                                Data.username = textBoTaiKhoan.Text;
-
-                                                FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
-                                                this.Hide();
-                                                fNguoiUngTuyen.Show();
-                                            }
-                                            else
-                                            {
-                                                MessageBox.Show("Bạn không phải ứng viên");
-                                            }
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Lỗi Candidate trả về null");
-                                        }
+                                        Data.username = textBoTaiKhoan.Text;
+                                        FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
+                                        this.Hide();
+                                        fNguoiUngTuyen.Show();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Bạn không phải ứng viên");
                                     }
                                 }
-                                else if (radioButtonEmployer.Checked)
+                            }
+                            else if (radioButtonEmployer.Checked)
+                            {
+                                using (SqlCommand commandEmployer = new SqlCommand("SELECT dbo.sp_CheckAccountEmployer(@Username)", connection))
                                 {
-                                    using (SqlCommand commandEmployer = new SqlCommand("sp_CheckAccountEmployer", connection))
+                                    commandEmployer.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
+                                    int resultEmployer = (int)commandEmployer.ExecuteScalar();
+                                    if (resultEmployer == 1)
                                     {
-                                        commandEmployer.CommandType = CommandType.StoredProcedure;
-                                        commandEmployer.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
-                                        object resultObjEmployer = commandEmployer.ExecuteScalar();
-                                        if (resultObjEmployer != null)
-                                        {
-                                            int resultEmployer = (int)resultObjEmployer;
-                                            if (resultEmployer == 1)
-                                            {
-                                                Data.username = textBoTaiKhoan.Text;
-
-                                                FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
-                                                this.Hide();
-                                                fNhaTuyenDung.Show();
-                                            }
-                                            else
-                                            {
-                                                MessageBox.Show("Bạn không phải nhà tuyển dụng");
-                                            }
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Lỗi Employer trả về null");
-                                        }
+                                        Data.username = textBoTaiKhoan.Text;
+                                        FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
+                                        this.Hide();
+                                        fNguoiUngTuyen.Show();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Bạn không phải nhà ứng tuyển");
                                     }
                                 }
-                                else
-                                {
-                                    MessageBox.Show("Chọn chứ vụ");
-                                }
                             }
-                            else if (result == 0)
+                            else
                             {
-                                MessageBox.Show("Tài khoản không tồn tại!");
-                            }
-                            else if (result == -1)
-                            {
-                                MessageBox.Show("Mật khẩu không đúng!");
+                                MessageBox.Show("Chọn chứ vụ");
                             }
                         }
-                        else
+                        else if (result == 0)
                         {
-                            MessageBox.Show("Đã xảy ra lỗi: Kết quả trả về là null.");
+                            MessageBox.Show("Tài khoản không tồn tại!");
+                        }
+                        else if (result == -1)
+                        {
+                            MessageBox.Show("Mật khẩu không đúng!");
                         }
                     }
                 }

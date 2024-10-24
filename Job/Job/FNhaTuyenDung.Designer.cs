@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FNhaTuyenDung));
             this.panelTren = new System.Windows.Forms.Panel();
             this.labelUser = new System.Windows.Forms.Label();
-            this.buttonNguoiUngTuyen = new Guna.UI2.WinForms.Guna2Button();
-            this.panelChinh = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.buttonNguoiUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.buttonLogOut = new Guna.UI2.WinForms.Guna2Button();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.buttonHoSoUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -73,6 +73,20 @@
             this.labelUser.TabIndex = 4;
             this.labelUser.Text = "Trường Giang";
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(731, 3);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 5;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // buttonNguoiUngTuyen
             // 
             this.buttonNguoiUngTuyen.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -88,31 +102,6 @@
             this.buttonNguoiUngTuyen.Size = new System.Drawing.Size(147, 32);
             this.buttonNguoiUngTuyen.TabIndex = 3;
             this.buttonNguoiUngTuyen.Text = "Người ứng  tuyển";
-            // 
-            // panelChinh
-            // 
-            this.panelChinh.AutoScroll = true;
-            this.panelChinh.AutoSize = true;
-            this.panelChinh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelChinh.Location = new System.Drawing.Point(150, 40);
-            this.panelChinh.Margin = new System.Windows.Forms.Padding(2);
-            this.panelChinh.Name = "panelChinh";
-            this.panelChinh.Size = new System.Drawing.Size(930, 476);
-            this.panelChinh.TabIndex = 2;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(731, 3);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 5;
-            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // buttonLogOut
             // 
@@ -130,6 +119,17 @@
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 2;
+            // 
+            // panelMain
+            // 
+            this.panelMain.AutoScroll = true;
+            this.panelMain.AutoSize = true;
+            this.panelMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMain.Location = new System.Drawing.Point(150, 40);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(948, 476);
+            this.panelMain.TabIndex = 2;
             // 
             // panelMenu
             // 
@@ -211,6 +211,7 @@
             this.buttonTT.Size = new System.Drawing.Size(139, 42);
             this.buttonTT.TabIndex = 2;
             this.buttonTT.Text = "    Thông tin công ty";
+            this.buttonTT.Click += new System.EventHandler(this.buttonTT_Click);
             // 
             // buttonTinDaDang
             // 
@@ -267,7 +268,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 519);
-            this.Controls.Add(this.panelChinh);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelTren);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -294,7 +295,7 @@
         private Guna.UI2.WinForms.Guna2Button buttonNguoiUngTuyen;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Panel panelChinh;
+        private Guna.UI2.WinForms.Guna2Panel panelMain;
         private Guna.UI2.WinForms.Guna2Button buttonHoSoUngTuyen;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         public System.Windows.Forms.Label labelUser;

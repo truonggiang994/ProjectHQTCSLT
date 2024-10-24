@@ -17,6 +17,32 @@ namespace Job
         public FNhaTuyenDung()
         {
             InitializeComponent();
-        }       
+        }
+
+
+        // Hàm LoadForm chung để hiển thị các Form vào panel
+        public void LoadForm(Form form)
+        {
+            // Xóa tất cả các control hiện tại trong panelMain
+            panelMain.Controls.Clear();
+
+            // Thiết lập không có viền cho Form khi nhúng vào panel
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill; // Điều chỉnh form vừa với panel
+
+            // Thêm Form vào panelMain
+            panelMain.Controls.Add(form);
+            panelMain.Tag = form;
+
+            // Hiển thị form
+            form.Show();
+        }
+
+
+        private void buttonTT_Click(object sender, EventArgs e)
+        {
+            LoadForm(new FThongTinCongTy());
+        }
     }
 }

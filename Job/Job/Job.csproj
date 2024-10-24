@@ -295,6 +295,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlAnhCongTy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAnhCongTy.Designer.cs">
+      <DependentUpon>UserControlAnhCongTy.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlCamNang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -318,6 +324,12 @@
     </Compile>
     <Compile Include="UserControlDanhGia.Designer.cs">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDiaChiCongTy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDiaChiCongTy.Designer.cs">
+      <DependentUpon>UserControlDiaChiCongTy.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlDuyetBaiDang.cs">
       <SubType>UserControl</SubType>
@@ -476,6 +488,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlAnhCongTy.resx">
+      <DependentUpon>UserControlAnhCongTy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlCamNang.resx">
       <DependentUpon>UserControlCamNang.cs</DependentUpon>
     </EmbeddedResource>
@@ -487,6 +502,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDanhGia.resx">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDiaChiCongTy.resx">
+      <DependentUpon>UserControlDiaChiCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDuyetBaiDang.resx">
       <DependentUpon>UserControlDuyetBaiDang.cs</DependentUpon>

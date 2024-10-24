@@ -37,6 +37,9 @@ namespace Job
 
         }
 
-      
+        private void panelThongTin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
