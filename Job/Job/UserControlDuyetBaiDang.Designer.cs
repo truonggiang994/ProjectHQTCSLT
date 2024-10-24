@@ -65,14 +65,13 @@
             this.guna2ComboBox1.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.guna2ComboBox1.ItemHeight = 30;
+            this.guna2ComboBox1.SelectedText = "Pending";
             this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Chờ duyệt",
-            "Đã duyệt",
-            "Bị từ chối",
-            " "});
+            "Approved",
+            "Rejected"});
             this.guna2ComboBox1.Location = new System.Drawing.Point(706, 34);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(169, 36);
@@ -92,6 +91,7 @@
             this.buttonXemPhongVan.Size = new System.Drawing.Size(86, 31);
             this.buttonXemPhongVan.TabIndex = 6;
             this.buttonXemPhongVan.Text = "Duyệt";
+            this.buttonXemPhongVan.Click += new System.EventHandler(this.buttonDuyet_Click);
             // 
             // labelNgayNop
             // 

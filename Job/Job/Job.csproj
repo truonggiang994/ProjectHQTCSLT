@@ -70,6 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data.cs" />
     <Compile Include="DatabaseConnection.cs" />
     <Compile Include="FCamNang.cs">
       <SubType>Form</SubType>
@@ -154,12 +155,6 @@
     </Compile>
     <Compile Include="FQuanLy.Designer.cs">
       <DependentUpon>FQuanLy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FSuaCV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FSuaCV.Designer.cs">
-      <DependentUpon>FSuaCV.cs</DependentUpon>
     </Compile>
     <Compile Include="FSuaDangTin.cs">
       <SubType>Form</SubType>
@@ -390,9 +385,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FSuaCV.resx">
-      <DependentUpon>FSuaCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSuaDangTin.resx">
       <DependentUpon>FSuaDangTin.cs</DependentUpon>
