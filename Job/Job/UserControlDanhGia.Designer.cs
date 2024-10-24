@@ -139,14 +139,14 @@
             this.pictureBoxDanhGia.TabIndex = 3;
             this.pictureBoxDanhGia.TabStop = false;
             // 
-            // guna2Panel1
+            // guna2PanelChinh
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2Panel1.BorderRadius = 4;
             this.guna2Panel1.BorderThickness = 3;
             this.guna2Panel1.Controls.Add(this.ratingStarSoSao);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Name = "guna2PanelChinh";
             this.guna2Panel1.Size = new System.Drawing.Size(430, 410);
             this.guna2Panel1.TabIndex = 3;
             // 

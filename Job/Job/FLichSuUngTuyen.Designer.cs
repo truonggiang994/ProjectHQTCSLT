@@ -124,7 +124,7 @@
             this.panel2.Size = new System.Drawing.Size(0, 0);
             this.panel2.TabIndex = 1;
             // 
-            // guna2Panel1
+            // guna2PanelChinh
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.MediumTurquoise;
             this.guna2Panel1.BorderRadius = 15;
@@ -132,7 +132,7 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.SystemColors.Control;
             this.guna2Panel1.Location = new System.Drawing.Point(339, 12);
-            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Name = "guna2PanelChinh";
             this.guna2Panel1.Size = new System.Drawing.Size(259, 39);
             this.guna2Panel1.TabIndex = 10;
             // 

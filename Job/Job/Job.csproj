@@ -70,7 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="Data.cs" />
     <Compile Include="FCamNang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +191,12 @@
     <Compile Include="FThongTinViecLam.Designer.cs">
       <DependentUpon>FThongTinViecLam.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThonTinCaNhanUngVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThonTinCaNhanUngVien.Designer.cs">
+      <DependentUpon>FThonTinCaNhanUngVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FTopViecLam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,12 @@
     <Compile Include="UserControlComboBox.Designer.cs">
       <DependentUpon>UserControlComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlCVItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCVItem.Designer.cs">
+      <DependentUpon>UserControlCVItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlDanhGia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -403,6 +415,9 @@
     <EmbeddedResource Include="FThongTinViecLam.resx">
       <DependentUpon>FThongTinViecLam.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FThonTinCaNhanUngVien.resx">
+      <DependentUpon>FThonTinCaNhanUngVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FTopViecLam.resx">
       <DependentUpon>FTopViecLam.cs</DependentUpon>
     </EmbeddedResource>
@@ -466,6 +481,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlComboBox.resx">
       <DependentUpon>UserControlComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCVItem.resx">
+      <DependentUpon>UserControlCVItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDanhGia.resx">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>

@@ -204,7 +204,7 @@
             this.buttonSua.TabIndex = 13;
             this.buttonSua.Text = "Sửa";
             // 
-            // guna2Panel1
+            // guna2PanelChinh
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.BorderThickness = 1;
@@ -222,7 +222,7 @@
             this.guna2Panel1.Controls.Add(this.labelTrangThaiHanNop);
             this.guna2Panel1.Controls.Add(this.labelHanHopHoSo);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Name = "guna2PanelChinh";
             this.guna2Panel1.Size = new System.Drawing.Size(910, 50);
             this.guna2Panel1.TabIndex = 14;
             // 
