@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelChucVu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
@@ -37,35 +36,24 @@
             this.guna2VSeparator4 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator5 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.labelNganhNghe = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelHanHopHoSo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelTrangThaiHanNop = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.labelNgayDang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelMucLuongToiThieu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelMucLuongToiDa = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelLuotDaTuyen = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelLuotChuaTuyen = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.labelTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.buttonSua = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // labelChucVu
-            // 
-            this.labelChucVu.AutoSize = false;
-            this.labelChucVu.BackColor = System.Drawing.Color.Transparent;
-            this.labelChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelChucVu.Location = new System.Drawing.Point(3, 3);
-            this.labelChucVu.Name = "labelChucVu";
-            this.labelChucVu.Size = new System.Drawing.Size(356, 21);
-            this.labelChucVu.TabIndex = 0;
-            this.labelChucVu.Text = "Chức vụ: Lập trình viên";
             // 
             // guna2VSeparator1
             // 
             this.guna2VSeparator1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2VSeparator1.Location = new System.Drawing.Point(365, 1);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(304, -1);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 48);
             this.guna2VSeparator1.TabIndex = 1;
+            this.guna2VSeparator1.Click += new System.EventHandler(this.guna2VSeparator1_Click);
             // 
             // guna2VSeparator2
             // 
@@ -94,7 +82,7 @@
             // guna2VSeparator5
             // 
             this.guna2VSeparator5.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2VSeparator5.Location = new System.Drawing.Point(495, 1);
+            this.guna2VSeparator5.Location = new System.Drawing.Point(448, 0);
             this.guna2VSeparator5.Name = "guna2VSeparator5";
             this.guna2VSeparator5.Size = new System.Drawing.Size(10, 48);
             this.guna2VSeparator5.TabIndex = 5;
@@ -105,37 +93,24 @@
             this.labelNganhNghe.BackColor = System.Drawing.Color.Transparent;
             this.labelNganhNghe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNganhNghe.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelNganhNghe.Location = new System.Drawing.Point(3, 24);
+            this.labelNganhNghe.Location = new System.Drawing.Point(3, 11);
             this.labelNganhNghe.Name = "labelNganhNghe";
-            this.labelNganhNghe.Size = new System.Drawing.Size(356, 21);
+            this.labelNganhNghe.Size = new System.Drawing.Size(265, 34);
             this.labelNganhNghe.TabIndex = 6;
             this.labelNganhNghe.Text = "Ngành: Công nghệ thông tin";
             // 
-            // labelHanHopHoSo
+            // labelNgayDang
             // 
-            this.labelHanHopHoSo.AutoSize = false;
-            this.labelHanHopHoSo.BackColor = System.Drawing.Color.Transparent;
-            this.labelHanHopHoSo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHanHopHoSo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelHanHopHoSo.Location = new System.Drawing.Point(381, 3);
-            this.labelHanHopHoSo.Name = "labelHanHopHoSo";
-            this.labelHanHopHoSo.Size = new System.Drawing.Size(108, 21);
-            this.labelHanHopHoSo.TabIndex = 7;
-            this.labelHanHopHoSo.Text = "22/02/2023";
-            this.labelHanHopHoSo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTrangThaiHanNop
-            // 
-            this.labelTrangThaiHanNop.AutoSize = false;
-            this.labelTrangThaiHanNop.BackColor = System.Drawing.Color.Transparent;
-            this.labelTrangThaiHanNop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTrangThaiHanNop.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelTrangThaiHanNop.Location = new System.Drawing.Point(381, 24);
-            this.labelTrangThaiHanNop.Name = "labelTrangThaiHanNop";
-            this.labelTrangThaiHanNop.Size = new System.Drawing.Size(108, 21);
-            this.labelTrangThaiHanNop.TabIndex = 8;
-            this.labelTrangThaiHanNop.Text = "Còn hạn";
-            this.labelTrangThaiHanNop.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNgayDang.AutoSize = false;
+            this.labelNgayDang.BackColor = System.Drawing.Color.Transparent;
+            this.labelNgayDang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNgayDang.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelNgayDang.Location = new System.Drawing.Point(320, 24);
+            this.labelNgayDang.Name = "labelNgayDang";
+            this.labelNgayDang.Size = new System.Drawing.Size(108, 21);
+            this.labelNgayDang.TabIndex = 7;
+            this.labelNgayDang.Text = "22/02/2023";
+            this.labelNgayDang.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelMucLuongToiThieu
             // 
@@ -143,9 +118,9 @@
             this.labelMucLuongToiThieu.BackColor = System.Drawing.Color.Transparent;
             this.labelMucLuongToiThieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMucLuongToiThieu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelMucLuongToiThieu.Location = new System.Drawing.Point(511, 3);
+            this.labelMucLuongToiThieu.Location = new System.Drawing.Point(448, 3);
             this.labelMucLuongToiThieu.Name = "labelMucLuongToiThieu";
-            this.labelMucLuongToiThieu.Size = new System.Drawing.Size(88, 21);
+            this.labelMucLuongToiThieu.Size = new System.Drawing.Size(151, 21);
             this.labelMucLuongToiThieu.TabIndex = 9;
             this.labelMucLuongToiThieu.Text = "Từ 10 triệu";
             this.labelMucLuongToiThieu.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,38 +131,25 @@
             this.labelMucLuongToiDa.BackColor = System.Drawing.Color.Transparent;
             this.labelMucLuongToiDa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMucLuongToiDa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelMucLuongToiDa.Location = new System.Drawing.Point(511, 24);
+            this.labelMucLuongToiDa.Location = new System.Drawing.Point(464, 24);
             this.labelMucLuongToiDa.Name = "labelMucLuongToiDa";
-            this.labelMucLuongToiDa.Size = new System.Drawing.Size(88, 21);
+            this.labelMucLuongToiDa.Size = new System.Drawing.Size(135, 21);
             this.labelMucLuongToiDa.TabIndex = 10;
             this.labelMucLuongToiDa.Text = "đến 15 triệu";
             this.labelMucLuongToiDa.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLuotDaTuyen
+            // labelTrangThai
             // 
-            this.labelLuotDaTuyen.AutoSize = false;
-            this.labelLuotDaTuyen.BackColor = System.Drawing.Color.Transparent;
-            this.labelLuotDaTuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLuotDaTuyen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelLuotDaTuyen.Location = new System.Drawing.Point(621, 3);
-            this.labelLuotDaTuyen.Name = "labelLuotDaTuyen";
-            this.labelLuotDaTuyen.Size = new System.Drawing.Size(118, 21);
-            this.labelLuotDaTuyen.TabIndex = 11;
-            this.labelLuotDaTuyen.Text = "Lượt đã tuyển: 0";
-            this.labelLuotDaTuyen.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelLuotChuaTuyen
-            // 
-            this.labelLuotChuaTuyen.AutoSize = false;
-            this.labelLuotChuaTuyen.BackColor = System.Drawing.Color.Transparent;
-            this.labelLuotChuaTuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLuotChuaTuyen.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelLuotChuaTuyen.Location = new System.Drawing.Point(621, 24);
-            this.labelLuotChuaTuyen.Name = "labelLuotChuaTuyen";
-            this.labelLuotChuaTuyen.Size = new System.Drawing.Size(118, 21);
-            this.labelLuotChuaTuyen.TabIndex = 12;
-            this.labelLuotChuaTuyen.Text = "Lượt chưa tuyển: 0";
-            this.labelLuotChuaTuyen.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.labelTrangThai.AutoSize = false;
+            this.labelTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.labelTrangThai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTrangThai.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelTrangThai.Location = new System.Drawing.Point(621, 17);
+            this.labelTrangThai.Name = "labelTrangThai";
+            this.labelTrangThai.Size = new System.Drawing.Size(118, 21);
+            this.labelTrangThai.TabIndex = 12;
+            this.labelTrangThai.Text = "duyệtChờ ";
+            this.labelTrangThai.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // buttonSua
             // 
@@ -203,28 +165,41 @@
             this.buttonSua.Size = new System.Drawing.Size(121, 26);
             this.buttonSua.TabIndex = 13;
             this.buttonSua.Text = "Sửa";
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
-            // guna2PanelChinh
+            // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Controls.Add(this.labelChucVu);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.buttonSua);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator1);
-            this.guna2Panel1.Controls.Add(this.labelLuotChuaTuyen);
+            this.guna2Panel1.Controls.Add(this.labelTrangThai);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator3);
-            this.guna2Panel1.Controls.Add(this.labelLuotDaTuyen);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator4);
             this.guna2Panel1.Controls.Add(this.labelMucLuongToiDa);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator5);
             this.guna2Panel1.Controls.Add(this.labelMucLuongToiThieu);
             this.guna2Panel1.Controls.Add(this.labelNganhNghe);
-            this.guna2Panel1.Controls.Add(this.labelTrangThaiHanNop);
-            this.guna2Panel1.Controls.Add(this.labelHanHopHoSo);
+            this.guna2Panel1.Controls.Add(this.labelNgayDang);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2PanelChinh";
+            this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(910, 50);
             this.guna2Panel1.TabIndex = 14;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(320, 3);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(108, 21);
+            this.guna2HtmlLabel1.TabIndex = 14;
+            this.guna2HtmlLabel1.Text = "Ngày Đăng Tin";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // UserControlDangTin
             // 
@@ -240,8 +215,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelChucVu;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
@@ -249,13 +222,12 @@
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator4;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator5;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelNganhNghe;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelHanHopHoSo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelTrangThaiHanNop;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labelNgayDang;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelMucLuongToiThieu;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelMucLuongToiDa;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelLuotDaTuyen;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelLuotChuaTuyen;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labelTrangThai;
         private Guna.UI2.WinForms.Guna2Button buttonSua;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

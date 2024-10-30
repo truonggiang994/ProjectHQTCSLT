@@ -46,7 +46,7 @@ namespace Job
         {
             FCVGuide fCV = new FCVGuide();
 
-            fCV.CVGuide(ID);
+            fCV.CVGuide(ID,Data.username);
             FNguoiUngTuyen.Ins.LoadForm(fCV);
         }
 
