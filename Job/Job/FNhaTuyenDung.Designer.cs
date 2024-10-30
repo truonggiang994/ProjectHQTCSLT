@@ -40,6 +40,7 @@
             this.buttonTT = new Guna.UI2.WinForms.Guna2Button();
             this.buttonTinDaDang = new Guna.UI2.WinForms.Guna2Button();
             this.buttonDangTin = new Guna.UI2.WinForms.Guna2Button();
+            this.panelChinh = new System.Windows.Forms.Panel();
             this.panelTren.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -102,6 +103,7 @@
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 2;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+
             // 
             // panelChinh
             // 
@@ -113,6 +115,7 @@
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(1030, 639);
             this.panelChinh.TabIndex = 2;
+
             // 
             // panelMenu
             // 
@@ -249,6 +252,13 @@
             this.buttonDangTin.Text = "    Tạo tin tuyển dụng";
             this.buttonDangTin.Click += new System.EventHandler(this.buttonDangTin_Click);
             // 
+            // panelChinh
+            // 
+            this.panelChinh.Location = new System.Drawing.Point(170, 40);
+            this.panelChinh.Name = "panelChinh";
+            this.panelChinh.Size = new System.Drawing.Size(1030, 639);
+            this.panelChinh.TabIndex = 3;
+            // 
             // FNhaTuyenDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,7 +277,6 @@
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -280,9 +289,9 @@
         private System.Windows.Forms.Panel panelTren;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Panel panelChinh;
         private Guna.UI2.WinForms.Guna2Button buttonHoSoUngTuyen;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         public System.Windows.Forms.Label labelUser;
+        private System.Windows.Forms.Panel panelChinh;
     }
 }

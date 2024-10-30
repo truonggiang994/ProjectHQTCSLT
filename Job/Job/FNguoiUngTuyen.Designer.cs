@@ -36,7 +36,6 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.buttonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -44,7 +43,9 @@
             this.buttonVLDaUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.buttonCV = new Guna.UI2.WinForms.Guna2Button();
             this.buttonTrangChu = new Guna.UI2.WinForms.Guna2Button();
-            this.btnViecLam = new Guna.UI2.WinForms.Guna2Button();
+
+            this.panelChinh = new System.Windows.Forms.Panel();
+
             this.panelTren.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -130,13 +131,6 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 2;
             this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Location = new System.Drawing.Point(170, 40);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1030, 639);
-            this.panelMain.TabIndex = 2;
             // 
             // panelMenu
             // 
@@ -299,38 +293,19 @@
             this.buttonTrangChu.TabIndex = 3;
             this.buttonTrangChu.Text = "Trang chủ";
             // 
-            // btnViecLam
+            // panelChinh
             // 
-            this.btnViecLam.AutoRoundedCorners = true;
-            this.btnViecLam.BackColor = System.Drawing.Color.Transparent;
-            this.btnViecLam.BorderRadius = 21;
-            this.btnViecLam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnViecLam.CustomizableEdges.BottomLeft = false;
-            this.btnViecLam.CustomizableEdges.TopLeft = false;
-            this.btnViecLam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnViecLam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnViecLam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnViecLam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnViecLam.FillColor = System.Drawing.Color.BurlyWood;
-            this.btnViecLam.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViecLam.ForeColor = System.Drawing.Color.White;
-            this.btnViecLam.Image = ((System.Drawing.Image)(resources.GetObject("btnViecLam.Image")));
-            this.btnViecLam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnViecLam.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnViecLam.Location = new System.Drawing.Point(3, 145);
-            this.btnViecLam.Margin = new System.Windows.Forms.Padding(2);
-            this.btnViecLam.Name = "btnViecLam";
-            this.btnViecLam.Size = new System.Drawing.Size(165, 44);
-            this.btnViecLam.TabIndex = 10;
-            this.btnViecLam.Text = "Việc làm ";
-            this.btnViecLam.Click += new System.EventHandler(this.btnViecLam_Click);
+            this.panelChinh.Location = new System.Drawing.Point(170, 40);
+            this.panelChinh.Name = "panelChinh";
+            this.panelChinh.Size = new System.Drawing.Size(1030, 639);
+            this.panelChinh.TabIndex = 2;
             // 
             // FNguoiUngTuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 680);
-            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelChinh);
             this.Controls.Add(this.panelTren);
             this.Controls.Add(this.panelMenu);
             this.ForeColor = System.Drawing.Color.Transparent;
@@ -359,9 +334,8 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Panel panelMain;
         private Guna.UI2.WinForms.Guna2Button buttonXemCV;
-        private Guna.UI2.WinForms.Guna2Button btnViecLam;
+        private System.Windows.Forms.Panel panelChinh;
     }
 }
 

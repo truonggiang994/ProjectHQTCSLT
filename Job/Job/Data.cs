@@ -8,6 +8,6 @@ namespace Job
 {
     public static class Data
     {
-        public static string username = string.Empty;
+        public static string username = "hoan4704";
     }
 }
