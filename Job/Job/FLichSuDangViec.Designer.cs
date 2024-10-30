@@ -30,12 +30,7 @@
         {
             this.lblLsdv = new System.Windows.Forms.Label();
             this.guna2PanelLsdv = new Guna.UI2.WinForms.Guna2Panel();
-            this.labelCotTenTinDang = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelCotHapNopHoSo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelCotLuotUngTuyen = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelCotHanhDong = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelCotMucLuong = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2PanelLsdv.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,80 +56,25 @@
             this.guna2PanelLsdv.Size = new System.Drawing.Size(200, 40);
             this.guna2PanelLsdv.TabIndex = 2;
             // 
-            // labelCotTenTinDang
+            // flowLayout
             // 
-            this.labelCotTenTinDang.BackColor = System.Drawing.Color.Transparent;
-            this.labelCotTenTinDang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCotTenTinDang.Location = new System.Drawing.Point(35, 99);
-            this.labelCotTenTinDang.Name = "labelCotTenTinDang";
-            this.labelCotTenTinDang.Size = new System.Drawing.Size(103, 22);
-            this.labelCotTenTinDang.TabIndex = 3;
-            this.labelCotTenTinDang.Text = "Tên tin đăng";
-            // 
-            // labelCotHapNopHoSo
-            // 
-            this.labelCotHapNopHoSo.BackColor = System.Drawing.Color.Transparent;
-            this.labelCotHapNopHoSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCotHapNopHoSo.Location = new System.Drawing.Point(380, 99);
-            this.labelCotHapNopHoSo.Name = "labelCotHapNopHoSo";
-            this.labelCotHapNopHoSo.Size = new System.Drawing.Size(72, 22);
-            this.labelCotHapNopHoSo.TabIndex = 4;
-            this.labelCotHapNopHoSo.Text = "Thời hạn";
-            // 
-            // labelCotLuotUngTuyen
-            // 
-            this.labelCotLuotUngTuyen.BackColor = System.Drawing.Color.Transparent;
-            this.labelCotLuotUngTuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCotLuotUngTuyen.Location = new System.Drawing.Point(620, 99);
-            this.labelCotLuotUngTuyen.Name = "labelCotLuotUngTuyen";
-            this.labelCotLuotUngTuyen.Size = new System.Drawing.Size(123, 22);
-            this.labelCotLuotUngTuyen.TabIndex = 5;
-            this.labelCotLuotUngTuyen.Text = "Lượt ứng tuyển";
-            // 
-            // labelCotHanhDong
-            // 
-            this.labelCotHanhDong.BackColor = System.Drawing.Color.Transparent;
-            this.labelCotHanhDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCotHanhDong.Location = new System.Drawing.Point(782, 99);
-            this.labelCotHanhDong.Name = "labelCotHanhDong";
-            this.labelCotHanhDong.Size = new System.Drawing.Size(91, 22);
-            this.labelCotHanhDong.TabIndex = 6;
-            this.labelCotHanhDong.Text = "Hành động";
-            // 
-            // labelCotMucLuong
-            // 
-            this.labelCotMucLuong.BackColor = System.Drawing.Color.Transparent;
-            this.labelCotMucLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCotMucLuong.Location = new System.Drawing.Point(510, 99);
-            this.labelCotMucLuong.Name = "labelCotMucLuong";
-            this.labelCotMucLuong.Size = new System.Drawing.Size(85, 22);
-            this.labelCotMucLuong.TabIndex = 7;
-            this.labelCotMucLuong.Text = "Mức lương";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 124);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(930, 352);
-            this.flowLayoutPanel1.TabIndex = 8;
+            this.flowLayout.AutoScroll = true;
+            this.flowLayout.Location = new System.Drawing.Point(0, 78);
+            this.flowLayout.Name = "flowLayout";
+            this.flowLayout.Size = new System.Drawing.Size(930, 398);
+            this.flowLayout.TabIndex = 8;
+            this.flowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // FLichSuDangViec
             // 
             this.ClientSize = new System.Drawing.Size(930, 476);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.labelCotMucLuong);
-            this.Controls.Add(this.labelCotHanhDong);
-            this.Controls.Add(this.labelCotLuotUngTuyen);
-            this.Controls.Add(this.labelCotHapNopHoSo);
-            this.Controls.Add(this.labelCotTenTinDang);
+            this.Controls.Add(this.flowLayout);
             this.Controls.Add(this.guna2PanelLsdv);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FLichSuDangViec";
             this.guna2PanelLsdv.ResumeLayout(false);
             this.guna2PanelLsdv.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -142,11 +82,6 @@
 
         private System.Windows.Forms.Label lblLsdv;
         private Guna.UI2.WinForms.Guna2Panel guna2PanelLsdv;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelCotTenTinDang;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelCotHapNopHoSo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelCotLuotUngTuyen;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelCotHanhDong;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelCotMucLuong;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayout;
     }
 }

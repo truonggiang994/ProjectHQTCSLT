@@ -14,35 +14,51 @@ namespace Job
 {
     public partial class FNhaTuyenDung : Form
     {
+        static public FNhaTuyenDung Instance { get; private set; }
         public FNhaTuyenDung()
         {
+            Instance = this;
             InitializeComponent();
         }
 
-
-        // Hàm LoadForm chung để hiển thị các Form vào panel
-        public void LoadForm(Form form)
+        public void MoFCon(Form fCon)
         {
-            // Xóa tất cả các control hiện tại trong panelMain
-            panelMain.Controls.Clear();
-
-            // Thiết lập không có viền cho Form khi nhúng vào panel
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill; // Điều chỉnh form vừa với panel
-
-            // Thêm Form vào panelMain
-            panelMain.Controls.Add(form);
-            panelMain.Tag = form;
-
-            // Hiển thị form
-            form.Show();
+            fCon.TopLevel = false;
+            fCon.Size = panelChinh.Size;
+            fCon.Location = new Point(0, 0);
+            fCon.Tag = this;
+            panelChinh.Controls.Clear();
+            panelChinh.Controls.Add(fCon);
+            fCon.BringToFront();
+            fCon.Show();
         }
 
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            FDangNhap dn = new FDangNhap();
+            this.Hide();
+            dn.Show();
+        }
 
+        private void buttonDangTin_Click(object sender, EventArgs e)
+        {
+            MoFCon(new FDangTin());
+        }
         private void buttonTT_Click(object sender, EventArgs e)
         {
-            LoadForm(new FThongTinCongTy());
+            MoFCon(new FThongTinCongTy());
+        }
+        private void buttonTinDaDang_Click(object sender, EventArgs e)
+        {
+            MoFCon(new FLichSuDangViec());
+        }
+        private void buttonHoSoUngTuyen_Click(object sender, EventArgs e)
+        {
+            MoFCon(new FHoSoUngTuyen());
+        }
+        private void panelChinh_Paint(object sender, PaintEventArgs e)
+        {
+            MoFCon(new FDangTin());
         }
     }
 }

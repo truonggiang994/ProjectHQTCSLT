@@ -17,7 +17,7 @@ namespace Job
         public void LoadForm(Form form)
         {
             // Xóa tất cả các control hiện tại trong panelMain
-            panelMain.Controls.Clear();
+            panelChinh.Controls.Clear();
 
             // Thiết lập không có viền cho Form khi nhúng vào panel
             form.TopLevel = false;
@@ -25,8 +25,8 @@ namespace Job
             form.Dock = DockStyle.Fill; // Điều chỉnh form vừa với panel
 
             // Thêm Form vào panelMain
-            panelMain.Controls.Add(form);
-            panelMain.Tag = form;
+            panelChinh.Controls.Add(form);
+            panelChinh.Tag = form;
 
             // Hiển thị form
             form.Show();
@@ -49,6 +49,16 @@ namespace Job
         private void buttonCoHoiVL_Click(object sender, EventArgs e)
         {
             LoadForm(new FThonTinCaNhanUngVien());
+        }
+
+        private void buttonVLDaUngTuyen_Click(object sender, EventArgs e)
+        {
+            LoadForm(new FLichSuUngTuyen());
+        }
+
+        private void btnViecLam_Click(object sender, EventArgs e)
+        {
+            LoadForm(new FViecLam());
         }
     }
 }

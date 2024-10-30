@@ -41,7 +41,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2PanelChinh
+            // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.guna2ComboBox1);
             this.guna2Panel1.Controls.Add(this.buttonXemPhongVan);
@@ -51,7 +51,7 @@
             this.guna2Panel1.Controls.Add(this.labelChucVu);
             this.guna2Panel1.Controls.Add(this.pictureBoxAnhLogo);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2PanelChinh";
+            this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1000, 80);
             this.guna2Panel1.TabIndex = 0;
             // 
@@ -69,10 +69,8 @@
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
             this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Chờ duyệt",
-            "Đã duyệt",
-            "Bị từ chối",
-            " "});
+            "Approved",
+            "Rejected"});
             this.guna2ComboBox1.Location = new System.Drawing.Point(706, 34);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(169, 36);
@@ -92,6 +90,7 @@
             this.buttonXemPhongVan.Size = new System.Drawing.Size(86, 31);
             this.buttonXemPhongVan.TabIndex = 6;
             this.buttonXemPhongVan.Text = "Duyệt";
+            this.buttonXemPhongVan.Click += new System.EventHandler(this.buttonDuyet_Click);
             // 
             // labelNgayNop
             // 
