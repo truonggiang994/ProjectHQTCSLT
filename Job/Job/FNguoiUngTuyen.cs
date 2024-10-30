@@ -50,5 +50,15 @@ namespace Job
         {
             LoadForm(new FThonTinCaNhanUngVien());
         }
+
+        private void buttonVLDaUngTuyen_Click(object sender, EventArgs e)
+        {
+            LoadForm(new FLichSuUngTuyen());
+        }
+
+        private void btnViecLam_Click(object sender, EventArgs e)
+        {
+            LoadForm(new FViecLam());
+        }
     }
 }

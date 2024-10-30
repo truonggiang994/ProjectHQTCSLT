@@ -14,15 +14,17 @@ namespace Job
     public partial class FCVGuide : Form
     {
         int ID;
+        string username;
         public FCVGuide()
         {
             InitializeComponent();
         }
 
-        public void CVGuide(int ID)
+        public void CVGuide(int ID, string username)
         {
             this.ID = ID;
-            string connectionString = Settings.Default.Connection; // Chuỗi kết nối đến SQL Server
+            this.username = username;
+            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Gọi hàm trả về bảng trong SQL
@@ -30,7 +32,7 @@ namespace Job
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Username", Data.username); // Thêm tham số cho hàm
+                    command.Parameters.AddWithValue("@Username", username); // Thêm tham số cho hàm
 
                     try
                     {
@@ -85,7 +87,7 @@ namespace Job
                     // Gọi hàm GetCVByUsername
                     using (SqlCommand command = new SqlCommand("SELECT * FROM GetCVByUsername(@Username, @ID)", connection))
                     {
-                        command.Parameters.AddWithValue("@Username", Data.username); // Thêm tham số Username
+                        command.Parameters.AddWithValue("@Username", username); // Thêm tham số Username
                         command.Parameters.AddWithValue("@ID", ID); // Thêm tham số ID
 
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
@@ -126,7 +128,7 @@ namespace Job
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            FNguoiUngTuyen.Ins.LoadForm(new FXemCV());
+            Dispose();
         }
     }
 }

@@ -47,6 +47,7 @@
             this.dateTimePickerNgayThanhLap = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.buttonCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.panelThongTin = new Guna.UI2.WinForms.Guna2Panel();
+
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -66,6 +67,7 @@
             this.panelThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuyMoNhanSu)).BeginInit();
+
             this.SuspendLayout();
             // 
             // groupBoxQuyMoNhanSu
@@ -306,6 +308,7 @@
             this.panelThongTin.Location = new System.Drawing.Point(0, 0);
             this.panelThongTin.Margin = new System.Windows.Forms.Padding(2);
             this.panelThongTin.Name = "panelThongTin";
+
             this.panelThongTin.Size = new System.Drawing.Size(1027, 744);
             this.panelThongTin.TabIndex = 1;
             // 
@@ -329,11 +332,14 @@
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
+
             this.guna2PictureBox2.Location = new System.Drawing.Point(12, 343);
+
             this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(33, 36);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+
             this.guna2PictureBox2.TabIndex = 30;
             this.guna2PictureBox2.TabStop = false;
             // 
@@ -385,6 +391,7 @@
             this.userControlTextCTMaSoThue.text = "";
             this.userControlTextCTMaSoThue.textBoxSize = new System.Drawing.Size(225, 25);
             // 
+
             // pictureBoxQuyMoNhanSu
             // 
             this.pictureBoxQuyMoNhanSu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuyMoNhanSu.Image")));
@@ -397,6 +404,7 @@
             this.pictureBoxQuyMoNhanSu.TabIndex = 12;
             this.pictureBoxQuyMoNhanSu.TabStop = false;
             // 
+
             // userControlTextSDT
             // 
             this.userControlTextSDT.BackColor = System.Drawing.Color.White;
@@ -444,6 +452,7 @@
             this.userControlTextNganh.TabIndex = 1;
             this.userControlTextNganh.text = "";
             this.userControlTextNganh.textBoxSize = new System.Drawing.Size(510, 30);
+
             // 
             // labelThongTinCongTy
             // 
@@ -456,6 +465,7 @@
             this.labelThongTinCongTy.TabIndex = 0;
             this.labelThongTinCongTy.Text = "Thông tin công ty";
             // 
+
             // labelTTCaNhan
             // 
             this.labelTTCaNhan.BackColor = System.Drawing.Color.Transparent;
@@ -466,6 +476,7 @@
             this.labelTTCaNhan.Size = new System.Drawing.Size(175, 27);
             this.labelTTCaNhan.TabIndex = 74;
             this.labelTTCaNhan.Text = "Thông tin cá nhân";
+
             // 
             // FThongTinCongTy
             // 
@@ -476,7 +487,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1078, 524);
             this.Controls.Add(this.panelThongTin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FThongTinCongTy";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -489,7 +500,9 @@
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuyMoNhanSu)).EndInit();
+
             this.ResumeLayout(false);
 
         }

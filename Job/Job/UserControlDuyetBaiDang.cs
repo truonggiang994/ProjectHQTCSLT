@@ -44,7 +44,8 @@ namespace Job
 
                         labelTenCongTy.Text = reader.GetString(reader.GetOrdinal("Name")).ToString();
                         labelChucVu.Text = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
-                        guna2ComboBox1.Text = "Chờ duyệt";
+                        guna2ComboBox1.Text = "Pending";
+                        
                     }
 
                     reader.Close();
@@ -89,7 +90,7 @@ namespace Job
 
                     // 2. Thêm bản ghi vào bảng ApprovalHistory
                     SqlCommand insertHistoryCommand = new SqlCommand("INSERT INTO ApprovalHistory (AdminUsername, PostJobID, Status) VALUES (@AdminUsername, @PostJobID, @Status)", connection, transaction);
-                    insertHistoryCommand.Parameters.Add(new SqlParameter("@AdminUsername", "Giang")); // Thay thế 'Giang' bằng admin hiện tại
+                    insertHistoryCommand.Parameters.Add(new SqlParameter("@AdminUsername", "adminGiang")); 
                     insertHistoryCommand.Parameters.Add(new SqlParameter("@PostJobID", iD));
                     insertHistoryCommand.Parameters.Add(new SqlParameter("@Status", newStatus));
                     insertHistoryCommand.ExecuteNonQuery();

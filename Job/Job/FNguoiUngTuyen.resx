@@ -127,6 +127,7 @@
   <data name="buttonLogOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+
         DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACB6SURBVHhe7d0J
         sG1ZXd/xX3dDN40ogjKIkUHAqYFEUSmZQQYb6Ip2JDJYGI1IoDQYpbAwRjFxKiFOaAALDJNoIEaMGqJE
         QEsxoGDJGOKAgkzN1AwNDT0ktZsD9Fu93nt3WOec/d/78636VHW99/q9c+9ee63/PffecxNJ++qcJF+V
@@ -267,11 +268,13 @@
         kgZ24yRPTPLBzqG7bz7SlyRpy90oyY8neUfnIN6l6dD3kb4kSTtueu2A85P8apKPdg7obfD0viRJM+p6
         SR6Q5MlJXpPkis7hfRTTaxJMf9+TktwvybntPyxJkubTDZLcI8kjN0PB9Pn5P0/yV0nemeTDmwP+Q0ne
         l+Rvkrxi85LE/zHJdyX5miTXaf9iadf9f11+MsRaDoTMAAAAAElFTkSuQmCC
+
 </value>
   </data>
   <data name="guna2CirclePictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+
         vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAHDMSURBVHhe7d0H
         dBRnmi98jyennbCzOxvv3Lvx7szO7t6d/QYwNoiMxNjjmbEnD8FE2wSJjAGpwURjwCCCiSYZTOOMsQ2W
         1CBAIFWLDOpGsasBk3NSd0vPd94iGJ6nhVJ3dVXX/znnd+75vvVAU/XW+3+7+g0PPYRCoSxdnkr6iqeS
@@ -755,6 +758,7 @@
         /dCFl9oPf/Va635TI616ZNam9BhPKT3G0c+6j6V9vdNr/X3Yt/4+g+lg7/Ta/c+k1/6qx1jjv+3cfVxt
         6x5Z4Uf6Tj6Tkp69OyU9+xM1oz5lSPY6Y6LdkOxZKtDbDZk7OGVI9h/bpmenqpn2bQbP+ecOz8/7c/5v
         QKFQ1qv/H7irSXxdFkC5AAAAAElFTkSuQmCC
+
 </value>
   </data>
   <data name="panelMenu.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

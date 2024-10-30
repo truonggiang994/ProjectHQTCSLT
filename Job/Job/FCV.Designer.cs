@@ -670,7 +670,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1044, 637);
+            this.ClientSize = new System.Drawing.Size(1000, 637);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBoxHocVan);
             this.Controls.Add(this.richTextBoxChungChi);

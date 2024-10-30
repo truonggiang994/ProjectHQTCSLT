@@ -43,7 +43,9 @@
             this.buttonVLDaUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.buttonCV = new Guna.UI2.WinForms.Guna2Button();
             this.buttonTrangChu = new Guna.UI2.WinForms.Guna2Button();
+
             this.panelChinh = new System.Windows.Forms.Panel();
+
             this.panelTren.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -134,6 +136,7 @@
             // 
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMenu.Controls.Add(this.btnViecLam);
             this.panelMenu.Controls.Add(this.buttonXemCV);
             this.panelMenu.Controls.Add(this.guna2PictureBox1);
             this.panelMenu.Controls.Add(this.buttonCoHoiVL);
@@ -164,7 +167,7 @@
             this.buttonXemCV.Image = ((System.Drawing.Image)(resources.GetObject("buttonXemCV.Image")));
             this.buttonXemCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonXemCV.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonXemCV.Location = new System.Drawing.Point(2, 244);
+            this.buttonXemCV.Location = new System.Drawing.Point(2, 295);
             this.buttonXemCV.Margin = new System.Windows.Forms.Padding(2);
             this.buttonXemCV.Name = "buttonXemCV";
             this.buttonXemCV.Size = new System.Drawing.Size(165, 44);
@@ -204,7 +207,7 @@
             this.buttonCoHoiVL.Image = ((System.Drawing.Image)(resources.GetObject("buttonCoHoiVL.Image")));
             this.buttonCoHoiVL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonCoHoiVL.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonCoHoiVL.Location = new System.Drawing.Point(2, 144);
+            this.buttonCoHoiVL.Location = new System.Drawing.Point(2, 195);
             this.buttonCoHoiVL.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCoHoiVL.Name = "buttonCoHoiVL";
             this.buttonCoHoiVL.Size = new System.Drawing.Size(165, 44);
@@ -230,12 +233,13 @@
             this.buttonVLDaUngTuyen.Image = ((System.Drawing.Image)(resources.GetObject("buttonVLDaUngTuyen.Image")));
             this.buttonVLDaUngTuyen.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonVLDaUngTuyen.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonVLDaUngTuyen.Location = new System.Drawing.Point(2, 294);
+            this.buttonVLDaUngTuyen.Location = new System.Drawing.Point(2, 345);
             this.buttonVLDaUngTuyen.Margin = new System.Windows.Forms.Padding(2);
             this.buttonVLDaUngTuyen.Name = "buttonVLDaUngTuyen";
             this.buttonVLDaUngTuyen.Size = new System.Drawing.Size(165, 44);
             this.buttonVLDaUngTuyen.TabIndex = 6;
             this.buttonVLDaUngTuyen.Text = "CV đã nộp";
+            this.buttonVLDaUngTuyen.Click += new System.EventHandler(this.buttonVLDaUngTuyen_Click);
             // 
             // buttonCV
             // 
@@ -255,7 +259,7 @@
             this.buttonCV.Image = ((System.Drawing.Image)(resources.GetObject("buttonCV.Image")));
             this.buttonCV.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonCV.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonCV.Location = new System.Drawing.Point(2, 194);
+            this.buttonCV.Location = new System.Drawing.Point(2, 245);
             this.buttonCV.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCV.Name = "buttonCV";
             this.buttonCV.Size = new System.Drawing.Size(165, 44);

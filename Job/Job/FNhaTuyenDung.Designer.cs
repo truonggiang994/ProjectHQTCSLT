@@ -33,6 +33,7 @@
             this.labelUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.buttonLogOut = new Guna.UI2.WinForms.Guna2Button();
+            this.panelChinh = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.buttonHoSoUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -102,6 +103,19 @@
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 2;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+
+            // 
+            // panelChinh
+            // 
+            this.panelChinh.AutoScroll = true;
+            this.panelChinh.AutoSize = true;
+            this.panelChinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelChinh.Location = new System.Drawing.Point(170, 40);
+            this.panelChinh.Margin = new System.Windows.Forms.Padding(2);
+            this.panelChinh.Name = "panelChinh";
+            this.panelChinh.Size = new System.Drawing.Size(1030, 639);
+            this.panelChinh.TabIndex = 2;
+
             // 
             // panelMenu
             // 
