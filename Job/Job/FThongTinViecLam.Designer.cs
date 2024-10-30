@@ -41,10 +41,6 @@
             this.labelName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBoxCongTy = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelTTChung = new Guna.UI2.WinForms.Guna2Panel();
-            this.userControlLabelKinhNghiem = new Job.UserControlLabelTT();
-            this.userControlLabelWorkForm = new Job.UserControlLabelTT();
-            this.userControlLabelSkill = new Job.UserControlLabelTT();
-            this.userControlLabelViTri = new Job.UserControlLabelTT();
             this.labelTenTTChung = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelMoTaCongViec = new Guna.UI2.WinForms.Guna2Panel();
             this.labelMoTaCongViec = new System.Windows.Forms.RichTextBox();
@@ -56,6 +52,10 @@
             this.labelDiaDiemLamViec = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelTenDiaDiemLV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControlLabelKinhNghiem = new Job.UserControlLabelTT();
+            this.userControlLabelWorkForm = new Job.UserControlLabelTT();
+            this.userControlLabelSkill = new Job.UserControlLabelTT();
+            this.userControlLabelViTri = new Job.UserControlLabelTT();
             this.panelCongTy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -92,6 +92,7 @@
             this.buttonBack.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBack.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.buttonBack.Image = ((System.Drawing.Image)(resources.GetObject("buttonBack.Image")));
             this.buttonBack.ImageOffset = new System.Drawing.Point(0, 0);
             this.buttonBack.ImageRotate = 0F;
             this.buttonBack.ImageSize = new System.Drawing.Size(20, 20);
@@ -100,6 +101,7 @@
             this.buttonBack.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonBack.Size = new System.Drawing.Size(25, 25);
             this.buttonBack.TabIndex = 17;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click_1);
             // 
             // buttonNopHoSo
             // 
@@ -116,6 +118,7 @@
             this.buttonNopHoSo.Size = new System.Drawing.Size(113, 30);
             this.buttonNopHoSo.TabIndex = 16;
             this.buttonNopHoSo.Text = "Nộp hồ sơ ";
+            this.buttonNopHoSo.Click += new System.EventHandler(this.buttonNopHoSo_Click);
             // 
             // labelDiaChi
             // 
@@ -124,7 +127,7 @@
             this.labelDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDiaChi.ForeColor = System.Drawing.Color.Black;
             this.labelDiaChi.Location = new System.Drawing.Point(304, 88);
-            this.labelDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.labelDiaChi.Name = "labelDiaChi";
             this.labelDiaChi.Size = new System.Drawing.Size(256, 20);
             this.labelDiaChi.TabIndex = 15;
@@ -137,7 +140,7 @@
             this.labelMucLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMucLuong.ForeColor = System.Drawing.Color.Black;
             this.labelMucLuong.Location = new System.Drawing.Point(304, 57);
-            this.labelMucLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelMucLuong.Margin = new System.Windows.Forms.Padding(2);
             this.labelMucLuong.Name = "labelMucLuong";
             this.labelMucLuong.Size = new System.Drawing.Size(406, 20);
             this.labelMucLuong.TabIndex = 13;
@@ -149,7 +152,7 @@
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(177, 88);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(112, 21);
             this.guna2HtmlLabel2.TabIndex = 12;
@@ -160,7 +163,7 @@
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
             this.guna2PictureBox4.Location = new System.Drawing.Point(141, 83);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(30, 30);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,7 +177,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(177, 57);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.label2.Margin = new System.Windows.Forms.Padding(2);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 8;
@@ -186,7 +189,7 @@
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.InitialImage")));
             this.guna2PictureBox3.Location = new System.Drawing.Point(141, 52);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(30, 30);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -229,54 +232,6 @@
             this.panelTTChung.Name = "panelTTChung";
             this.panelTTChung.Size = new System.Drawing.Size(883, 191);
             this.panelTTChung.TabIndex = 1;
-            // 
-            // userControlLabelKinhNghiem
-            // 
-            this.userControlLabelKinhNghiem.GroupBoxSize = new System.Drawing.Size(350, 55);
-            this.userControlLabelKinhNghiem.GroupBoxText = "Yêu cầu kinh nghiệm";
-            this.userControlLabelKinhNghiem.LabelText = "Không yêu cầu";
-            this.userControlLabelKinhNghiem.Location = new System.Drawing.Point(448, 71);
-            this.userControlLabelKinhNghiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.userControlLabelKinhNghiem.Name = "userControlLabelKinhNghiem";
-            this.userControlLabelKinhNghiem.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelKinhNghiem.PictureBoxImage")));
-            this.userControlLabelKinhNghiem.Size = new System.Drawing.Size(409, 43);
-            this.userControlLabelKinhNghiem.TabIndex = 5;
-            // 
-            // userControlLabelWorkForm
-            // 
-            this.userControlLabelWorkForm.GroupBoxSize = new System.Drawing.Size(350, 55);
-            this.userControlLabelWorkForm.GroupBoxText = "Hình thức làm việc";
-            this.userControlLabelWorkForm.LabelText = "Toàn thời gian";
-            this.userControlLabelWorkForm.Location = new System.Drawing.Point(10, 122);
-            this.userControlLabelWorkForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.userControlLabelWorkForm.Name = "userControlLabelWorkForm";
-            this.userControlLabelWorkForm.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelWorkForm.PictureBoxImage")));
-            this.userControlLabelWorkForm.Size = new System.Drawing.Size(410, 43);
-            this.userControlLabelWorkForm.TabIndex = 4;
-            // 
-            // userControlLabelSkill
-            // 
-            this.userControlLabelSkill.GroupBoxSize = new System.Drawing.Size(350, 55);
-            this.userControlLabelSkill.GroupBoxText = "Kỹ Năng";
-            this.userControlLabelSkill.LabelText = "";
-            this.userControlLabelSkill.Location = new System.Drawing.Point(10, 71);
-            this.userControlLabelSkill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.userControlLabelSkill.Name = "userControlLabelSkill";
-            this.userControlLabelSkill.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelSkill.PictureBoxImage")));
-            this.userControlLabelSkill.Size = new System.Drawing.Size(410, 43);
-            this.userControlLabelSkill.TabIndex = 2;
-            // 
-            // userControlLabelViTri
-            // 
-            this.userControlLabelViTri.GroupBoxSize = new System.Drawing.Size(805, 50);
-            this.userControlLabelViTri.GroupBoxText = "Vị Trí Tuyển Dụng";
-            this.userControlLabelViTri.LabelText = "Kế toán ";
-            this.userControlLabelViTri.Location = new System.Drawing.Point(10, 20);
-            this.userControlLabelViTri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.userControlLabelViTri.Name = "userControlLabelViTri";
-            this.userControlLabelViTri.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelViTri.PictureBoxImage")));
-            this.userControlLabelViTri.Size = new System.Drawing.Size(862, 54);
-            this.userControlLabelViTri.TabIndex = 1;
             // 
             // labelTenTTChung
             // 
@@ -362,7 +317,7 @@
             this.labelTenQuyenLoi.TabIndex = 0;
             this.labelTenQuyenLoi.Text = "Quyền lợi";
             // 
-            // guna2PanelChinh
+            // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel1.BorderRadius = 4;
@@ -371,7 +326,7 @@
             this.guna2Panel1.Controls.Add(this.labelTenDiaDiemLV);
             this.guna2Panel1.ForeColor = System.Drawing.Color.Black;
             this.guna2Panel1.Location = new System.Drawing.Point(12, 700);
-            this.guna2Panel1.Name = "guna2PanelChinh";
+            this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(883, 52);
             this.guna2Panel1.TabIndex = 9;
             // 
@@ -405,12 +360,60 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(907, 207);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
+            // userControlLabelKinhNghiem
+            // 
+            this.userControlLabelKinhNghiem.GroupBoxSize = new System.Drawing.Size(350, 55);
+            this.userControlLabelKinhNghiem.GroupBoxText = "Yêu cầu kinh nghiệm";
+            this.userControlLabelKinhNghiem.LabelText = "Không yêu cầu";
+            this.userControlLabelKinhNghiem.Location = new System.Drawing.Point(448, 71);
+            this.userControlLabelKinhNghiem.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlLabelKinhNghiem.Name = "userControlLabelKinhNghiem";
+            this.userControlLabelKinhNghiem.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelKinhNghiem.PictureBoxImage")));
+            this.userControlLabelKinhNghiem.Size = new System.Drawing.Size(409, 43);
+            this.userControlLabelKinhNghiem.TabIndex = 5;
+            // 
+            // userControlLabelWorkForm
+            // 
+            this.userControlLabelWorkForm.GroupBoxSize = new System.Drawing.Size(350, 55);
+            this.userControlLabelWorkForm.GroupBoxText = "Hình thức làm việc";
+            this.userControlLabelWorkForm.LabelText = "Toàn thời gian";
+            this.userControlLabelWorkForm.Location = new System.Drawing.Point(10, 122);
+            this.userControlLabelWorkForm.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlLabelWorkForm.Name = "userControlLabelWorkForm";
+            this.userControlLabelWorkForm.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelWorkForm.PictureBoxImage")));
+            this.userControlLabelWorkForm.Size = new System.Drawing.Size(410, 43);
+            this.userControlLabelWorkForm.TabIndex = 4;
+            // 
+            // userControlLabelSkill
+            // 
+            this.userControlLabelSkill.GroupBoxSize = new System.Drawing.Size(350, 55);
+            this.userControlLabelSkill.GroupBoxText = "Kỹ Năng";
+            this.userControlLabelSkill.LabelText = "";
+            this.userControlLabelSkill.Location = new System.Drawing.Point(10, 71);
+            this.userControlLabelSkill.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlLabelSkill.Name = "userControlLabelSkill";
+            this.userControlLabelSkill.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelSkill.PictureBoxImage")));
+            this.userControlLabelSkill.Size = new System.Drawing.Size(410, 43);
+            this.userControlLabelSkill.TabIndex = 2;
+            // 
+            // userControlLabelViTri
+            // 
+            this.userControlLabelViTri.GroupBoxSize = new System.Drawing.Size(805, 50);
+            this.userControlLabelViTri.GroupBoxText = "Vị Trí Tuyển Dụng";
+            this.userControlLabelViTri.LabelText = "Kế toán ";
+            this.userControlLabelViTri.Location = new System.Drawing.Point(10, 20);
+            this.userControlLabelViTri.Margin = new System.Windows.Forms.Padding(4);
+            this.userControlLabelViTri.Name = "userControlLabelViTri";
+            this.userControlLabelViTri.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlLabelViTri.PictureBoxImage")));
+            this.userControlLabelViTri.Size = new System.Drawing.Size(862, 54);
+            this.userControlLabelViTri.TabIndex = 1;
+            // 
             // FThongTinViecLam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(922, 718);
+            this.ClientSize = new System.Drawing.Size(1160, 718);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panelQuyenLoi);

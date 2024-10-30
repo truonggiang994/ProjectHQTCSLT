@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,23 @@ namespace Job
 {
     public partial class UserControlViecLam : UserControl
     {
-        public UserControlViecLam()
+        private int IDPostJob;
+        public UserControlViecLam(int ID, string tenCongTy, string diaChi, string tienLuong, string chucVu)
         {
             InitializeComponent();
+            this.IDPostJob = ID;
+            labelTenCongTy.Text = tenCongTy;
+            labelChucVu.Text = chucVu;
+            labelDiaChi.Text = diaChi;
+            labelTienLuong.Text = tienLuong;
         }
+
+        private void buttonXemChiTiet_Click(object sender, EventArgs e)
+        {
+            FThongTinViecLam fThongTinViecLam = new FThongTinViecLam(IDPostJob);
+            fThongTinViecLam.ShowDialog();
+        }
+
+       
     }
 }
