@@ -48,6 +48,7 @@
             this.buttonCapNhat = new Guna.UI2.WinForms.Guna2Button();
             this.panelThongTin = new Guna.UI2.WinForms.Guna2Panel();
 
+
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -281,6 +282,7 @@
             this.panelThongTin.BorderColor = System.Drawing.Color.Transparent;
             this.panelThongTin.BorderRadius = 4;
             this.panelThongTin.BorderThickness = 3;
+
             this.panelThongTin.Controls.Add(this.labelTTCaNhan);
             this.panelThongTin.Controls.Add(this.panel7);
             this.panelThongTin.Controls.Add(this.panel1);
@@ -298,11 +300,13 @@
             this.panelThongTin.Controls.Add(this.groupBox1);
             this.panelThongTin.Controls.Add(this.flowLayoutPanelDiaChi);
             this.panelThongTin.Controls.Add(this.flowLayoutPanelAnh);
+
             this.panelThongTin.Controls.Add(this.userControlTextCTGmail);
             this.panelThongTin.Controls.Add(this.userControlTextCTMaSoThue);
             this.panelThongTin.Controls.Add(this.pictureBoxQuyMoNhanSu);
             this.panelThongTin.Controls.Add(this.groupBoxQuyMoNhanSu);
             this.panelThongTin.Controls.Add(this.userControlTextSDT);
+
             this.panelThongTin.Controls.Add(this.userControlTextWebsite);
             this.panelThongTin.Controls.Add(this.userControlTextNganh);
             this.panelThongTin.Location = new System.Drawing.Point(0, 0);
@@ -358,9 +362,17 @@
             this.userControlTextTenCongTy.TabIndex = 25;
             this.userControlTextTenCongTy.text = "";
             this.userControlTextTenCongTy.textBoxSize = new System.Drawing.Size(510, 30);
+
             // 
-            // userControlTextCTGmail
+            this.richTextBoxMoTa.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxMoTa.Location = new System.Drawing.Point(6, 27);
+            this.richTextBoxMoTa.Name = "richTextBoxMoTa";
+            this.richTextBoxMoTa.Size = new System.Drawing.Size(306, 93);
+            this.richTextBoxMoTa.TabIndex = 17;
+            this.richTextBoxMoTa.Text = "";
             // 
+
             this.userControlTextCTGmail.BackColor = System.Drawing.Color.White;
             this.userControlTextCTGmail.GroupBoxSize = new System.Drawing.Size(280, 50);
             this.userControlTextCTGmail.GroupBoxText = "Gmail";
@@ -374,9 +386,14 @@
             this.userControlTextCTGmail.TabIndex = 14;
             this.userControlTextCTGmail.text = "";
             this.userControlTextCTGmail.textBoxSize = new System.Drawing.Size(225, 25);
+
             // 
-            // userControlTextCTMaSoThue
+            this.flowLayoutPanelDiaChi.Location = new System.Drawing.Point(354, 279);
+            this.flowLayoutPanelDiaChi.Name = "flowLayoutPanelDiaChi";
+            this.flowLayoutPanelDiaChi.Size = new System.Drawing.Size(405, 199);
+            this.flowLayoutPanelDiaChi.TabIndex = 23;
             // 
+
             this.userControlTextCTMaSoThue.BackColor = System.Drawing.Color.White;
             this.userControlTextCTMaSoThue.GroupBoxSize = new System.Drawing.Size(280, 50);
             this.userControlTextCTMaSoThue.GroupBoxText = "Mã số thuế";
@@ -396,7 +413,9 @@
             // 
             this.pictureBoxQuyMoNhanSu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuyMoNhanSu.Image")));
             this.pictureBoxQuyMoNhanSu.ImageRotate = 0F;
+
             this.pictureBoxQuyMoNhanSu.Location = new System.Drawing.Point(12, 293);
+
             this.pictureBoxQuyMoNhanSu.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxQuyMoNhanSu.Name = "pictureBoxQuyMoNhanSu";
             this.pictureBoxQuyMoNhanSu.Size = new System.Drawing.Size(33, 36);
@@ -410,7 +429,9 @@
             this.userControlTextSDT.BackColor = System.Drawing.Color.White;
             this.userControlTextSDT.GroupBoxSize = new System.Drawing.Size(280, 50);
             this.userControlTextSDT.GroupBoxText = "Số điện thoại";
+
             this.userControlTextSDT.Location = new System.Drawing.Point(359, 233);
+
             this.userControlTextSDT.Margin = new System.Windows.Forms.Padding(2);
             this.userControlTextSDT.Name = "userControlTextSDT";
             this.userControlTextSDT.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextSDT.PictureBoxImage")));
@@ -421,6 +442,7 @@
             this.userControlTextSDT.text = "";
             this.userControlTextSDT.textBoxSize = new System.Drawing.Size(225, 25);
             // 
+
             // userControlTextWebsite
             // 
             this.userControlTextWebsite.BackColor = System.Drawing.Color.White;
@@ -477,15 +499,17 @@
             this.labelTTCaNhan.TabIndex = 74;
             this.labelTTCaNhan.Text = "Thông tin cá nhân";
 
-            // 
+
             // FThongTinCongTy
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1078, 524);
+
             this.Controls.Add(this.panelThongTin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -499,9 +523,11 @@
             this.groupBoxNgayThanhLap.ResumeLayout(false);
             this.panelThongTin.ResumeLayout(false);
             this.panelThongTin.PerformLayout();
+
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
 
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuyMoNhanSu)).EndInit();
+
 
             this.ResumeLayout(false);
 
@@ -509,6 +535,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Panel panelThongTin;
+
         private Guna.UI2.WinForms.Guna2Button buttonCapNhat;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.GroupBox groupBoxNgayThanhLap;
@@ -538,5 +565,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelTTCaNhan;
+
     }
 }

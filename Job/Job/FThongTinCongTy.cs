@@ -228,6 +228,7 @@ namespace Job
                     imagesParam.TypeName = "dbo.ImageListType"; // Đảm bảo tên trùng khớp với tên trong SQL Server
                     cmd.Parameters.Add(imagesParam);
 
+
                     // Thực thi thủ tục
                     cmd.ExecuteNonQuery();
                 }

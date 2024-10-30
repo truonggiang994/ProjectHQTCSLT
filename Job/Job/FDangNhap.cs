@@ -65,9 +65,11 @@ namespace Job
                                     if (resultEmployer == 1)
                                     {
                                         Data.username = textBoTaiKhoan.Text;
+
                                         FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
                                         this.Hide();
                                         fNhaTuyenDung.Show();
+
                                     }
                                     else
                                     {

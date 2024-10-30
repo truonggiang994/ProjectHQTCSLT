@@ -32,8 +32,11 @@
             this.panelTren = new System.Windows.Forms.Panel();
             this.labelUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.buttonNguoiUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.buttonLogOut = new Guna.UI2.WinForms.Guna2Button();
+
             this.panelChinh = new Guna.UI2.WinForms.Guna2Panel();
+
             this.panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.buttonHoSoUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -77,7 +80,9 @@
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
+
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(848, 3);
+
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -86,6 +91,7 @@
             this.guna2CirclePictureBox1.TabIndex = 5;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
+
             // buttonLogOut
             // 
             this.buttonLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -116,6 +122,17 @@
             this.panelChinh.Size = new System.Drawing.Size(1030, 639);
             this.panelChinh.TabIndex = 2;
 
+            // 
+            // panelMain
+            // 
+            this.panelMain.AutoScroll = true;
+            this.panelMain.AutoSize = true;
+            this.panelMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelMain.Location = new System.Drawing.Point(150, 40);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(2);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(948, 476);
+            this.panelMain.TabIndex = 2;
             // 
             // panelMenu
             // 
@@ -263,8 +280,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.ClientSize = new System.Drawing.Size(1200, 680);
             this.Controls.Add(this.panelChinh);
+
             this.Controls.Add(this.panelTren);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -289,6 +308,7 @@
         private System.Windows.Forms.Panel panelTren;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+
         private Guna.UI2.WinForms.Guna2Button buttonHoSoUngTuyen;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         public System.Windows.Forms.Label labelUser;

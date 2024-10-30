@@ -25,8 +25,8 @@ namespace Job
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-            // Mở kết nối tới SQL Server
-            using (SqlConnection connection = new SqlConnection("connection_string_here"))
+            string connectionString = Settings.Default.Connection; // Chuỗi kết nối đến SQL Server
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -48,18 +48,43 @@ namespace Job
                     cmd.Parameters.AddWithValue("@District", comboBoxQuanHuyen.Text);
                     cmd.Parameters.AddWithValue("@Street", textBoxSoNha.Text);
 
-                    // Xử lý ảnh đại diện (Avatar)
-                    using (MemoryStream ms = new MemoryStream())
+                    // Xử lý ảnh đại diện
+                    try
                     {
-                        pictureBoxAnhDaiDien.Image.Save(ms, pictureBoxAnhDaiDien.Image.RawFormat);
-                        cmd.Parameters.AddWithValue("@Avatar", ms.ToArray());
+                        byte[] avatar = GetAvatarBytes(pictureBoxAnhDaiDien.Image);
+                        cmd.Parameters.AddWithValue("@Avatar", avatar);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message);
+                        return; // Ngừng thực hiện nếu có lỗi
                     }
 
                     // Thực thi stored procedure
-                    cmd.ExecuteNonQuery();
+                    try
+                    {
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Thông tin đã được lưu thành công.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi lưu thông tin: " + ex.Message);
+                    }
                 }
             }
         }
+
+        private byte[] GetAvatarBytes(Image image)
+        {
+            if (image == null) return null;
+
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+
 
         private void FThonTinCaNhanUngVien_Load(object sender, EventArgs e)
         {
