@@ -19,7 +19,7 @@ namespace Job
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new FKhoaTaiKhoan());
+            Application.Run(new FNhaTuyenDung());
 
         }
     }

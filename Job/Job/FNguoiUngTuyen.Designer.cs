@@ -136,7 +136,6 @@
             // 
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMenu.Controls.Add(this.btnViecLam);
             this.panelMenu.Controls.Add(this.buttonXemCV);
             this.panelMenu.Controls.Add(this.guna2PictureBox1);
             this.panelMenu.Controls.Add(this.buttonCoHoiVL);
@@ -338,4 +337,3 @@
         private System.Windows.Forms.Panel panelChinh;
     }
 }
-
