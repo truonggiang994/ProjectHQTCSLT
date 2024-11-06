@@ -18,9 +18,7 @@ namespace Job
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
-
-            Application.Run(new FThongTinCaNhan());
+            Application.Run(new FNhaTuyenDung());
 
 
         }

@@ -40,7 +40,6 @@
             this.buttonTT = new Guna.UI2.WinForms.Guna2Button();
             this.buttonTinDaDang = new Guna.UI2.WinForms.Guna2Button();
             this.buttonDangTin = new Guna.UI2.WinForms.Guna2Button();
-            this.panelChinh = new System.Windows.Forms.Panel();
             this.panelTren.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -103,18 +102,14 @@
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 2;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
-
             // 
             // panelChinh
             // 
-            this.panelChinh.AutoScroll = true;
-            this.panelChinh.AutoSize = true;
-            this.panelChinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelChinh.Location = new System.Drawing.Point(170, 40);
-            this.panelChinh.Margin = new System.Windows.Forms.Padding(2);
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(1030, 639);
-            this.panelChinh.TabIndex = 2;
+
+            this.panelChinh.TabIndex = 3;
 
             // 
             // panelMenu
@@ -252,13 +247,6 @@
             this.buttonDangTin.Text = "    Tạo tin tuyển dụng";
             this.buttonDangTin.Click += new System.EventHandler(this.buttonDangTin_Click);
             // 
-            // panelChinh
-            // 
-            this.panelChinh.Location = new System.Drawing.Point(170, 40);
-            this.panelChinh.Name = "panelChinh";
-            this.panelChinh.Size = new System.Drawing.Size(1030, 639);
-            this.panelChinh.TabIndex = 3;
-            // 
             // FNhaTuyenDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,7 +255,7 @@
             this.Controls.Add(this.panelChinh);
             this.Controls.Add(this.panelTren);
             this.Controls.Add(this.panelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FNhaTuyenDung";
             this.Text = "FNhaTuyenDung";
@@ -292,6 +280,6 @@
         private Guna.UI2.WinForms.Guna2Button buttonHoSoUngTuyen;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         public System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.Panel panelChinh;
+        private Guna.UI2.WinForms.Guna2Panel panelChinh;
     }
 }

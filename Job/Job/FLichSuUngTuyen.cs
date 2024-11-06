@@ -11,41 +11,38 @@ namespace Job
         public FLichSuUngTuyen()
         {
             InitializeComponent();
-            LoadData();
+
         }
-        private void LoadData()
+        private void LoadDuyetBaiDangControls()
         {
-            try
+            flowLayoutPanel.Controls.Clear();  // Xóa các control trước đó (nếu có)
+
+            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                SqlCommand command = new SqlCommand("select * from ApplicationSubmit where ", connection);
+
+                try
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("sp_GetApplicationSubmit", connection))
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
                     {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@Username", Data.username.ToString());
+                        int postId = reader.GetInt32(0);  // Lấy ID của PostJob
 
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
+                        // Tạo một instance của UserControlDuyetBaiDang
+                        UserControlDuyetbaiDang control = new UserControlDuyetbaiDang(postId);
 
-                        dataGridView.DataSource = dataTable;
-
-                        dataGridView.AutoGenerateColumns = true;
-
-                        dataGridView.ColumnHeadersHeight = 40; // Chiều cao tiêu đề cột là 40 pixel
-
-                        for (int i = 0; i < dataTable.Columns.Count; i++)
-                        {
-                            string columnName = dataTable.Columns[i].ColumnName;
-                            dataGridView.Columns[i].HeaderText = columnName;
-                        }
-
-                        // Ngăn không cho người dùng tương tác với hàng
-                        dataGridView.ReadOnly = true; // Đặt DataGridView ở chế độ chỉ đọc
-                        dataGridView.AllowUserToAddRows = false; // Không cho phép người dùng thêm hàng mới
-                        dataGridView.AllowUserToDeleteRows = false; // Không cho phép người dùng xóa hàng
+                        // Thêm control vào flowLayoutPanel
+                        flowLayoutPanel.Controls.Add(control);
                     }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+
                 }
             }
             catch (Exception ex)

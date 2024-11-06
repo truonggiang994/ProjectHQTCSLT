@@ -14,12 +14,7 @@ namespace Job
     public partial class UserControlDuyetbaiDang : UserControl
     {
         private int iD;
-        public UserControlDuyetbaiDang()
-        {
-            InitializeComponent();
-        }
-        private bool co = false;
-        private bool cof = false;
+        
         public UserControlDuyetbaiDang(int ID)
         {
             InitializeComponent();
