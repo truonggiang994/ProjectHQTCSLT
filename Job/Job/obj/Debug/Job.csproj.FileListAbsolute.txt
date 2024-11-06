@@ -60,3 +60,4 @@ D:\IT\ProjectHQTCSLT\Job\Job\bin\Debug\Newtonsoft.Json.xml
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.csproj.Up2Date
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.exe
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.UserControlACT.resources
+D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FTaoTaiKhoanQuanly.resources
