@@ -60,5 +60,13 @@ namespace Job
         {
             LoadForm(new FViecLam());
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            FDangNhap fDangNhap = new FDangNhap();
+            this.Hide();
+            fDangNhap.Show();
+        }
+
     }
 }

@@ -71,12 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
-    <Compile Include="FCamNang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FCamNang.Designer.cs">
-      <DependentUpon>FCamNang.cs</DependentUpon>
-    </Compile>
     <Compile Include="FCVGuide.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,18 +131,6 @@
     <Compile Include="FNhanPhongVan.Designer.cs">
       <DependentUpon>FNhanPhongVan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FNhapCamNang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FNhapCamNang.Designer.cs">
-      <DependentUpon>FNhapCamNang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FNhapDanhGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FNhapDanhGia.Designer.cs">
-      <DependentUpon>FNhapDanhGia.cs</DependentUpon>
-    </Compile>
     <Compile Include="FQuanLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,29 +179,11 @@
     <Compile Include="FThonTinCaNhanUngVien.Designer.cs">
       <DependentUpon>FThonTinCaNhanUngVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTopViecLam.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FTopViecLam.Designer.cs">
-      <DependentUpon>FTopViecLam.cs</DependentUpon>
-    </Compile>
     <Compile Include="FTrangChuNhaUngTuyen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FTrangChuNhaUngTuyen.Designer.cs">
       <DependentUpon>FTrangChuNhaUngTuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FViecLamYeuThich.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FViecLamYeuThich.Designer.cs">
-      <DependentUpon>FViecLamYeuThich.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FXemCamNang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FXemCamNang.Designer.cs">
-      <DependentUpon>FXemCamNang.cs</DependentUpon>
     </Compile>
     <Compile Include="FXemCongTy.cs">
       <SubType>Form</SubType>
@@ -232,18 +196,6 @@
     </Compile>
     <Compile Include="FXemCV.Designer.cs">
       <DependentUpon>FXemCV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FXemDanhGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FXemDanhGia.Designer.cs">
-      <DependentUpon>FXemDanhGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FQuenMK.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FQuenMK.Designer.cs">
-      <DependentUpon>FQuenMK.cs</DependentUpon>
     </Compile>
     <Compile Include="FCV.cs">
       <SubType>Form</SubType>
@@ -295,13 +247,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="UserControlACT.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlACT.Designer.cs">
       <DependentUpon>UserControlACT.cs</DependentUpon>
-
     </Compile>
     <Compile Include="UserControlCamNang.cs">
       <SubType>UserControl</SubType>
@@ -327,13 +277,17 @@
     <Compile Include="UserControlDanhGia.Designer.cs">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="UserControlDaNop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDaNop.Designer.cs">
+      <DependentUpon>UserControlDaNop.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlDCCT.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlDCCT.Designer.cs">
       <DependentUpon>UserControlDCCT.cs</DependentUpon>
-
     </Compile>
     <Compile Include="UserControlDuyetBaiDang.cs">
       <SubType>UserControl</SubType>
@@ -371,9 +325,6 @@
     <Compile Include="UserControlViecLam.Designer.cs">
       <DependentUpon>UserControlViecLam.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FCamNang.resx">
-      <DependentUpon>FCamNang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FCVGuide.resx">
       <DependentUpon>FCVGuide.cs</DependentUpon>
     </EmbeddedResource>
@@ -404,12 +355,6 @@
     <EmbeddedResource Include="FNhanPhongVan.resx">
       <DependentUpon>FNhanPhongVan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FNhapCamNang.resx">
-      <DependentUpon>FNhapCamNang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FNhapDanhGia.resx">
-      <DependentUpon>FNhapDanhGia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FQuanLy.resx">
       <DependentUpon>FQuanLy.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,29 +379,14 @@
     <EmbeddedResource Include="FThonTinCaNhanUngVien.resx">
       <DependentUpon>FThonTinCaNhanUngVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FTopViecLam.resx">
-      <DependentUpon>FTopViecLam.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FTrangChuNhaUngTuyen.resx">
       <DependentUpon>FTrangChuNhaUngTuyen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FViecLamYeuThich.resx">
-      <DependentUpon>FViecLamYeuThich.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FXemCamNang.resx">
-      <DependentUpon>FXemCamNang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FXemCongTy.resx">
       <DependentUpon>FXemCongTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FXemCV.resx">
       <DependentUpon>FXemCV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FXemDanhGia.resx">
-      <DependentUpon>FXemDanhGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FQuenMK.resx">
-      <DependentUpon>FQuenMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCV.resx">
       <DependentUpon>FCV.cs</DependentUpon>
@@ -492,10 +422,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-
     <EmbeddedResource Include="UserControlACT.resx">
       <DependentUpon>UserControlACT.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlCamNang.resx">
       <DependentUpon>UserControlCamNang.cs</DependentUpon>
@@ -509,10 +437,11 @@
     <EmbeddedResource Include="UserControlDanhGia.resx">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>
     </EmbeddedResource>
-
+    <EmbeddedResource Include="UserControlDaNop.resx">
+      <DependentUpon>UserControlDaNop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlDCCT.resx">
       <DependentUpon>UserControlDCCT.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDuyetBaiDang.resx">
       <DependentUpon>UserControlDuyetBaiDang.cs</DependentUpon>

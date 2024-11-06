@@ -33,19 +33,17 @@
             this.labelUser = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelTren = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.buttonLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonViecLam = new Guna.UI2.WinForms.Guna2Button();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.buttonCoHoiVL = new Guna.UI2.WinForms.Guna2Button();
             this.buttonVLDaUngTuyen = new Guna.UI2.WinForms.Guna2Button();
             this.buttonCV = new Guna.UI2.WinForms.Guna2Button();
             this.buttonTrangChu = new Guna.UI2.WinForms.Guna2Button();
-
             this.panelChinh = new System.Windows.Forms.Panel();
-
             this.panelTren.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -58,7 +56,7 @@
             this.labelUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.labelUser.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUser.ForeColor = System.Drawing.Color.Black;
-            this.labelUser.Location = new System.Drawing.Point(770, 18);
+            this.labelUser.Location = new System.Drawing.Point(869, 18);
             this.labelUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUser.Name = "labelUser";
             this.labelUser.Size = new System.Drawing.Size(89, 17);
@@ -75,7 +73,6 @@
             // 
             this.panelTren.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panelTren.Controls.Add(this.labelUser);
-            this.panelTren.Controls.Add(this.guna2Button1);
             this.panelTren.Controls.Add(this.buttonLogOut);
             this.panelTren.Controls.Add(this.guna2CirclePictureBox1);
             this.panelTren.ForeColor = System.Drawing.Color.Silver;
@@ -84,22 +81,6 @@
             this.panelTren.Name = "panelTren";
             this.panelTren.Size = new System.Drawing.Size(1029, 40);
             this.panelTren.TabIndex = 0;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.BurlyWood;
-            this.guna2Button1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(591, 5);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(135, 30);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Nhà tuyển dụng";
             // 
             // buttonLogOut
             // 
@@ -112,18 +93,19 @@
             this.buttonLogOut.ForeColor = System.Drawing.Color.White;
             this.buttonLogOut.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogOut.Image")));
             this.buttonLogOut.ImageSize = new System.Drawing.Size(28, 28);
-            this.buttonLogOut.Location = new System.Drawing.Point(897, 3);
+            this.buttonLogOut.Location = new System.Drawing.Point(977, 2);
             this.buttonLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(28, 37);
             this.buttonLogOut.TabIndex = 0;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(730, 2);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(829, 2);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -136,7 +118,7 @@
             // 
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelMenu.Controls.Add(this.btnViecLam);
+            this.panelMenu.Controls.Add(this.buttonViecLam);
             this.panelMenu.Controls.Add(this.buttonXemCV);
             this.panelMenu.Controls.Add(this.guna2PictureBox1);
             this.panelMenu.Controls.Add(this.buttonCoHoiVL);
@@ -148,6 +130,32 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(170, 679);
             this.panelMenu.TabIndex = 1;
+            // 
+            // buttonViecLam
+            // 
+            this.buttonViecLam.AutoRoundedCorners = true;
+            this.buttonViecLam.BackColor = System.Drawing.Color.Transparent;
+            this.buttonViecLam.BorderRadius = 21;
+            this.buttonViecLam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonViecLam.CustomizableEdges.BottomLeft = false;
+            this.buttonViecLam.CustomizableEdges.TopLeft = false;
+            this.buttonViecLam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonViecLam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonViecLam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonViecLam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonViecLam.FillColor = System.Drawing.Color.BurlyWood;
+            this.buttonViecLam.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonViecLam.ForeColor = System.Drawing.Color.White;
+            this.buttonViecLam.Image = ((System.Drawing.Image)(resources.GetObject("buttonViecLam.Image")));
+            this.buttonViecLam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buttonViecLam.ImageSize = new System.Drawing.Size(25, 25);
+            this.buttonViecLam.Location = new System.Drawing.Point(0, 144);
+            this.buttonViecLam.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonViecLam.Name = "buttonViecLam";
+            this.buttonViecLam.Size = new System.Drawing.Size(165, 44);
+            this.buttonViecLam.TabIndex = 10;
+            this.buttonViecLam.Text = "Cơ hội việc làm ";
+            this.buttonViecLam.Click += new System.EventHandler(this.btnViecLam_Click);
             // 
             // buttonXemCV
             // 
@@ -331,11 +339,11 @@
         private System.Windows.Forms.Label labelUser;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Panel panelTren;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button buttonXemCV;
         private System.Windows.Forms.Panel panelChinh;
+        private Guna.UI2.WinForms.Guna2Button buttonViecLam;
     }
 }
 
