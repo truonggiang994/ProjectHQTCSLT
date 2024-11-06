@@ -9,5 +9,6 @@ namespace Job
     public static class Data
     {
         public static string username = "hoan4704";
+        public static string username = "adminAn";
     }
 }
