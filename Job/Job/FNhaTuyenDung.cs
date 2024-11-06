@@ -26,7 +26,6 @@ namespace Job
             fCon.Size = panelChinh.Size;
             fCon.Location = new Point(0, 0);
             fCon.Tag = this;
-            fCon.FormBorderStyle = FormBorderStyle.None;
             panelChinh.Controls.Add(fCon);
             fCon.BringToFront();
             fCon.Show();

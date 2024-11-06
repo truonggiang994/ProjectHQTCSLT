@@ -1,6 +1,7 @@
-﻿namespace Job
+﻿
+namespace Job
 {
-    partial class UserControlDCCT
+    partial class UserControlDCCTView
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +29,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDCCT));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlDCCTView));
             this.groupBoxTInhThanh = new System.Windows.Forms.GroupBox();
             this.comboBoxTinhThanh = new Guna.UI2.WinForms.Guna2ComboBox();
             this.groupBoxQuanHuyen = new System.Windows.Forms.GroupBox();
             this.comboBoxQuanHuyen = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.buttonXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.userControlTextDiaChi = new Job.UserControlTextCT();
             this.pictureBoxDiaDiem = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.groupBoxTInhThanh.SuspendLayout();
             this.groupBoxQuanHuyen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -49,12 +49,12 @@
             this.groupBoxTInhThanh.Controls.Add(this.comboBoxTinhThanh);
             this.groupBoxTInhThanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTInhThanh.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBoxTInhThanh.Location = new System.Drawing.Point(68, 10);
-            this.groupBoxTInhThanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxTInhThanh.Location = new System.Drawing.Point(72, 14);
+            this.groupBoxTInhThanh.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxTInhThanh.Name = "groupBoxTInhThanh";
-            this.groupBoxTInhThanh.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxTInhThanh.Size = new System.Drawing.Size(454, 62);
-            this.groupBoxTInhThanh.TabIndex = 30;
+            this.groupBoxTInhThanh.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxTInhThanh.Size = new System.Drawing.Size(452, 62);
+            this.groupBoxTInhThanh.TabIndex = 37;
             this.groupBoxTInhThanh.TabStop = false;
             this.groupBoxTInhThanh.Text = "Tỉnh/Thành phố";
             // 
@@ -70,11 +70,10 @@
             this.comboBoxTinhThanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxTinhThanh.ItemHeight = 22;
             this.comboBoxTinhThanh.Location = new System.Drawing.Point(4, 21);
-            this.comboBoxTinhThanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTinhThanh.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTinhThanh.Name = "comboBoxTinhThanh";
-            this.comboBoxTinhThanh.Size = new System.Drawing.Size(437, 28);
+            this.comboBoxTinhThanh.Size = new System.Drawing.Size(435, 28);
             this.comboBoxTinhThanh.TabIndex = 10;
-            this.comboBoxTinhThanh.SelectedIndexChanged += new System.EventHandler(this.comboBoxTinhThanh_SelectedIndexChanged);
             // 
             // groupBoxQuanHuyen
             // 
@@ -82,12 +81,12 @@
             this.groupBoxQuanHuyen.Controls.Add(this.comboBoxQuanHuyen);
             this.groupBoxQuanHuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxQuanHuyen.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBoxQuanHuyen.Location = new System.Drawing.Point(68, 79);
-            this.groupBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxQuanHuyen.Location = new System.Drawing.Point(72, 83);
+            this.groupBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxQuanHuyen.Name = "groupBoxQuanHuyen";
-            this.groupBoxQuanHuyen.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxQuanHuyen.Size = new System.Drawing.Size(454, 62);
-            this.groupBoxQuanHuyen.TabIndex = 33;
+            this.groupBoxQuanHuyen.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxQuanHuyen.Size = new System.Drawing.Size(452, 62);
+            this.groupBoxQuanHuyen.TabIndex = 40;
             this.groupBoxQuanHuyen.TabStop = false;
             this.groupBoxQuanHuyen.Text = "Quận/Huyện";
             // 
@@ -103,39 +102,32 @@
             this.comboBoxQuanHuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxQuanHuyen.ItemHeight = 22;
             this.comboBoxQuanHuyen.Location = new System.Drawing.Point(4, 21);
-            this.comboBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxQuanHuyen.Name = "comboBoxQuanHuyen";
-            this.comboBoxQuanHuyen.Size = new System.Drawing.Size(437, 28);
+            this.comboBoxQuanHuyen.Size = new System.Drawing.Size(435, 28);
             this.comboBoxQuanHuyen.TabIndex = 10;
             // 
-            // buttonXoa
+            // guna2Panel1
             // 
-            this.buttonXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonXoa.FillColor = System.Drawing.Color.DarkGray;
-            this.buttonXoa.FocusedColor = System.Drawing.SystemColors.Control;
-            this.buttonXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoa.ForeColor = System.Drawing.Color.White;
-            this.buttonXoa.Location = new System.Drawing.Point(235, 218);
-            this.buttonXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(82, 37);
-            this.buttonXoa.TabIndex = 35;
-            this.buttonXoa.Text = "Xóa";
-            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(531, 261);
+            this.guna2Panel1.TabIndex = 43;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(11, 89);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(15, 93);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(46, 44);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(44, 44);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 34;
+            this.guna2PictureBox1.TabIndex = 41;
             this.guna2PictureBox1.TabStop = false;
             // 
             // userControlTextDiaChi
@@ -143,14 +135,14 @@
             this.userControlTextDiaChi.BackColor = System.Drawing.Color.White;
             this.userControlTextDiaChi.GroupBoxSize = new System.Drawing.Size(340, 50);
             this.userControlTextDiaChi.GroupBoxText = "Địa chỉ";
-            this.userControlTextDiaChi.Location = new System.Drawing.Point(11, 146);
+            this.userControlTextDiaChi.Location = new System.Drawing.Point(15, 150);
             this.userControlTextDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControlTextDiaChi.Name = "userControlTextDiaChi";
             this.userControlTextDiaChi.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextDiaChi.PictureBoxImage")));
             this.userControlTextDiaChi.Placeholder = "VD: số 1, Võ Văn Ngân";
             this.userControlTextDiaChi.ReadOnly = false;
-            this.userControlTextDiaChi.Size = new System.Drawing.Size(519, 71);
-            this.userControlTextDiaChi.TabIndex = 32;
+            this.userControlTextDiaChi.Size = new System.Drawing.Size(517, 71);
+            this.userControlTextDiaChi.TabIndex = 39;
             this.userControlTextDiaChi.text = "";
             this.userControlTextDiaChi.textBoxSize = new System.Drawing.Size(225, 25);
             // 
@@ -158,40 +150,26 @@
             // 
             this.pictureBoxDiaDiem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiaDiem.Image")));
             this.pictureBoxDiaDiem.ImageRotate = 0F;
-            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(11, 20);
+            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(15, 24);
             this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxDiaDiem.Name = "pictureBoxDiaDiem";
-            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(46, 44);
+            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(44, 44);
             this.pictureBoxDiaDiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxDiaDiem.TabIndex = 31;
+            this.pictureBoxDiaDiem.TabIndex = 38;
             this.pictureBoxDiaDiem.TabStop = false;
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(533, 261);
-            this.guna2Panel1.TabIndex = 36;
-            // 
-            // UserControlDCCT
+            // UserControlDCCTView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupBoxTInhThanh);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.groupBoxQuanHuyen);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.userControlTextDiaChi);
             this.Controls.Add(this.pictureBoxDiaDiem);
-            this.Controls.Add(this.buttonXoa);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "UserControlDCCT";
-            this.Size = new System.Drawing.Size(533, 263);
+            this.Name = "UserControlDCCTView";
+            this.Size = new System.Drawing.Size(540, 269);
             this.groupBoxTInhThanh.ResumeLayout(false);
             this.groupBoxQuanHuyen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -204,12 +182,11 @@
 
         private System.Windows.Forms.GroupBox groupBoxTInhThanh;
         public Guna.UI2.WinForms.Guna2ComboBox comboBoxTinhThanh;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.GroupBox groupBoxQuanHuyen;
         public Guna.UI2.WinForms.Guna2ComboBox comboBoxQuanHuyen;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         public UserControlTextCT userControlTextDiaChi;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBoxDiaDiem;
-        private Guna.UI2.WinForms.Guna2Button buttonXoa;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
