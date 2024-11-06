@@ -8,6 +8,7 @@ namespace Job
 {
     public static class Data
     {
+
         public static string username = "adminAn";
     }
 }

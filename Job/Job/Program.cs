@@ -19,6 +19,7 @@ namespace Job
             Application.SetCompatibleTextRenderingDefault(false);
 
 
+
             Application.Run(new FThongTinCaNhan());
 
 

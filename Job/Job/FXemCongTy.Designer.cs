@@ -29,270 +29,465 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FXemCongTy));
-            this.pictureBoxAnhBia = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBoxLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.labelTenCongTy = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelDiaDiem = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pictureBoxDiaChi = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.flowLayoutPanelChinh = new System.Windows.Forms.FlowLayoutPanel();
-            this.labelDiaChi = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.labelQuyMo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.labelThongTinCongTy = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panelThongTin = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.labelSDT = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.labelGmail = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.buttonDanhGia = new Guna.UI2.WinForms.Guna2Button();
-            this.buttonXemDanhGia = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhBia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaChi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.groupBoxNgayThanhLap = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerNgayThanhLap = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.userControlTextTenCongTy = new Job.UserControlTextCT();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.richTextBoxMoTa = new System.Windows.Forms.RichTextBox();
+            this.flowLayoutPanelDiaChi = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelAnh = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControlTextCTGmail = new Job.UserControlTextCT();
+            this.userControlTextCTMaSoThue = new Job.UserControlTextCT();
+            this.pictureBoxQuyMoNhanSu = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.groupBoxQuyMoNhanSu = new System.Windows.Forms.GroupBox();
+            this.comboBoxQuyMoNhanSu = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.userControlTextSDT = new Job.UserControlTextCT();
+            this.userControlTextWebsite = new Job.UserControlTextCT();
+            this.userControlTextNganh = new Job.UserControlTextCT();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            this.panelThongTin.SuspendLayout();
+            this.groupBoxNgayThanhLap.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuyMoNhanSu)).BeginInit();
+            this.groupBoxQuyMoNhanSu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBoxAnhBia
+            // labelThongTinCongTy
             // 
-            this.pictureBoxAnhBia.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAnhBia.Image")));
-            this.pictureBoxAnhBia.ImageRotate = 0F;
-            this.pictureBoxAnhBia.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxAnhBia.Name = "pictureBoxAnhBia";
-            this.pictureBoxAnhBia.Size = new System.Drawing.Size(928, 156);
-            this.pictureBoxAnhBia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxAnhBia.TabIndex = 0;
-            this.pictureBoxAnhBia.TabStop = false;
+            this.labelThongTinCongTy.BackColor = System.Drawing.Color.Transparent;
+            this.labelThongTinCongTy.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThongTinCongTy.Location = new System.Drawing.Point(-9, -44);
+            this.labelThongTinCongTy.Margin = new System.Windows.Forms.Padding(2);
+            this.labelThongTinCongTy.Name = "labelThongTinCongTy";
+            this.labelThongTinCongTy.Size = new System.Drawing.Size(207, 33);
+            this.labelThongTinCongTy.TabIndex = 2;
+            this.labelThongTinCongTy.Text = "Thông tin công ty";
+            this.labelThongTinCongTy.Click += new System.EventHandler(this.labelThongTinCongTy_Click);
             // 
-            // pictureBoxLogo
+            // panel7
             // 
-            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.ImageRotate = 0F;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(74, 110);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(100, 100);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogo.TabIndex = 1;
-            this.pictureBoxLogo.TabStop = false;
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(1375, 492);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1, 345);
+            this.panel7.TabIndex = 30;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
-            // labelTenCongTy
+            // panel1
             // 
-            this.labelTenCongTy.AutoSize = false;
-            this.labelTenCongTy.BackColor = System.Drawing.Color.Transparent;
-            this.labelTenCongTy.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTenCongTy.Location = new System.Drawing.Point(180, 178);
-            this.labelTenCongTy.Name = "labelTenCongTy";
-            this.labelTenCongTy.Size = new System.Drawing.Size(614, 24);
-            this.labelTenCongTy.TabIndex = 2;
-            this.labelTenCongTy.Text = "Công Ty TNHH Một Thành Viên Dịch Vụ Hàng Hải Đại Thịnh";
-            // 
-            // labelDiaDiem
-            // 
-            this.labelDiaDiem.BackColor = System.Drawing.Color.Transparent;
-            this.labelDiaDiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiaDiem.Location = new System.Drawing.Point(216, 208);
-            this.labelDiaDiem.Name = "labelDiaDiem";
-            this.labelDiaDiem.Size = new System.Drawing.Size(57, 21);
-            this.labelDiaDiem.TabIndex = 3;
-            this.labelDiaDiem.Text = "TPHCM";
-            // 
-            // pictureBoxDiaChi
-            // 
-            this.pictureBoxDiaChi.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiaChi.Image")));
-            this.pictureBoxDiaChi.ImageRotate = 0F;
-            this.pictureBoxDiaChi.Location = new System.Drawing.Point(180, 208);
-            this.pictureBoxDiaChi.Name = "pictureBoxDiaChi";
-            this.pictureBoxDiaChi.Size = new System.Drawing.Size(20, 20);
-            this.pictureBoxDiaChi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxDiaChi.TabIndex = 4;
-            this.pictureBoxDiaChi.TabStop = false;
-            // 
-            // flowLayoutPanelChinh
-            // 
-            this.flowLayoutPanelChinh.AutoScroll = true;
-            this.flowLayoutPanelChinh.Location = new System.Drawing.Point(12, 267);
-            this.flowLayoutPanelChinh.Name = "flowLayoutPanelChinh";
-            this.flowLayoutPanelChinh.Size = new System.Drawing.Size(906, 250);
-            this.flowLayoutPanelChinh.TabIndex = 5;
-            // 
-            // labelDiaChi
-            // 
-            this.labelDiaChi.AutoSize = false;
-            this.labelDiaChi.BackColor = System.Drawing.Color.Transparent;
-            this.labelDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiaChi.Location = new System.Drawing.Point(70, 552);
-            this.labelDiaChi.Name = "labelDiaChi";
-            this.labelDiaChi.Size = new System.Drawing.Size(848, 21);
-            this.labelDiaChi.TabIndex = 6;
-            this.labelDiaChi.Text = "Địa chỉ: 101/58/14 Nguyễn Văn Đậu, Phường 5, Quận Bình Thạnh, Thành phố Hồ Chí Mi" +
-    "nh, Việt Nam";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(38, 521);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(614, 24);
-            this.guna2HtmlLabel1.TabIndex = 7;
-            this.guna2HtmlLabel1.Text = "Liên hệ";
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(38, 551);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 8;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // labelQuyMo
-            // 
-            this.labelQuyMo.BackColor = System.Drawing.Color.Transparent;
-            this.labelQuyMo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuyMo.Location = new System.Drawing.Point(386, 208);
-            this.labelQuyMo.Name = "labelQuyMo";
-            this.labelQuyMo.Size = new System.Drawing.Size(135, 21);
-            this.labelQuyMo.TabIndex = 9;
-            this.labelQuyMo.Text = "Quy mô: 10-50 người ";
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(1375, 26);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 458);
+            this.panel1.TabIndex = 29;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(354, 206);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(27, 448);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(44, 44);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 10;
+            this.guna2PictureBox2.TabIndex = 30;
             this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
+            // 
+            // panelThongTin
+            // 
+            this.panelThongTin.BackColor = System.Drawing.Color.Transparent;
+            this.panelThongTin.BorderColor = System.Drawing.Color.Transparent;
+            this.panelThongTin.BorderRadius = 4;
+            this.panelThongTin.BorderThickness = 3;
+            this.panelThongTin.Controls.Add(this.guna2HtmlLabel2);
+            this.panelThongTin.Controls.Add(this.guna2HtmlLabel1);
+            this.panelThongTin.Controls.Add(this.panel7);
+            this.panelThongTin.Controls.Add(this.panel1);
+            this.panelThongTin.Controls.Add(this.guna2PictureBox2);
+            this.panelThongTin.Controls.Add(this.groupBoxNgayThanhLap);
+            this.panelThongTin.Controls.Add(this.panel5);
+            this.panelThongTin.Controls.Add(this.panel4);
+            this.panelThongTin.Controls.Add(this.panel3);
+            this.panelThongTin.Controls.Add(this.panel2);
+            this.panelThongTin.Controls.Add(this.panel6);
+            this.panelThongTin.Controls.Add(this.userControlTextTenCongTy);
+            this.panelThongTin.Controls.Add(this.groupBox1);
+            this.panelThongTin.Controls.Add(this.flowLayoutPanelDiaChi);
+            this.panelThongTin.Controls.Add(this.flowLayoutPanelAnh);
+            this.panelThongTin.Controls.Add(this.userControlTextCTGmail);
+            this.panelThongTin.Controls.Add(this.userControlTextCTMaSoThue);
+            this.panelThongTin.Controls.Add(this.pictureBoxQuyMoNhanSu);
+            this.panelThongTin.Controls.Add(this.groupBoxQuyMoNhanSu);
+            this.panelThongTin.Controls.Add(this.userControlTextSDT);
+            this.panelThongTin.Controls.Add(this.userControlTextWebsite);
+            this.panelThongTin.Controls.Add(this.userControlTextNganh);
+            this.panelThongTin.Location = new System.Drawing.Point(-11, -55);
+            this.panelThongTin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelThongTin.Name = "panelThongTin";
+            this.panelThongTin.Size = new System.Drawing.Size(1392, 827);
+            this.panelThongTin.TabIndex = 3;
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(38, 234);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(813, 499);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(204, 31);
-            this.guna2HtmlLabel2.TabIndex = 11;
-            this.guna2HtmlLabel2.Text = "Vị trí đang tuyển";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(239, 33);
+            this.guna2HtmlLabel2.TabIndex = 76;
+            this.guna2HtmlLabel2.Text = "Địa chỉ công ty";
+            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
             // 
-            // guna2PictureBox3
+            // guna2HtmlLabel1
             // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(38, 578);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 13;
-            this.guna2PictureBox3.TabStop = false;
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(1100, 438);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(246, 33);
+            this.guna2HtmlLabel1.TabIndex = 75;
+            this.guna2HtmlLabel1.Text = "Ảnh công ty";
+            this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
-            // labelSDT
+            // groupBoxNgayThanhLap
             // 
-            this.labelSDT.AutoSize = false;
-            this.labelSDT.BackColor = System.Drawing.Color.Transparent;
-            this.labelSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSDT.Location = new System.Drawing.Point(70, 579);
-            this.labelSDT.Name = "labelSDT";
-            this.labelSDT.Size = new System.Drawing.Size(848, 21);
-            this.labelSDT.TabIndex = 12;
-            this.labelSDT.Text = "Số điện thoại: ";
+            this.groupBoxNgayThanhLap.Controls.Add(this.dateTimePickerNgayThanhLap);
+            this.groupBoxNgayThanhLap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxNgayThanhLap.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBoxNgayThanhLap.Location = new System.Drawing.Point(80, 438);
+            this.groupBoxNgayThanhLap.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxNgayThanhLap.Name = "groupBoxNgayThanhLap";
+            this.groupBoxNgayThanhLap.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxNgayThanhLap.Size = new System.Drawing.Size(375, 62);
+            this.groupBoxNgayThanhLap.TabIndex = 29;
+            this.groupBoxNgayThanhLap.TabStop = false;
+            this.groupBoxNgayThanhLap.Text = "Ngày thành lập";
+            this.groupBoxNgayThanhLap.Enter += new System.EventHandler(this.groupBoxNgayThanhLap_Enter);
             // 
-            // guna2PictureBox4
+            // dateTimePickerNgayThanhLap
             // 
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(38, 605);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox4.TabIndex = 15;
-            this.guna2PictureBox4.TabStop = false;
+            this.dateTimePickerNgayThanhLap.BackColor = System.Drawing.Color.White;
+            this.dateTimePickerNgayThanhLap.BorderColor = System.Drawing.Color.White;
+            this.dateTimePickerNgayThanhLap.Checked = true;
+            this.dateTimePickerNgayThanhLap.FillColor = System.Drawing.Color.White;
+            this.dateTimePickerNgayThanhLap.FocusedColor = System.Drawing.Color.White;
+            this.dateTimePickerNgayThanhLap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerNgayThanhLap.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dateTimePickerNgayThanhLap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerNgayThanhLap.Location = new System.Drawing.Point(19, 29);
+            this.dateTimePickerNgayThanhLap.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerNgayThanhLap.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerNgayThanhLap.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerNgayThanhLap.Name = "dateTimePickerNgayThanhLap";
+            this.dateTimePickerNgayThanhLap.Size = new System.Drawing.Size(359, 31);
+            this.dateTimePickerNgayThanhLap.TabIndex = 0;
+            this.dateTimePickerNgayThanhLap.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.dateTimePickerNgayThanhLap.Value = new System.DateTime(2024, 10, 23, 14, 57, 34, 0);
+            this.dateTimePickerNgayThanhLap.ValueChanged += new System.EventHandler(this.dateTimePickerNgayThanhLap_ValueChanged);
             // 
-            // labelGmail
+            // panel5
             // 
-            this.labelGmail.AutoSize = false;
-            this.labelGmail.BackColor = System.Drawing.Color.Transparent;
-            this.labelGmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGmail.Location = new System.Drawing.Point(70, 606);
-            this.labelGmail.Name = "labelGmail";
-            this.labelGmail.Size = new System.Drawing.Size(848, 21);
-            this.labelGmail.TabIndex = 14;
-            this.labelGmail.Text = "Gmail:";
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Controls.Add(this.panel8);
+            this.panel5.Location = new System.Drawing.Point(938, 483);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(437, 1);
+            this.panel5.TabIndex = 27;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // buttonDanhGia
+            // panel8
             // 
-            this.buttonDanhGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonDanhGia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonDanhGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonDanhGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonDanhGia.FillColor = System.Drawing.Color.DarkGray;
-            this.buttonDanhGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDanhGia.ForeColor = System.Drawing.Color.White;
-            this.buttonDanhGia.Location = new System.Drawing.Point(765, 178);
-            this.buttonDanhGia.Name = "buttonDanhGia";
-            this.buttonDanhGia.Size = new System.Drawing.Size(118, 26);
-            this.buttonDanhGia.TabIndex = 16;
-            this.buttonDanhGia.Text = "Đánh giá";
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(11, 26);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(437, 1);
+            this.panel8.TabIndex = 28;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
-            // buttonXemDanhGia
+            // panel4
             // 
-            this.buttonXemDanhGia.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonXemDanhGia.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonXemDanhGia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonXemDanhGia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonXemDanhGia.FillColor = System.Drawing.Color.DarkGray;
-            this.buttonXemDanhGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXemDanhGia.ForeColor = System.Drawing.Color.White;
-            this.buttonXemDanhGia.Location = new System.Drawing.Point(765, 210);
-            this.buttonXemDanhGia.Name = "buttonXemDanhGia";
-            this.buttonXemDanhGia.Size = new System.Drawing.Size(118, 26);
-            this.buttonXemDanhGia.TabIndex = 17;
-            this.buttonXemDanhGia.Text = "Xem đánh giá";
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(795, 837);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(581, 1);
+            this.panel4.TabIndex = 27;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(936, 26);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 458);
+            this.panel3.TabIndex = 28;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(794, 491);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 347);
+            this.panel2.TabIndex = 27;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Location = new System.Drawing.Point(795, 491);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(581, 1);
+            this.panel6.TabIndex = 26;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // userControlTextTenCongTy
+            // 
+            this.userControlTextTenCongTy.BackColor = System.Drawing.Color.White;
+            this.userControlTextTenCongTy.GroupBoxSize = new System.Drawing.Size(630, 55);
+            this.userControlTextTenCongTy.GroupBoxText = "Tên công ty";
+            this.userControlTextTenCongTy.Location = new System.Drawing.Point(23, 78);
+            this.userControlTextTenCongTy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlTextTenCongTy.Name = "userControlTextTenCongTy";
+            this.userControlTextTenCongTy.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextTenCongTy.PictureBoxImage")));
+            this.userControlTextTenCongTy.Placeholder = "Nhập tên công ty";
+            this.userControlTextTenCongTy.ReadOnly = false;
+            this.userControlTextTenCongTy.Size = new System.Drawing.Size(907, 71);
+            this.userControlTextTenCongTy.TabIndex = 25;
+            this.userControlTextTenCongTy.text = "";
+            this.userControlTextTenCongTy.textBoxSize = new System.Drawing.Size(510, 30);
+            this.userControlTextTenCongTy.Load += new System.EventHandler(this.userControlTextTenCongTy_Load);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.richTextBoxMoTa);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBox1.Location = new System.Drawing.Point(23, 518);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(745, 320);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Mô tả";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // richTextBoxMoTa
+            // 
+            this.richTextBoxMoTa.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBoxMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxMoTa.Location = new System.Drawing.Point(19, 57);
+            this.richTextBoxMoTa.Margin = new System.Windows.Forms.Padding(4);
+            this.richTextBoxMoTa.Name = "richTextBoxMoTa";
+            this.richTextBoxMoTa.Size = new System.Drawing.Size(713, 267);
+            this.richTextBoxMoTa.TabIndex = 17;
+            this.richTextBoxMoTa.Text = "";
+            this.richTextBoxMoTa.TextChanged += new System.EventHandler(this.richTextBoxMoTa_TextChanged);
+            // 
+            // flowLayoutPanelDiaChi
+            // 
+            this.flowLayoutPanelDiaChi.AutoScroll = true;
+            this.flowLayoutPanelDiaChi.Location = new System.Drawing.Point(803, 539);
+            this.flowLayoutPanelDiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanelDiaChi.Name = "flowLayoutPanelDiaChi";
+            this.flowLayoutPanelDiaChi.Size = new System.Drawing.Size(564, 286);
+            this.flowLayoutPanelDiaChi.TabIndex = 23;
+            this.flowLayoutPanelDiaChi.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelDiaChi_Paint);
+            // 
+            // flowLayoutPanelAnh
+            // 
+            this.flowLayoutPanelAnh.AutoScroll = true;
+            this.flowLayoutPanelAnh.Location = new System.Drawing.Point(946, 68);
+            this.flowLayoutPanelAnh.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanelAnh.Name = "flowLayoutPanelAnh";
+            this.flowLayoutPanelAnh.Size = new System.Drawing.Size(421, 363);
+            this.flowLayoutPanelAnh.TabIndex = 22;
+            this.flowLayoutPanelAnh.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanelAnh_Paint);
+            // 
+            // userControlTextCTGmail
+            // 
+            this.userControlTextCTGmail.BackColor = System.Drawing.Color.White;
+            this.userControlTextCTGmail.GroupBoxSize = new System.Drawing.Size(280, 50);
+            this.userControlTextCTGmail.GroupBoxText = "Gmail";
+            this.userControlTextCTGmail.Location = new System.Drawing.Point(490, 379);
+            this.userControlTextCTGmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlTextCTGmail.Name = "userControlTextCTGmail";
+            this.userControlTextCTGmail.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextCTGmail.PictureBoxImage")));
+            this.userControlTextCTGmail.Placeholder = "VD: user@gmail.com";
+            this.userControlTextCTGmail.ReadOnly = false;
+            this.userControlTextCTGmail.Size = new System.Drawing.Size(440, 62);
+            this.userControlTextCTGmail.TabIndex = 14;
+            this.userControlTextCTGmail.text = "";
+            this.userControlTextCTGmail.textBoxSize = new System.Drawing.Size(225, 25);
+            this.userControlTextCTGmail.Load += new System.EventHandler(this.userControlTextCTGmail_Load);
+            // 
+            // userControlTextCTMaSoThue
+            // 
+            this.userControlTextCTMaSoThue.BackColor = System.Drawing.Color.White;
+            this.userControlTextCTMaSoThue.GroupBoxSize = new System.Drawing.Size(280, 50);
+            this.userControlTextCTMaSoThue.GroupBoxText = "Mã số thuế";
+            this.userControlTextCTMaSoThue.Location = new System.Drawing.Point(23, 307);
+            this.userControlTextCTMaSoThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlTextCTMaSoThue.Name = "userControlTextCTMaSoThue";
+            this.userControlTextCTMaSoThue.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextCTMaSoThue.PictureBoxImage")));
+            this.userControlTextCTMaSoThue.Placeholder = "Nhập số";
+            this.userControlTextCTMaSoThue.ReadOnly = false;
+            this.userControlTextCTMaSoThue.Size = new System.Drawing.Size(432, 62);
+            this.userControlTextCTMaSoThue.TabIndex = 13;
+            this.userControlTextCTMaSoThue.text = "";
+            this.userControlTextCTMaSoThue.textBoxSize = new System.Drawing.Size(225, 25);
+            this.userControlTextCTMaSoThue.Load += new System.EventHandler(this.userControlTextCTMaSoThue_Load);
+            // 
+            // pictureBoxQuyMoNhanSu
+            // 
+            this.pictureBoxQuyMoNhanSu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxQuyMoNhanSu.Image")));
+            this.pictureBoxQuyMoNhanSu.ImageRotate = 0F;
+            this.pictureBoxQuyMoNhanSu.Location = new System.Drawing.Point(27, 387);
+            this.pictureBoxQuyMoNhanSu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxQuyMoNhanSu.Name = "pictureBoxQuyMoNhanSu";
+            this.pictureBoxQuyMoNhanSu.Size = new System.Drawing.Size(44, 44);
+            this.pictureBoxQuyMoNhanSu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxQuyMoNhanSu.TabIndex = 12;
+            this.pictureBoxQuyMoNhanSu.TabStop = false;
+            this.pictureBoxQuyMoNhanSu.Click += new System.EventHandler(this.pictureBoxQuyMoNhanSu_Click);
+            // 
+            // groupBoxQuyMoNhanSu
+            // 
+            this.groupBoxQuyMoNhanSu.Controls.Add(this.comboBoxQuyMoNhanSu);
+            this.groupBoxQuyMoNhanSu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxQuyMoNhanSu.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.groupBoxQuyMoNhanSu.Location = new System.Drawing.Point(80, 374);
+            this.groupBoxQuyMoNhanSu.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxQuyMoNhanSu.Name = "groupBoxQuyMoNhanSu";
+            this.groupBoxQuyMoNhanSu.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxQuyMoNhanSu.Size = new System.Drawing.Size(375, 62);
+            this.groupBoxQuyMoNhanSu.TabIndex = 11;
+            this.groupBoxQuyMoNhanSu.TabStop = false;
+            this.groupBoxQuyMoNhanSu.Text = "Quy mô";
+            this.groupBoxQuyMoNhanSu.Enter += new System.EventHandler(this.groupBoxQuyMoNhanSu_Enter);
+            // 
+            // comboBoxQuyMoNhanSu
+            // 
+            this.comboBoxQuyMoNhanSu.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxQuyMoNhanSu.BorderColor = System.Drawing.Color.Transparent;
+            this.comboBoxQuyMoNhanSu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxQuyMoNhanSu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxQuyMoNhanSu.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxQuyMoNhanSu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxQuyMoNhanSu.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxQuyMoNhanSu.ForeColor = System.Drawing.Color.Black;
+            this.comboBoxQuyMoNhanSu.ItemHeight = 20;
+            this.comboBoxQuyMoNhanSu.Items.AddRange(new object[] {
+            "Dưới 10 người ",
+            "10 - 20 người ",
+            "20 - 30 người ",
+            "30 - 40 người ",
+            "40 - 50 người ",
+            "Trên 50 người "});
+            this.comboBoxQuyMoNhanSu.Location = new System.Drawing.Point(19, 29);
+            this.comboBoxQuyMoNhanSu.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxQuyMoNhanSu.Name = "comboBoxQuyMoNhanSu";
+            this.comboBoxQuyMoNhanSu.Size = new System.Drawing.Size(357, 26);
+            this.comboBoxQuyMoNhanSu.StartIndex = 1;
+            this.comboBoxQuyMoNhanSu.TabIndex = 0;
+            this.comboBoxQuyMoNhanSu.SelectedIndexChanged += new System.EventHandler(this.comboBoxQuyMoNhanSu_SelectedIndexChanged);
+            // 
+            // userControlTextSDT
+            // 
+            this.userControlTextSDT.BackColor = System.Drawing.Color.White;
+            this.userControlTextSDT.GroupBoxSize = new System.Drawing.Size(280, 50);
+            this.userControlTextSDT.GroupBoxText = "Số điện thoại";
+            this.userControlTextSDT.Location = new System.Drawing.Point(490, 313);
+            this.userControlTextSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlTextSDT.Name = "userControlTextSDT";
+            this.userControlTextSDT.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextSDT.PictureBoxImage")));
+            this.userControlTextSDT.Placeholder = "Nhập số";
+            this.userControlTextSDT.ReadOnly = false;
+            this.userControlTextSDT.Size = new System.Drawing.Size(440, 62);
+            this.userControlTextSDT.TabIndex = 6;
+            this.userControlTextSDT.text = "";
+            this.userControlTextSDT.textBoxSize = new System.Drawing.Size(225, 25);
+            this.userControlTextSDT.Load += new System.EventHandler(this.userControlTextSDT_Load);
+            // 
+            // userControlTextWebsite
+            // 
+            this.userControlTextWebsite.BackColor = System.Drawing.Color.White;
+            this.userControlTextWebsite.GroupBoxSize = new System.Drawing.Size(630, 55);
+            this.userControlTextWebsite.GroupBoxText = "Webside ";
+            this.userControlTextWebsite.Location = new System.Drawing.Point(23, 230);
+            this.userControlTextWebsite.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlTextWebsite.Name = "userControlTextWebsite";
+            this.userControlTextWebsite.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextWebsite.PictureBoxImage")));
+            this.userControlTextWebsite.Placeholder = "Nhập địa chỉ webside";
+            this.userControlTextWebsite.ReadOnly = false;
+            this.userControlTextWebsite.Size = new System.Drawing.Size(907, 71);
+            this.userControlTextWebsite.TabIndex = 5;
+            this.userControlTextWebsite.text = "";
+            this.userControlTextWebsite.textBoxSize = new System.Drawing.Size(510, 30);
+            this.userControlTextWebsite.Load += new System.EventHandler(this.userControlTextWebsite_Load);
+            // 
+            // userControlTextNganh
+            // 
+            this.userControlTextNganh.BackColor = System.Drawing.Color.White;
+            this.userControlTextNganh.GroupBoxSize = new System.Drawing.Size(630, 55);
+            this.userControlTextNganh.GroupBoxText = "Tên công việc";
+            this.userControlTextNganh.Location = new System.Drawing.Point(23, 154);
+            this.userControlTextNganh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlTextNganh.Name = "userControlTextNganh";
+            this.userControlTextNganh.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextNganh.PictureBoxImage")));
+            this.userControlTextNganh.Placeholder = "Nhập tên công việc";
+            this.userControlTextNganh.ReadOnly = false;
+            this.userControlTextNganh.Size = new System.Drawing.Size(907, 71);
+            this.userControlTextNganh.TabIndex = 1;
+            this.userControlTextNganh.text = "";
+            this.userControlTextNganh.textBoxSize = new System.Drawing.Size(510, 30);
+            this.userControlTextNganh.Load += new System.EventHandler(this.userControlTextNganh_Load);
             // 
             // FXemCongTy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(930, 630);
-            this.Controls.Add(this.buttonXemDanhGia);
-            this.Controls.Add(this.buttonDanhGia);
-            this.Controls.Add(this.guna2PictureBox4);
-            this.Controls.Add(this.labelGmail);
-            this.Controls.Add(this.guna2PictureBox3);
-            this.Controls.Add(this.labelSDT);
-            this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.labelQuyMo);
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.labelDiaChi);
-            this.Controls.Add(this.flowLayoutPanelChinh);
-            this.Controls.Add(this.pictureBoxDiaChi);
-            this.Controls.Add(this.labelDiaDiem);
-            this.Controls.Add(this.labelTenCongTy);
-            this.Controls.Add(this.pictureBoxLogo);
-            this.Controls.Add(this.pictureBoxAnhBia);
+            this.ClientSize = new System.Drawing.Size(1401, 786);
+            this.Controls.Add(this.labelThongTinCongTy);
+            this.Controls.Add(this.panelThongTin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FXemCongTy";
             this.Text = "FXemCongTy";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhBia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDiaChi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            this.panelThongTin.ResumeLayout(false);
+            this.groupBoxNgayThanhLap.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQuyMoNhanSu)).EndInit();
+            this.groupBoxQuyMoNhanSu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,23 +495,33 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxAnhBia;
-        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxLogo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelTenCongTy;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelDiaDiem;
-        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxDiaChi;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelChinh;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelDiaChi;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelQuyMo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labelThongTinCongTy;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Guna.UI2.WinForms.Guna2Panel panelThongTin;
+        private System.Windows.Forms.GroupBox groupBoxNgayThanhLap;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerNgayThanhLap;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel6;
+        private UserControlTextCT userControlTextTenCongTy;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxMoTa;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelDiaChi;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelAnh;
+        private UserControlTextCT userControlTextCTGmail;
+        private UserControlTextCT userControlTextCTMaSoThue;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxQuyMoNhanSu;
+        private System.Windows.Forms.GroupBox groupBoxQuyMoNhanSu;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxQuyMoNhanSu;
+        private UserControlTextCT userControlTextSDT;
+        private UserControlTextCT userControlTextWebsite;
+        private UserControlTextCT userControlTextNganh;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelSDT;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelGmail;
-        private Guna.UI2.WinForms.Guna2Button buttonDanhGia;
-        private Guna.UI2.WinForms.Guna2Button buttonXemDanhGia;
     }
 }

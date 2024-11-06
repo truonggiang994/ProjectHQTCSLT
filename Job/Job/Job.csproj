@@ -77,6 +77,12 @@
     <Compile Include="FCamNang.Designer.cs">
       <DependentUpon>FCamNang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FChonCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChonCV.Designer.cs">
+      <DependentUpon>FChonCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="FCVGuide.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlDCCTView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDCCTView.Designer.cs">
+      <DependentUpon>UserControlDCCTView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlACTView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlACTView.Designer.cs">
+      <DependentUpon>UserControlACTView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlACT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -312,6 +330,12 @@
     </Compile>
     <Compile Include="UserControlComboBox.Designer.cs">
       <DependentUpon>UserControlComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlCV.Designer.cs">
+      <DependentUpon>UserControlCV.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlCVItem.cs">
       <SubType>UserControl</SubType>
@@ -369,6 +393,9 @@
     </Compile>
     <EmbeddedResource Include="FCamNang.resx">
       <DependentUpon>FCamNang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChonCV.resx">
+      <DependentUpon>FChonCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FCVGuide.resx">
       <DependentUpon>FCVGuide.cs</DependentUpon>
@@ -491,11 +518,17 @@
     <EmbeddedResource Include="UserControlACT.resx">
       <DependentUpon>UserControlACT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlACTView.resx">
+      <DependentUpon>UserControlACTView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlCamNang.resx">
       <DependentUpon>UserControlCamNang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlComboBox.resx">
       <DependentUpon>UserControlComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlCV.resx">
+      <DependentUpon>UserControlCV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlCVItem.resx">
       <DependentUpon>UserControlCVItem.cs</DependentUpon>
@@ -505,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDCCT.resx">
       <DependentUpon>UserControlDCCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDCCTView.resx">
+      <DependentUpon>UserControlDCCTView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDuyetBaiDang.resx">
       <DependentUpon>UserControlDuyetBaiDang.cs</DependentUpon>
