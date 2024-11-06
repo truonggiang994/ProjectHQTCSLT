@@ -156,6 +156,12 @@
     <Compile Include="FSuaDangTin.Designer.cs">
       <DependentUpon>FSuaDangTin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTaoTaiKhoanQuanly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTaoTaiKhoanQuanly.Designer.cs">
+      <DependentUpon>FTaoTaiKhoanQuanly.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThongBao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSuaDangTin.resx">
       <DependentUpon>FSuaDangTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTaoTaiKhoanQuanly.resx">
+      <DependentUpon>FTaoTaiKhoanQuanly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongBao.resx">
       <DependentUpon>FThongBao.cs</DependentUpon>

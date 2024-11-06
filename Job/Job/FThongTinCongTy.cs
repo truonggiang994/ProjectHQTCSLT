@@ -106,12 +106,6 @@ namespace Job
                         }
                     }
                 }
-
-                // Hiển thị danh sách địa chỉ
-                if (addressList.Count == 0)
-                {
-                    MessageBox.Show("Không có địa chỉ nào cho công ty này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
             }
             catch (Exception ex)
             {
@@ -332,6 +326,7 @@ namespace Job
         {
             UserControlDCCT userControlDCCT = new UserControlDCCT();
 
+            userControlDCCT.DeleteRequested += UserControl_DeleteRequested;
             flowLayoutPanelDiaChi.Controls.Add(userControlDCCT);
         }
 

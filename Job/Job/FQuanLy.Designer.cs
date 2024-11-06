@@ -114,7 +114,6 @@
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(1000, 638);
             this.panelChinh.TabIndex = 2;
-            this.panelChinh.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChinh_Paint);
             // 
             // panelMenu
             // 
@@ -248,6 +247,7 @@
             this.buttonTT.Size = new System.Drawing.Size(180, 60);
             this.buttonTT.TabIndex = 2;
             this.buttonTT.Text = "    Thông tin cá nhân";
+            this.buttonTT.Click += new System.EventHandler(this.buttonTT_Click);
             // 
             // buttonDuyetBaiDang
             // 
@@ -297,6 +297,7 @@
             this.buttonTaoTaiKhoan.Size = new System.Drawing.Size(180, 60);
             this.buttonTaoTaiKhoan.TabIndex = 0;
             this.buttonTaoTaiKhoan.Text = "Tạo tài khoản";
+            this.buttonTaoTaiKhoan.Click += new System.EventHandler(this.buttonTaoTaiKhoan_Click);
             // 
             // FQuanLy
             // 
