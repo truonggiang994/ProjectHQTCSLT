@@ -19,7 +19,9 @@ namespace Job
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-            Application.Run(new FViecLam());
+
+            Application.Run(new FThongTinCaNhan());
+
 
         }
     }
