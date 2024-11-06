@@ -337,4 +337,3 @@
         private System.Windows.Forms.Panel panelChinh;
     }
 }
-

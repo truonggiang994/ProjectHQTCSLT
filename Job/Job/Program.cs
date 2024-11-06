@@ -21,6 +21,7 @@ namespace Job
 
             Application.Run(new FThongTinCaNhan());
 
+
         }
     }
 }

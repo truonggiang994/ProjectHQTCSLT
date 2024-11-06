@@ -295,13 +295,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="UserControlACT.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlACT.Designer.cs">
       <DependentUpon>UserControlACT.cs</DependentUpon>
-
     </Compile>
     <Compile Include="UserControlCamNang.cs">
       <SubType>UserControl</SubType>
@@ -327,13 +325,11 @@
     <Compile Include="UserControlDanhGia.Designer.cs">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>
     </Compile>
-
     <Compile Include="UserControlDCCT.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlDCCT.Designer.cs">
       <DependentUpon>UserControlDCCT.cs</DependentUpon>
-
     </Compile>
     <Compile Include="UserControlDuyetBaiDang.cs">
       <SubType>UserControl</SubType>
@@ -492,10 +488,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-
     <EmbeddedResource Include="UserControlACT.resx">
       <DependentUpon>UserControlACT.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlCamNang.resx">
       <DependentUpon>UserControlCamNang.cs</DependentUpon>
@@ -509,10 +503,8 @@
     <EmbeddedResource Include="UserControlDanhGia.resx">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="UserControlDCCT.resx">
       <DependentUpon>UserControlDCCT.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDuyetBaiDang.resx">
       <DependentUpon>UserControlDuyetBaiDang.cs</DependentUpon>
