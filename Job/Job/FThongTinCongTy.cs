@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace Job
 {
@@ -54,7 +55,7 @@ namespace Job
                     userControlTextWebsite.text = reader["Website"].ToString();
                     string scale = reader["Scale"].ToString();
 
-                    int index = comboBoxQuyMoNhanSu.Items.IndexOf(scale + " ");
+                    int index = comboBoxQuyMoNhanSu.Items.IndexOf(scale);
                     comboBoxQuyMoNhanSu.SelectedIndex = index; // Chọn mục nếu có
                     richTextBoxMoTa.Text = reader["Description"].ToString();
                     dateTimePickerNgayThanhLap.Value = Convert.ToDateTime(reader["CreatedDate"]);
@@ -99,7 +100,7 @@ namespace Job
                                 userControlDCCT.comboBoxTinhThanh.Text = province;
                                 userControlDCCT.comboBoxQuanHuyen.Text = district;
                                 userControlDCCT.userControlTextDiaChi.text = street; // Sửa từ district thành street
-                                userControlDCCT.DeleteRequested += UserControlDCCT_DeleteRequested;
+                                userControlDCCT.DeleteRequested += UserControl_DeleteRequested;
                                 // Thêm vào FlowLayoutPanel
                                 flowLayoutPanelDiaChi.Controls.Add(userControlDCCT);
                             }
@@ -142,6 +143,7 @@ namespace Job
                             UserControlACT userControlACT = new UserControlACT();
 
                             userControlACT.pictureBoxAnh.Image = ConvertByteArrayToImage(imageBytes);
+                            userControlACT.DeleteRequested += UserControl_DeleteRequested;
 
                             flowLayoutPanelAnh.Controls.Add(userControlACT);
                         }
@@ -161,9 +163,7 @@ namespace Job
             }
         }
 
-
         private void UpdateCompanyImages()
-
         {
             // Tạo danh sách để lưu các hình ảnh
             List<byte[]> images = new List<byte[]>();
@@ -176,10 +176,13 @@ namespace Job
                     // Lấy hình ảnh từ PictureBox
                     if (userControlImage.pictureBoxAnh.Image != null)
                     {
-                        // Chuyển đổi Image thành mảng byte
+                        // Xác định định dạng của ảnh
+                        ImageFormat format = userControlImage.pictureBoxAnh.Image.RawFormat;
+
+                        // Chuyển đổi Image thành mảng byte với định dạng đã phát hiện
                         using (MemoryStream ms = new MemoryStream())
                         {
-                            userControlImage.pictureBoxAnh.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); // Hoặc định dạng khác nếu cần
+                            userControlImage.pictureBoxAnh.Image.Save(ms, format);
                             byte[] imageBytes = ms.ToArray();
                             images.Add(imageBytes);
                         }
@@ -190,17 +193,9 @@ namespace Job
             // Gọi hàm để thêm hình ảnh vào cơ sở dữ liệu
             InsertImages(images);
         }
-        
 
         public void InsertImages(List<byte[]> images)
         {
-            // Kiểm tra xem danh sách hình ảnh có rỗng hay không
-            if (images == null || images.Count == 0)
-            {
-                MessageBox.Show("Không có hình ảnh nào để thêm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
             // Tạo DataTable để chứa danh sách hình ảnh
             DataTable imageTable = new DataTable();
             imageTable.Columns.Add("Image", typeof(byte[]));
@@ -215,7 +210,7 @@ namespace Job
             {
                 conn.Open();
 
-                using (SqlCommand cmd = new SqlCommand("InsertCompanyImages", conn))
+                using (SqlCommand cmd = new SqlCommand("UpdateCompanyImages", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -234,7 +229,7 @@ namespace Job
                 }
             }
 
-            MessageBox.Show("Thêm hình ảnh thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cập nhật hình ảnh thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Hàm lấy CompanyID từ Username
@@ -320,15 +315,55 @@ namespace Job
             }
         }
 
+        private void UpdateCompanyInfo()
+        {
+            string name = userControlTextTenCongTy.text;
+            string email = userControlTextCTGmail.text;
+            string description = richTextBoxMoTa.Text;
+            string taxCode = userControlTextCTMaSoThue.text;
+            string scale = comboBoxQuyMoNhanSu.Text;
+            string industry = userControlTextNganh.text;
+            string website = userControlTextWebsite.text;
+            DateTime createdDate = dateTimePickerNgayThanhLap.Value;
+            string connectionString = Properties.Settings.Default.Connection;
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand("UpdateCompanyInfo", connection))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Thêm các tham số
+                    command.Parameters.AddWithValue("@ID", ID);
+                    command.Parameters.AddWithValue("@Name", name);
+                    command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@Description", description);
+                    command.Parameters.AddWithValue("@TaxCode", taxCode);
+                    command.Parameters.AddWithValue("@Scale", scale);
+                    command.Parameters.AddWithValue("@Industry", industry);
+                    command.Parameters.AddWithValue("@Website", website);
+                    command.Parameters.AddWithValue("@CreatedDate", createdDate);
+
+                    // Mở kết nối và thực thi câu lệnh
+                    connection.Open();
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Cập nhật thông tin công ty thành công!");
+                }
+            }
+        }
+    
 
         private void guna2ButtonThemAnh_Click(object sender, EventArgs e)
         {
             UserControlACT userControlDCCT = new UserControlACT();
 
+            userControlDCCT.DeleteRequested += UserControl_DeleteRequested;
             flowLayoutPanelAnh.Controls.Add(userControlDCCT);
         }
 
-        private void guna2ButtonThemDiaChi_Click_1(object sender, EventArgs e)
+
+        private void guna2ButtonThemDiaChi_Click(object sender, EventArgs e)
         {
             UserControlDCCT userControlDCCT = new UserControlDCCT();
 
@@ -337,16 +372,22 @@ namespace Job
 
         private void buttonCapNhat_Click(object sender, EventArgs e)
         {
+            UpdateCompanyInfo();
             UpdateCompanyAddresses();
             UpdateCompanyImages();
         }
 
-        private void UserControlDCCT_DeleteRequested(object sender, EventArgs e)
+        private void UserControl_DeleteRequested(object sender, EventArgs e)
         {
             // Lấy UserControlDCCT được yêu cầu xóa
-            UserControlDCCT userControlToRemove = sender as UserControlDCCT;
+            UserControl userControlToRemove = sender as UserControlDCCT;
 
-            if (userControlToRemove != null)
+            if (userControlToRemove == null)
+            {
+                userControlToRemove = sender as UserControlACT;
+                flowLayoutPanelAnh.Controls.Remove(userControlToRemove);
+            }    
+            else
             {
                 // Xóa khỏi FlowLayoutPanel
                 flowLayoutPanelDiaChi.Controls.Remove(userControlToRemove);

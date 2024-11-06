@@ -37,7 +37,6 @@ D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FNguoiUngTuyen.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FNhaTuyenDung.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.FTrangChu.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.Properties.Resources.resources
-D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.UserControlACT.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.UserControlCamNang.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.UserControlComboBox.resources
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.UserControlCVItem.resources
@@ -60,3 +59,4 @@ D:\IT\ProjectHQTCSLT\Job\Job\bin\Debug\Newtonsoft.Json.dll
 D:\IT\ProjectHQTCSLT\Job\Job\bin\Debug\Newtonsoft.Json.xml
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.csproj.Up2Date
 D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.exe
+D:\IT\ProjectHQTCSLT\Job\Job\obj\Debug\Job.UserControlACT.resources

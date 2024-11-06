@@ -120,7 +120,6 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="guna2PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACrGSURBVHhe7d15
         lKVlfeDxRqNZZs5kMjPRrmqgu0o0J5ITtzGaaOKCSfQY4zJhjJkzkxMnOYlzYk6c0FVGHSVxiRurVDUg
@@ -321,7 +320,6 @@
         v2tUChw7T7mE4QDblEa4PIiN7gDnyRdRzeg/SYIDOvagau49iuEAh8RSuDyIjeGA3qOoZnTsGXUAYQc4
         Lv1q7LL4s4Nz/4kQ54oFxTDs1n8+ACRuPfudLawDYpI/L8c0d2YxCIPYMHGz2e9sQWpBepDNAJkJEgfZ
         gW7vKBhQAAD4rgUR9WvBFQAAAABJRU5ErkJggg==
-
 </value>
   </data>
   <data name="userControlTextCTGmail.PictureBoxImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -599,7 +597,6 @@
   <data name="pictureBoxQuyMoNhanSu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-
         1wAAAdcBjJIIaAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAA/2SURBVHhevVsJ
         kBVVlm1ni4mZjpnpnogJZ2J6tpiY6Bj4+Vns0VG73XHpQdrG4mdWgQ0iKFIsFvvSiAi0io0gArIpiMgi
         gggIFGuBUEIBtYFsxVpFFZtQFEqP3Vpn4uTLl/n+zfz5fzGGN+JE1K+87/x371vy3fvu/973YgU3WTYe
@@ -670,7 +667,6 @@
         EkQ54PC37YDiA2hmNFZWh99vqMHlG8W4JeqcnjdS8ZXXo3nHKXwp9VqCjkPUBc2C9WhuaEJzfRO+rj6P
         xsoGXL4RFFerfId2wCYGHf/SHX8eRAc3LgxeeHRNpjBGPrtR4S/ILBsXs/2cNlehrfzVWdJG8f8BTfsr
         vwHHNEsAAAAASUVORK5CYII=
-
 </value>
   </data>
   <data name="userControlTextSDT.PictureBoxImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -873,7 +869,6 @@
         QmCC
 </value>
   </data>
-
   <data name="userControlTextWebsite.PictureBoxImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -1603,7 +1598,6 @@
 </value>
   </data>
   <data name="userControlTextNganh.PictureBoxImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAH99SURBVHhe7b0H
