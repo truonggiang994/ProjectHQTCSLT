@@ -20,14 +20,12 @@ namespace Job
             Instance = this;
             InitializeComponent();
         }
-
         public void MoFCon(Form fCon)
         {
             fCon.TopLevel = false;
             fCon.Size = panelChinh.Size;
             fCon.Location = new Point(0, 0);
             fCon.Tag = this;
-            panelChinh.Controls.Clear();
             panelChinh.Controls.Add(fCon);
             fCon.BringToFront();
             fCon.Show();

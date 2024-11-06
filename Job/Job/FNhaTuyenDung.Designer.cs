@@ -108,7 +108,9 @@
             this.panelChinh.Location = new System.Drawing.Point(170, 40);
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(1030, 639);
+
             this.panelChinh.TabIndex = 3;
+
             // 
             // panelMenu
             // 
@@ -275,7 +277,6 @@
         private System.Windows.Forms.Panel panelTren;
         private Guna.UI2.WinForms.Guna2Button buttonLogOut;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-
         private Guna.UI2.WinForms.Guna2Button buttonHoSoUngTuyen;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         public System.Windows.Forms.Label labelUser;

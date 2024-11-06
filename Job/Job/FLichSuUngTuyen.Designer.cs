@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.panelLsnut = new System.Windows.Forms.Panel();
+            this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelLsnut.SuspendLayout();
+
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,6 +87,36 @@
             this.flowLayoutPanel.Size = new System.Drawing.Size(1000, 619);
             this.flowLayoutPanel.TabIndex = 11;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(3, 120);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(0, 0);
+            this.panel2.TabIndex = 1;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.MediumTurquoise;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderThickness = 5;
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.FillColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel1.Location = new System.Drawing.Point(339, 12);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(259, 39);
+            this.guna2Panel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(35, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Lịch sử ứng tuyển";
+            // 
             // FLichSuUngTuyen
             // 
             this.ClientSize = new System.Drawing.Size(1000, 680);
@@ -92,6 +124,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLichSuUngTuyen";
             this.panelLsnut.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);

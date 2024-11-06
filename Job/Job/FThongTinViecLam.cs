@@ -14,13 +14,41 @@ namespace Job
     public partial class FThongTinViecLam : Form
     {
         private int ID;
+        private int companyID;
         public FThongTinViecLam(int ID)
         {
             InitializeComponent();
             TaiDuLieu(ID);
             this.ID = ID;
+            companyID = GetIDCompany();
         }
+        private int GetIDCompany()
+        {
+            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            {
+                try
+                {
+                    connection.Open();
 
+                    // Tạo lệnh để gọi hàm SQL
+                    using (SqlCommand cmd = new SqlCommand("dbo.GetCompanybyPostJobID", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure; // Đảm bảo rằng lệnh là một stored procedure
+                        cmd.Parameters.AddWithValue("@PostJobID", ID); // Thêm tham số cho hàm
+
+                        // Sử dụng ExecuteScalar để lấy giá trị trả về từ hàm
+                      int  companyID = Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi: " + ex.Message);
+                }
+            }
+
+            return companyID;
+        }
+    
         private void TaiDuLieu(int ID)
         {
             using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
@@ -70,49 +98,15 @@ namespace Job
 
         private void buttonNopHoSo_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Kết nối với SQL Server
-                using (SqlConnection conn = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
-                {
-                    // Mở kết nối
-                    conn.Open();
+            FChonCV fChon = new FChonCV(ID);
+            fChon.ShowDialog();
+        }
 
-                    // Khởi tạo SqlCommand với stored procedure
-                    using (SqlCommand cmd = new SqlCommand("CheckCVIDByUserName", conn))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            FXemCongTy fXemCongTy = new FXemCongTy(companyID);
+            fXemCongTy.ShowDialog();
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.Add(new SqlParameter("@UserName", SqlDbType.NVarChar, 100)).Value = "hoan4701";
-                        cmd.Parameters.Add(new SqlParameter("@PostJobID", SqlDbType.Int)).Value = ID;
-
-                        // Thực thi stored procedure
-                        SqlParameter outputMessage = new SqlParameter("@Message", SqlDbType.NVarChar, 255)
-                        {
-                            Direction = ParameterDirection.Output
-                        };
-                        cmd.Parameters.Add(outputMessage);
-
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
-
-                        // Hiển thị thông báo từ tham số OUTPUT
-                        string message = outputMessage.Value.ToString();
-                        MessageBox.Show(message);
-
-
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("Lỗi SQL: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi: " + ex.Message);
-            }
         }
     }
 }

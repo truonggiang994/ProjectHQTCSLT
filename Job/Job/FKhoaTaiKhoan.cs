@@ -112,7 +112,7 @@ namespace Job
                     using (SqlCommand command = new SqlCommand("sp_SaveLockAccountHistory", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@AdminUsername", "adminHung");
+                        command.Parameters.AddWithValue("@AdminUsername", Data.username.ToString());
                         command.Parameters.AddWithValue("@LockUsername", textBoxName.Text);
                         command.Parameters.AddWithValue("@Reason", textBoxReason.Text);
 

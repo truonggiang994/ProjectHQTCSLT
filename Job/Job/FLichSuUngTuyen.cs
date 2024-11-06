@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,6 +11,7 @@ namespace Job
         public FLichSuUngTuyen()
         {
             InitializeComponent();
+
         }
         private void LoadDuyetBaiDangControls()
         {
@@ -40,7 +42,12 @@ namespace Job
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
+
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi khi tải dữ liệu: " + ex.Message);
             }
         }
     }
