@@ -1,6 +1,7 @@
-﻿namespace Job
+﻿
+namespace Job
 {
-    partial class FXemCamNang
+    partial class FChonCV
     {
         /// <summary>
         /// Required designer variable.
@@ -33,20 +34,22 @@
             // 
             // flowLayoutPanelChinh
             // 
-            this.flowLayoutPanelChinh.Location = new System.Drawing.Point(0, 28);
+            this.flowLayoutPanelChinh.AutoScroll = true;
+            this.flowLayoutPanelChinh.Location = new System.Drawing.Point(13, 13);
+            this.flowLayoutPanelChinh.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanelChinh.Name = "flowLayoutPanelChinh";
-            this.flowLayoutPanelChinh.Size = new System.Drawing.Size(930, 432);
-            this.flowLayoutPanelChinh.TabIndex = 0;
+            this.flowLayoutPanelChinh.Size = new System.Drawing.Size(1246, 523);
+            this.flowLayoutPanelChinh.TabIndex = 6;
+           
             // 
-            // FXemCamNang
+            // FChonCV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 460);
+            this.ClientSize = new System.Drawing.Size(1272, 549);
             this.Controls.Add(this.flowLayoutPanelChinh);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FXemCamNang";
-            this.Text = "FXemCamNang";
+            this.Name = "FChonCV";
+            this.Text = "FChonCV";
             this.ResumeLayout(false);
 
         }

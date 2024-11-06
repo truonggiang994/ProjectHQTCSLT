@@ -18,6 +18,10 @@ namespace Job
         private int PostJobID;
         private string UsernameCandidate;
         private bool co = false;
+        string viTri;
+        string ngaySinh;
+        string hoTen;
+        string gioiTinh;
         public UserControlUngVien(int ID,int CVID, int PostJobID, string hoTen, string gioiTinh, string ngaySinh, Image anhDaiDien, string viTri, string trangthai, string UsernameCandidate)
         {
             InitializeComponent();
@@ -25,6 +29,10 @@ namespace Job
             this.CVID = CVID;
             this.PostJobID = PostJobID;
             this.UsernameCandidate = UsernameCandidate;
+            this.viTri = viTri;
+            this.ngaySinh = ngaySinh;
+            this.hoTen = hoTen;
+            this.gioiTinh = gioiTinh;
             labelHoTen.Text = "Họ và tên: " + hoTen;
             labelGioiTinh.Text = "Giới tính: " + gioiTinh;
             labelNgaySinh.Text = "Ngày sinh: " + ngaySinh;
@@ -68,7 +76,7 @@ namespace Job
         }
         private void buttonPhuongVan_Click(object sender, EventArgs e)
         {
-            //FNhaTuyenDung.Instance.MoFCon(new FHenPhongVan(UsernameCandidate, Data.username));
+            FNhaTuyenDung.Instance.MoFCon(new FHenPhongVan(iD, PostJobID, UsernameCandidate, hoTen, viTri, ngaySinh, gioiTinh));
         }
     }
 }

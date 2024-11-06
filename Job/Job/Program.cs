@@ -17,9 +17,7 @@ namespace Job
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-
-            Application.Run(new FQuanLy());
+            Application.Run(new FDangNhap());
         }
     }
 }

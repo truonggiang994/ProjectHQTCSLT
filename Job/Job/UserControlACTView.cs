@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Job
 {
-    public partial class FTopViecLam : Form
+    public partial class UserControlACTView : UserControl
     {
-        public FTopViecLam()
+        public UserControlACTView()
         {
             InitializeComponent();
         }
-    } 
+
+        
+    }
 }

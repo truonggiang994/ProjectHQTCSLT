@@ -1,5 +1,4 @@
-﻿using Job.Login;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,15 +64,32 @@ namespace Job
                                     if (resultEmployer == 1)
                                     {
                                         Data.username = textBoTaiKhoan.Text;
-
                                         FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
                                         this.Hide();
                                         fNhaTuyenDung.Show();
-
                                     }
                                     else
                                     {
                                         MessageBox.Show("Bạn không phải nhà ứng tuyển");
+                                    }
+                                }
+                            }
+                            else if (radioButtonAdmin.Checked)
+                            {
+                                using (SqlCommand commandEmployer = new SqlCommand("SELECT dbo.sp_CheckAccountAdmin(@Username)", connection))
+                                {
+                                    commandEmployer.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
+                                    int resultEmployer = (int)commandEmployer.ExecuteScalar();
+                                    if (resultEmployer == 1)
+                                    {
+                                        Data.username = textBoTaiKhoan.Text;
+                                        FQuanLy fQuanLy = new FQuanLy();
+                                        this.Hide();
+                                        fQuanLy.Show();
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Bạn không phải quản lý");
                                     }
                                 }
                             }
@@ -89,6 +105,22 @@ namespace Job
                         else if (result == -1)
                         {
                             MessageBox.Show("Mật khẩu không đúng!");
+                        }
+                        else if (result == -2)
+                        {
+                            using (SqlCommand commandLock = new SqlCommand("SELECT dbo.sp_GetLockReason(@LockUsername)", connection))
+                            {
+                                commandLock.Parameters.AddWithValue("@LockUsername", textBoTaiKhoan.Text);
+                                var resultLock = commandLock.ExecuteScalar();
+                                if (resultLock != null && resultLock != DBNull.Value)
+                                {
+                                    MessageBox.Show("Tài khoản bị khóa: " + resultLock.ToString());
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Tài khoản bị khóa nhưng không có lý do");
+                                }
+                            }
                         }
                     }
                 }

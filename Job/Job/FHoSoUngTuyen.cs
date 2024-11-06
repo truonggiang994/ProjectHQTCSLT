@@ -15,7 +15,6 @@ namespace Job
 {
     public partial class FHoSoUngTuyen : Form
     {
-        public Image AnhDaiDien { get; private set; }
 
         public FHoSoUngTuyen()
         {

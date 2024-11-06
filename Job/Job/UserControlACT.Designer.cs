@@ -30,8 +30,8 @@
         {
             this.buttonXoa = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2ButtonTaiAnh = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBoxAnh = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2ButtonTaiAnh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnh)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,17 @@
             this.guna2Panel1.Size = new System.Drawing.Size(288, 310);
             this.guna2Panel1.TabIndex = 20;
             // 
+            // pictureBoxAnh
+            // 
+            this.pictureBoxAnh.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAnh.ImageRotate = 0F;
+            this.pictureBoxAnh.Location = new System.Drawing.Point(11, 6);
+            this.pictureBoxAnh.Name = "pictureBoxAnh";
+            this.pictureBoxAnh.Size = new System.Drawing.Size(265, 265);
+            this.pictureBoxAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAnh.TabIndex = 18;
+            this.pictureBoxAnh.TabStop = false;
+            // 
             // guna2ButtonTaiAnh
             // 
             this.guna2ButtonTaiAnh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -85,19 +96,6 @@
             this.guna2ButtonTaiAnh.TabIndex = 20;
             this.guna2ButtonTaiAnh.Text = "Tải ảnh";
             this.guna2ButtonTaiAnh.Click += new System.EventHandler(this.guna2ButtonTaiAnh_Click);
-            // 
-            // pictureBoxAnh
-            // 
-            this.pictureBoxAnh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxAnh.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAnh.ImageRotate = 0F;
-            this.pictureBoxAnh.InitialImage = null;
-            this.pictureBoxAnh.Location = new System.Drawing.Point(11, 6);
-            this.pictureBoxAnh.Name = "pictureBoxAnh";
-            this.pictureBoxAnh.Size = new System.Drawing.Size(265, 265);
-            this.pictureBoxAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxAnh.TabIndex = 18;
-            this.pictureBoxAnh.TabStop = false;
             // 
             // UserControlACT
             // 

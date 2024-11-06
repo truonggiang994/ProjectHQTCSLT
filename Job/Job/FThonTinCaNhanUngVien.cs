@@ -43,7 +43,7 @@ namespace Job
                     cmd.Parameters.AddWithValue("@Password", guna2TextBoxPassword.Text);
                     cmd.Parameters.AddWithValue("@FullName", textBoxHoTen.Text);
                     cmd.Parameters.AddWithValue("@BirthDate", dateTimePickerNgaySinh.Value);
-                    cmd.Parameters.AddWithValue("@Gender", comboBoxGioiTinh.SelectedIndex == 0); // Nam: 0, Nữ: 1
+                    cmd.Parameters.AddWithValue("@Gender", comboBoxGioiTinh.SelectedIndex == 1); // Nam: 0, Nữ: 1
                     cmd.Parameters.AddWithValue("@Province", comboBoxTinhThanh.Text);
                     cmd.Parameters.AddWithValue("@District", comboBoxQuanHuyen.Text);
                     cmd.Parameters.AddWithValue("@Street", textBoxSoNha.Text);
