@@ -115,7 +115,7 @@ namespace Job
 
         private void buttonTT_Click(object sender, EventArgs e)
         {
-
+            MoFCon(new FThongTinCaNhan());
         }
 
         private void CheckAndDisableButton()

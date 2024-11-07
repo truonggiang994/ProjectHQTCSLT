@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelLsnut = new System.Windows.Forms.Panel();
-            this.dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -124,7 +123,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FLichSuUngTuyen";
             this.panelLsnut.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);

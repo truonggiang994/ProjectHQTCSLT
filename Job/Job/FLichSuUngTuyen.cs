@@ -17,38 +17,42 @@ namespace Job
         {
             flowLayoutPanel.Controls.Clear();  // Xóa các control trước đó (nếu có)
 
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            try
             {
-                SqlCommand command = new SqlCommand("select * from ApplicationSubmit where ", connection);
-
-                try
+                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
                 {
-                    connection.Open();
-                    SqlDataReader reader = command.ExecuteReader();
+                    SqlCommand command = new SqlCommand("select * from ApplicationSubmit where ", connection);
 
-                    while (reader.Read())
+                    try
                     {
-                        int postId = reader.GetInt32(0);  // Lấy ID của PostJob
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
 
-                        // Tạo một instance của UserControlDuyetBaiDang
-                        UserControlDuyetbaiDang control = new UserControlDuyetbaiDang(postId);
+                        while (reader.Read())
+                        {
+                            int postId = reader.GetInt32(0);  // Lấy ID của PostJob
 
-                        // Thêm control vào flowLayoutPanel
-                        flowLayoutPanel.Controls.Add(control);
+                            // Tạo một instance của UserControlDuyetBaiDang
+                            UserControlDuyetbaiDang control = new UserControlDuyetbaiDang(postId);
+
+                            // Thêm control vào flowLayoutPanel
+                            flowLayoutPanel.Controls.Add(control);
+                        }
+
+                        reader.Close();
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
 
-                    reader.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-
+                    }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Đã xảy ra lỗi khi tải dữ liệu: " + ex.Message);
             }
+
         }
     }
 }

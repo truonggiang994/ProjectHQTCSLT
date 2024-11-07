@@ -23,6 +23,7 @@ namespace Job
             LoadData();
             LoadLocations();
         }
+
         private void LoadData()
         {
             try
@@ -65,16 +66,17 @@ namespace Job
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+
             }
         }
 
 
+
         //Khu vực
 
-        // Dictionary để chứa dữ liệu tỉnh thành và quận huyện
+            // Dictionary để chứa dữ liệu tỉnh thành và quận huyện
         private Dictionary<string, List<string>> locations = new Dictionary<string, List<string>>();
 
         // Hàm để đọc file JSON và lưu vào Dictionary

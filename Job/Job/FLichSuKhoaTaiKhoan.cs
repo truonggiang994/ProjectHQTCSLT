@@ -17,6 +17,7 @@ namespace Job
         public FLichSuKhoaTaiKhoan()
         {
             InitializeComponent();
+            LoadData();
         }
         private void LoadData()
         {
