@@ -31,12 +31,16 @@ namespace Job
                 using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
                 {
                     connection.Open();
+
+                    // Sử dụng stored procedure thay vì câu lệnh SELECT
                     using (SqlCommand command = new SqlCommand("sp_GetAdminDetails", connection))
                     {
                         // Thiết lập kiểu câu lệnh là stored procedure
                         command.CommandType = CommandType.StoredProcedure;
 
+                        // Thêm tham số @Username
                         command.Parameters.AddWithValue("@Username", Data.username.ToString());
+
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.HasRows)
@@ -66,17 +70,18 @@ namespace Job
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
         }
 
 
 
+
         //Khu vực
 
-            // Dictionary để chứa dữ liệu tỉnh thành và quận huyện
+        // Dictionary để chứa dữ liệu tỉnh thành và quận huyện
         private Dictionary<string, List<string>> locations = new Dictionary<string, List<string>>();
 
         // Hàm để đọc file JSON và lưu vào Dictionary

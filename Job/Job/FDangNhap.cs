@@ -26,76 +26,49 @@ namespace Job
                 using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT dbo.sp_CheckAccount(@Username, @Password)", connection))
+
+                    string role = "";
+                    if (radioButtonCandidate.Checked)
+                        role = "Candidate";
+                    else if (radioButtonEmployer.Checked)
+                        role = "Employer";
+                    else if (radioButtonAdmin.Checked)
+                        role = "Admin";
+                    else
                     {
-                        // Chỉ truyền đúng 2 tham số
+                        MessageBox.Show("Chọn chức vụ");
+                        return;
+                    }
+
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.sp_CheckLoginAccount(@Username, @Password, @Role)", connection))
+                    {
                         command.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
                         command.Parameters.AddWithValue("@Password", textBoxMK.Text);
+                        command.Parameters.AddWithValue("@Role", role);
 
                         int result = (int)command.ExecuteScalar();
 
                         if (result == 1)
                         {
-                            if (radioButtonCandidate.Checked)
+                            Data.username = textBoTaiKhoan.Text;
+
+                            if (role == "Candidate")
                             {
-                                using (SqlCommand commandCandidate = new SqlCommand("SELECT dbo.sp_CheckAccountCandidate(@Username)", connection))
-                                {
-                                    commandCandidate.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
-                                    int resultCandidate = (int)commandCandidate.ExecuteScalar();
-                                    if (resultCandidate == 1)
-                                    {
-                                        Data.username = textBoTaiKhoan.Text;
-                                        FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
-                                        this.Hide();
-                                        fNguoiUngTuyen.Show();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Bạn không phải ứng viên");
-                                    }
-                                }
+                                FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
+                                this.Hide();
+                                fNguoiUngTuyen.Show();
                             }
-                            else if (radioButtonEmployer.Checked)
+                            else if (role == "Employer")
                             {
-                                using (SqlCommand commandEmployer = new SqlCommand("SELECT dbo.sp_CheckAccountEmployer(@Username)", connection))
-                                {
-                                    commandEmployer.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
-                                    int resultEmployer = (int)commandEmployer.ExecuteScalar();
-                                    if (resultEmployer == 1)
-                                    {
-                                        Data.username = textBoTaiKhoan.Text;
-                                        FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
-                                        this.Hide();
-                                        fNhaTuyenDung.Show();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Bạn không phải nhà ứng tuyển");
-                                    }
-                                }
+                                FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
+                                this.Hide();
+                                fNhaTuyenDung.Show();
                             }
-                            else if (radioButtonAdmin.Checked)
+                            else if (role == "Admin")
                             {
-                                using (SqlCommand commandEmployer = new SqlCommand("SELECT dbo.sp_CheckAccountAdmin(@Username)", connection))
-                                {
-                                    commandEmployer.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
-                                    int resultEmployer = (int)commandEmployer.ExecuteScalar();
-                                    if (resultEmployer == 1)
-                                    {
-                                        Data.username = textBoTaiKhoan.Text;
-                                        FQuanLy fQuanLy = new FQuanLy();
-                                        this.Hide();
-                                        fQuanLy.Show();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Bạn không phải quản lý");
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                MessageBox.Show("Chọn chứ vụ");
+                                FQuanLy fQuanLy = new FQuanLy();
+                                this.Hide();
+                                fQuanLy.Show();
                             }
                         }
                         else if (result == 0)
@@ -121,6 +94,10 @@ namespace Job
                                     MessageBox.Show("Tài khoản bị khóa nhưng không có lý do");
                                 }
                             }
+                        }
+                        else if (result == -3)
+                        {
+                            MessageBox.Show("Chức vụ không hợp lệ!");
                         }
                     }
                 }
