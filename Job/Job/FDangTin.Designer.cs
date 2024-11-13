@@ -64,7 +64,7 @@
             this.labelTTCoBan.BackColor = System.Drawing.Color.Transparent;
             this.labelTTCoBan.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTTCoBan.Location = new System.Drawing.Point(36, 4);
-            this.labelTTCoBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelTTCoBan.Margin = new System.Windows.Forms.Padding(2);
             this.labelTTCoBan.Name = "labelTTCoBan";
             this.labelTTCoBan.Size = new System.Drawing.Size(153, 26);
             this.labelTTCoBan.TabIndex = 0;
@@ -75,7 +75,7 @@
             this.labelViTri.BackColor = System.Drawing.Color.Transparent;
             this.labelViTri.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelViTri.Location = new System.Drawing.Point(44, 34);
-            this.labelViTri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelViTri.Margin = new System.Windows.Forms.Padding(2);
             this.labelViTri.Name = "labelViTri";
             this.labelViTri.Size = new System.Drawing.Size(128, 21);
             this.labelViTri.TabIndex = 110;
@@ -89,7 +89,7 @@
             this.textBoxChucDanh.BorderRadius = 5;
             this.textBoxChucDanh.BorderThickness = 2;
             this.textBoxChucDanh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxChucDanh.DefaultText = "";
+            this.textBoxChucDanh.DefaultText = "Lập trình viên";
             this.textBoxChucDanh.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textBoxChucDanh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textBoxChucDanh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -99,7 +99,7 @@
             this.textBoxChucDanh.ForeColor = System.Drawing.Color.Black;
             this.textBoxChucDanh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxChucDanh.Location = new System.Drawing.Point(35, 59);
-            this.textBoxChucDanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxChucDanh.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxChucDanh.Name = "textBoxChucDanh";
             this.textBoxChucDanh.PasswordChar = '\0';
             this.textBoxChucDanh.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -129,17 +129,19 @@
             "Theo hợp đồng tư vấn ",
             "Thực tập"});
             this.comboBoxHinhThucLV.Location = new System.Drawing.Point(35, 137);
-            this.comboBoxHinhThucLV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxHinhThucLV.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxHinhThucLV.Name = "comboBoxHinhThucLV";
             this.comboBoxHinhThucLV.Size = new System.Drawing.Size(400, 30);
+            this.comboBoxHinhThucLV.StartIndex = 0;
             this.comboBoxHinhThucLV.TabIndex = 7;
+            this.comboBoxHinhThucLV.Tag = "Toàn thời gian cố định";
             // 
             // labelHinhThucLV
             // 
             this.labelHinhThucLV.BackColor = System.Drawing.Color.Transparent;
             this.labelHinhThucLV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHinhThucLV.Location = new System.Drawing.Point(46, 114);
-            this.labelHinhThucLV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelHinhThucLV.Margin = new System.Windows.Forms.Padding(2);
             this.labelHinhThucLV.Name = "labelHinhThucLV";
             this.labelHinhThucLV.Size = new System.Drawing.Size(128, 21);
             this.labelHinhThucLV.TabIndex = 6;
@@ -150,7 +152,7 @@
             this.labelMucLuongKiNang.BackColor = System.Drawing.Color.Transparent;
             this.labelMucLuongKiNang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMucLuongKiNang.Location = new System.Drawing.Point(23, 239);
-            this.labelMucLuongKiNang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelMucLuongKiNang.Margin = new System.Windows.Forms.Padding(2);
             this.labelMucLuongKiNang.Name = "labelMucLuongKiNang";
             this.labelMucLuongKiNang.Size = new System.Drawing.Size(176, 22);
             this.labelMucLuongKiNang.TabIndex = 39;
@@ -159,11 +161,11 @@
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Navy;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(516, 301);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(41, 25);
             this.guna2HtmlLabel5.TabIndex = 45;
@@ -173,11 +175,11 @@
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.AutoSize = false;
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Gainsboro;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Navy;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(226, 301);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(46, 24);
             this.guna2HtmlLabel6.TabIndex = 44;
@@ -189,7 +191,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(319, 273);
-            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(120, 21);
             this.guna2HtmlLabel7.TabIndex = 43;
@@ -200,7 +202,7 @@
             this.labelLuongToiThieu.BackColor = System.Drawing.Color.Transparent;
             this.labelLuongToiThieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLuongToiThieu.Location = new System.Drawing.Point(31, 273);
-            this.labelLuongToiThieu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelLuongToiThieu.Margin = new System.Windows.Forms.Padding(2);
             this.labelLuongToiThieu.Name = "labelLuongToiThieu";
             this.labelLuongToiThieu.Size = new System.Drawing.Size(137, 21);
             this.labelLuongToiThieu.TabIndex = 42;
@@ -213,7 +215,7 @@
             this.textBoxLuongToiDa.BorderRadius = 4;
             this.textBoxLuongToiDa.BorderThickness = 2;
             this.textBoxLuongToiDa.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxLuongToiDa.DefaultText = "";
+            this.textBoxLuongToiDa.DefaultText = "20";
             this.textBoxLuongToiDa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textBoxLuongToiDa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textBoxLuongToiDa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -239,7 +241,7 @@
             this.textBoxLuongToiThieu.BorderRadius = 4;
             this.textBoxLuongToiThieu.BorderThickness = 2;
             this.textBoxLuongToiThieu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxLuongToiThieu.DefaultText = "";
+            this.textBoxLuongToiThieu.DefaultText = "15";
             this.textBoxLuongToiThieu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textBoxLuongToiThieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textBoxLuongToiThieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -263,7 +265,7 @@
             this.lableKiNang.BackColor = System.Drawing.Color.Transparent;
             this.lableKiNang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lableKiNang.Location = new System.Drawing.Point(31, 335);
-            this.lableKiNang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lableKiNang.Margin = new System.Windows.Forms.Padding(2);
             this.lableKiNang.Name = "lableKiNang";
             this.lableKiNang.Size = new System.Drawing.Size(55, 21);
             this.lableKiNang.TabIndex = 47;
@@ -276,7 +278,7 @@
             this.textBoxKiNang.BorderRadius = 4;
             this.textBoxKiNang.BorderThickness = 2;
             this.textBoxKiNang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxKiNang.DefaultText = "";
+            this.textBoxKiNang.DefaultText = "C#, python, ....";
             this.textBoxKiNang.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textBoxKiNang.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textBoxKiNang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -300,7 +302,7 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(90, 338);
-            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(107, 18);
             this.guna2HtmlLabel8.TabIndex = 48;
@@ -311,7 +313,7 @@
             this.labelMoTa.BackColor = System.Drawing.Color.Transparent;
             this.labelMoTa.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMoTa.Location = new System.Drawing.Point(21, 399);
-            this.labelMoTa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelMoTa.Margin = new System.Windows.Forms.Padding(2);
             this.labelMoTa.Name = "labelMoTa";
             this.labelMoTa.Size = new System.Drawing.Size(125, 22);
             this.labelMoTa.TabIndex = 49;
@@ -322,7 +324,7 @@
             this.labelMoTaCongViec.BackColor = System.Drawing.Color.Transparent;
             this.labelMoTaCongViec.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMoTaCongViec.Location = new System.Drawing.Point(31, 423);
-            this.labelMoTaCongViec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelMoTaCongViec.Margin = new System.Windows.Forms.Padding(2);
             this.labelMoTaCongViec.Name = "labelMoTaCongViec";
             this.labelMoTaCongViec.Size = new System.Drawing.Size(110, 21);
             this.labelMoTaCongViec.TabIndex = 51;
@@ -334,11 +336,11 @@
             this.buttonHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.buttonHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.buttonHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonHuy.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonHuy.FillColor = System.Drawing.Color.Silver;
             this.buttonHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHuy.ForeColor = System.Drawing.Color.Black;
             this.buttonHuy.Location = new System.Drawing.Point(670, 650);
-            this.buttonHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonHuy.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHuy.Name = "buttonHuy";
             this.buttonHuy.Size = new System.Drawing.Size(71, 32);
             this.buttonHuy.TabIndex = 202;
@@ -355,7 +357,7 @@
             this.buttonDang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDang.ForeColor = System.Drawing.Color.Black;
             this.buttonDang.Location = new System.Drawing.Point(766, 650);
-            this.buttonDang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDang.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDang.Name = "buttonDang";
             this.buttonDang.Size = new System.Drawing.Size(71, 32);
             this.buttonDang.TabIndex = 201;
@@ -367,7 +369,7 @@
             this.labelKinhNghiem.BackColor = System.Drawing.Color.Transparent;
             this.labelKinhNghiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKinhNghiem.Location = new System.Drawing.Point(46, 175);
-            this.labelKinhNghiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelKinhNghiem.Margin = new System.Windows.Forms.Padding(2);
             this.labelKinhNghiem.Name = "labelKinhNghiem";
             this.labelKinhNghiem.Size = new System.Drawing.Size(87, 21);
             this.labelKinhNghiem.TabIndex = 12;
@@ -395,9 +397,10 @@
             "1 năm",
             "Chưa có kinh nghiệm"});
             this.comboBoxKinhNghiem.Location = new System.Drawing.Point(37, 200);
-            this.comboBoxKinhNghiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxKinhNghiem.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxKinhNghiem.Name = "comboBoxKinhNghiem";
             this.comboBoxKinhNghiem.Size = new System.Drawing.Size(400, 30);
+            this.comboBoxKinhNghiem.StartIndex = 0;
             this.comboBoxKinhNghiem.TabIndex = 13;
             // 
             // textBoxMoTaCongViec
@@ -408,7 +411,7 @@
             this.textBoxMoTaCongViec.Name = "textBoxMoTaCongViec";
             this.textBoxMoTaCongViec.Size = new System.Drawing.Size(838, 65);
             this.textBoxMoTaCongViec.TabIndex = 203;
-            this.textBoxMoTaCongViec.Text = "";
+            this.textBoxMoTaCongViec.Text = "Master";
             // 
             // textBoxQuyenLoi
             // 
@@ -418,14 +421,14 @@
             this.textBoxQuyenLoi.Name = "textBoxQuyenLoi";
             this.textBoxQuyenLoi.Size = new System.Drawing.Size(836, 47);
             this.textBoxQuyenLoi.TabIndex = 209;
-            this.textBoxQuyenLoi.Text = "";
+            this.textBoxQuyenLoi.Text = "Đi du lịch, thưởng tết, bảo hiểm, ...";
             // 
             // labelQuyenLoi
             // 
             this.labelQuyenLoi.BackColor = System.Drawing.Color.Transparent;
             this.labelQuyenLoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuyenLoi.Location = new System.Drawing.Point(22, 541);
-            this.labelQuyenLoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelQuyenLoi.Margin = new System.Windows.Forms.Padding(2);
             this.labelQuyenLoi.Name = "labelQuyenLoi";
             this.labelQuyenLoi.Size = new System.Drawing.Size(68, 21);
             this.labelQuyenLoi.TabIndex = 208;
@@ -459,7 +462,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(993, 546);
+            this.ClientSize = new System.Drawing.Size(976, 546);
             this.Controls.Add(this.textBoxQuyenLoi);
             this.Controls.Add(this.labelQuyenLoi);
             this.Controls.Add(this.guna2PictureBox3);
@@ -487,8 +490,8 @@
             this.Controls.Add(this.labelTTCoBan);
             this.Controls.Add(this.guna2PictureBox1);
             this.ForeColor = System.Drawing.Color.Coral;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FDangTin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "FDangTin";

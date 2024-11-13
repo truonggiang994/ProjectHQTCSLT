@@ -33,14 +33,12 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2VSeparator2 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator3 = new Guna.UI2.WinForms.Guna2VSeparator();
-            this.guna2VSeparator4 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.guna2VSeparator5 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.labelNganhNghe = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelNgayDang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelMucLuongToiThieu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelMucLuongToiDa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.buttonSua = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
@@ -49,7 +47,7 @@
             // guna2VSeparator1
             // 
             this.guna2VSeparator1.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2VSeparator1.Location = new System.Drawing.Point(304, -1);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(287, -1);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
             this.guna2VSeparator1.Size = new System.Drawing.Size(10, 48);
             this.guna2VSeparator1.TabIndex = 1;
@@ -66,18 +64,10 @@
             // guna2VSeparator3
             // 
             this.guna2VSeparator3.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2VSeparator3.Location = new System.Drawing.Point(605, 1);
+            this.guna2VSeparator3.Location = new System.Drawing.Point(733, 1);
             this.guna2VSeparator3.Name = "guna2VSeparator3";
             this.guna2VSeparator3.Size = new System.Drawing.Size(10, 48);
             this.guna2VSeparator3.TabIndex = 3;
-            // 
-            // guna2VSeparator4
-            // 
-            this.guna2VSeparator4.FillColor = System.Drawing.Color.DarkGray;
-            this.guna2VSeparator4.Location = new System.Drawing.Point(745, 1);
-            this.guna2VSeparator4.Name = "guna2VSeparator4";
-            this.guna2VSeparator4.Size = new System.Drawing.Size(10, 48);
-            this.guna2VSeparator4.TabIndex = 4;
             // 
             // guna2VSeparator5
             // 
@@ -118,9 +108,9 @@
             this.labelMucLuongToiThieu.BackColor = System.Drawing.Color.Transparent;
             this.labelMucLuongToiThieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMucLuongToiThieu.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelMucLuongToiThieu.Location = new System.Drawing.Point(448, 3);
+            this.labelMucLuongToiThieu.Location = new System.Drawing.Point(464, 3);
             this.labelMucLuongToiThieu.Name = "labelMucLuongToiThieu";
-            this.labelMucLuongToiThieu.Size = new System.Drawing.Size(151, 21);
+            this.labelMucLuongToiThieu.Size = new System.Drawing.Size(263, 21);
             this.labelMucLuongToiThieu.TabIndex = 9;
             this.labelMucLuongToiThieu.Text = "Từ 10 triệu";
             this.labelMucLuongToiThieu.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,7 +123,7 @@
             this.labelMucLuongToiDa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelMucLuongToiDa.Location = new System.Drawing.Point(464, 24);
             this.labelMucLuongToiDa.Name = "labelMucLuongToiDa";
-            this.labelMucLuongToiDa.Size = new System.Drawing.Size(135, 21);
+            this.labelMucLuongToiDa.Size = new System.Drawing.Size(263, 21);
             this.labelMucLuongToiDa.TabIndex = 10;
             this.labelMucLuongToiDa.Text = "đến 15 triệu";
             this.labelMucLuongToiDa.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,39 +134,21 @@
             this.labelTrangThai.BackColor = System.Drawing.Color.Transparent;
             this.labelTrangThai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTrangThai.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelTrangThai.Location = new System.Drawing.Point(621, 17);
+            this.labelTrangThai.Location = new System.Drawing.Point(775, 16);
             this.labelTrangThai.Name = "labelTrangThai";
             this.labelTrangThai.Size = new System.Drawing.Size(118, 21);
             this.labelTrangThai.TabIndex = 12;
             this.labelTrangThai.Text = "duyệtChờ ";
             this.labelTrangThai.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // buttonSua
-            // 
-            this.buttonSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonSua.FillColor = System.Drawing.Color.DarkGray;
-            this.buttonSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSua.ForeColor = System.Drawing.Color.White;
-            this.buttonSua.Location = new System.Drawing.Point(762, 12);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(121, 26);
-            this.buttonSua.TabIndex = 13;
-            this.buttonSua.Text = "Sửa";
-            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.Gray;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.Controls.Add(this.buttonSua);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator1);
             this.guna2Panel1.Controls.Add(this.labelTrangThai);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator3);
-            this.guna2Panel1.Controls.Add(this.guna2VSeparator4);
             this.guna2Panel1.Controls.Add(this.labelMucLuongToiDa);
             this.guna2Panel1.Controls.Add(this.guna2VSeparator5);
             this.guna2Panel1.Controls.Add(this.labelMucLuongToiThieu);
@@ -219,14 +191,12 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator2;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator3;
-        private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator4;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator5;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelNganhNghe;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelNgayDang;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelMucLuongToiThieu;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelMucLuongToiDa;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelTrangThai;
-        private Guna.UI2.WinForms.Guna2Button buttonSua;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }

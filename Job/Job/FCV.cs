@@ -39,7 +39,7 @@ namespace Job
                     connection.Open();
 
                     // Gọi hàm GetCVByUsername
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetCVByUsername(@Username, @ID)", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM fn_GetCVByUsername(@Username, @ID)", connection))
                     {
                         command.Parameters.AddWithValue("@Username", Data.username); // Thêm tham số Username
                         command.Parameters.AddWithValue("@ID", ID); // Thêm tham số ID
@@ -90,7 +90,7 @@ namespace Job
                     connection.Open();
 
                     // Tạo một SqlCommand để gọi thủ tục UpdateCV
-                    using (SqlCommand command = new SqlCommand("InsertOrUpdateCV", connection))
+                    using (SqlCommand command = new SqlCommand("sp_InsertOrUpdateCV", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
@@ -148,7 +148,7 @@ namespace Job
             using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Gọi hàm trả về bảng trong SQL
-                string query = "SELECT * FROM GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng
+                string query = "SELECT * FROM fn_GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

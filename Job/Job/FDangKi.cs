@@ -28,7 +28,7 @@ namespace Job
                 using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT dbo.sp_CheckAccountExistence(@Username)", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.fn_CheckAccountExistence(@Username)", connection))
                     {
                         command.Parameters.AddWithValue("@Username", textBoxAccount.Text);
 
@@ -99,6 +99,23 @@ namespace Job
             {
                 MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
             }
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            FDangNhap fDangKi = new FDangNhap();
+            Hide();
+            fDangKi.Show();
+        }
+
+        private void radioButtonEmployer_CheckedChanged(object sender, EventArgs e)
+        {
+            Data.role = ERoleLogin.employ;
+        }
+
+        private void radioButtonCandidate_CheckedChanged(object sender, EventArgs e)
+        {
+            Data.role = ERoleLogin.cadidate;
         }
     }
 }

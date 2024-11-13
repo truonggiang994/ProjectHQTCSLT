@@ -26,27 +26,38 @@ namespace Job
         {
             using (SqlConnection connection = DbConnection.GetConnection())
             {
+                int companyID = 0; // Khai báo biến ngoài try-catch để có thể trả về ngoài vòng lặp
                 try
                 {
                     connection.Open();
 
-                    // Tạo lệnh để gọi hàm SQL
-                    using (SqlCommand cmd = new SqlCommand("dbo.GetCompanybyPostJobID", connection))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure; // Đảm bảo rằng lệnh là một stored procedure
-                        cmd.Parameters.AddWithValue("@PostJobID", ID); // Thêm tham số cho hàm
+                    // Tạo câu lệnh SQL để gọi function
+                    string query = "SELECT dbo.fn_GetCompanybyPostJobID(@PostJobID)";  // Gọi function
 
-                        // Sử dụng ExecuteScalar để lấy giá trị trả về từ hàm
-                        int companyID = Convert.ToInt32(cmd.ExecuteScalar());
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@PostJobID", ID); // Thêm tham số cho function
+
+                        // Sử dụng ExecuteScalar để lấy giá trị trả về từ function
+                        object result = cmd.ExecuteScalar();
+
+                        if (result != DBNull.Value)  // Kiểm tra xem kết quả có phải là DBNull không
+                        {
+                            companyID = Convert.ToInt32(result); // Lưu giá trị vào biến
+                        }
+                        else
+                        {
+                            Console.WriteLine("Không tìm thấy CompanyID cho PostJobID " + ID);
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Lỗi: " + ex.Message);
                 }
-            }
 
-            return companyID;
+                return companyID;  // Trả về companyID sau khi đã lấy xong
+            }
         }
 
         private void TaiDuLieu(int ID)

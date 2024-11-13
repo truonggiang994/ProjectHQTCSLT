@@ -61,7 +61,7 @@ namespace Job
                     connection.Open();
 
                     // Gọi thủ tục DeleteCVByID
-                    using (SqlCommand command = new SqlCommand("DeleteCVByID", connection))
+                    using (SqlCommand command = new SqlCommand("sp_DeleteCVByID", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("@ID", ID); // Thêm tham số ID

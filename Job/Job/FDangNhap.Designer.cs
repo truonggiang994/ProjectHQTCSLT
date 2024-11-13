@@ -36,31 +36,18 @@ namespace Job
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDangNhap));
-            this.linkLabelQuenMK = new System.Windows.Forms.LinkLabel();
             this.linkLabelDangki = new System.Windows.Forms.LinkLabel();
             this.buttonDangNhap = new System.Windows.Forms.Button();
             this.panelDangNhap = new System.Windows.Forms.Panel();
+            this.radioButtonAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
             this.radioButtonEmployer = new Guna.UI2.WinForms.Guna2RadioButton();
             this.radioButtonCandidate = new Guna.UI2.WinForms.Guna2RadioButton();
             this.textBoxMK = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBoTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBoxDangNhap = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.radioButtonAdmin = new Guna.UI2.WinForms.Guna2RadioButton();
             this.panelDangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDangNhap)).BeginInit();
             this.SuspendLayout();
-            // 
-            // linkLabelQuenMK
-            // 
-            this.linkLabelQuenMK.AutoSize = true;
-            this.linkLabelQuenMK.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelQuenMK.Location = new System.Drawing.Point(254, 119);
-            this.linkLabelQuenMK.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.linkLabelQuenMK.Name = "linkLabelQuenMK";
-            this.linkLabelQuenMK.Size = new System.Drawing.Size(103, 16);
-            this.linkLabelQuenMK.TabIndex = 7;
-            this.linkLabelQuenMK.TabStop = true;
-            this.linkLabelQuenMK.Text = "Quên mật khẩu ?";
             // 
             // linkLabelDangki
             // 
@@ -99,12 +86,29 @@ namespace Job
             this.panelDangNhap.Controls.Add(this.pictureBoxDangNhap);
             this.panelDangNhap.Controls.Add(this.buttonDangNhap);
             this.panelDangNhap.Controls.Add(this.linkLabelDangki);
-            this.panelDangNhap.Controls.Add(this.linkLabelQuenMK);
             this.panelDangNhap.Location = new System.Drawing.Point(4, 1);
             this.panelDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.panelDangNhap.Name = "panelDangNhap";
             this.panelDangNhap.Size = new System.Drawing.Size(410, 155);
             this.panelDangNhap.TabIndex = 1;
+            // 
+            // radioButtonAdmin
+            // 
+            this.radioButtonAdmin.AutoSize = true;
+            this.radioButtonAdmin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButtonAdmin.CheckedState.BorderThickness = 0;
+            this.radioButtonAdmin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.radioButtonAdmin.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioButtonAdmin.CheckedState.InnerOffset = -4;
+            this.radioButtonAdmin.Location = new System.Drawing.Point(144, 133);
+            this.radioButtonAdmin.Name = "radioButtonAdmin";
+            this.radioButtonAdmin.Size = new System.Drawing.Size(54, 17);
+            this.radioButtonAdmin.TabIndex = 16;
+            this.radioButtonAdmin.Text = "Admin";
+            this.radioButtonAdmin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.radioButtonAdmin.UncheckedState.BorderThickness = 2;
+            this.radioButtonAdmin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioButtonAdmin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // radioButtonEmployer
             // 
@@ -216,24 +220,6 @@ namespace Job
             this.pictureBoxDangNhap.TabIndex = 10;
             this.pictureBoxDangNhap.TabStop = false;
             // 
-            // radioButtonAdmin
-            // 
-            this.radioButtonAdmin.AutoSize = true;
-            this.radioButtonAdmin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.radioButtonAdmin.CheckedState.BorderThickness = 0;
-            this.radioButtonAdmin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.radioButtonAdmin.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.radioButtonAdmin.CheckedState.InnerOffset = -4;
-            this.radioButtonAdmin.Location = new System.Drawing.Point(144, 133);
-            this.radioButtonAdmin.Name = "radioButtonAdmin";
-            this.radioButtonAdmin.Size = new System.Drawing.Size(54, 17);
-            this.radioButtonAdmin.TabIndex = 16;
-            this.radioButtonAdmin.Text = "Admin";
-            this.radioButtonAdmin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.radioButtonAdmin.UncheckedState.BorderThickness = 2;
-            this.radioButtonAdmin.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.radioButtonAdmin.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            // 
             // FDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,7 +238,6 @@ namespace Job
         }
 
         #endregion
-        private LinkLabel linkLabelQuenMK;
         private LinkLabel linkLabelDangki;
         private Button buttonDangNhap;
         private Panel panelDangNhap;

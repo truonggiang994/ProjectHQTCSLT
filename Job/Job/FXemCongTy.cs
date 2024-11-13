@@ -38,7 +38,7 @@ namespace Job
             string connectionString = Properties.Settings.Default.ConnectionAdmin; // Thay bằng chuỗi kết nối của bạn
 
             // Câu lệnh SQL để gọi hàm GetCompanyInfo
-            string query = "SELECT * FROM dbo.GetCompanyInfo(@ID)";
+            string query = "SELECT * FROM dbo.fn_GetCompanyInfo(@ID)";
 
             using (SqlConnection connection = DbConnection.GetConnection())
             {
@@ -83,7 +83,7 @@ namespace Job
                     conn.Open();
 
                     // Tạo lệnh SQL để gọi hàm GetCompanyAddresses
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.GetCompanyAddresses(@CompanyID)", conn))
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_GetCompanyAddresses(@CompanyID)", conn))
                     {
                         cmd.Parameters.Add(new SqlParameter("@CompanyID", SqlDbType.Int)).Value = ID;
 
@@ -133,7 +133,7 @@ namespace Job
                 conn.Open();
 
                 // Tạo lệnh SQL để gọi hàm GetCompanyImages
-                using (SqlCommand cmd = new SqlCommand("SELECT Image FROM dbo.GetCompanyImages(@CompanyID)", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT Image FROM dbo.fn_GetCompanyImages(@CompanyID)", conn))
                 {
                     cmd.Parameters.Add(new SqlParameter("@CompanyID", SqlDbType.Int)).Value = ID;
 

@@ -33,7 +33,7 @@ namespace Job
             string connectionString = Properties.Settings.Default.ConnectionAdmin; // Thay bằng chuỗi kết nối của bạn
 
             // Câu lệnh SQL để gọi hàm GetCompanyInfo
-            string query = "SELECT * FROM dbo.GetCompanyInfo(@ID)";
+            string query = "SELECT * FROM dbo.fn_GetCompanyInfo(@ID)";
 
             using (SqlConnection connection = DbConnection.GetConnection())
             {
@@ -78,7 +78,7 @@ namespace Job
                     conn.Open();
 
                     // Tạo lệnh SQL để gọi hàm GetCompanyAddresses
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.GetCompanyAddresses(@CompanyID)", conn))
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_GetCompanyAddresses(@CompanyID)", conn))
                     {
                         cmd.Parameters.Add(new SqlParameter("@CompanyID", SqlDbType.Int)).Value = ID;
 
@@ -121,7 +121,7 @@ namespace Job
                 conn.Open();
 
                 // Tạo lệnh SQL để gọi hàm GetCompanyImages
-                using (SqlCommand cmd = new SqlCommand("SELECT Image FROM dbo.GetCompanyImages(@CompanyID)", conn))
+                using (SqlCommand cmd = new SqlCommand("SELECT Image FROM dbo.fn_GetCompanyImages(@CompanyID)", conn))
                 {
                     cmd.Parameters.Add(new SqlParameter("@CompanyID", SqlDbType.Int)).Value = ID;
 
@@ -204,7 +204,7 @@ namespace Job
             {
                 conn.Open();
 
-                using (SqlCommand cmd = new SqlCommand("UpdateCompanyImages", conn))
+                using (SqlCommand cmd = new SqlCommand("sp_UpdateCompanyImages", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -214,7 +214,7 @@ namespace Job
                     // Thêm tham số cho danh sách hình ảnh
                     SqlParameter imagesParam = new SqlParameter("@Images", SqlDbType.Structured);
                     imagesParam.Value = imageTable;
-                    imagesParam.TypeName = "dbo.ImageListType"; // Đảm bảo tên trùng khớp với tên trong SQL Server
+                    imagesParam.TypeName = "dbo.tp_ImageListType"; // Đảm bảo tên trùng khớp với tên trong SQL Server
                     cmd.Parameters.Add(imagesParam);
 
 
@@ -231,7 +231,7 @@ namespace Job
         {
             int companyId = -1;
             string connectionString = Properties.Settings.Default.ConnectionAdmin;
-            string query = "SELECT dbo.GetCompanyIDByUsername(@Username) AS CompanyID";
+            string query = "SELECT dbo.fn_GetCompanyIDByUsername(@Username) AS CompanyID";
 
             using (SqlConnection connection = DbConnection.GetConnection())
             {
@@ -281,7 +281,7 @@ namespace Job
                 {
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("UpdateCompanyAddresses", conn))
+                    using (SqlCommand cmd = new SqlCommand("sp_UpdateCompanyAddresses", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -291,7 +291,7 @@ namespace Job
                         // Truyền AddressListType (DataTable dưới dạng SqlParameter)
                         SqlParameter addressesParam = new SqlParameter("@Addresses", SqlDbType.Structured);
                         addressesParam.Value = addressTable;
-                        addressesParam.TypeName = "dbo.AddressListType"; // Đảm bảo tên trùng khớp với tên trong SQL Server
+                        addressesParam.TypeName = "dbo.tp_AddressListType"; // Đảm bảo tên trùng khớp với tên trong SQL Server
                         cmd.Parameters.Add(addressesParam);
 
                         // Thực thi thủ tục
@@ -323,7 +323,7 @@ namespace Job
 
             using (SqlConnection connection = DbConnection.GetConnection())
             {
-                using (SqlCommand command = new SqlCommand("UpdateCompanyInfo", connection))
+                using (SqlCommand command = new SqlCommand("sp_UpdateCompanyInfo", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
 

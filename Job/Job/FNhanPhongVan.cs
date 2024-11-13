@@ -32,7 +32,7 @@ namespace Job
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Lệnh SQL để lấy dữ liệu từ bảng Interview
-                string query = "SELECT * FROM dbo.GetInterviewDetails(@ApplicationSubmitID)";
+                string query = "SELECT * FROM dbo.fn_GetInterviewDetails(@ApplicationSubmitID)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -63,7 +63,7 @@ namespace Job
                             labelThongTinNguoiPhongvan.AutoSize = false;// Đặt chiều rộng tối đa nếu cần
                             labelThongTinNguoiPhongvan.Text = labelThongTinNguoiPhongvan.Text.Replace("\n", "<br/>");
                             reader.Close();
-                            string addressQuery = "SELECT * FROM dbo.GetAddressDetails(@AddressID)";
+                            string addressQuery = "SELECT * FROM dbo.fn_GetAddressDetails(@AddressID)";
                             using (SqlCommand addressCommand = new SqlCommand(addressQuery, connection))
                             {
                                 addressCommand.Parameters.AddWithValue("@AddressID", addressID);

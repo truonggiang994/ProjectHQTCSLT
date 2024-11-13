@@ -46,7 +46,7 @@ namespace Job
                         return;
                     }
 
-                    using (SqlCommand command = new SqlCommand("SELECT dbo.sp_CheckLoginAccount(@Username, @Password, @Role)", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.fn_CheckLoginAccount(@Username, @Password, @Role)", connection))
                     {
                         command.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
                         command.Parameters.AddWithValue("@Password", textBoxMK.Text);
@@ -96,7 +96,7 @@ namespace Job
                         }
                         else if (result == -2)
                         {
-                            using (SqlCommand commandLock = new SqlCommand("SELECT dbo.sp_GetLockReason(@LockUsername)", connection))
+                            using (SqlCommand commandLock = new SqlCommand("SELECT dbo.fn_GetLockReason(@LockUsername)", connection))
                             {
                                 commandLock.Parameters.AddWithValue("@LockUsername", textBoTaiKhoan.Text);
                                 var resultLock = commandLock.ExecuteScalar();

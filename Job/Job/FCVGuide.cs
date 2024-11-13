@@ -28,7 +28,7 @@ namespace Job
             using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Gọi hàm trả về bảng trong SQL
-                string query = "SELECT * FROM GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng
+                string query = "SELECT * FROM fn_GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -85,7 +85,7 @@ namespace Job
                     connection.Open();
 
                     // Gọi hàm GetCVByUsername
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetCVByUsername(@Username, @ID)", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM fn_GetCVByUsername(@Username, @ID)", connection))
                     {
                         command.Parameters.AddWithValue("@Username", username); // Thêm tham số Username
                         command.Parameters.AddWithValue("@ID", ID); // Thêm tham số ID

@@ -30,13 +30,8 @@ namespace Job
             this.gioiTinh = gioiTinh;
 
             UserControlDCCT userControlDCCT = new UserControlDCCT();
-
+            userControlDCCT.buttonXoa.Size = new Size(0, 0);
             panel1.Controls.Add(userControlDCCT);
-            //if ( != null)
-            //{
-            //    buttonGuiThongTin.Text = "Đã gửi";
-            //    buttonGuiThongTin.Enabled = false;
-            //}
             labelHoTen.Text = "Họ và tên: " + hoTen;
             labelGioiTinh.Text = "Giới tính: " + gioiTinh;
             labelNgaySinh.Text = "Ngày sinh: " + ngaySinh;
@@ -48,12 +43,12 @@ namespace Job
         {
             Dispose();
         }
+
         private void TaiDuLieuUI()
         {
-            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
             using (SqlConnection connection = DbConnection.GetConnection())
             {
-                string query = "SELECT * FROM dbo.GetInterviewByApplicationSubmitID(@ID)";
+                string query = "SELECT * FROM dbo.fn_GetInterviewByApplicationSubmitID(@ID)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -87,18 +82,18 @@ namespace Job
         {
             if (panel1.Controls.Count > 0 && panel1.Controls[0] is UserControlDCCT control)
             {
+                control.buttonXoa.Size = new Size(0, 0);
                 string tinhThanh = control.comboBoxTinhThanh.Text;
                 string quanHuyen = control.comboBoxQuanHuyen.Text;
                 string diaChi = control.userControlTextDiaChi.text;
 
                 try
                 {
-                    string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
                     using (SqlConnection conn = DbConnection.GetConnection())
                     {
                         conn.Open();
 
-                        using (SqlCommand cmd = new SqlCommand("InsertAddess", conn))
+                        using (SqlCommand cmd = new SqlCommand("sp_InsertAddess", conn))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -128,11 +123,9 @@ namespace Job
         private void LuuThongTinPhongVan(int applicationSubmitID, string email, string phone, int addressID,
                                  string interviewerName, DateTime interviewDate, DateTime acceptDate, string note)
         {
-            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
-
             using (SqlConnection connection = DbConnection.GetConnection())
             {
-                using (SqlCommand command = new SqlCommand("InsertInterview", connection))
+                using (SqlCommand command = new SqlCommand("sp_InsertInterview", connection))
                 {
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@ApplicationSubmitID", applicationSubmitID);

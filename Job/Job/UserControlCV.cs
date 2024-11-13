@@ -46,18 +46,18 @@ namespace Job
             try
             {
                 // Kết nối với SQL Server
-                using (SqlConnection conn = DbConnection.GetConnection())
+                using (SqlConnection conn = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
                 {
                     // Mở kết nối
                     conn.Open();
 
                     // Khởi tạo SqlCommand với stored procedure
-                    using (SqlCommand cmd = new SqlCommand("CheckCVIDByUserName", conn))
+                    using (SqlCommand cmd = new SqlCommand("sp_CheckOrAddCVIDByUserName", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         // Thêm tham số cho stored procedure
-                        cmd.Parameters.Add(new SqlParameter("@UserName", SqlDbType.NVarChar, 100)).Value = "hoan4701";
+                        cmd.Parameters.Add(new SqlParameter("@UserName", SqlDbType.NVarChar, 100)).Value = Data.username;
                         cmd.Parameters.Add(new SqlParameter("@PostJobID", SqlDbType.Int)).Value = postID;
                         cmd.Parameters.Add(new SqlParameter("@CVID", SqlDbType.Int)).Value = ID;
 
@@ -89,5 +89,5 @@ namespace Job
             }
         }
     }
-    
+
 }

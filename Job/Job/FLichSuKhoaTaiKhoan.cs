@@ -23,7 +23,7 @@ namespace Job
                     connection.Open();
 
                     // Sử dụng SELECT để gọi view thay vì function
-                    string query = "SELECT * FROM dbo.sp_GetLockAccountHistory"; // Không có dấu ngoặc tròn
+                    string query = "SELECT * FROM dbo.vw_GetLockAccountHistory"; // Không có dấu ngoặc tròn
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {

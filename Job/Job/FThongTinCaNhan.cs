@@ -32,12 +32,9 @@ namespace Job
                 {
                     connection.Open();
 
-                    // Sử dụng stored procedure thay vì câu lệnh SELECT
-                    using (SqlCommand command = new SqlCommand("sp_GetAdminDetails", connection))
+                    // Trường hợp là function, sử dụng cú pháp SELECT để gọi function
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.fn_GetAdminDetails(@Username)", connection))
                     {
-                        // Thiết lập kiểu câu lệnh là stored procedure
-                        command.CommandType = CommandType.StoredProcedure;
-
                         // Thêm tham số @Username
                         command.Parameters.AddWithValue("@Username", Data.username.ToString());
 

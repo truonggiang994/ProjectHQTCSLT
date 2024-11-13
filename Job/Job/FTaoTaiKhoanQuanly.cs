@@ -114,7 +114,7 @@ namespace Job
                 using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("dbo.AddAdminWithRoles", connection))
+                    using (SqlCommand cmd = new SqlCommand("dbo.sp_AddAdminWithRoles", connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -127,7 +127,7 @@ namespace Job
 
                         // Vai trò là kiểu dữ liệu bảng (table-valued parameter)
                         SqlParameter rolesParam = new SqlParameter("@Roles", SqlDbType.Structured);
-                        rolesParam.TypeName = "dbo.RoleListType"; // Đảm bảo TypeName chính xác với kiểu trong DB
+                        rolesParam.TypeName = "dbo.tp_RoleListType"; // Đảm bảo TypeName chính xác với kiểu trong DB
                         rolesParam.Value = rolesTable;
                         cmd.Parameters.Add(rolesParam);
 

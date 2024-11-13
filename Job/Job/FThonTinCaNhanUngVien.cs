@@ -31,7 +31,7 @@ namespace Job
                 connection.Open();
 
                 // Gọi stored procedure UpdateCandidateInfo
-                using (SqlCommand cmd = new SqlCommand("UpdateCandidateInfo", connection))
+                using (SqlCommand cmd = new SqlCommand("sp_UpdateCandidateInfo", connection))
                 {
                     // Chỉ định kiểu của command là Stored Procedure
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -92,7 +92,7 @@ namespace Job
             using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Gọi hàm trả về bảng trong SQL
-                string query = "SELECT * FROM GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng
+                string query = "SELECT * FROM fn_GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

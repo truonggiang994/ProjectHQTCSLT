@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -22,7 +23,8 @@ namespace Job
         string ngaySinh;
         string hoTen;
         string gioiTinh;
-        public UserControlUngVien(int ID,int CVID, int PostJobID, string hoTen, string gioiTinh, string ngaySinh, Image anhDaiDien, string viTri, string trangthai, string UsernameCandidate)
+
+        public UserControlUngVien(int ID, int CVID, int PostJobID, string hoTen, string gioiTinh, string ngaySinh, Image anhDaiDien, string viTri, string trangthai, string UsernameCandidate)
         {
             InitializeComponent();
             this.iD = ID;
@@ -38,7 +40,7 @@ namespace Job
             labelNgaySinh.Text = "Ngày sinh: " + ngaySinh;
             pictureBoxAnhDaiDien.Image = anhDaiDien;
 
-            labelChucVu.Text = "Ứng tuyển vô: " +viTri;
+            labelChucVu.Text = "Ứng tuyển vô: " + viTri;
             if (trangthai == "Accepted")
             {
                 buttonTuyen.Text = "Đã tuyển";
@@ -67,11 +69,39 @@ namespace Job
         }
         private void buttonTuyen_Click(object sender, EventArgs e)
         {
-            if (co == false)
+            if (!co)
             {
-                buttonTuyen.Text = "Đã tuyển";
-                buttonTuyen.Enabled = false;
-                MessageBox.Show("Đã thêm vô danh sách yêu thích");
+                using (SqlConnection connection = DbConnection.GetConnection())
+                {
+                    using (SqlCommand command = new SqlCommand("sp_UpdateApplicationStatus", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@ApplicationSubmitID", iD);
+
+                        try
+                        {
+                            connection.Open();
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                // Cập nhật thành công, thay đổi trạng thái nút và hiển thị thông báo
+                                buttonTuyen.Text = "Đã tuyển";
+                                buttonTuyen.Enabled = false;
+                                co = true;
+                                MessageBox.Show("Ứng viên đã được tuyển thành công!");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không tìm thấy ứng viên hoặc cập nhật thất bại.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Lỗi: " + ex.Message);
+                        }
+                    }
+                }
             }
         }
         private void buttonPhuongVan_Click(object sender, EventArgs e)
@@ -80,3 +110,4 @@ namespace Job
         }
     }
 }
+

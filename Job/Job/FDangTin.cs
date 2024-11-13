@@ -27,23 +27,13 @@ namespace Job
         }
         private void buttonDang_Click(object sender, EventArgs e)
         {
-            /* string employerUsername = Data.username;
-             string jobvacancy = textBoxChucDanh.Text.Trim();
-             string description = textBoxMoTaCongViec.Text.Trim();
-             string skill = textBoxKiNang.Text.Trim();
-             string experience = comboBoxKinhNghiem.Text.Trim();
-             decimal salaryMax = decimal.Parse(textBoxLuongToiDa.Text.Trim());
-             decimal salaryMin = decimal.Parse(textBoxLuongToiThieu.Text.Trim());
-             string benefits = textBoxQuyenLoi.Text.Trim();
-             string workForm = comboBoxHinhThucLV.Text.Trim();
- */
             try
             {
                 using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("AddPostJob", connection))
+                    using (SqlCommand command = new SqlCommand("sp_AddPostJob", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 

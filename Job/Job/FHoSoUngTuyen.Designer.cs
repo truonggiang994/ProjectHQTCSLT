@@ -35,9 +35,9 @@
             // flowLayoutPanelChinh
             // 
             this.flowLayoutPanelChinh.AutoScroll = true;
-            this.flowLayoutPanelChinh.Location = new System.Drawing.Point(0, 50);
+            this.flowLayoutPanelChinh.Location = new System.Drawing.Point(12, 50);
             this.flowLayoutPanelChinh.Name = "flowLayoutPanelChinh";
-            this.flowLayoutPanelChinh.Size = new System.Drawing.Size(930, 427);
+            this.flowLayoutPanelChinh.Size = new System.Drawing.Size(1006, 577);
             this.flowLayoutPanelChinh.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -54,7 +54,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 476);
+            this.ClientSize = new System.Drawing.Size(1030, 639);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.flowLayoutPanelChinh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

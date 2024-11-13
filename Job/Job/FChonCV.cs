@@ -45,7 +45,7 @@ namespace Job
                     connection.Open();
 
                     // Gọi hàm GetCVByUsername
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetCVByUsername(@Username, @ID)", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM fn_GetCVByUsername(@Username, @ID)", connection))
                     {
                         command.Parameters.AddWithValue("@Username", Data.username); // Thêm tham số Username
                         command.Parameters.AddWithValue("@ID", DBNull.Value); // Thêm tham số ID

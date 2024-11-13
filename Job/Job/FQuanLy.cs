@@ -68,7 +68,7 @@ namespace Job
                 connection.Open();
 
                 // Câu truy vấn sử dụng hàm GetRole
-                string query = "SELECT * FROM dbo.GetRole(@username)";
+                string query = "SELECT * FROM dbo.fn_GetRole(@username)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {

@@ -75,7 +75,7 @@
             this.dateTimePickerNgayPhongVan.FillColor = System.Drawing.Color.WhiteSmoke;
             this.dateTimePickerNgayPhongVan.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayPhongVan.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerNgayPhongVan.Location = new System.Drawing.Point(44, 355);
+            this.dateTimePickerNgayPhongVan.Location = new System.Drawing.Point(44, 350);
             this.dateTimePickerNgayPhongVan.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerNgayPhongVan.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerNgayPhongVan.Name = "dateTimePickerNgayPhongVan";
@@ -89,7 +89,7 @@
             this.textBoxHoTen.BorderRadius = 4;
             this.textBoxHoTen.BorderThickness = 3;
             this.textBoxHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxHoTen.DefaultText = "";
+            this.textBoxHoTen.DefaultText = "Nguyen Van A";
             this.textBoxHoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textBoxHoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textBoxHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -98,7 +98,7 @@
             this.textBoxHoTen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHoTen.ForeColor = System.Drawing.Color.Black;
             this.textBoxHoTen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxHoTen.Location = new System.Drawing.Point(44, 292);
+            this.textBoxHoTen.Location = new System.Drawing.Point(44, 287);
             this.textBoxHoTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxHoTen.Name = "textBoxHoTen";
             this.textBoxHoTen.PasswordChar = '\0';
@@ -113,7 +113,7 @@
             this.textBoxSDT.BorderRadius = 4;
             this.textBoxSDT.BorderThickness = 3;
             this.textBoxSDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxSDT.DefaultText = "";
+            this.textBoxSDT.DefaultText = "0987654321";
             this.textBoxSDT.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textBoxSDT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textBoxSDT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -122,7 +122,7 @@
             this.textBoxSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSDT.ForeColor = System.Drawing.Color.Black;
             this.textBoxSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxSDT.Location = new System.Drawing.Point(475, 292);
+            this.textBoxSDT.Location = new System.Drawing.Point(475, 287);
             this.textBoxSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxSDT.Name = "textBoxSDT";
             this.textBoxSDT.PasswordChar = '\0';
@@ -135,7 +135,7 @@
             // 
             this.labelHoTenNguoiPhongVan.BackColor = System.Drawing.Color.Transparent;
             this.labelHoTenNguoiPhongVan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHoTenNguoiPhongVan.Location = new System.Drawing.Point(49, 264);
+            this.labelHoTenNguoiPhongVan.Location = new System.Drawing.Point(49, 259);
             this.labelHoTenNguoiPhongVan.Name = "labelHoTenNguoiPhongVan";
             this.labelHoTenNguoiPhongVan.Size = new System.Drawing.Size(148, 21);
             this.labelHoTenNguoiPhongVan.TabIndex = 4;
@@ -145,7 +145,7 @@
             // 
             this.labelSDTLienHe.BackColor = System.Drawing.Color.Transparent;
             this.labelSDTLienHe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSDTLienHe.Location = new System.Drawing.Point(479, 264);
+            this.labelSDTLienHe.Location = new System.Drawing.Point(479, 259);
             this.labelSDTLienHe.Name = "labelSDTLienHe";
             this.labelSDTLienHe.Size = new System.Drawing.Size(124, 21);
             this.labelSDTLienHe.TabIndex = 5;
@@ -155,7 +155,7 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(51, 327);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(51, 322);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(102, 21);
             this.guna2HtmlLabel3.TabIndex = 6;
@@ -170,7 +170,7 @@
             this.buttonGuiThongTin.FillColor = System.Drawing.Color.DarkGray;
             this.buttonGuiThongTin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGuiThongTin.ForeColor = System.Drawing.Color.White;
-            this.buttonGuiThongTin.Location = new System.Drawing.Point(796, 621);
+            this.buttonGuiThongTin.Location = new System.Drawing.Point(747, 568);
             this.buttonGuiThongTin.Name = "buttonGuiThongTin";
             this.buttonGuiThongTin.Size = new System.Drawing.Size(128, 30);
             this.buttonGuiThongTin.TabIndex = 9;
@@ -248,7 +248,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(49, 220);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(49, 215);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(190, 34);
             this.guna2HtmlLabel2.TabIndex = 17;
@@ -258,7 +258,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(479, 327);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(479, 322);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(38, 21);
             this.guna2HtmlLabel4.TabIndex = 19;
@@ -270,7 +270,7 @@
             this.textBoxGmail.BorderRadius = 4;
             this.textBoxGmail.BorderThickness = 3;
             this.textBoxGmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxGmail.DefaultText = "";
+            this.textBoxGmail.DefaultText = "abc@email.com";
             this.textBoxGmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.textBoxGmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.textBoxGmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -279,7 +279,7 @@
             this.textBoxGmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGmail.ForeColor = System.Drawing.Color.Black;
             this.textBoxGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxGmail.Location = new System.Drawing.Point(475, 355);
+            this.textBoxGmail.Location = new System.Drawing.Point(475, 350);
             this.textBoxGmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxGmail.Name = "textBoxGmail";
             this.textBoxGmail.PasswordChar = '\0';
@@ -290,17 +290,18 @@
             // 
             // richTextBox
             // 
-            this.richTextBox.Location = new System.Drawing.Point(475, 416);
+            this.richTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox.Location = new System.Drawing.Point(475, 411);
             this.richTextBox.Name = "richTextBox";
-            this.richTextBox.Size = new System.Drawing.Size(400, 187);
+            this.richTextBox.Size = new System.Drawing.Size(400, 151);
             this.richTextBox.TabIndex = 20;
-            this.richTextBox.Text = "";
+            this.richTextBox.Text = "Nhớ tới đúng giờ.";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(479, 392);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(479, 387);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(49, 21);
             this.guna2HtmlLabel5.TabIndex = 21;
@@ -310,7 +311,7 @@
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(51, 392);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(51, 387);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(45, 21);
             this.guna2HtmlLabel6.TabIndex = 22;
@@ -318,9 +319,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(51, 417);
+            this.panel1.Location = new System.Drawing.Point(51, 412);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 185);
+            this.panel1.Size = new System.Drawing.Size(418, 228);
             this.panel1.TabIndex = 23;
             // 
             // FHenPhongVan
@@ -328,7 +329,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 680);
+            this.ClientSize = new System.Drawing.Size(1030, 639);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.guna2HtmlLabel5);

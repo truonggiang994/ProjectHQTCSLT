@@ -86,6 +86,7 @@ namespace Job
             this.radioButtonEmployer.UncheckedState.BorderThickness = 2;
             this.radioButtonEmployer.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.radioButtonEmployer.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.radioButtonEmployer.CheckedChanged += new System.EventHandler(this.radioButtonEmployer_CheckedChanged);
             // 
             // radioButtonCandidate
             // 
@@ -104,6 +105,7 @@ namespace Job
             this.radioButtonCandidate.UncheckedState.BorderThickness = 2;
             this.radioButtonCandidate.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.radioButtonCandidate.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.radioButtonCandidate.CheckedChanged += new System.EventHandler(this.radioButtonCandidate_CheckedChanged);
             // 
             // textBoxPhone
             // 
@@ -236,6 +238,7 @@ namespace Job
             this.buttonBack.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonBack.Size = new System.Drawing.Size(25, 27);
             this.buttonBack.TabIndex = 11;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // textBoxPassword
             // 
@@ -304,7 +307,7 @@ namespace Job
             this.ClientSize = new System.Drawing.Size(431, 290);
             this.ControlBox = false;
             this.Controls.Add(this.panelDangKi);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(6, 1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FDangKi";
