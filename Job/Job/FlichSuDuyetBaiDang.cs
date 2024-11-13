@@ -21,10 +21,11 @@ namespace Job
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("sp_GetApprovalHistory", connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
+                    // Sử dụng view thay vì function
+                    string query = "SELECT * FROM dbo.vw_GetApprovalHistory";
 
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
@@ -32,8 +33,7 @@ namespace Job
                         dataGridView.DataSource = dataTable;
 
                         dataGridView.AutoGenerateColumns = true;
-
-                        dataGridView.ColumnHeadersHeight = 40; // Chiều cao tiêu đề cột là 40 pixel
+                        dataGridView.ColumnHeadersHeight = 40;
 
                         for (int i = 0; i < dataTable.Columns.Count; i++)
                         {
@@ -41,10 +41,10 @@ namespace Job
                             dataGridView.Columns[i].HeaderText = columnName;
                         }
 
-                        // Ngăn không cho người dùng tương tác với hàng
-                        dataGridView.ReadOnly = true; // Đặt DataGridView ở chế độ chỉ đọc
-                        dataGridView.AllowUserToAddRows = false; // Không cho phép người dùng thêm hàng mới
-                        dataGridView.AllowUserToDeleteRows = false; // Không cho phép người dùng xóa hàng
+                        // Thiết lập DataGridView chỉ đọc
+                        dataGridView.ReadOnly = true;
+                        dataGridView.AllowUserToAddRows = false;
+                        dataGridView.AllowUserToDeleteRows = false;
                     }
                 }
             }

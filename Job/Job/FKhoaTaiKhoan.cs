@@ -27,19 +27,15 @@ namespace Job
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("sp_GetListAccountLock", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM vw_ListAccountLock", connection))
                     {
-                        command.CommandType = CommandType.StoredProcedure;
-
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
 
                         dataGridView.DataSource = dataTable;
-
                         dataGridView.AutoGenerateColumns = true;
-
-                        dataGridView.ColumnHeadersHeight = 40; // Chiều cao tiêu đề cột là 40 pixel
+                        dataGridView.ColumnHeadersHeight = 40;
 
                         for (int i = 0; i < dataTable.Columns.Count; i++)
                         {
@@ -47,10 +43,9 @@ namespace Job
                             dataGridView.Columns[i].HeaderText = columnName;
                         }
 
-                        // Ngăn không cho người dùng tương tác với hàng
-                        dataGridView.ReadOnly = true; // Đặt DataGridView ở chế độ chỉ đọc
-                        dataGridView.AllowUserToAddRows = false; // Không cho phép người dùng thêm hàng mới
-                        dataGridView.AllowUserToDeleteRows = false; // Không cho phép người dùng xóa hàng
+                        dataGridView.ReadOnly = true;
+                        dataGridView.AllowUserToAddRows = false;
+                        dataGridView.AllowUserToDeleteRows = false;
                     }
                 }
             }
@@ -58,11 +53,13 @@ namespace Job
             {
                 MessageBox.Show("Đã xảy ra lỗi khi tải dữ liệu: " + ex.Message);
             }
+
             buttonLock.Hide();
             buttonUnlock.Hide();
             htmlLabelReason.Hide();
             textBoxReason.Hide();
         }
+
 
         private void dataGridView_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
