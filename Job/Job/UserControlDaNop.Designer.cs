@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.buttonCV = new Guna.UI2.WinForms.Guna2Button();
+            this.labelTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.buttonXemPhongVan = new Guna.UI2.WinForms.Guna2Button();
-            this.labelNgayNop = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
             this.labelTenCongTy = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelChucVu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pictureBoxAnhLogo = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.labelTrangThai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.buttonCV);
             this.guna2Panel1.Controls.Add(this.labelTrangThai);
             this.guna2Panel1.Controls.Add(this.buttonXemPhongVan);
-            this.guna2Panel1.Controls.Add(this.labelNgayNop);
             this.guna2Panel1.Controls.Add(this.buttonXemCV);
             this.guna2Panel1.Controls.Add(this.labelTenCongTy);
             this.guna2Panel1.Controls.Add(this.labelChucVu);
@@ -53,6 +53,34 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1000, 80);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // buttonCV
+            // 
+            this.buttonCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonCV.FillColor = System.Drawing.Color.DarkGray;
+            this.buttonCV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCV.ForeColor = System.Drawing.Color.White;
+            this.buttonCV.Location = new System.Drawing.Point(617, 34);
+            this.buttonCV.Name = "buttonCV";
+            this.buttonCV.Size = new System.Drawing.Size(86, 31);
+            this.buttonCV.TabIndex = 8;
+            this.buttonCV.Text = "Xem ";
+            this.buttonCV.Click += new System.EventHandler(this.buttonCV_Click);
+            // 
+            // labelTrangThai
+            // 
+            this.labelTrangThai.AutoSize = false;
+            this.labelTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.labelTrangThai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTrangThai.ForeColor = System.Drawing.Color.Black;
+            this.labelTrangThai.Location = new System.Drawing.Point(753, 42);
+            this.labelTrangThai.Name = "labelTrangThai";
+            this.labelTrangThai.Size = new System.Drawing.Size(85, 23);
+            this.labelTrangThai.TabIndex = 7;
+            this.labelTrangThai.Text = "20/02/2023";
             // 
             // buttonXemPhongVan
             // 
@@ -69,18 +97,6 @@
             this.buttonXemPhongVan.TabIndex = 6;
             this.buttonXemPhongVan.Text = "Xem";
             this.buttonXemPhongVan.Click += new System.EventHandler(this.buttonXemPhongVan_Click);
-            // 
-            // labelNgayNop
-            // 
-            this.labelNgayNop.AutoSize = false;
-            this.labelNgayNop.BackColor = System.Drawing.Color.Transparent;
-            this.labelNgayNop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNgayNop.ForeColor = System.Drawing.Color.Black;
-            this.labelNgayNop.Location = new System.Drawing.Point(591, 44);
-            this.labelNgayNop.Name = "labelNgayNop";
-            this.labelNgayNop.Size = new System.Drawing.Size(85, 23);
-            this.labelNgayNop.TabIndex = 4;
-            this.labelNgayNop.Text = "20/02/2023";
             // 
             // buttonXemCV
             // 
@@ -132,25 +148,13 @@
             this.pictureBoxAnhLogo.TabIndex = 0;
             this.pictureBoxAnhLogo.TabStop = false;
             // 
-            // labelTrangThai
-            // 
-            this.labelTrangThai.AutoSize = false;
-            this.labelTrangThai.BackColor = System.Drawing.Color.Transparent;
-            this.labelTrangThai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTrangThai.ForeColor = System.Drawing.Color.Black;
-            this.labelTrangThai.Location = new System.Drawing.Point(732, 42);
-            this.labelTrangThai.Name = "labelTrangThai";
-            this.labelTrangThai.Size = new System.Drawing.Size(85, 23);
-            this.labelTrangThai.TabIndex = 7;
-            this.labelTrangThai.Text = "20/02/2023";
-            // 
             // UserControlDaNop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UserControlDaNop";
-            this.Size = new System.Drawing.Size(1003, 80);
+            this.Size = new System.Drawing.Size(1000, 80);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnhLogo)).EndInit();
             this.ResumeLayout(false);
@@ -164,8 +168,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel labelChucVu;
         private Guna.UI2.WinForms.Guna2Button buttonXemCV;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelTenCongTy;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelNgayNop;
         private Guna.UI2.WinForms.Guna2Button buttonXemPhongVan;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelTrangThai;
+        private Guna.UI2.WinForms.Guna2Button buttonCV;
     }
 }

@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Job
 {
@@ -11,48 +12,47 @@ namespace Job
         public FLichSuUngTuyen()
         {
             InitializeComponent();
-
+            LoadControls();
         }
-        private void LoadDuyetBaiDangControls()
+        private void LoadControls()
         {
             flowLayoutPanel.Controls.Clear();  // Xóa các control trước đó (nếu có)
 
-            try
+            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
+            string query = "SELECT * FROM GetApplicationSubmitted(@Username)"; // Khai báo câu truy vấn
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                connection.Open(); // Mở kết nối
+
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    SqlCommand command = new SqlCommand("select * from ApplicationSubmit where ", connection);
+                    command.Parameters.AddWithValue("@Username", Data.username); // Thêm tham số cho hàm
 
-                    try
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        connection.Open();
-                        SqlDataReader reader = command.ExecuteReader();
-
                         while (reader.Read())
                         {
-                            int postId = reader.GetInt32(0);  // Lấy ID của PostJob
-
-                            // Tạo một instance của UserControlDuyetBaiDang
-                            UserControlDuyetbaiDang control = new UserControlDuyetbaiDang(postId);
+                            int applicationSubmitID = reader.GetInt32(reader.GetOrdinal("ApplicationID")); // Sửa tên cột
+                            string trangThai = reader.GetString(reader.GetOrdinal("Status")); // Sửa tên cột
+                            int CVID = reader.GetInt32(reader.GetOrdinal("CVID"));
+                            int PostJobID = reader.GetInt32(reader.GetOrdinal("PostJobID"));
+                            string FullName = reader.GetString(reader.GetOrdinal("FullName")).ToString();
+                            string BirthDate = Convert.ToDateTime(reader["BirthDate"]).ToString("dd/MM/yyyy");
+                            string Gender = Convert.ToBoolean(reader["Gender"]) ? "Nam" : "Nữ";
+                            string JobVacancy = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
+                            string UsernameCandidate = reader.GetString(reader.GetOrdinal("Username")).ToString();
+                            
+                            // Chuyển 'anhDaiDien' cho UserControlUngVien
+                            UserControlDaNop control = new UserControlDaNop(PostJobID, applicationSubmitID, FullName, CVID);
 
                             // Thêm control vào flowLayoutPanel
                             flowLayoutPanel.Controls.Add(control);
                         }
-
                         reader.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Đã xảy ra lỗi khi tải dữ liệu: " + ex.Message);
-            }
-
         }
     }
 }
