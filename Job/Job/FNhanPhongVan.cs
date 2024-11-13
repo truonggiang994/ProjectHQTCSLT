@@ -28,8 +28,7 @@ namespace Job
 
         private void TaiDuLieuUI()
         {
-            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Lệnh SQL để lấy dữ liệu từ bảng Interview
                 string query = "SELECT * FROM dbo.fn_GetInterviewDetails(@ApplicationSubmitID)";
