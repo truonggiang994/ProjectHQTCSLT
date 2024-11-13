@@ -24,7 +24,7 @@ namespace Job
         }
         private int GetIDCompany()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 try
                 {
@@ -37,7 +37,7 @@ namespace Job
                         cmd.Parameters.AddWithValue("@PostJobID", ID); // Thêm tham số cho hàm
 
                         // Sử dụng ExecuteScalar để lấy giá trị trả về từ hàm
-                      int  companyID = Convert.ToInt32(cmd.ExecuteScalar());
+                        int companyID = Convert.ToInt32(cmd.ExecuteScalar());
                     }
                 }
                 catch (Exception ex)
@@ -48,13 +48,15 @@ namespace Job
 
             return companyID;
         }
-    
+
         private void TaiDuLieu(int ID)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
-                SqlCommand command = new SqlCommand("sp_GetJobPostingById", connection);
-                command.CommandType = CommandType.StoredProcedure;
+
+                SqlCommand command = new SqlCommand("SELECT * FROM dbo.fn_GetJobPostingById(@ID)", connection);
+
+                // Thêm tham số cho hàm
                 command.Parameters.Add(new SqlParameter("@ID", ID));
 
                 try
@@ -64,7 +66,6 @@ namespace Job
 
                     while (reader.Read())
                     {
-
                         labelMucLuong.Text = $"{reader.GetDecimal(reader.GetOrdinal("SalaryMin"))} - {reader.GetDecimal(reader.GetOrdinal("SalaryMax"))} triệu";
                         labelName.Text = reader.GetString(reader.GetOrdinal("Name")).ToString();
                         userControlLabelViTri.LabelText = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
@@ -74,7 +75,6 @@ namespace Job
                         labelMoTaCongViec.Text = reader.GetString(reader.GetOrdinal("Description")).ToString();
                         labelQuyenLoi.Text = reader.GetString(reader.GetOrdinal("Benefits")).ToString();
                         labelDiaDiemLamViec.Text = reader.GetString(reader.GetOrdinal("Street")).ToString();
-
                     }
 
                     reader.Close();
@@ -84,6 +84,7 @@ namespace Job
                     Console.WriteLine("Error: " + ex.Message);
                 }
             }
+
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

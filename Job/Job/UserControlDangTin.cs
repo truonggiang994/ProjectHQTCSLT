@@ -27,7 +27,7 @@ namespace Job
         }
         private void TaiDuLieu()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 SqlCommand command = new SqlCommand("sp_GetPostJobByEmployerUsername", connection);
                 command.CommandType = CommandType.StoredProcedure;

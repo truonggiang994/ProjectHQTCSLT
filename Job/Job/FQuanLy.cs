@@ -59,10 +59,10 @@ namespace Job
 
         HashSet<string> GetRole()
         {
-            string connectionString = Settings.Default.Connection;
+            string connectionString = Settings.Default.ConnectionAdmin;
             HashSet<string> roleHashSet = new HashSet<string>();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Mở kết nối
                 connection.Open();

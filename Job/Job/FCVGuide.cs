@@ -25,7 +25,7 @@ namespace Job
             this.ID = ID;
             this.username = username;
             string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Gọi hàm trả về bảng trong SQL
                 string query = "SELECT * FROM GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng
@@ -78,7 +78,7 @@ namespace Job
 
             DataTable cvTable = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 try
                 {

@@ -8,6 +8,15 @@ namespace Job
 {
     public static class Data
     {
-        public static string username = "hoan4701";
+        public static string username;
+        public static ERoleLogin role;
     }
+}
+
+
+public enum ERoleLogin
+{
+    admin,
+    employ,
+    cadidate
 }

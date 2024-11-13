@@ -27,7 +27,7 @@ namespace Job
         {
             flowLayoutPanel1.Controls.Clear();  // Xóa các control trước đó (nếu có)
 
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 SqlCommand command = new SqlCommand("SELECT ID FROM PostJob WHERE Status = N'Pending'", connection);
 

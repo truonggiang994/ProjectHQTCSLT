@@ -35,12 +35,12 @@ namespace Job
      
         private void CompanyInfo()
         {
-            string connectionString = Properties.Settings.Default.Connection; // Thay bằng chuỗi kết nối của bạn
+            string connectionString = Properties.Settings.Default.ConnectionAdmin; // Thay bằng chuỗi kết nối của bạn
 
             // Câu lệnh SQL để gọi hàm GetCompanyInfo
             string query = "SELECT * FROM dbo.GetCompanyInfo(@ID)";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ID", ID);
@@ -78,7 +78,7 @@ namespace Job
                 // Tạo một danh sách để lưu các địa chỉ của công ty
                 List<string> addressList = new List<string>();
 
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection))
+                using (SqlConnection conn = DbConnection.GetConnection())
                 {
                     conn.Open();
 
@@ -103,6 +103,7 @@ namespace Job
                                 UserControlDCCTView userControlDCCT = new UserControlDCCTView();
 
                                 userControlDCCT.comboBoxTinhThanh.Text = province;
+                                userControlDCCT.comboBoxQuanHuyen.Items.Add(district);
                                 userControlDCCT.comboBoxQuanHuyen.Text = district;
                                 userControlDCCT.userControlTextDiaChi.text = street; // Sửa từ district thành street
                                
@@ -127,7 +128,7 @@ namespace Job
 
         private void CompanyImages()
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection))
+            using (SqlConnection conn = DbConnection.GetConnection())
             {
                 conn.Open();
 

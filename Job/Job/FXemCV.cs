@@ -34,10 +34,10 @@ namespace Job
 
         public void LoadF()
         {
-            string connectionString = Settings.Default.Connection; // Chuỗi kết nối
+            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối
             DataTable cvTable = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 try
                 {

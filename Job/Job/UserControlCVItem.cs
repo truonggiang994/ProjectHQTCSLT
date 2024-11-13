@@ -52,9 +52,9 @@ namespace Job
 
         private void buttonXoaCV_Click(object sender, EventArgs e)
         {
-            string connectionString = Settings.Default.Connection; // Chuỗi kết nối
+            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 try
                 {

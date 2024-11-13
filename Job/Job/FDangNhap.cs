@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web.Security;
 using System.Windows.Forms;
 
 namespace Job
@@ -23,17 +24,22 @@ namespace Job
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
 
-                    string role = "";
                     if (radioButtonCandidate.Checked)
-                        role = "Candidate";
+                    {
+                        Data.role = ERoleLogin.cadidate;
+                    }
                     else if (radioButtonEmployer.Checked)
-                        role = "Employer";
+                    {
+                        Data.role = ERoleLogin.employ;
+                    }
                     else if (radioButtonAdmin.Checked)
-                        role = "Admin";
+                    {
+                        Data.role = ERoleLogin.admin;
+                    }
                     else
                     {
                         MessageBox.Show("Chọn chức vụ");
@@ -44,6 +50,15 @@ namespace Job
                     {
                         command.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
                         command.Parameters.AddWithValue("@Password", textBoxMK.Text);
+
+                        string role = "";
+                        if (radioButtonCandidate.Checked)
+                            role = "Candidate";
+                        else if (radioButtonEmployer.Checked)
+                            role = "Employer";
+                        else if (radioButtonAdmin.Checked)
+                            role = "Admin";
+
                         command.Parameters.AddWithValue("@Role", role);
 
                         int result = (int)command.ExecuteScalar();
@@ -52,22 +67,22 @@ namespace Job
                         {
                             Data.username = textBoTaiKhoan.Text;
 
-                            if (role == "Candidate")
+                            if (Data.role == ERoleLogin.cadidate)
                             {
                                 FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
-                                this.Hide();
+                                Hide();
                                 fNguoiUngTuyen.Show();
                             }
-                            else if (role == "Employer")
+                            else if (Data.role == ERoleLogin.employ)
                             {
                                 FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
-                                this.Hide();
+                                Hide();
                                 fNhaTuyenDung.Show();
                             }
-                            else if (role == "Admin")
+                            else if (Data.role == ERoleLogin.admin)
                             {
                                 FQuanLy fQuanLy = new FQuanLy();
-                                this.Hide();
+                                Hide();
                                 fQuanLy.Show();
                             }
                         }
@@ -111,7 +126,7 @@ namespace Job
         private void linkLabelDangki_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FDangKi fDangKi = new FDangKi();
-            this.Hide();
+            Hide();
             fDangKi.Show();
         }
     }

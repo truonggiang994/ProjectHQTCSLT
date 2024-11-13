@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
+    <Compile Include="DbConnection.cs" />
     <Compile Include="FChonCV.cs">
       <SubType>Form</SubType>
     </Compile>

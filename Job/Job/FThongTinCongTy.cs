@@ -30,12 +30,12 @@ namespace Job
 
         private void CompanyInfo()
         {
-            string connectionString = Properties.Settings.Default.Connection; // Thay bằng chuỗi kết nối của bạn
+            string connectionString = Properties.Settings.Default.ConnectionAdmin; // Thay bằng chuỗi kết nối của bạn
 
             // Câu lệnh SQL để gọi hàm GetCompanyInfo
             string query = "SELECT * FROM dbo.GetCompanyInfo(@ID)";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ID", ID);
@@ -73,7 +73,7 @@ namespace Job
                 // Tạo một danh sách để lưu các địa chỉ của công ty
                 List<string> addressList = new List<string>();
 
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection))
+                using (SqlConnection conn = DbConnection.GetConnection())
                 {
                     conn.Open();
 
@@ -116,7 +116,7 @@ namespace Job
 
         private void CompanyImages()
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection))
+            using (SqlConnection conn = DbConnection.GetConnection())
             {
                 conn.Open();
 
@@ -200,7 +200,7 @@ namespace Job
                 imageTable.Rows.Add(image);
             }
 
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection))
+            using (SqlConnection conn = DbConnection.GetConnection())
             {
                 conn.Open();
 
@@ -230,10 +230,10 @@ namespace Job
         private int GetCompanyID()
         {
             int companyId = -1;
-            string connectionString = Properties.Settings.Default.Connection;
+            string connectionString = Properties.Settings.Default.ConnectionAdmin;
             string query = "SELECT dbo.GetCompanyIDByUsername(@Username) AS CompanyID";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", Data.username);
@@ -277,7 +277,7 @@ namespace Job
             // Bước 3: Kết nối với cơ sở dữ liệu và gọi thủ tục UpdateCompanyAddresses
             try
             {
-                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.Connection))
+                using (SqlConnection conn = DbConnection.GetConnection())
                 {
                     conn.Open();
 
@@ -319,9 +319,9 @@ namespace Job
             string industry = userControlTextNganh.text;
             string website = userControlTextWebsite.text;
             DateTime createdDate = dateTimePickerNgayThanhLap.Value;
-            string connectionString = Properties.Settings.Default.Connection;
+            string connectionString = Properties.Settings.Default.ConnectionAdmin;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 using (SqlCommand command = new SqlCommand("UpdateCompanyInfo", connection))
                 {

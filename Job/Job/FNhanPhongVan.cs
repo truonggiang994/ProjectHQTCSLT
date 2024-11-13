@@ -16,7 +16,8 @@ namespace Job
         int applicationSubmitID;
         string viTri;
         string tenCongTy;
-        public FNhanPhongVan(int applicationSubmitID,  string viTri, string tenCongTy)
+
+        public FNhanPhongVan(int applicationSubmitID, string viTri, string tenCongTy)
         {
             InitializeComponent();
             this.applicationSubmitID = applicationSubmitID;
@@ -24,13 +25,14 @@ namespace Job
             this.tenCongTy = tenCongTy;
             TaiDuLieuUI();
         }
+
         private void TaiDuLieuUI()
         {
             string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Lệnh SQL để lấy dữ liệu từ bảng Interview
-                string query = "SELECT InterviewerName, InterviewDate, AddressID, Note, Phone, Email FROM Interview WHERE ApplicationSubmitID = @ApplicationSubmitID";
+                string query = "SELECT * FROM dbo.GetInterviewDetails(@ApplicationSubmitID)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -48,11 +50,11 @@ namespace Job
 
                             // Thông tin địa chỉ từ bảng Address
                             int addressID = (int)reader["AddressID"];
-                            labelThongTin.Text = "Công ty " + tenCongTy + 
+                            labelThongTin.Text = "Công ty " + tenCongTy +
                                 " thông báo: Hồ sơ ứng tuyển của anh/chị đã chúng tôi tiếp nhận.\n Chúng tôi xin trân trọng kính mời anh/chị đến tham gia phỏng vấn." +
                                 "Ghi chú: " + reader["Note"].ToString();
                             labelThongTinNguoiPhongvan.Text = "Mọi chi tiết, anh/chị vui lòng liên hệ " + reader["InterviewerName"].ToString() + " qua số điện thoại: "
-                                + reader["Phone"].ToString() + " hoặc email: " + reader["Email"].ToString() + " để biết thêm chi tiết. " +"\n"
+                                + reader["Phone"].ToString() + " hoặc email: " + reader["Email"].ToString() + " để biết thêm chi tiết. " + "\n"
                                 + "Rất mong Anh/Chị thu xếp thời gian tham gia. Trường hợp Anh/Chị không thể thu xếp được thời gian, xin vui lòng liên hệ lại chúng tôi theo số điện thoại/địa chỉ trên để xác nhận lại.\n"
                                 + "\n" + "Trân trọng kính chào!";
                             labelThongTin.AutoSize = false; // Đặt chiều rộng tối đa nếu cần
@@ -61,7 +63,7 @@ namespace Job
                             labelThongTinNguoiPhongvan.AutoSize = false;// Đặt chiều rộng tối đa nếu cần
                             labelThongTinNguoiPhongvan.Text = labelThongTinNguoiPhongvan.Text.Replace("\n", "<br/>");
                             reader.Close();
-                            string addressQuery = "SELECT Province, District, Street FROM Address WHERE ID = @AddressID";
+                            string addressQuery = "SELECT * FROM dbo.GetAddressDetails(@AddressID)";
                             using (SqlCommand addressCommand = new SqlCommand(addressQuery, connection))
                             {
                                 addressCommand.Parameters.AddWithValue("@AddressID", addressID);
@@ -73,8 +75,6 @@ namespace Job
                                     }
                                 }
                             }
-
-                            
                         }
                     }
                     connection.Close();

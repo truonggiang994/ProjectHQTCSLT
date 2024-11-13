@@ -12,7 +12,7 @@ namespace Job.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,10 +25,37 @@ namespace Job.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BQH;Initial Catalog=Job;User ID=Giang;Password=123456789;")]
-        public string Connection {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=admin;Pass" +
+            "word=123456789")]
+        public string ConnectionAdmin {
             get {
-                return ((string)(this["Connection"]));
+                return ((string)(this["ConnectionAdmin"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=employ;Pas" +
+            "sword=123456789")]
+        public string ConnectionEmploy {
+            get {
+                return ((string)(this["ConnectionEmploy"]));
+            }
+            set {
+                this["ConnectionEmploy"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=candidate;" +
+            "Password=123456789")]
+        public string ConnectionCandidate {
+            get {
+                return ((string)(this["ConnectionCandidate"]));
+            }
+            set {
+                this["ConnectionCandidate"] = value;
             }
         }
     }

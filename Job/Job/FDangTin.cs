@@ -27,22 +27,19 @@ namespace Job
         }
         private void buttonDang_Click(object sender, EventArgs e)
         {
-
-
-            string employerUsername = "hoan4703";
-            int companyId = 1;
-            string jobvacancy = textBoxChucDanh.Text.Trim();
-            string description = textBoxMoTaCongViec.Text.Trim();
-            string skill = textBoxKiNang.Text.Trim();
-            string experience = comboBoxKinhNghiem.Text.Trim();
-            decimal salaryMax = decimal.Parse(textBoxLuongToiDa.Text.Trim());
-            decimal salaryMin = decimal.Parse(textBoxLuongToiThieu.Text.Trim());
-            string benefits = textBoxQuyenLoi.Text.Trim();
-            string workForm = comboBoxHinhThucLV.Text.Trim();
-
+            /* string employerUsername = Data.username;
+             string jobvacancy = textBoxChucDanh.Text.Trim();
+             string description = textBoxMoTaCongViec.Text.Trim();
+             string skill = textBoxKiNang.Text.Trim();
+             string experience = comboBoxKinhNghiem.Text.Trim();
+             decimal salaryMax = decimal.Parse(textBoxLuongToiDa.Text.Trim());
+             decimal salaryMin = decimal.Parse(textBoxLuongToiThieu.Text.Trim());
+             string benefits = textBoxQuyenLoi.Text.Trim();
+             string workForm = comboBoxHinhThucLV.Text.Trim();
+ */
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
 
@@ -51,16 +48,15 @@ namespace Job
                         command.CommandType = CommandType.StoredProcedure;
 
                         // Thêm các tham số
-                        command.Parameters.AddWithValue("@EmployerUsername", employerUsername);
-                        command.Parameters.AddWithValue("@CompanyID", companyId);
-                        command.Parameters.AddWithValue("@Description", description);
-                        command.Parameters.AddWithValue("@Skill", skill);
-                        command.Parameters.AddWithValue("@Experience", experience);
-                        command.Parameters.AddWithValue("@SalaryMax", salaryMax);
-                        command.Parameters.AddWithValue("@SalaryMin", salaryMin);
-                        command.Parameters.AddWithValue("@Benefits", benefits);
-                        command.Parameters.AddWithValue("@WorkForm", workForm);
-                        command.Parameters.AddWithValue("@JobVacancy", jobvacancy);
+                        command.Parameters.AddWithValue("@EmployerUsername", Data.username);
+                        command.Parameters.AddWithValue("@Description", textBoxMoTaCongViec.Text);
+                        command.Parameters.AddWithValue("@Skill", textBoxKiNang.Text);
+                        command.Parameters.AddWithValue("@Experience", comboBoxKinhNghiem.Text);
+                        command.Parameters.AddWithValue("@SalaryMax", textBoxLuongToiDa.Text);
+                        command.Parameters.AddWithValue("@SalaryMin", textBoxLuongToiThieu.Text);
+                        command.Parameters.AddWithValue("@Benefits", textBoxQuyenLoi.Text);
+                        command.Parameters.AddWithValue("@WorkForm", comboBoxHinhThucLV.Text);
+                        command.Parameters.AddWithValue("@JobVacancy", textBoxChucDanh.Text);
 
 
                         int result = command.ExecuteNonQuery();

@@ -24,7 +24,7 @@ namespace Job
         }
         public void LoadData()
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 connection.Open();
 

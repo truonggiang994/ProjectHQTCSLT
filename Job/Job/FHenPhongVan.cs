@@ -19,7 +19,7 @@ namespace Job
         private int ID;
         private string ngaySinh;
         private string gioiTinh;
-        public FHenPhongVan(int ID, int PostJobID, string usernameCandidate, string hoTen , string viTri, string ngaySinh, string gioiTinh)
+        public FHenPhongVan(int ID, int PostJobID, string usernameCandidate, string hoTen, string viTri, string ngaySinh, string gioiTinh)
         {
             InitializeComponent();
             this.ID = ID;
@@ -51,9 +51,9 @@ namespace Job
         private void TaiDuLieuUI()
         {
             string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
-                string query = "SELECT * FROM Interview WHERE ApplicationSubmitID = @ID";
+                string query = "SELECT * FROM dbo.GetInterviewByApplicationSubmitID(@ID)";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -94,7 +94,7 @@ namespace Job
                 try
                 {
                     string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
-                    using (SqlConnection conn = new SqlConnection(connectionString))
+                    using (SqlConnection conn = DbConnection.GetConnection())
                     {
                         conn.Open();
 
@@ -130,7 +130,7 @@ namespace Job
         {
             string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 using (SqlCommand command = new SqlCommand("InsertInterview", connection))
                 {

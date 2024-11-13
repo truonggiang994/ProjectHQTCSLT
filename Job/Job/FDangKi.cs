@@ -25,7 +25,7 @@ namespace Job
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
                     using (SqlCommand command = new SqlCommand("SELECT dbo.sp_CheckAccountExistence(@Username)", connection))

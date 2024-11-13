@@ -64,7 +64,7 @@ namespace Job
 
         private void buttonDangKi_Click(object sender, EventArgs e)
         {
-            string connectionString = Settings.Default.Connection;
+            string connectionString = Settings.Default.ConnectionAdmin;
 
             try
             {
@@ -111,7 +111,7 @@ namespace Job
                 }
 
                 // Kết nối tới SQL và gọi stored procedure
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
                     using (SqlCommand cmd = new SqlCommand("dbo.AddAdminWithRoles", connection))

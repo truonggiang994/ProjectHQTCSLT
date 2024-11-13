@@ -25,8 +25,8 @@ namespace Job
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-            string connectionString = Settings.Default.Connection; // Chuỗi kết nối đến SQL Server
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối đến SQL Server
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 connection.Open();
 
@@ -88,8 +88,8 @@ namespace Job
 
         private void FThonTinCaNhanUngVien_Load(object sender, EventArgs e)
         {
-            string connectionString = Settings.Default.Connection; // Chuỗi kết nối đến SQL Server
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối đến SQL Server
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Gọi hàm trả về bảng trong SQL
                 string query = "SELECT * FROM GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng

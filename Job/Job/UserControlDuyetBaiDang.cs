@@ -14,19 +14,22 @@ namespace Job
     public partial class UserControlDuyetbaiDang : UserControl
     {
         private int iD;
-        
+
         public UserControlDuyetbaiDang(int ID)
         {
             InitializeComponent();
             iD = ID;
             TaiDuLieu(ID);
         }
+
         private void TaiDuLieu(int ID)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
-                SqlCommand command = new SqlCommand("sp_GetJobPostingById", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                // Sử dụng câu lệnh SELECT để gọi hàm fn_GetJobPostingById
+                SqlCommand command = new SqlCommand("SELECT * FROM dbo.fn_GetJobPostingById(@ID)", connection);
+
+                // Thêm tham số cho hàm
                 command.Parameters.Add(new SqlParameter("@ID", ID));
 
                 try
@@ -36,11 +39,9 @@ namespace Job
 
                     while (reader.Read())
                     {
-
                         labelTenCongTy.Text = reader.GetString(reader.GetOrdinal("Name")).ToString();
                         labelChucVu.Text = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
                         guna2ComboBox1.Text = "Pending";
-                        
                     }
 
                     reader.Close();
@@ -51,12 +52,14 @@ namespace Job
                 }
             }
         }
+
+
         private void buttonXemDangTin_Click(object sender, EventArgs e)
         {
 
-            FQuanLy.Instance.MoFCon(  new FThongTinViecLam(iD));
+            FQuanLy.Instance.MoFCon(new FThongTinViecLam(iD));
         }
-        
+
         private void buttonDuyet_Click(object sender, EventArgs e)
         {
             // Lấy giá trị Status từ comboBox
@@ -69,35 +72,26 @@ namespace Job
                 return;
             }
 
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
-                SqlTransaction transaction = null;
                 try
                 {
                     connection.Open();
-                    transaction = connection.BeginTransaction();
 
-                    // 1. Cập nhật bảng PostJob
-                    SqlCommand updatePostJobCommand = new SqlCommand("UPDATE PostJob SET Status = @Status WHERE ID = @ID", connection, transaction);
-                    updatePostJobCommand.Parameters.Add(new SqlParameter("@Status", newStatus));
-                    updatePostJobCommand.Parameters.Add(new SqlParameter("@ID", iD));
-                    updatePostJobCommand.ExecuteNonQuery();
+                    SqlCommand command = new SqlCommand("sp_UpdateJobPostingStatusAndHistory", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    // Thêm tham số
+                    command.Parameters.Add(new SqlParameter("@AdminUsername", Data.username));
+                    command.Parameters.Add(new SqlParameter("@PostJobID", iD));
+                    command.Parameters.Add(new SqlParameter("@Status", newStatus));
 
-                    // 2. Thêm bản ghi vào bảng ApprovalHistory
-                    SqlCommand insertHistoryCommand = new SqlCommand("INSERT INTO ApprovalHistory (AdminUsername, PostJobID, Status) VALUES (@AdminUsername, @PostJobID, @Status)", connection, transaction);
-                    insertHistoryCommand.Parameters.Add(new SqlParameter("@AdminUsername", "adminGiang")); 
-                    insertHistoryCommand.Parameters.Add(new SqlParameter("@PostJobID", iD));
-                    insertHistoryCommand.Parameters.Add(new SqlParameter("@Status", newStatus));
-                    insertHistoryCommand.ExecuteNonQuery();
+                    // Thực thi stored procedure
+                    command.ExecuteNonQuery();
 
-                    // Commit transaction
-                    transaction.Commit();
-                    MessageBox.Show("Cập nhật trạng thái thành công!");
+                    MessageBox.Show("Cập nhật trạng thái và thêm lịch sử duyệt thành công!");
                 }
                 catch (Exception ex)
                 {
-                    // Nếu có lỗi, rollback transaction
-                    transaction?.Rollback();
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }

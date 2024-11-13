@@ -28,7 +28,7 @@ namespace Job
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
 
@@ -126,7 +126,7 @@ namespace Job
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
                     using (SqlCommand cmd = new SqlCommand("sp_SaveAdminDetails", connection))

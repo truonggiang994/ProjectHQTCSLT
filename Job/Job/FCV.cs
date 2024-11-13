@@ -29,10 +29,10 @@ namespace Job
         public void LoadCV(int ID)//CV đã có sẵn
         {
             this.ID = ID;   
-            string connectionString = Settings.Default.Connection; // Chuỗi kết nối
+            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối
             DataTable cvTable = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 try
                 {
@@ -72,7 +72,7 @@ namespace Job
         private void buttonLuu_Click(object sender, EventArgs e)//Tạo CV
         {
             // Chuẩn bị kết nối tới cơ sở dữ liệu
-            string connectionString = Settings.Default.Connection; // Sửa lại cho phù hợp với cấu hình của bạn
+            string connectionString = Settings.Default.ConnectionAdmin; // Sửa lại cho phù hợp với cấu hình của bạn
             // Lấy dữ liệu từ các trường thông tin
             string careerGoals = richTextBoxMucTieuNgheNghiep.Text;
             string experience = richTextBoxKinhNghiem.Text;
@@ -82,7 +82,7 @@ namespace Job
             string hobbies = richTextBoxSoThich.Text;
 
             // Tạo kết nối tới cơ sở dữ liệu và gọi thủ tục UpdateCV
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 try
                 {
@@ -144,8 +144,8 @@ namespace Job
             {
                 buttonLuu.Text = "Lưu CV";
             }    
-            string connectionString = Settings.Default.Connection; // Chuỗi kết nối đến SQL Server
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối đến SQL Server
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Gọi hàm trả về bảng trong SQL
                 string query = "SELECT * FROM GetCandidateDetailsByUsername(@Username)"; // Gọi hàm trả về bảng

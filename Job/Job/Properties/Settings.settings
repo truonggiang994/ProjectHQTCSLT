@@ -2,8 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Job.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Connection" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=BQH;Initial Catalog=Job;User ID=Giang;Password=123456789;</Value>
+    <Setting Name="ConnectionAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=admin;Password=123456789</Value>
+    </Setting>
+    <Setting Name="ConnectionEmploy" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=employ;Password=123456789</Value>
+    </Setting>
+    <Setting Name="ConnectionCandidate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=candidate;Password=123456789</Value>
     </Setting>
   </Settings>
 </SettingsFile>

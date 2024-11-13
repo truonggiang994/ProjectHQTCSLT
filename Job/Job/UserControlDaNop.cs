@@ -22,19 +22,22 @@ namespace Job
         string Fullname;
         public UserControlDaNop(int ID, int applicationSubmitID, string FullName, int CVID)
         {
-            this.iD = ID;
-            this.cVID = CVID;
+            iD = ID;
+            cVID = CVID;
             this.applicationSubmitID = applicationSubmitID;
-            this.Fullname = FullName;
+            Fullname = FullName;
             InitializeComponent();
             TaiDuLieu(iD);
         }
+
         private void TaiDuLieu(int ID)
         {
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
-                SqlCommand command = new SqlCommand("sp_GetJobPostingById", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                // Sử dụng câu lệnh SELECT để gọi hàm fn_GetJobPostingById
+                SqlCommand command = new SqlCommand("SELECT * FROM dbo.fn_GetJobPostingById(@ID)", connection);
+
+                // Thêm tham số cho hàm
                 command.Parameters.Add(new SqlParameter("@ID", ID));
 
                 try
@@ -44,7 +47,6 @@ namespace Job
 
                     while (reader.Read())
                     {
-
                         labelTenCongTy.Text = reader.GetString(reader.GetOrdinal("Name")).ToString();
                         labelChucVu.Text = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
                         labelTrangThai.Text = reader.GetString(reader.GetOrdinal("Status")).ToString();
@@ -58,12 +60,16 @@ namespace Job
                 {
                     Console.WriteLine("Error: " + ex.Message);
                 }
+
+                // Kiểm tra nếu applicationSubmitID không tồn tại thì ẩn nút
                 if (!CheckApplicationSubmitIDExists(applicationSubmitID))
                 {
                     buttonXemPhongVan.Visible = false;
                 }
             }
+
         }
+
 
         private bool CheckApplicationSubmitIDExists(int applicationSubmitID)
         {
@@ -71,7 +77,7 @@ namespace Job
             string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"; // Cập nhật theo chuỗi kết nối của bạn
             string query = "SELECT COUNT(1) FROM Interview WHERE ApplicationSubmitID = @ApplicationSubmitID";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@ApplicationSubmitID", applicationSubmitID);

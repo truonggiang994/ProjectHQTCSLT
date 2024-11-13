@@ -16,7 +16,7 @@ namespace Job
     {
         public FLichSuDangViec()
         {
-            
+
             InitializeComponent();
             LoadDuyetBaiDangControls();
 
@@ -25,12 +25,13 @@ namespace Job
         private void LoadDuyetBaiDangControls()
         {
 
-            using (SqlConnection connection = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+            using (SqlConnection connection = DbConnection.GetConnection())
             {
-                SqlCommand command = new SqlCommand("sp_GetPostJobByEmployerUsername", connection);
-                command.CommandType = CommandType.StoredProcedure;
-                string user = "hoan4703";
-                command.Parameters.Add(new SqlParameter("@EmployerUsername",user ));
+                // Sử dụng câu lệnh SELECT để gọi hàm bảng
+                SqlCommand command = new SqlCommand("SELECT * FROM dbo.fn_GetPostJobByEmployerUsername(@EmployerUsername)", connection);
+
+                // Thêm tham số cho hàm
+                command.Parameters.Add(new SqlParameter("@EmployerUsername", Data.username));
 
                 try
                 {
@@ -39,7 +40,6 @@ namespace Job
 
                     while (reader.Read())
                     {
-
                         string NganhNghe = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
                         string NgayDang = reader.GetDateTime(reader.GetOrdinal("CreatedDate")).ToString("dd/MM/yyyy");
                         string MucLuongToiThieu = reader.GetDecimal(reader.GetOrdinal("SalaryMin")).ToString();
@@ -48,7 +48,6 @@ namespace Job
 
                         UserControlDangTin userControlDangTin = new UserControlDangTin(NganhNghe, NgayDang, MucLuongToiThieu, MucLuongToiDa, TrangThai);
                         flowLayout.Controls.Add(userControlDangTin);
-
                     }
 
                     reader.Close();
@@ -58,6 +57,7 @@ namespace Job
                     Console.WriteLine("Error: " + ex.Message);
                 }
             }
+
         }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {

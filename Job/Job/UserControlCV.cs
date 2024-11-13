@@ -46,7 +46,7 @@ namespace Job
             try
             {
                 // Kết nối với SQL Server
-                using (SqlConnection conn = new SqlConnection("Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"))
+                using (SqlConnection conn = DbConnection.GetConnection())
                 {
                     // Mở kết nối
                     conn.Open();
