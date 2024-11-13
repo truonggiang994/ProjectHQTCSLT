@@ -21,22 +21,20 @@ namespace Job
             CompanyInfo();
             CompanyAddresses();
             CompanyImages();
-            userControlTextCTGmail.Enabled = false;
-            userControlTextCTMaSoThue.Enabled = false;
-            userControlTextNganh.Enabled = false;
-            userControlTextSDT.Enabled = false;
-            userControlTextTenCongTy.Enabled = false;
-            userControlTextWebsite.Enabled = false;
+            userControlTextCTGmail.ReadOnly = true;
+            userControlTextCTMaSoThue.ReadOnly = true;
+            userControlTextNganh.ReadOnly = true;
+            userControlTextSDT.ReadOnly = true;
+            userControlTextTenCongTy.ReadOnly = true;
+            userControlTextWebsite.ReadOnly = true;
             dateTimePickerNgayThanhLap.Enabled = false;
             comboBoxQuyMoNhanSu.Enabled = false;
-            richTextBoxMoTa.Enabled = false;
+            richTextBoxMoTa.ReadOnly = true;
         }
 
      
         private void CompanyInfo()
         {
-            string connectionString = Properties.Settings.Default.ConnectionAdmin; // Thay bằng chuỗi kết nối của bạn
-
             // Câu lệnh SQL để gọi hàm GetCompanyInfo
             string query = "SELECT * FROM dbo.fn_GetCompanyInfo(@ID)";
 
@@ -60,7 +58,7 @@ namespace Job
                     userControlTextWebsite.text = reader["Website"].ToString();
                     string scale = reader["Scale"].ToString();
 
-                    int index = comboBoxQuyMoNhanSu.Items.IndexOf(scale + " ");
+                    int index = comboBoxQuyMoNhanSu.Items.IndexOf(scale);
                     comboBoxQuyMoNhanSu.SelectedIndex = index; // Chọn mục nếu có
                     richTextBoxMoTa.Text = reader["Description"].ToString();
                     dateTimePickerNgayThanhLap.Value = Convert.ToDateTime(reader["CreatedDate"]);
@@ -306,6 +304,11 @@ namespace Job
         }
 
         private void userControlTextNganh_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelThongTin_Paint(object sender, PaintEventArgs e)
         {
 
         }

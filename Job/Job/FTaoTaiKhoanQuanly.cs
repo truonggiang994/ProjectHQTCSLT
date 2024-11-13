@@ -19,7 +19,40 @@ namespace Job
         {
             InitializeComponent();
             CheckAndDisableCheckBox();
+            LoadSubordinates();
         }
+
+        void LoadSubordinates()
+        {
+            // Khởi tạo đối tượng SqlConnection và SqlCommand
+            using (SqlConnection connection = DbConnection.GetConnection())
+            using (SqlCommand command = new SqlCommand("SELECT * FROM fn_GetAdminBelow(@Username)", connection))
+            {
+                // Thêm tham số cho câu lệnh SQL (tránh SQL injection)
+                command.Parameters.AddWithValue("@Username", Data.username); // Giả sử Data.username chứa tên người quản lý hiện tại
+
+                // Khởi tạo SqlDataAdapter và DataTable
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                try
+                {
+                    // Điền dữ liệu vào DataTable
+                    adapter.Fill(dataTable);
+
+                    // Gán DataTable vào DataGridView
+                    guna2DataGridView.DataSource = dataTable;
+
+                    // Tùy chỉnh tên cột (nếu cần)
+                    guna2DataGridView.Columns[0].HeaderText = "Username";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi lấy dữ liệu: " + ex.Message);
+                }
+            }
+        }
+
 
         private void CheckAndDisableCheckBox()
         {
@@ -131,8 +164,12 @@ namespace Job
                         rolesParam.Value = rolesTable;
                         cmd.Parameters.Add(rolesParam);
 
-                        string result = cmd.ExecuteScalar()?.ToString();
-                        if (result != null && result == "1")
+                        SqlParameter resultParam = new SqlParameter("@Result", SqlDbType.Int) { Direction = ParameterDirection.Output };
+                        cmd.Parameters.Add(resultParam);
+
+                        cmd.ExecuteNonQuery();
+                        int result = (int)resultParam.Value;
+                        if (result == 1)
                         {
                             MessageBox.Show("Đăng ký admin thành công!");
                         }
@@ -140,7 +177,6 @@ namespace Job
                         {
                             MessageBox.Show("Đã có lỗi xảy ra.");
                         }
-
                     }
                 }
             }
@@ -149,7 +185,36 @@ namespace Job
                 MessageBox.Show($"Lỗi: {ex.Message}");
             }
         }
+
+        private void GetSubordinatesRecursive(string managerUsername, List<string> subordinates)
+        {
+            var query = "SELECT * FROM dbo.fn_GetAdminBelow(@ManagerUsername)";
+
+            using (SqlConnection connection = DbConnection.GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ManagerUsername", managerUsername);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string username = reader["Username"].ToString();
+                            subordinates.Add(username);
+
+                            // Đệ quy để lấy cấp dưới của cấp dưới
+                            GetSubordinatesRecursive(username, subordinates);
+                        }
+                    }
+                }
+            }
+        }
     }
+
+
+
 
     public enum ERole
     {

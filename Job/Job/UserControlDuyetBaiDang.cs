@@ -56,12 +56,15 @@ namespace Job
 
         private void buttonXemDangTin_Click(object sender, EventArgs e)
         {
+            FThongTinViecLam fThongTinViecLam = new FThongTinViecLam(iD);
 
-            FQuanLy.Instance.MoFCon(new FThongTinViecLam(iD));
+            fThongTinViecLam.buttonNopHoSo.Size = new Size(0, 0);
+            FQuanLy.Instance.MoFCon(fThongTinViecLam);
         }
 
         private void buttonDuyet_Click(object sender, EventArgs e)
         {
+            FDuyetBaiDang.Ins.LoadDuyetBaiDangControls();
             // Lấy giá trị Status từ comboBox
             string newStatus = guna2ComboBox1.SelectedItem.ToString();
 
@@ -95,6 +98,8 @@ namespace Job
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }
+
+
         }
     }
 }

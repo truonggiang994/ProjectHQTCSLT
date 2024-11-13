@@ -97,21 +97,12 @@ namespace Job
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("sp_AccountStatusTransition", connection))
+                    using (SqlCommand command = new SqlCommand("sp_LockAccount", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@Username", textBoxName.Text); // Thêm tham số
-
-                        command.ExecuteNonQuery(); // Thực thi câu lệnh
-
-                        MessageBox.Show("Trạng thái tài khoản đã được cập nhật.");
-                    }
-                    using (SqlCommand command = new SqlCommand("sp_SaveLockAccountHistory", connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@AdminUsername", Data.username.ToString());
-                        command.Parameters.AddWithValue("@LockUsername", textBoxName.Text);
-                        command.Parameters.AddWithValue("@Reason", textBoxReason.Text);
+                        command.Parameters.AddWithValue("@Username", textBoxName.Text); // Tên tài khoản cần khóa
+                        command.Parameters.AddWithValue("@AdminUsername", Data.username.ToString()); // Tên admin thực hiện khóa
+                        command.Parameters.AddWithValue("@Reason", textBoxReason.Text); // Lý do khóa
 
                         command.ExecuteNonQuery(); // Thực thi câu lệnh
                     }
@@ -132,14 +123,14 @@ namespace Job
                 {
                     connection.Open();
 
-                    using (SqlCommand command = new SqlCommand("sp_AccountStatusTransition", connection))
+                    using (SqlCommand command = new SqlCommand("sp_LockAccount", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@Username", textBoxName.Text); // Thêm tham số
+                        command.Parameters.AddWithValue("@Username", textBoxName.Text); // Tên tài khoản cần khóa
+                        command.Parameters.AddWithValue("@AdminUsername", Data.username.ToString()); // Tên admin thực hiện khóa
+                        command.Parameters.AddWithValue("@Reason", textBoxReason.Text); // Lý do khóa
 
                         command.ExecuteNonQuery(); // Thực thi câu lệnh
-
-                        MessageBox.Show("Trạng thái tài khoản đã được cập nhật.");
                     }
                 }
                 LoadData();

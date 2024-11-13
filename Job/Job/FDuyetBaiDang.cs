@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,8 +14,11 @@ namespace Job
 {
     public partial class FDuyetBaiDang : Form
     {
+        public static FDuyetBaiDang Ins;
+        
         public FDuyetBaiDang()
         {
+            Ins = this;
             InitializeComponent();
             LoadDuyetBaiDangControls();
         }
@@ -23,7 +27,8 @@ namespace Job
         {
             LoadDuyetBaiDangControls();
         }
-        private void LoadDuyetBaiDangControls()
+
+        public void LoadDuyetBaiDangControls()
         {
             flowLayoutPanel1.Controls.Clear();  // Xóa các control trước đó (nếu có)
 

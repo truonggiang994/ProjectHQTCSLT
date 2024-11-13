@@ -29,8 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTaoTaiKhoanQuanly));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelDangKi = new System.Windows.Forms.Panel();
             this.guna2GroupBoxVaiTro = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2CheckBoxLichSuKhoaTaiKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBoxLichSuDuyetBaiDang = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBoxTaoTaiKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBoxKhoaTaiKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2CheckBoxDuyetBai = new Guna.UI2.WinForms.Guna2CheckBox();
             this.textBoxPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBoxEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBoxDaiDien = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -38,19 +46,19 @@
             this.textBoxReEnterPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBoxPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.textBoxAccount = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CheckBoxDuyetBai = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBoxLichSuKhoaTaiKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBoxTaoTaiKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBoxKhoaTaiKhoan = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.guna2CheckBoxLichSuDuyetBaiDang = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2DataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panelDangKi.SuspendLayout();
             this.guna2GroupBoxVaiTro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDaiDien)).BeginInit();
+            this.guna2GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDangKi
             // 
             this.panelDangKi.BackColor = System.Drawing.Color.White;
+            this.panelDangKi.Controls.Add(this.guna2GroupBox1);
             this.panelDangKi.Controls.Add(this.guna2GroupBoxVaiTro);
             this.panelDangKi.Controls.Add(this.textBoxPhone);
             this.panelDangKi.Controls.Add(this.textBoxEmail);
@@ -83,6 +91,91 @@
             this.guna2GroupBoxVaiTro.Size = new System.Drawing.Size(172, 175);
             this.guna2GroupBoxVaiTro.TabIndex = 29;
             this.guna2GroupBoxVaiTro.Text = "Vai trò";
+            // 
+            // guna2CheckBoxLichSuKhoaTaiKhoan
+            // 
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.AutoSize = true;
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.BorderRadius = 0;
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.BorderThickness = 0;
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.Location = new System.Drawing.Point(17, 150);
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.Name = "guna2CheckBoxLichSuKhoaTaiKhoan";
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.Size = new System.Drawing.Size(144, 19);
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.TabIndex = 31;
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.Text = "Lịch sử khóa tài khoản";
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // guna2CheckBoxLichSuDuyetBaiDang
+            // 
+            this.guna2CheckBoxLichSuDuyetBaiDang.AutoSize = true;
+            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.BorderRadius = 0;
+            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.BorderThickness = 0;
+            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxLichSuDuyetBaiDang.Location = new System.Drawing.Point(17, 125);
+            this.guna2CheckBoxLichSuDuyetBaiDang.Name = "guna2CheckBoxLichSuDuyetBaiDang";
+            this.guna2CheckBoxLichSuDuyetBaiDang.Size = new System.Drawing.Size(145, 19);
+            this.guna2CheckBoxLichSuDuyetBaiDang.TabIndex = 34;
+            this.guna2CheckBoxLichSuDuyetBaiDang.Text = "Lịch sử duyệt bài đăng";
+            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // guna2CheckBoxTaoTaiKhoan
+            // 
+            this.guna2CheckBoxTaoTaiKhoan.AutoSize = true;
+            this.guna2CheckBoxTaoTaiKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxTaoTaiKhoan.CheckedState.BorderRadius = 0;
+            this.guna2CheckBoxTaoTaiKhoan.CheckedState.BorderThickness = 0;
+            this.guna2CheckBoxTaoTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxTaoTaiKhoan.Location = new System.Drawing.Point(17, 50);
+            this.guna2CheckBoxTaoTaiKhoan.Name = "guna2CheckBoxTaoTaiKhoan";
+            this.guna2CheckBoxTaoTaiKhoan.Size = new System.Drawing.Size(98, 19);
+            this.guna2CheckBoxTaoTaiKhoan.TabIndex = 32;
+            this.guna2CheckBoxTaoTaiKhoan.Text = "Tạo tài khoản";
+            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // guna2CheckBoxKhoaTaiKhoan
+            // 
+            this.guna2CheckBoxKhoaTaiKhoan.AutoSize = true;
+            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.BorderRadius = 0;
+            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.BorderThickness = 0;
+            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxKhoaTaiKhoan.Location = new System.Drawing.Point(17, 100);
+            this.guna2CheckBoxKhoaTaiKhoan.Name = "guna2CheckBoxKhoaTaiKhoan";
+            this.guna2CheckBoxKhoaTaiKhoan.Size = new System.Drawing.Size(105, 19);
+            this.guna2CheckBoxKhoaTaiKhoan.TabIndex = 33;
+            this.guna2CheckBoxKhoaTaiKhoan.Text = "Khóa tài khoản";
+            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            // 
+            // guna2CheckBoxDuyetBai
+            // 
+            this.guna2CheckBoxDuyetBai.AutoSize = true;
+            this.guna2CheckBoxDuyetBai.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxDuyetBai.CheckedState.BorderRadius = 0;
+            this.guna2CheckBoxDuyetBai.CheckedState.BorderThickness = 0;
+            this.guna2CheckBoxDuyetBai.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBoxDuyetBai.Location = new System.Drawing.Point(17, 75);
+            this.guna2CheckBoxDuyetBai.Name = "guna2CheckBoxDuyetBai";
+            this.guna2CheckBoxDuyetBai.Size = new System.Drawing.Size(106, 19);
+            this.guna2CheckBoxDuyetBai.TabIndex = 30;
+            this.guna2CheckBoxDuyetBai.Text = "Duyệt bài đăng";
+            this.guna2CheckBoxDuyetBai.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBoxDuyetBai.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBoxDuyetBai.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBoxDuyetBai.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // textBoxPhone
             // 
@@ -261,90 +354,70 @@
             this.textBoxAccount.Size = new System.Drawing.Size(262, 30);
             this.textBoxAccount.TabIndex = 18;
             // 
-            // guna2CheckBoxDuyetBai
+            // guna2GroupBox1
             // 
-            this.guna2CheckBoxDuyetBai.AutoSize = true;
-            this.guna2CheckBoxDuyetBai.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxDuyetBai.CheckedState.BorderRadius = 0;
-            this.guna2CheckBoxDuyetBai.CheckedState.BorderThickness = 0;
-            this.guna2CheckBoxDuyetBai.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxDuyetBai.Location = new System.Drawing.Point(17, 75);
-            this.guna2CheckBoxDuyetBai.Name = "guna2CheckBoxDuyetBai";
-            this.guna2CheckBoxDuyetBai.Size = new System.Drawing.Size(106, 19);
-            this.guna2CheckBoxDuyetBai.TabIndex = 30;
-            this.guna2CheckBoxDuyetBai.Text = "Duyệt bài đăng";
-            this.guna2CheckBoxDuyetBai.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBoxDuyetBai.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBoxDuyetBai.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBoxDuyetBai.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2GroupBox1.BorderRadius = 10;
+            this.guna2GroupBox1.BorderThickness = 3;
+            this.guna2GroupBox1.Controls.Add(this.guna2DataGridView);
+            this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GroupBox1.Location = new System.Drawing.Point(56, 313);
+            this.guna2GroupBox1.Name = "guna2GroupBox1";
+            this.guna2GroupBox1.Size = new System.Drawing.Size(300, 228);
+            this.guna2GroupBox1.TabIndex = 367;
+            this.guna2GroupBox1.Text = "Username của cấp dưới";
             // 
-            // guna2CheckBoxLichSuKhoaTaiKhoan
+            // guna2DataGridView
             // 
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.AutoSize = true;
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.BorderRadius = 0;
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.BorderThickness = 0;
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.Location = new System.Drawing.Point(17, 150);
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.Name = "guna2CheckBoxLichSuKhoaTaiKhoan";
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.Size = new System.Drawing.Size(144, 19);
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.TabIndex = 31;
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.Text = "Lịch sử khóa tài khoản";
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBoxLichSuKhoaTaiKhoan.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2CheckBoxTaoTaiKhoan
-            // 
-            this.guna2CheckBoxTaoTaiKhoan.AutoSize = true;
-            this.guna2CheckBoxTaoTaiKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxTaoTaiKhoan.CheckedState.BorderRadius = 0;
-            this.guna2CheckBoxTaoTaiKhoan.CheckedState.BorderThickness = 0;
-            this.guna2CheckBoxTaoTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxTaoTaiKhoan.Location = new System.Drawing.Point(17, 50);
-            this.guna2CheckBoxTaoTaiKhoan.Name = "guna2CheckBoxTaoTaiKhoan";
-            this.guna2CheckBoxTaoTaiKhoan.Size = new System.Drawing.Size(98, 19);
-            this.guna2CheckBoxTaoTaiKhoan.TabIndex = 32;
-            this.guna2CheckBoxTaoTaiKhoan.Text = "Tạo tài khoản";
-            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBoxTaoTaiKhoan.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2CheckBoxKhoaTaiKhoan
-            // 
-            this.guna2CheckBoxKhoaTaiKhoan.AutoSize = true;
-            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.BorderRadius = 0;
-            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.BorderThickness = 0;
-            this.guna2CheckBoxKhoaTaiKhoan.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxKhoaTaiKhoan.Location = new System.Drawing.Point(17, 100);
-            this.guna2CheckBoxKhoaTaiKhoan.Name = "guna2CheckBoxKhoaTaiKhoan";
-            this.guna2CheckBoxKhoaTaiKhoan.Size = new System.Drawing.Size(105, 19);
-            this.guna2CheckBoxKhoaTaiKhoan.TabIndex = 33;
-            this.guna2CheckBoxKhoaTaiKhoan.Text = "Khóa tài khoản";
-            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBoxKhoaTaiKhoan.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2CheckBoxLichSuDuyetBaiDang
-            // 
-            this.guna2CheckBoxLichSuDuyetBaiDang.AutoSize = true;
-            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.BorderRadius = 0;
-            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.BorderThickness = 0;
-            this.guna2CheckBoxLichSuDuyetBaiDang.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBoxLichSuDuyetBaiDang.Location = new System.Drawing.Point(17, 125);
-            this.guna2CheckBoxLichSuDuyetBaiDang.Name = "guna2CheckBoxLichSuDuyetBaiDang";
-            this.guna2CheckBoxLichSuDuyetBaiDang.Size = new System.Drawing.Size(145, 19);
-            this.guna2CheckBoxLichSuDuyetBaiDang.TabIndex = 34;
-            this.guna2CheckBoxLichSuDuyetBaiDang.Text = "Lịch sử duyệt bài đăng";
-            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBoxLichSuDuyetBaiDang.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.guna2DataGridView.ColumnHeadersHeight = 4;
+            this.guna2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.guna2DataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView.Location = new System.Drawing.Point(5, 42);
+            this.guna2DataGridView.Name = "guna2DataGridView";
+            this.guna2DataGridView.RowHeadersVisible = false;
+            this.guna2DataGridView.Size = new System.Drawing.Size(290, 180);
+            this.guna2DataGridView.TabIndex = 365;
+            this.guna2DataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2DataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView.ThemeStyle.RowsStyle.Height = 22;
+            this.guna2DataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // FTaoTaiKhoanQuanly
             // 
@@ -360,6 +433,8 @@
             this.guna2GroupBoxVaiTro.ResumeLayout(false);
             this.guna2GroupBoxVaiTro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDaiDien)).EndInit();
+            this.guna2GroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -380,5 +455,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBoxTaoTaiKhoan;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBoxKhoaTaiKhoan;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBoxDuyetBai;
+        private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView;
     }
 }

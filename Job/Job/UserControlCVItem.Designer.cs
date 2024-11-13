@@ -38,7 +38,6 @@
             this.guna2HtmlMaCV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelHocVan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.buttonXemCV = new Guna.UI2.WinForms.Guna2Button();
-            this.buttonXoaCV = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +54,6 @@
             this.guna2Panel1.Controls.Add(this.guna2HtmlMaCV);
             this.guna2Panel1.Controls.Add(this.labelHocVan);
             this.guna2Panel1.Controls.Add(this.buttonXemCV);
-            this.guna2Panel1.Controls.Add(this.buttonXoaCV);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -127,7 +125,7 @@
             this.guna2ButtonSua.FillColor = System.Drawing.Color.DarkGray;
             this.guna2ButtonSua.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ButtonSua.ForeColor = System.Drawing.Color.White;
-            this.guna2ButtonSua.Location = new System.Drawing.Point(594, 207);
+            this.guna2ButtonSua.Location = new System.Drawing.Point(738, 207);
             this.guna2ButtonSua.Name = "guna2ButtonSua";
             this.guna2ButtonSua.Size = new System.Drawing.Size(102, 25);
             this.guna2ButtonSua.TabIndex = 331;
@@ -172,22 +170,6 @@
             this.buttonXemCV.Text = "Xem CV";
             this.buttonXemCV.Click += new System.EventHandler(this.buttonXemCV_Click);
             // 
-            // buttonXoaCV
-            // 
-            this.buttonXoaCV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonXoaCV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonXoaCV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonXoaCV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonXoaCV.FillColor = System.Drawing.Color.DarkGray;
-            this.buttonXoaCV.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoaCV.ForeColor = System.Drawing.Color.White;
-            this.buttonXoaCV.Location = new System.Drawing.Point(720, 207);
-            this.buttonXoaCV.Name = "buttonXoaCV";
-            this.buttonXoaCV.Size = new System.Drawing.Size(102, 25);
-            this.buttonXoaCV.TabIndex = 326;
-            this.buttonXoaCV.Text = "Xóa CV";
-            this.buttonXoaCV.Click += new System.EventHandler(this.buttonXoaCV_Click);
-            // 
             // UserControlCVItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -207,7 +189,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlMaCV;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelHocVan;
         public Guna.UI2.WinForms.Guna2Button buttonXemCV;
-        public Guna.UI2.WinForms.Guna2Button buttonXoaCV;
         public Guna.UI2.WinForms.Guna2Button guna2ButtonSua;
         private System.Windows.Forms.RichTextBox richTextBoxTomTatCV;
         private System.Windows.Forms.RichTextBox richTextBoxHocVan;

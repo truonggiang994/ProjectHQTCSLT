@@ -44,7 +44,7 @@ namespace Job
                             string UsernameCandidate = reader.GetString(reader.GetOrdinal("Username")).ToString();
                             
                             // Chuyển 'anhDaiDien' cho UserControlUngVien
-                            UserControlDaNop control = new UserControlDaNop(PostJobID, applicationSubmitID, FullName, CVID);
+                            UserControlDaNop control = new UserControlDaNop(PostJobID, applicationSubmitID, FullName, CVID, trangThai);
 
                             // Thêm control vào flowLayoutPanel
                             flowLayoutPanel.Controls.Add(control);

@@ -28,9 +28,8 @@ namespace Job
         private void buttonXemChiTiet_Click(object sender, EventArgs e)
         {
             FThongTinViecLam fThongTinViecLam = new FThongTinViecLam(IDPostJob);
-            fThongTinViecLam.ShowDialog();
-        }
 
-       
+            FNguoiUngTuyen.Ins.LoadForm(fThongTinViecLam);
+        }   
     }
 }

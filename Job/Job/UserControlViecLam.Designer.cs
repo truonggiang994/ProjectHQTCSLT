@@ -47,7 +47,7 @@
             // panelChinh
             // 
             this.panelChinh.AutoScroll = true;
-            this.panelChinh.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelChinh.BackColor = System.Drawing.Color.White;
             this.panelChinh.Controls.Add(this.buttonXemChiTiet);
             this.panelChinh.Controls.Add(this.labelChucVu);
             this.panelChinh.Controls.Add(this.labelDiaChi);
@@ -58,7 +58,7 @@
             this.panelChinh.Controls.Add(this.pictureBoxLogo);
             this.panelChinh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelChinh.Location = new System.Drawing.Point(0, 0);
-            this.panelChinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelChinh.Margin = new System.Windows.Forms.Padding(2);
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(900, 106);
             this.panelChinh.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.buttonXemChiTiet.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXemChiTiet.ForeColor = System.Drawing.Color.White;
             this.buttonXemChiTiet.Location = new System.Drawing.Point(728, 51);
-            this.buttonXemChiTiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonXemChiTiet.Margin = new System.Windows.Forms.Padding(2);
             this.buttonXemChiTiet.Name = "buttonXemChiTiet";
             this.buttonXemChiTiet.Size = new System.Drawing.Size(135, 37);
             this.buttonXemChiTiet.TabIndex = 8;
@@ -85,7 +85,7 @@
             this.labelChucVu.BackColor = System.Drawing.Color.Transparent;
             this.labelChucVu.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelChucVu.Location = new System.Drawing.Point(135, 17);
-            this.labelChucVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelChucVu.Margin = new System.Windows.Forms.Padding(2);
             this.labelChucVu.Name = "labelChucVu";
             this.labelChucVu.Size = new System.Drawing.Size(317, 27);
             this.labelChucVu.TabIndex = 1;
@@ -96,7 +96,7 @@
             this.labelDiaChi.BackColor = System.Drawing.Color.Transparent;
             this.labelDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDiaChi.Location = new System.Drawing.Point(369, 77);
-            this.labelDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.labelDiaChi.Name = "labelDiaChi";
             this.labelDiaChi.Size = new System.Drawing.Size(82, 21);
             this.labelDiaChi.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(335, 77);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(29, 20);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,7 +119,7 @@
             this.labelTienLuong.BackColor = System.Drawing.Color.Transparent;
             this.labelTienLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTienLuong.Location = new System.Drawing.Point(160, 77);
-            this.labelTienLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelTienLuong.Margin = new System.Windows.Forms.Padding(2);
             this.labelTienLuong.Name = "labelTienLuong";
             this.labelTienLuong.Size = new System.Drawing.Size(71, 21);
             this.labelTienLuong.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(134, 77);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(29, 20);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,7 +142,7 @@
             this.labelTenCongTy.BackColor = System.Drawing.Color.Transparent;
             this.labelTenCongTy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenCongTy.Location = new System.Drawing.Point(135, 51);
-            this.labelTenCongTy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelTenCongTy.Margin = new System.Windows.Forms.Padding(2);
             this.labelTenCongTy.Name = "labelTenCongTy";
             this.labelTenCongTy.Size = new System.Drawing.Size(250, 22);
             this.labelTenCongTy.TabIndex = 2;
@@ -154,7 +154,7 @@
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.ImageRotate = 0F;
             this.pictureBoxLogo.Location = new System.Drawing.Point(4, 4);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(100, 100);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -166,7 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelChinh);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControlViecLam";
             this.Size = new System.Drawing.Size(900, 106);
             this.panelChinh.ResumeLayout(false);

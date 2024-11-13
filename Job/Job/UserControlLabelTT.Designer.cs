@@ -38,14 +38,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.SlateGray;
-            this.groupBox1.Location = new System.Drawing.Point(72, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(54, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(556, 58);
+            this.groupBox1.Size = new System.Drawing.Size(417, 47);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ngành nghề ";
@@ -53,28 +52,26 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(8, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label1.Location = new System.Drawing.Point(6, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 29);
+            this.label1.Size = new System.Drawing.Size(133, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "guna2HtmlLabel1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // PictureBox1
             // 
-            this.PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.PictureBox1.BackColor = System.Drawing.Color.White;
             this.PictureBox1.BorderRadius = 5;
             this.PictureBox1.FillColor = System.Drawing.Color.Black;
             this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
             this.PictureBox1.ImageRotate = 0F;
-            this.PictureBox1.Location = new System.Drawing.Point(13, 9);
-            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PictureBox1.Location = new System.Drawing.Point(10, 7);
             this.PictureBox1.Name = "PictureBox1";
-            this.PictureBox1.Size = new System.Drawing.Size(44, 44);
+            this.PictureBox1.Size = new System.Drawing.Size(33, 36);
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 2;
             this.PictureBox1.TabStop = false;
@@ -82,13 +79,12 @@
             // 
             // UserControlLabelTT
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserControlLabelTT";
-            this.Size = new System.Drawing.Size(643, 62);
+            this.Size = new System.Drawing.Size(482, 50);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();

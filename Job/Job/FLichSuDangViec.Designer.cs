@@ -59,15 +59,15 @@
             // flowLayout
             // 
             this.flowLayout.AutoScroll = true;
-            this.flowLayout.Location = new System.Drawing.Point(12, 78);
+            this.flowLayout.Location = new System.Drawing.Point(12, 46);
             this.flowLayout.Name = "flowLayout";
-            this.flowLayout.Size = new System.Drawing.Size(1006, 549);
+            this.flowLayout.Size = new System.Drawing.Size(976, 580);
             this.flowLayout.TabIndex = 8;
             this.flowLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // FLichSuDangViec
             // 
-            this.ClientSize = new System.Drawing.Size(1030, 639);
+            this.ClientSize = new System.Drawing.Size(1000, 638);
             this.Controls.Add(this.flowLayout);
             this.Controls.Add(this.guna2PanelLsdv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

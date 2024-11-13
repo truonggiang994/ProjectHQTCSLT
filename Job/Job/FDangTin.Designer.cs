@@ -34,7 +34,6 @@
             this.textBoxChucDanh = new Guna.UI2.WinForms.Guna2TextBox();
             this.comboBoxHinhThucLV = new Guna.UI2.WinForms.Guna2ComboBox();
             this.labelHinhThucLV = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelMucLuongKiNang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -44,7 +43,6 @@
             this.lableKiNang = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.textBoxKiNang = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labelMoTa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labelMoTaCongViec = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.buttonHuy = new Guna.UI2.WinForms.Guna2Button();
             this.buttonDang = new Guna.UI2.WinForms.Guna2Button();
@@ -146,17 +144,6 @@
             this.labelHinhThucLV.Size = new System.Drawing.Size(128, 21);
             this.labelHinhThucLV.TabIndex = 6;
             this.labelHinhThucLV.Text = "Hình thức làm việc";
-            // 
-            // labelMucLuongKiNang
-            // 
-            this.labelMucLuongKiNang.BackColor = System.Drawing.Color.Transparent;
-            this.labelMucLuongKiNang.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMucLuongKiNang.Location = new System.Drawing.Point(23, 239);
-            this.labelMucLuongKiNang.Margin = new System.Windows.Forms.Padding(2);
-            this.labelMucLuongKiNang.Name = "labelMucLuongKiNang";
-            this.labelMucLuongKiNang.Size = new System.Drawing.Size(176, 22);
-            this.labelMucLuongKiNang.TabIndex = 39;
-            this.labelMucLuongKiNang.Text = "Mức lương & Kĩ năng";
             // 
             // guna2HtmlLabel5
             // 
@@ -307,17 +294,6 @@
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(107, 18);
             this.guna2HtmlLabel8.TabIndex = 48;
             this.guna2HtmlLabel8.Text = "( Không bắt buộc)";
-            // 
-            // labelMoTa
-            // 
-            this.labelMoTa.BackColor = System.Drawing.Color.Transparent;
-            this.labelMoTa.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMoTa.Location = new System.Drawing.Point(21, 399);
-            this.labelMoTa.Margin = new System.Windows.Forms.Padding(2);
-            this.labelMoTa.Name = "labelMoTa";
-            this.labelMoTa.Size = new System.Drawing.Size(125, 22);
-            this.labelMoTa.TabIndex = 49;
-            this.labelMoTa.Text = "Mô tả công việc";
             // 
             // labelMoTaCongViec
             // 
@@ -470,7 +446,6 @@
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonDang);
             this.Controls.Add(this.labelMoTaCongViec);
-            this.Controls.Add(this.labelMoTa);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.lableKiNang);
             this.Controls.Add(this.textBoxKiNang);
@@ -480,7 +455,6 @@
             this.Controls.Add(this.labelLuongToiThieu);
             this.Controls.Add(this.textBoxLuongToiDa);
             this.Controls.Add(this.textBoxLuongToiThieu);
-            this.Controls.Add(this.labelMucLuongKiNang);
             this.Controls.Add(this.comboBoxKinhNghiem);
             this.Controls.Add(this.labelKinhNghiem);
             this.Controls.Add(this.comboBoxHinhThucLV);
@@ -509,8 +483,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBoxChucDanh;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxHinhThucLV;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelHinhThucLV;
-
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelMucLuongKiNang;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
@@ -520,7 +492,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lableKiNang;
         private Guna.UI2.WinForms.Guna2TextBox textBoxKiNang;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelMoTa;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelMoTaCongViec;
         private Guna.UI2.WinForms.Guna2Button buttonHuy;
         private Guna.UI2.WinForms.Guna2Button buttonDang;

@@ -139,5 +139,12 @@ namespace Job
 
             // Bạn có thể thực hiện tương tự với các nút khác nếu cần
         }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            FDangNhap dn = new FDangNhap();
+            this.Hide();
+            dn.Show();
+        }
     }
 }

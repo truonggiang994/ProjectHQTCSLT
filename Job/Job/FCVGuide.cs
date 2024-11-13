@@ -24,7 +24,6 @@ namespace Job
         {
             this.ID = ID;
             this.username = username;
-            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
             using (SqlConnection connection = DbConnection.GetConnection())
             {
                 // Gọi hàm trả về bảng trong SQL
@@ -128,6 +127,10 @@ namespace Job
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            if (Data.role == ERoleLogin.cadidate)
+            {
+                FNguoiUngTuyen.Ins.LoadForm(FNguoiUngTuyen.Ins.CurrentForm);
+            }    
             Dispose();
         }
     }

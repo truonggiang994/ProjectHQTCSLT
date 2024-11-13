@@ -46,14 +46,13 @@ namespace Job
             // 
             // groupBoxTInhThanh
             // 
+            this.groupBoxTInhThanh.BackColor = System.Drawing.Color.White;
             this.groupBoxTInhThanh.Controls.Add(this.comboBoxTinhThanh);
             this.groupBoxTInhThanh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxTInhThanh.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBoxTInhThanh.Location = new System.Drawing.Point(72, 14);
-            this.groupBoxTInhThanh.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxTInhThanh.Location = new System.Drawing.Point(54, 11);
             this.groupBoxTInhThanh.Name = "groupBoxTInhThanh";
-            this.groupBoxTInhThanh.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxTInhThanh.Size = new System.Drawing.Size(452, 62);
+            this.groupBoxTInhThanh.Size = new System.Drawing.Size(339, 50);
             this.groupBoxTInhThanh.TabIndex = 37;
             this.groupBoxTInhThanh.TabStop = false;
             this.groupBoxTInhThanh.Text = "Tỉnh/Thành phố";
@@ -69,10 +68,9 @@ namespace Job
             this.comboBoxTinhThanh.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.comboBoxTinhThanh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxTinhThanh.ItemHeight = 22;
-            this.comboBoxTinhThanh.Location = new System.Drawing.Point(4, 21);
-            this.comboBoxTinhThanh.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxTinhThanh.Location = new System.Drawing.Point(3, 17);
             this.comboBoxTinhThanh.Name = "comboBoxTinhThanh";
-            this.comboBoxTinhThanh.Size = new System.Drawing.Size(435, 28);
+            this.comboBoxTinhThanh.Size = new System.Drawing.Size(327, 28);
             this.comboBoxTinhThanh.TabIndex = 10;
             // 
             // groupBoxQuanHuyen
@@ -81,11 +79,9 @@ namespace Job
             this.groupBoxQuanHuyen.Controls.Add(this.comboBoxQuanHuyen);
             this.groupBoxQuanHuyen.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxQuanHuyen.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBoxQuanHuyen.Location = new System.Drawing.Point(72, 83);
-            this.groupBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxQuanHuyen.Location = new System.Drawing.Point(54, 67);
             this.groupBoxQuanHuyen.Name = "groupBoxQuanHuyen";
-            this.groupBoxQuanHuyen.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxQuanHuyen.Size = new System.Drawing.Size(452, 62);
+            this.groupBoxQuanHuyen.Size = new System.Drawing.Size(339, 50);
             this.groupBoxQuanHuyen.TabIndex = 40;
             this.groupBoxQuanHuyen.TabStop = false;
             this.groupBoxQuanHuyen.Text = "Quận/Huyện";
@@ -101,31 +97,31 @@ namespace Job
             this.comboBoxQuanHuyen.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.comboBoxQuanHuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxQuanHuyen.ItemHeight = 22;
-            this.comboBoxQuanHuyen.Location = new System.Drawing.Point(4, 21);
-            this.comboBoxQuanHuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxQuanHuyen.Location = new System.Drawing.Point(3, 17);
             this.comboBoxQuanHuyen.Name = "comboBoxQuanHuyen";
-            this.comboBoxQuanHuyen.Size = new System.Drawing.Size(435, 28);
+            this.comboBoxQuanHuyen.Size = new System.Drawing.Size(327, 28);
             this.comboBoxQuanHuyen.TabIndex = 10;
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
             this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.Location = new System.Drawing.Point(4, 4);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(531, 261);
+            this.guna2Panel1.Size = new System.Drawing.Size(398, 212);
             this.guna2Panel1.TabIndex = 43;
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.White;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(15, 93);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(11, 76);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(44, 44);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(33, 36);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 41;
             this.guna2PictureBox1.TabStop = false;
@@ -135,32 +131,33 @@ namespace Job
             this.userControlTextDiaChi.BackColor = System.Drawing.Color.White;
             this.userControlTextDiaChi.GroupBoxSize = new System.Drawing.Size(340, 50);
             this.userControlTextDiaChi.GroupBoxText = "Địa chỉ";
-            this.userControlTextDiaChi.Location = new System.Drawing.Point(15, 150);
-            this.userControlTextDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControlTextDiaChi.Location = new System.Drawing.Point(11, 122);
+            this.userControlTextDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.userControlTextDiaChi.Name = "userControlTextDiaChi";
             this.userControlTextDiaChi.PictureBoxImage = ((System.Drawing.Image)(resources.GetObject("userControlTextDiaChi.PictureBoxImage")));
             this.userControlTextDiaChi.Placeholder = "VD: số 1, Võ Văn Ngân";
             this.userControlTextDiaChi.ReadOnly = false;
-            this.userControlTextDiaChi.Size = new System.Drawing.Size(517, 71);
+            this.userControlTextDiaChi.Size = new System.Drawing.Size(388, 58);
             this.userControlTextDiaChi.TabIndex = 39;
             this.userControlTextDiaChi.text = "";
             this.userControlTextDiaChi.textBoxSize = new System.Drawing.Size(225, 25);
             // 
             // pictureBoxDiaDiem
             // 
+            this.pictureBoxDiaDiem.BackColor = System.Drawing.Color.White;
             this.pictureBoxDiaDiem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDiaDiem.Image")));
             this.pictureBoxDiaDiem.ImageRotate = 0F;
-            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(15, 24);
-            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxDiaDiem.Location = new System.Drawing.Point(11, 20);
+            this.pictureBoxDiaDiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxDiaDiem.Name = "pictureBoxDiaDiem";
-            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(44, 44);
+            this.pictureBoxDiaDiem.Size = new System.Drawing.Size(33, 36);
             this.pictureBoxDiaDiem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxDiaDiem.TabIndex = 38;
             this.pictureBoxDiaDiem.TabStop = false;
             // 
             // UserControlDCCTView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBoxTInhThanh);
             this.Controls.Add(this.groupBoxQuanHuyen);
@@ -168,8 +165,9 @@ namespace Job
             this.Controls.Add(this.userControlTextDiaChi);
             this.Controls.Add(this.pictureBoxDiaDiem);
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UserControlDCCTView";
-            this.Size = new System.Drawing.Size(540, 269);
+            this.Size = new System.Drawing.Size(405, 219);
             this.groupBoxTInhThanh.ResumeLayout(false);
             this.groupBoxQuanHuyen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

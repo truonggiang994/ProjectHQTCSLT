@@ -94,6 +94,7 @@ namespace Job
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
+            FNguoiUngTuyen.Ins.LoadForm(new FLichSuUngTuyen());
             Dispose();
         }
     }

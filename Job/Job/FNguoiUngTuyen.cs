@@ -5,6 +5,7 @@ namespace Job
 {
     public partial class FNguoiUngTuyen : Form
     {
+        public Form CurrentForm;
         public static FNguoiUngTuyen Ins;
 
         public FNguoiUngTuyen()
@@ -48,17 +49,20 @@ namespace Job
 
         private void buttonCoHoiVL_Click(object sender, EventArgs e)
         {
-            LoadForm(new FThonTinCaNhanUngVien());
+            CurrentForm = new FThonTinCaNhanUngVien();
+            LoadForm(CurrentForm);
         }
 
         private void buttonVLDaUngTuyen_Click(object sender, EventArgs e)
         {
-            LoadForm(new FLichSuUngTuyen());
+            CurrentForm = new FLichSuUngTuyen();
+            LoadForm(CurrentForm);
         }
 
         private void btnViecLam_Click(object sender, EventArgs e)
         {
-            LoadForm(new FViecLam());
+            CurrentForm = new FViecLam();
+            LoadForm(CurrentForm);
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
@@ -67,6 +71,5 @@ namespace Job
             this.Hide();
             fDangNhap.Show();
         }
-
     }
 }

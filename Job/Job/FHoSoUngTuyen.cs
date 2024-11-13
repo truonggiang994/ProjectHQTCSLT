@@ -23,7 +23,6 @@ namespace Job
         }
         public void LoadData()
         {
-            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789";
             string query = "SELECT * FROM fn_GetApplicationSummaries(@Username)"; // Khai báo câu truy vấn
 
             using (SqlConnection connection = DbConnection.GetConnection())

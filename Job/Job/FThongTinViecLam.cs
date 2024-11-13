@@ -15,6 +15,7 @@ namespace Job
     {
         private int ID;
         private int companyID;
+
         public FThongTinViecLam(int ID)
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace Job
             this.ID = ID;
             companyID = GetIDCompany();
         }
+
         private int GetIDCompany()
         {
             using (SqlConnection connection = DbConnection.GetConnection())
@@ -85,7 +87,6 @@ namespace Job
                         userControlLabelKinhNghiem.LabelText = reader.GetString(reader.GetOrdinal("Experience")).ToString();
                         labelMoTaCongViec.Text = reader.GetString(reader.GetOrdinal("Description")).ToString();
                         labelQuyenLoi.Text = reader.GetString(reader.GetOrdinal("Benefits")).ToString();
-                        labelDiaDiemLamViec.Text = reader.GetString(reader.GetOrdinal("Street")).ToString();
                     }
 
                     reader.Close();
@@ -105,6 +106,11 @@ namespace Job
 
         private void buttonBack_Click_1(object sender, EventArgs e)
         {
+            if (Data.role == ERoleLogin.cadidate)
+            {
+                FNguoiUngTuyen.Ins.LoadForm(FNguoiUngTuyen.Ins.CurrentForm);
+            }    
+            
             Dispose();
         }
 
@@ -118,6 +124,10 @@ namespace Job
         {
             FXemCongTy fXemCongTy = new FXemCongTy(companyID);
             fXemCongTy.ShowDialog();
+        }
+
+        private void FThongTinViecLam_Load(object sender, EventArgs e)
+        {
 
         }
     }

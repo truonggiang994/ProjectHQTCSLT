@@ -123,6 +123,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.PasswordChar = '\0';
             this.textBoxName.PlaceholderText = "";
+            this.textBoxName.ReadOnly = true;
             this.textBoxName.SelectedText = "";
             this.textBoxName.Size = new System.Drawing.Size(200, 18);
             this.textBoxName.TabIndex = 2;
@@ -162,6 +163,7 @@
             this.textBoxPosition.Name = "textBoxPosition";
             this.textBoxPosition.PasswordChar = '\0';
             this.textBoxPosition.PlaceholderText = "";
+            this.textBoxPosition.ReadOnly = true;
             this.textBoxPosition.SelectedText = "";
             this.textBoxPosition.Size = new System.Drawing.Size(200, 18);
             this.textBoxPosition.TabIndex = 4;
@@ -191,6 +193,7 @@
             this.textBoxStatus.Name = "textBoxStatus";
             this.textBoxStatus.PasswordChar = '\0';
             this.textBoxStatus.PlaceholderText = "";
+            this.textBoxStatus.ReadOnly = true;
             this.textBoxStatus.SelectedText = "";
             this.textBoxStatus.Size = new System.Drawing.Size(200, 18);
             this.textBoxStatus.TabIndex = 6;

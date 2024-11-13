@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,13 +27,13 @@ namespace Job
             {
                 connection.Open();
 
-                using (SqlCommand command = new SqlCommand("sp_GetAllJobPostings", connection))
+                // Câu truy vấn SQL trực tiếp từ bảng view vw_JobPostings với điều kiện status = 'Approved'
+                using (SqlCommand command = new SqlCommand("SELECT * FROM vw_JobPostings WHERE status = 'Approved'", connection))
                 {
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-
                             int ID = reader.GetInt32(reader.GetOrdinal("ID"));
                             string CompanyName = reader.GetString(reader.GetOrdinal("Name")).ToString();
                             string JobVacancy = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
@@ -49,6 +48,12 @@ namespace Job
                     }
                 }
             }
+
+        }
+
+        private void FViecLam_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

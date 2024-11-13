@@ -24,6 +24,12 @@ namespace Job
             LoadLocations();
         }
 
+
+        void LoadSlowLevel()
+        {
+
+        }
+
         private void LoadData()
         {
             try
@@ -33,7 +39,7 @@ namespace Job
                     connection.Open();
 
                     // Trường hợp là function, sử dụng cú pháp SELECT để gọi function
-                    using (SqlCommand command = new SqlCommand("SELECT dbo.fn_GetAdminDetails(@Username)", connection))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.fn_GetAdminDetails(@Username)", connection))
                     {
                         // Thêm tham số @Username
                         command.Parameters.AddWithValue("@Username", Data.username.ToString());
@@ -126,7 +132,7 @@ namespace Job
                 using (SqlConnection connection = DbConnection.GetConnection())
                 {
                     connection.Open();
-                    using (SqlCommand cmd = new SqlCommand("sp_SaveAdminDetails", connection))
+                    using (SqlCommand cmd = new SqlCommand("sp_UpdateAdminInfo", connection))
                     {
                         // Chỉ định kiểu của command là Stored Procedure
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -147,13 +153,16 @@ namespace Job
                         try
                         {
                             byte[] avatar = GetAvatarBytes(pictureBoxAnhDaiDien.Image);
-                            cmd.Parameters.AddWithValue("@Avatar", avatar);
+                            var avatarParam = new SqlParameter("@Avatar", SqlDbType.VarBinary);
+                            avatarParam.Value = avatar;
+                            cmd.Parameters.Add(avatarParam);
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show("Lỗi khi lưu ảnh: " + ex.Message);
-                            return; // Ngừng thực hiện nếu có lỗi
+                            return;
                         }
+
 
                         // Thực thi stored procedure
                         try

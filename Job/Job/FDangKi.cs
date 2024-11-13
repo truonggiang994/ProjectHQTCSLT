@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+
 
 namespace Job
 {
@@ -23,81 +15,71 @@ namespace Job
 
         private void buttonDangKi_Click(object sender, EventArgs e)
         {
-            try
+            if (radioButtonCandidate.Checked || radioButtonEmployer.Checked)
             {
-                using (SqlConnection connection = DbConnection.GetConnection())
+                try
                 {
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT dbo.fn_CheckAccountExistence(@Username)", connection))
+                    using (SqlConnection connection = DbConnection.GetConnection())
                     {
-                        command.Parameters.AddWithValue("@Username", textBoxAccount.Text);
+                        connection.Open();
 
-                        int result = (int)command.ExecuteScalar();
-                        if (result == 1)
+                        using (SqlCommand command = new SqlCommand("SELECT dbo.fn_CheckAccountExistence(@Username)", connection))
                         {
-                            MessageBox.Show("Tài khoản đã tồn tại");
-                        }
-                        else
-                        {
-                            if (radioButtonCandidate.Checked)
-                            {
-                                using (SqlCommand commandAdd = new SqlCommand("sp_AddAccount", connection))
-                                {
-                                    commandAdd.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@Username", textBoxAccount.Text);
 
-                                    // Thêm các tham số
-                                    commandAdd.Parameters.AddWithValue("@Username", textBoxAccount.Text);
-                                    commandAdd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
-                                    commandAdd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
-                                    commandAdd.Parameters.AddWithValue("@Phone", textBoxPhone.Text);
-
-                                    // Thực thi stored procedure
-                                    commandAdd.ExecuteNonQuery();
-                                }
-                                using (SqlCommand commandAdd = new SqlCommand("sp_AddCandidate", connection))
-                                {
-                                    commandAdd.CommandType = CommandType.StoredProcedure;
-                                    commandAdd.Parameters.AddWithValue("@Username", textBoxAccount.Text);
-                                    commandAdd.ExecuteNonQuery();
-                                }
-                                MessageBox.Show("Tạo tài khoản ứng viên thành công");
-                                FDangNhap fDangNhap = new FDangNhap();
-                                this.Hide();
-                                fDangNhap.Show();
-                            }
-                            else if (radioButtonEmployer.Checked)
+                            int result = (int)command.ExecuteScalar();
+                            if (result == 1)
                             {
-                                using (SqlCommand commandAdd = new SqlCommand("sp_AddAccount", connection))
-                                {
-                                    commandAdd.CommandType = CommandType.StoredProcedure;
-                                    commandAdd.Parameters.AddWithValue("@Username", textBoxAccount.Text);
-                                    commandAdd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
-                                    commandAdd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
-                                    commandAdd.Parameters.AddWithValue("@Phone", textBoxPhone.Text);
-                                    commandAdd.ExecuteNonQuery();
-                                }
-                                using (SqlCommand commandAdd = new SqlCommand("sp_AddEmployer", connection))
-                                {
-                                    commandAdd.CommandType = CommandType.StoredProcedure;
-                                    commandAdd.Parameters.AddWithValue("@Username", textBoxAccount.Text);
-                                    commandAdd.ExecuteNonQuery();
-                                }
-                                MessageBox.Show("Tạo tài khoản nhà tuyển dụng thành công");
-                                FDangNhap fDangNhap = new FDangNhap();
-                                this.Hide();
-                                fDangNhap.Show();
+                                MessageBox.Show("Tài khoản đã tồn tại");
                             }
                             else
                             {
-                                MessageBox.Show("Vui lòng chọn chức vụ");
+                                string role = radioButtonCandidate.Checked ? "Candidate" : radioButtonEmployer.Checked ? "Employer" : null;
+
+                                if (role != null)
+                                {
+                                    using (SqlCommand commandAdd = new SqlCommand("sp_AddAccount", connection))
+                                    {
+                                        commandAdd.CommandType = CommandType.StoredProcedure;
+
+                                        // Thêm các tham số
+                                        commandAdd.Parameters.AddWithValue("@Username", textBoxAccount.Text);
+                                        commandAdd.Parameters.AddWithValue("@Password", textBoxPassword.Text);
+                                        commandAdd.Parameters.AddWithValue("@Email", textBoxEmail.Text);
+                                        commandAdd.Parameters.AddWithValue("@Phone", textBoxPhone.Text);
+                                        commandAdd.Parameters.AddWithValue("@Role", role);
+
+                                        // Thực thi stored procedure
+                                        int addResult = (int)commandAdd.ExecuteScalar();
+                                        if (addResult == 1)
+                                        {
+                                            MessageBox.Show($"Tạo tài khoản {role.ToLower()} thành công");
+                                            FDangNhap fDangNhap = new FDangNhap();
+                                            this.Hide();
+                                            fDangNhap.Show();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Đã xảy ra lỗi khi thêm tài khoản.");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Vui lòng chọn chức vụ");
+                                }
                             }
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                MessageBox.Show("Vui lòng chọn chức vụ");
             }
         }
 
@@ -119,3 +101,4 @@ namespace Job
         }
     }
 }
+

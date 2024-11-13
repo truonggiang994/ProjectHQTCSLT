@@ -22,104 +22,109 @@ namespace Job
         }
         private void buttonDangNhap_Click(object sender, EventArgs e)
         {
-            try
+            if (radioButtonCandidate.Checked || radioButtonEmployer.Checked || radioButtonAdmin.Checked)
             {
-                using (SqlConnection connection = DbConnection.GetConnection())
+                if (radioButtonCandidate.Checked)
                 {
-                    connection.Open();
-
-                    if (radioButtonCandidate.Checked)
+                    Data.role = ERoleLogin.cadidate;
+                }
+                else if (radioButtonEmployer.Checked)
+                {
+                    Data.role = ERoleLogin.employ;
+                }
+                else if (radioButtonAdmin.Checked)
+                {
+                    Data.role = ERoleLogin.admin;
+                }
+                else
+                {
+                    MessageBox.Show("Chọn chức vụ");
+                    return;
+                }
+                try
+                {
+                    using (SqlConnection connection = DbConnection.GetConnection())
                     {
-                        Data.role = ERoleLogin.cadidate;
-                    }
-                    else if (radioButtonEmployer.Checked)
-                    {
-                        Data.role = ERoleLogin.employ;
-                    }
-                    else if (radioButtonAdmin.Checked)
-                    {
-                        Data.role = ERoleLogin.admin;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Chọn chức vụ");
-                        return;
-                    }
-
-                    using (SqlCommand command = new SqlCommand("SELECT dbo.fn_CheckLoginAccount(@Username, @Password, @Role)", connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
-                        command.Parameters.AddWithValue("@Password", textBoxMK.Text);
-
-                        string role = "";
-                        if (radioButtonCandidate.Checked)
-                            role = "Candidate";
-                        else if (radioButtonEmployer.Checked)
-                            role = "Employer";
-                        else if (radioButtonAdmin.Checked)
-                            role = "Admin";
-
-                        command.Parameters.AddWithValue("@Role", role);
-
-                        int result = (int)command.ExecuteScalar();
-
-                        if (result == 1)
+                        connection.Open();
+                        using (SqlCommand command = new SqlCommand("SELECT dbo.fn_CheckLoginAccount(@Username, @Password, @Role)", connection))
                         {
-                            Data.username = textBoTaiKhoan.Text;
+                            command.Parameters.AddWithValue("@Username", textBoTaiKhoan.Text);
+                            command.Parameters.AddWithValue("@Password", textBoxMK.Text);
 
-                            if (Data.role == ERoleLogin.cadidate)
+                            string role = "";
+                            if (radioButtonCandidate.Checked)
+                                role = "Candidate";
+                            else if (radioButtonEmployer.Checked)
+                                role = "Employer";
+                            else if (radioButtonAdmin.Checked)
+                                role = "Admin";
+
+                            command.Parameters.AddWithValue("@Role", role);
+
+                            int result = (int)command.ExecuteScalar();
+
+                            if (result == 1)
                             {
-                                FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
-                                Hide();
-                                fNguoiUngTuyen.Show();
-                            }
-                            else if (Data.role == ERoleLogin.employ)
-                            {
-                                FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
-                                Hide();
-                                fNhaTuyenDung.Show();
-                            }
-                            else if (Data.role == ERoleLogin.admin)
-                            {
-                                FQuanLy fQuanLy = new FQuanLy();
-                                Hide();
-                                fQuanLy.Show();
-                            }
-                        }
-                        else if (result == 0)
-                        {
-                            MessageBox.Show("Tài khoản không tồn tại!");
-                        }
-                        else if (result == -1)
-                        {
-                            MessageBox.Show("Mật khẩu không đúng!");
-                        }
-                        else if (result == -2)
-                        {
-                            using (SqlCommand commandLock = new SqlCommand("SELECT dbo.fn_GetLockReason(@LockUsername)", connection))
-                            {
-                                commandLock.Parameters.AddWithValue("@LockUsername", textBoTaiKhoan.Text);
-                                var resultLock = commandLock.ExecuteScalar();
-                                if (resultLock != null && resultLock != DBNull.Value)
+                                Data.username = textBoTaiKhoan.Text;
+
+                                if (Data.role == ERoleLogin.cadidate)
                                 {
-                                    MessageBox.Show("Tài khoản bị khóa: " + resultLock.ToString());
+                                    FNguoiUngTuyen fNguoiUngTuyen = new FNguoiUngTuyen();
+                                    Hide();
+                                    fNguoiUngTuyen.Show();
                                 }
-                                else
+                                else if (Data.role == ERoleLogin.employ)
                                 {
-                                    MessageBox.Show("Tài khoản bị khóa nhưng không có lý do");
+                                    FNhaTuyenDung fNhaTuyenDung = new FNhaTuyenDung();
+                                    Hide();
+                                    fNhaTuyenDung.Show();
+                                }
+                                else if (Data.role == ERoleLogin.admin)
+                                {
+                                    FQuanLy fQuanLy = new FQuanLy();
+                                    Hide();
+                                    fQuanLy.Show();
                                 }
                             }
-                        }
-                        else if (result == -3)
-                        {
-                            MessageBox.Show("Chức vụ không hợp lệ!");
+                            else if (result == 0)
+                            {
+                                MessageBox.Show("Tài khoản không tồn tại!");
+                            }
+                            else if (result == -1)
+                            {
+                                MessageBox.Show("Mật khẩu không đúng!");
+                            }
+                            else if (result == -2)
+                            {
+                                using (SqlCommand commandLock = new SqlCommand("SELECT dbo.fn_GetLockReason(@LockUsername)", connection))
+                                {
+                                    commandLock.Parameters.AddWithValue("@LockUsername", textBoTaiKhoan.Text);
+                                    var resultLock = commandLock.ExecuteScalar();
+                                    if (resultLock != null && resultLock != DBNull.Value)
+                                    {
+                                        MessageBox.Show("Tài khoản bị khóa: " + resultLock.ToString());
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Tài khoản bị khóa nhưng không có lý do");
+                                    }
+                                }
+                            }
+                            else if (result == -3)
+                            {
+                                MessageBox.Show("Chức vụ không hợp lệ!");
+                            }
                         }
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message);
+                MessageBox.Show("Chọn chức vụ");
             }
         }
 

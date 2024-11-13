@@ -50,44 +50,6 @@ namespace Job
             FNguoiUngTuyen.Ins.LoadForm(fCV);
         }
 
-        private void buttonXoaCV_Click(object sender, EventArgs e)
-        {
-            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối
-
-            using (SqlConnection connection = DbConnection.GetConnection())
-            {
-                try
-                {
-                    connection.Open();
-
-                    // Gọi thủ tục DeleteCVByID
-                    using (SqlCommand command = new SqlCommand("sp_DeleteCVByID", connection))
-                    {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@ID", ID); // Thêm tham số ID
-
-                        int rowsAffected = command.ExecuteNonQuery(); // Thực thi lệnh xóa
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Xóa CV thành công!");
-
-                            // Xóa chính UserControl hiện tại
-                            Parent.Controls.Remove(this); // Xóa UserControl khỏi Parent
-                        }
-                        else
-                        {
-                            MessageBox.Show("Không tìm thấy CV với ID đã cho.");
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Đã xảy ra lỗi khi xóa CV: " + ex.Message);
-                }
-            }
-        }
-
         private void guna2ButtonSua_Click(object sender, EventArgs e)
         {
             FCV fCV = new FCV();

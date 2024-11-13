@@ -25,7 +25,6 @@ namespace Job
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-            string connectionString = Settings.Default.ConnectionAdmin; // Chuỗi kết nối đến SQL Server
             using (SqlConnection connection = DbConnection.GetConnection())
             {
                 connection.Open();

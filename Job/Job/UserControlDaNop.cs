@@ -20,12 +20,14 @@ namespace Job
         string viTri;
         string tenCongTy;
         string Fullname;
-        public UserControlDaNop(int ID, int applicationSubmitID, string FullName, int CVID)
+        string trangThai;
+        public UserControlDaNop(int ID, int applicationSubmitID, string FullName, int CVID, string trangThai)
         {
             iD = ID;
             cVID = CVID;
             this.applicationSubmitID = applicationSubmitID;
             Fullname = FullName;
+            this.trangThai = trangThai;
             InitializeComponent();
             TaiDuLieu(iD);
         }
@@ -49,7 +51,7 @@ namespace Job
                     {
                         labelTenCongTy.Text = reader.GetString(reader.GetOrdinal("Name")).ToString();
                         labelChucVu.Text = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
-                        labelTrangThai.Text = reader.GetString(reader.GetOrdinal("Status")).ToString();
+                        labelTrangThai.Text = trangThai;
                         viTri = reader.GetString(reader.GetOrdinal("JobVacancy")).ToString();
                         tenCongTy = reader.GetString(reader.GetOrdinal("Name")).ToString();
                     }
@@ -74,7 +76,6 @@ namespace Job
         private bool CheckApplicationSubmitIDExists(int applicationSubmitID)
         {
             bool exists = false;
-            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"; // Cập nhật theo chuỗi kết nối của bạn
             string query = "SELECT COUNT(1) FROM Interview WHERE ApplicationSubmitID = @ApplicationSubmitID";
 
             using (SqlConnection connection = DbConnection.GetConnection())
@@ -87,7 +88,7 @@ namespace Job
             }
 
             return exists;
-        }   
+        }
 
         private void buttonXemDangTin_Click(object sender, EventArgs e)
         {
