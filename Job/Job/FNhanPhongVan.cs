@@ -13,17 +13,16 @@ namespace Job
 {
     public partial class FNhanPhongVan : Form
     {
-        string usernameCandidate;
         int applicationSubmitID;
         string viTri;
         string tenCongTy;
-        public FNhanPhongVan(int applicationSubmitID,string usernameCandidate,  string viTri, string tenCongTy)
+        public FNhanPhongVan(int applicationSubmitID,  string viTri, string tenCongTy)
         {
             InitializeComponent();
-            this.usernameCandidate = usernameCandidate;
             this.applicationSubmitID = applicationSubmitID;
             this.viTri = viTri;
             this.tenCongTy = tenCongTy;
+            TaiDuLieuUI();
         }
         private void TaiDuLieuUI()
         {
@@ -31,7 +30,7 @@ namespace Job
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Lệnh SQL để lấy dữ liệu từ bảng Interview
-                string query = "SELECT InterviewerName, InterviewDate, AddressID, Note FROM Interview WHERE ApplicationSubmitID = @ApplicationSubmitID";
+                string query = "SELECT InterviewerName, InterviewDate, AddressID, Note, Phone, Email FROM Interview WHERE ApplicationSubmitID = @ApplicationSubmitID";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -49,6 +48,19 @@ namespace Job
 
                             // Thông tin địa chỉ từ bảng Address
                             int addressID = (int)reader["AddressID"];
+                            labelThongTin.Text = "Công ty " + tenCongTy + 
+                                " thông báo: Hồ sơ ứng tuyển của anh/chị đã chúng tôi tiếp nhận.\n Chúng tôi xin trân trọng kính mời anh/chị đến tham gia phỏng vấn." +
+                                "Ghi chú: " + reader["Note"].ToString();
+                            labelThongTinNguoiPhongvan.Text = "Mọi chi tiết, anh/chị vui lòng liên hệ " + reader["InterviewerName"].ToString() + " qua số điện thoại: "
+                                + reader["Phone"].ToString() + " hoặc email: " + reader["Email"].ToString() + " để biết thêm chi tiết. " +"\n"
+                                + "Rất mong Anh/Chị thu xếp thời gian tham gia. Trường hợp Anh/Chị không thể thu xếp được thời gian, xin vui lòng liên hệ lại chúng tôi theo số điện thoại/địa chỉ trên để xác nhận lại.\n"
+                                + "\n" + "Trân trọng kính chào!";
+                            labelThongTin.AutoSize = false; // Đặt chiều rộng tối đa nếu cần
+                            labelThongTin.Text = labelThongTin.Text.Replace("\n", "<br/>");
+
+                            labelThongTinNguoiPhongvan.AutoSize = false;// Đặt chiều rộng tối đa nếu cần
+                            labelThongTinNguoiPhongvan.Text = labelThongTinNguoiPhongvan.Text.Replace("\n", "<br/>");
+                            reader.Close();
                             string addressQuery = "SELECT Province, District, Street FROM Address WHERE ID = @AddressID";
                             using (SqlCommand addressCommand = new SqlCommand(addressQuery, connection))
                             {
@@ -62,13 +74,7 @@ namespace Job
                                 }
                             }
 
-                            labelThongTin.Text = "Công ty " + tenCongTy + 
-                                "thông báo: Hồ sơ ứng tuyển của anh/chị đã chúng tôi tiếp nhận. Chugns tôi xin trân trọng kính mời anh/chị đến tham gia phỏng vấn." +
-                                "Ghi chú: " + reader["Note"].ToString();
-                            labelThongTinNguoiPhongvan.Text = "Mọi chi tiết, anh/chị vui lòng liên hệ " + reader["InterviewName"].ToString() + " qua số điện thoại: "
-                                + reader["Phone"].ToString() + " hoặc email: " + reader["Email"].ToString() + " để biết thêm chi tiết. \n"
-                                + "Rất mong Anh/Chị thu xếp thời gian tham gia. Trường hợp Anh/Chị không thể thu xếp được thời gian, xin vui lòng liên hệ lại chúng tôi theo số điện thoại/địa chỉ trên để xác nhận lại.\n"
-                                + "\r\nTrân trọng kính chào!";
+                            
                         }
                     }
                     connection.Close();
@@ -79,6 +85,16 @@ namespace Job
         private void labelHoTen_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void labelThongTinNguoiPhongvan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 

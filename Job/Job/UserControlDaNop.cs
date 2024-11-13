@@ -15,15 +15,17 @@ namespace Job
     public partial class UserControlDaNop : UserControl
     {
         private int iD;
-        string usernameCandidate;
+        int cVID;
         int applicationSubmitID;
         string viTri;
         string tenCongTy;
-        public UserControlDaNop(int ID, int applicationSubmitID, string usernameCandidate)
+        string Fullname;
+        public UserControlDaNop(int ID, int applicationSubmitID, string FullName, int CVID)
         {
             this.iD = ID;
-            this.usernameCandidate = usernameCandidate;
+            this.cVID = CVID;
             this.applicationSubmitID = applicationSubmitID;
+            this.Fullname = FullName;
             InitializeComponent();
             TaiDuLieu(iD);
         }
@@ -56,8 +58,31 @@ namespace Job
                 {
                     Console.WriteLine("Error: " + ex.Message);
                 }
+                if (!CheckApplicationSubmitIDExists(applicationSubmitID))
+                {
+                    buttonXemPhongVan.Visible = false;
+                }
             }
         }
+
+        private bool CheckApplicationSubmitIDExists(int applicationSubmitID)
+        {
+            bool exists = false;
+            string connectionString = "Data Source=BQH;Initial Catalog=Job;Persist Security Info=True;User ID=Giang;Password=123456789"; // Cập nhật theo chuỗi kết nối của bạn
+            string query = "SELECT COUNT(1) FROM Interview WHERE ApplicationSubmitID = @ApplicationSubmitID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ApplicationSubmitID", applicationSubmitID);
+
+                connection.Open();
+                exists = (int)command.ExecuteScalar() > 0;
+            }
+
+            return exists;
+        }   
+
         private void buttonXemDangTin_Click(object sender, EventArgs e)
         {
 
@@ -66,7 +91,14 @@ namespace Job
 
         private void buttonXemPhongVan_Click(object sender, EventArgs e)
         {
-            FNguoiUngTuyen.Ins.LoadForm(new FNhanPhongVan(applicationSubmitID, usernameCandidate, viTri, tenCongTy));
+            FNguoiUngTuyen.Ins.LoadForm(new FNhanPhongVan(applicationSubmitID, viTri, tenCongTy));
+        }
+
+        private void buttonCV_Click(object sender, EventArgs e)
+        {
+            FCVGuide fCVGuide = new FCVGuide();
+            fCVGuide.CVGuide(cVID, Data.username);
+            FNguoiUngTuyen.Ins.LoadForm(fCVGuide);
         }
     }
 }

@@ -117,9 +117,10 @@
             this.labelThongTinNguoiPhongvan.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelThongTinNguoiPhongvan.Location = new System.Drawing.Point(97, 355);
             this.labelThongTinNguoiPhongvan.Name = "labelThongTinNguoiPhongvan";
-            this.labelThongTinNguoiPhongvan.Size = new System.Drawing.Size(811, 93);
+            this.labelThongTinNguoiPhongvan.Size = new System.Drawing.Size(811, 153);
             this.labelThongTinNguoiPhongvan.TabIndex = 6;
             this.labelThongTinNguoiPhongvan.Text = "Chuyên viên tư vấn Ôtô";
+            this.labelThongTinNguoiPhongvan.Click += new System.EventHandler(this.labelThongTinNguoiPhongvan_Click);
             // 
             // buttonBack
             // 
@@ -134,6 +135,7 @@
             this.buttonBack.PressedState.ImageSize = new System.Drawing.Size(64, 64);
             this.buttonBack.Size = new System.Drawing.Size(27, 30);
             this.buttonBack.TabIndex = 7;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // labelDiaChi
             // 
